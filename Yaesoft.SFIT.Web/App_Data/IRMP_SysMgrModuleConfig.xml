@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Jeason version="1.0">
+  <!--系统管理-->
+  <System SystemID="AS000000000000000000000000000000" SystemSign="yaesoft.IRMP.SysMgr" SystemName="系统管理" SystemDescription="">
+    
+    <Module ModuleID="AS000000000000000000000000000001" ModuleName="访问授权" ModuleUri="" OrderNo="1">
+      <Module ModuleID="AS000000000000000000000000000101" ModuleName="系统访问授权" ModuleUri="frmSysMgrAppAuthorizationList.aspx" OrderNo="1"/>
+      <Module ModuleID="AS000000000000000000000000000201" ModuleName="用户访问授权" ModuleUri="frmSysMgrEmployeeAuthorizationList.aspx" OrderNo="2"/>
+    </Module>
+    
+    <Module ModuleID="AS000000000000000000000000000002" ModuleName="用户限制" ModuleUri="" OrderNo="2">
+      <Module ModuleID="AS000000000000000000000000000102" ModuleName="拒绝IP" ModuleUri="frmSysMgrLimitRefusedIPAddrList.aspx" OrderNo="1"/>
+      <Module ModuleID="AS000000000000000000000000000202" ModuleName="绑定IP" ModuleUri="frmSysMgrLimitBindIPAddrList.aspx" OrderNo="2"/>
+      <Module ModuleID="AS000000000000000000000000000302" ModuleName="指定时间区段" ModuleUri="frmSysMgrLimitSpecifyTimeZoneList.aspx" OrderNo="3"/>
+      <Module ModuleID="AS000000000000000000000000000402" ModuleName="限制登录" ModuleUri="frmSysMgrLimitLoginList.aspx" OrderNo="4"/>
+    </Module>
+    
+    <Module ModuleID="AS000000000000000000000000000003" ModuleName="系统配置" ModuleUri="" OrderNo="3">
+      <Module ModuleID="AS000000000000000000000000000103" ModuleName="系统参数设置" ModuleUri="frmSysMgrSettingList.aspx" OrderNo="1"/>
+      <Module ModuleID="AS000000000000000000000000000203" ModuleName="注册部件模板" ModuleUri="frmSysMgrRegWebPartTemplateList.aspx" OrderNo="2"/>
+      <Module ModuleID="AS000000000000000000000000000303" ModuleName="部件数据设置" ModuleUri="frmSysMgrWebPartList.aspx" OrderNo="3"/>
+      <Module ModuleID="AS000000000000000000000000000403" ModuleName="部件位置定义" ModuleUri="frmSysMgrWebPartZoneList.aspx" OrderNo="4"/>
+      <Module ModuleID="AS000000000000000000000000000503" ModuleName="设置管理" ModuleUri="" OrderNo="5">
+        <Module ModuleID="AS000000000000000000000000010503" ModuleName="参数设置" ModuleUri="frmSysMgrSettingPersonalList.aspx" OrderNo="1"/>
+        <Module ModuleID="AS000000000000000000000000020503" ModuleName="首页设置" ModuleUri="frmSysMgrWebPartPersonalList.aspx" OrderNo="2"/>
+        <Module ModuleID="AS000000000000000000000000030503" ModuleName="链接管理" ModuleUri="frmSysMgrLinksList.aspx" OrderNo="3"/>
+      </Module>
+    </Module>
+
+    <Module ModuleID="AS000000000000000000000000000004" ModuleName="数据字典维护" ModuleUri="" OrderNo="4">
+      <Module ModuleID="AS000000000000000000000000000104" ModuleName="枚举数据维护" ModuleUri="frmCommonEnumsList.aspx" OrderNo="1"/>
+      <Module ModuleID="AS000000000000000000000000000204" ModuleName="资源数据维护" ModuleUri="frmResourcesList.aspx" OrderNo="2"/>
+    </Module>
+
+    <!--<Module ModuleID="AS000000000000000000000000000005" ModuleName="数据库维护" ModuleUri="" OrderNo="5">
+      <Module ModuleID="AS000000000000000000000000000105" ModuleName="备份数据库" ModuleUri="" OrderNo="1"/>
+      <Module ModuleID="AS000000000000000000000000000205" ModuleName="创建维护计划" ModuleUri="" OrderNo="2"/>
+      <Module ModuleID="AS000000000000000000000000000305" ModuleName="数据源配置" ModuleUri="" OrderNo="3"/>
+    </Module>-->
+
+    <Module ModuleID="AS000000000000000000000000000006" ModuleName="日志管理" ModuleUri="" OrderNo="6">
+      <!--<Module ModuleID="AS000000000000000000000000000106" ModuleName="日志文件" ModuleUri="" OrderNo="1"/>-->
+      <Module ModuleID="AS000000000000000000000000000206" ModuleName="日志数据" ModuleUri="frmIRMPCommonLogList.aspx" OrderNo="2"/>
+      <Module ModuleID="AS000000000000000000000000000306" ModuleName="登陆令牌" ModuleUri="frmSSOTicketList.aspx" OrderNo="3"/>
+    </Module>
+    
+  </System>
+</Jeason>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AutoUpdateConfig>
+  <Title>自动更新服务器配置文件</Title>
+  <Versions>
+    <AutoUpdateVersion>
+      <Ver>1</Ver>
+      <UpdateID>0000-0001-0002-0003</UpdateID>
+      <PackPath>/App_Data/test.zip</PackPath>
+      <Description>测试</Description>
+    </AutoUpdateVersion>
+  </Versions>
+</AutoUpdateConfig>

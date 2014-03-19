@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Share/ModuleFrameMasterPage.Master" AutoEventWireup="true" CodeBehind="ModuleFrameSetMasterPage.master.cs" Inherits="Yaesoft.SFIT.Web.Share.ModuleFrameSetMasterPage" %>
+<%@ Register Src="~/Controls/LeftMenu.ascx" TagName="LeftMenuControl" TagPrefix="iPower" %>
+
+<asp:Content ContentPlaceHolderID="MainPlace" runat="server">
+   
+    <div id="MainAreaLeftMenu">
+        <iPower:LeftMenuControl ID="LeftMenuControl" MenuType="TreeView" runat="server" />
+    </div>
+    <div class="MainAreaMiddle" title="隐藏菜单" onclick="OnSwapMenu(this)">
+        <img alt="" src="/Include/menu_open_s.png" />
+    </div>
+    <div class="MainAreaRight">
+        <div class="WorkPlaceTop">
+            <span class="WorkPlaceTopHeader">
+                <asp:Label id="lbTitle" runat="server">系统首页</asp:Label>
+            </span>
+        </div>
+        <div class="WorkPlaceMain">
+            <div class="WorkPlaceMainTop"><br /></div>
+            <asp:ContentPlaceHolder ID="workPlace" runat="server" />
+         </div>
+    </div>
+     
+</asp:Content>
+
+<asp:Content ID="Script" ContentPlaceHolderID="ContentPlaceButtom" runat="server">
+    <script language="javascript" type="text/javascript">
+        <!--
+        function OnSwapMenu(obj) {
+            try {
+                var strOpen = "显示菜单", strClose = "隐藏菜单";
+                var menu_open_path = "/Include/menu_open_s.png", menu_close_path = "/Include/menu_close_s.png";
+                if (obj) {
+                    var bOpen = (obj.title == strClose);
+                    var leftMenuObj = document.getElementById("MainAreaLeftMenu");
+                    var img = obj.firstChild;
+                    if (leftMenuObj && img) {
+                        leftMenuObj.style.display = (bOpen ? "none" : "block");
+                        obj.title = (bOpen ? strOpen : strClose);
+                        img.src = (bOpen ? menu_close_path : menu_open_path);
+                    }
+                }
+            } catch (e) {
+                alert(e.description);
+            }
+        }
+        //-->
+    </script>
+</asp:Content>

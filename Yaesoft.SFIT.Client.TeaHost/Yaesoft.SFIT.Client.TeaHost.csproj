@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E1AEEB0-0216-4C0C-ADCD-B419D724765B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yaesoft.SFIT.Client.TeaHost</RootNamespace>
+    <AssemblyName>Yaesoft.SFIT.Client.TeaHost</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Yaesoft.SFIT\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BoradcastAddressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoradcastAddressWindow.Designer.cs">
+      <DependentUpon>BoradcastAddressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FiveStartControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StudentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ThumbnailsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\CDATA.cs" />
+    <Compile Include="Data\LocalStudent.cs" />
+    <Compile Include="Data\LocalStudentWork.cs" />
+    <Compile Include="Data\LocalStudentWorkFile.cs" />
+    <Compile Include="Data\LocalStudentWorkStore.cs" />
+    <Compile Include="Data\ExportImportManifest.cs" />
+    <Compile Include="Data\FolderStructure.cs" />
+    <Compile Include="Data\LocalUserInfo.cs" />
+    <Compile Include="Data\LocalWorkReview.cs" />
+    <Compile Include="Data\MonitorUIColorSettings.cs" />
+    <Compile Include="Data\NetPortSettingsMgr.cs" />
+    <Compile Include="Data\OldVersion\WorkExportImportManifest.cs" />
+    <Compile Include="Data\StartClassInfo.cs" />
+    <Compile Include="Data\StudentEx.cs" />
+    <Compile Include="ImportCredentialsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportCredentialsWindow.Designer.cs">
+      <DependentUpon>ImportCredentialsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitializeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitializeWindow.Designer.cs">
+      <DependentUpon>InitializeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWorkDetailsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyWorkDetailsWindow.Designer.cs">
+      <DependentUpon>ModifyWorkDetailsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWorkWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyWorkWindow.Designer.cs">
+      <DependentUpon>ModifyWorkWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorStudentsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitorStudentsWindow.Designer.cs">
+      <DependentUpon>MonitorStudentsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Net\HostBroadcastService.cs" />
+    <Compile Include="Net\HostListenService.cs" />
+    <Compile Include="Net\HostNetService.cs" />
+    <Compile Include="Plugins\CaptureScreenPlugin.cs" />
+    <Compile Include="Plugins\ClassPlugin.cs" />
+    <Compile Include="Plugins\CredentialsPlugin.cs" />
+    <Compile Include="Plugins\MessagePlugin.cs" />
+    <Compile Include="Plugins\MonitorPlugin.cs" />
+    <Compile Include="Plugins\NetPlugin.cs" />
+    <Compile Include="Plugins\SyncPlugin.cs" />
+    <Compile Include="Plugins\SystemSettingsPlugin.cs" />
+    <Compile Include="Plugins\UCCaptureScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCCaptureScreen.Designer.cs">
+      <DependentUpon>UCCaptureScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCCredentialsSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCCredentialsSet.Designer.cs">
+      <DependentUpon>UCCredentialsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UClassSettngs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UClassSettngs.Designer.cs">
+      <DependentUpon>UClassSettngs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCMessage.Designer.cs">
+      <DependentUpon>UCMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCMonitor.Designer.cs">
+      <DependentUpon>UCMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCNetPluginSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCNetPluginSet.Designer.cs">
+      <DependentUpon>UCNetPluginSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCSyncSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCSyncSet.Designer.cs">
+      <DependentUpon>UCSyncSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCSystemSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCSystemSettings.Designer.cs">
+      <DependentUpon>UCSystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCWorkExportImportSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCWorkExportImportSet.Designer.cs">
+      <DependentUpon>UCWorkExportImportSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\UCWorkSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\UCWorkSet.Designer.cs">
+      <DependentUpon>UCWorkSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\WorkExportImportPlugin.cs" />
+    <Compile Include="Plugins\WorkPlugin.cs" />
+    <Compile Include="Poxy\TeaClientServicePoxy.cs" />
+    <Compile Include="Poxy\TeaClientServicePoxyFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+    <EmbeddedResource Include="BoradcastAddressWindow.resx">
+      <DependentUpon>BoradcastAddressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StudentControl.resx">
+      <DependentUpon>StudentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportCredentialsWindow.resx">
+      <DependentUpon>ImportCredentialsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitializeWindow.resx">
+      <DependentUpon>InitializeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyWorkDetailsWindow.resx">
+      <DependentUpon>ModifyWorkDetailsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyWorkWindow.resx">
+      <DependentUpon>ModifyWorkWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorStudentsWindow.resx">
+      <DependentUpon>MonitorStudentsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MouseThumbnailWindow.resx">
+      <DependentUpon>MouseThumbnailWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCCaptureScreen.resx">
+      <DependentUpon>UCCaptureScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCCredentialsSet.resx">
+      <DependentUpon>UCCredentialsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UClassSettngs.resx">
+      <DependentUpon>UClassSettngs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCMessage.resx">
+      <DependentUpon>UCMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCMonitor.resx">
+      <DependentUpon>UCMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCNetPluginSet.resx">
+      <DependentUpon>UCNetPluginSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCSyncSet.resx">
+      <DependentUpon>UCSyncSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCSystemSettings.resx">
+      <DependentUpon>UCSystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCWorkExportImportSet.resx">
+      <DependentUpon>UCWorkExportImportSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\UCWorkSet.resx">
+      <DependentUpon>UCWorkSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCredentialsWindow.resx">
+      <DependentUpon>SelectCredentialsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncDataWindow.resx">
+      <DependentUpon>SyncDataWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingsWindow.resx">
+      <DependentUpon>SystemSettingsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkExportImportWindow.resx">
+      <DependentUpon>WorkExportImportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkExportWindow.resx">
+      <DependentUpon>WorkExportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkImportWindow.resx">
+      <DependentUpon>WorkImportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkThumbnailsWindow.resx">
+      <DependentUpon>WorkThumbnailsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkUploadToServer.resx">
+      <DependentUpon>WorkUploadToServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SelectCredentialsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCredentialsWindow.Designer.cs">
+      <DependentUpon>SelectCredentialsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncDataWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyncDataWindow.Designer.cs">
+      <DependentUpon>SyncDataWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingsWindow.Designer.cs">
+      <DependentUpon>SystemSettingsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MouseThumbnailWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MouseThumbnailWindow.Designer.cs">
+      <DependentUpon>MouseThumbnailWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BufferBlockUtil.cs" />
+    <Compile Include="Utils\ExportWorkUtils.cs" />
+    <Compile Include="Utils\ImportOldVersionWorkUtils.cs" />
+    <Compile Include="Utils\ImportWorkUtils.cs" />
+    <Compile Include="Utils\IssueWorkHelpers.cs" />
+    <Compile Include="Utils\ListViewColumnSorter.cs" />
+    <Compile Include="Utils\ThumbnailsHelpers.cs" />
+    <Compile Include="Utils\Tools.cs" />
+    <Compile Include="Utils\WorkStoreHelper.cs" />
+    <Compile Include="Utils\ZipUtils.cs" />
+    <Compile Include="WorkExportImportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkExportImportWindow.Designer.cs">
+      <DependentUpon>WorkExportImportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkExportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkExportWindow.Designer.cs">
+      <DependentUpon>WorkExportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkImportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkImportWindow.Designer.cs">
+      <DependentUpon>WorkImportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkThumbnailsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkThumbnailsWindow.Designer.cs">
+      <DependentUpon>WorkThumbnailsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkUploadToServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkUploadToServer.Designer.cs">
+      <DependentUpon>WorkUploadToServer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yaesoft.SFIT.Client\Yaesoft.SFIT.Client.csproj">
+      <Project>{C554437A-4D0A-4365-9FD1-26D1825FC9E4}</Project>
+      <Name>Yaesoft.SFIT.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT.Resources\Yaesoft.SFIT.Resources.csproj">
+      <Project>{735FED15-2A42-4C6A-984E-6C8C9C2F642A}</Project>
+      <Name>Yaesoft.SFIT.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT\Yaesoft.SFIT.csproj">
+      <Project>{4FD4EFD8-C7E9-4A7E-A7EB-1B549FF5582B}</Project>
+      <Name>Yaesoft.SFIT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportCredentials.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\ButtonOK.gif" />
+    <None Include="Resources\Credentials.gif" />
+    <None Include="Resources\btnClose.gif" />
+    <None Include="Resources\BoradcastAddress.png" />
+    <None Include="Resources\BottomBackground.gif" />
+    <Content Include="Plug-in.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\BlankSyncBackground.gif" />
+    <None Include="Resources\DisabledSyncData.gif" />
+    <None Include="Resources\ClassSettings_01.gif" />
+    <None Include="Resources\ClassSettings_03.gif" />
+    <None Include="Resources\ClassSettings_02.gif" />
+    <None Include="Resources\End.gif" />
+    <None Include="Resources\ChangedCredentials.gif" />
+    <None Include="Resources\ChangedCredentialsDisabled.gif" />
+    <None Include="Resources\ChangedCredentialsMove.gif" />
+    <None Include="Resources\CaptureScreen.gif" />
+    <None Include="Resources\CaptureScreenDisabled.gif" />
+    <None Include="Resources\CaptureScreenMove.gif" />
+    <Content Include="Resources\initLoad.gif" />
+    <None Include="Resources\WorkExportImportMove.gif" />
+    <None Include="Resources\WorkExportImportDisabled.gif" />
+    <None Include="Resources\WorkExportImport.gif" />
+    <None Include="Resources\WorkImportMove.gif" />
+    <None Include="Resources\WorkImportDisabled.gif" />
+    <None Include="Resources\WorkImport.gif" />
+    <None Include="Resources\WorkExportMove.gif" />
+    <None Include="Resources\WorkExportDisabled.gif" />
+    <None Include="Resources\WorkExport.gif" />
+    <None Include="Resources\SystemSettingsMove.gif" />
+    <None Include="Resources\SystemSettingsDisabled.gif" />
+    <None Include="Resources\SystemSettings.gif" />
+    <None Include="Resources\SFIT.ico" />
+    <None Include="Resources\IssueWorkMove.gif" />
+    <None Include="Resources\IssueWorkDisabled.gif" />
+    <None Include="Resources\IssueWork.gif" />
+    <None Include="Resources\NetSetMove.gif" />
+    <None Include="Resources\NetSetEnabled.gif" />
+    <None Include="Resources\NetSetDisabled.gif" />
+    <None Include="Resources\ModfiyWorkMove.gif" />
+    <None Include="Resources\ModfiyWork.gif" />
+    <None Include="Resources\MoveStart.gif" />
+    <None Include="Resources\MoveEnd.gif" />
+    <None Include="Resources\Start.gif" />
+    <None Include="Resources\MoveSyncData.gif" />
+    <None Include="Resources\MonitorBackground.png" />
+    <None Include="Resources\SyncData.gif" />
+    <None Include="Resources\RightBackground.gif" />
+    <None Include="Resources\login.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,16 @@
+﻿.ext-load-mask
+{
+    position:absolute;
+	background:#ccc;
+	color:#000;
+	opacity:0.8;
+	filter:alpha(opacity=30);
+	display:none;
+	z-index:9999;
+}
+.ext-load-mask span
+{
+    position:absolute;
+    color:red;
+    z-index:9999;
+}

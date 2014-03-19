@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Jeason version="1.0">
+  <!--学生信息技术档案管理系统 区中心系统-->
+  <System SystemID="PAS00000000000000000000000000000" SystemSign="yaesoft.SFIT" SystemName="学生信息技术档案管理系统" 
+          SystemDescription="学生信息技术档案管理系统(Student Files of Information Technology Management System)">
+	  <Module ModuleID="PAS00000000000000000000000000001" ModuleName="系统设置" ModuleUri="" OrderNo="1">
+
+		  <Module ModuleID="PAS00000000000000000000000000101" ModuleName="接入管理" ModuleUri="frmSFITCenterAccessList.aspx" OrderNo="1"/>
+		  <Module ModuleID="PAS00000000000000000000000000201" ModuleName="评价规则管理" ModuleUri="frmSFITEvaluateList.aspx" OrderNo="2">
+			  <Module ModuleID="PAS00000000000000000000000010201" ModuleName="规则应用" ModuleUri="frmSFITEvaluateSetList.aspx" OrderNo="1"/>
+		  </Module>
+
+		  <Module ModuleID="PAS00000000000000000000000000301" ModuleName="要点与目录" ModuleUri="" OrderNo="3">
+			  <Module ModuleID="PAS00000000000000000000000010301" ModuleName="知识技能要点" ModuleUri="frmSFITKnowledgePointsList.aspx" OrderNo="1"/>
+			  <Module ModuleID="PAS00000000000000000000000020301" ModuleName="课程目录(教育局)" ModuleUri="frmSFITCatalogList.aspx" OrderNo="2"/>
+			  <Module ModuleID="PAS00000000000000000000000030301" ModuleName="课程目录(学校)" ModuleUri="frmSFITCatalogByUnitList.aspx" OrderNo="3"/>
+		  </Module>
+
+		  <Module ModuleID="PAS00000000000000000000000000401" ModuleName="教师/班级(教育局)" ModuleUri="frmSFITTeaClassList.aspx" OrderNo="4"/>
+		  <Module ModuleID="PAS00000000000000000000000000501" ModuleName="教师/班级(学校)" ModuleUri="frmSFITTeaClassByUnitList.aspx" OrderNo="5"/>
+	  </Module>
+
+	  <Module ModuleID="PAS00000000000000000000000000002" ModuleName="系统数据维护" ModuleUri="" OrderNo="2">
+		  <Module ModuleID="PAS00000000000000000000000000102" ModuleName="学校数据" ModuleUri="frmSFITSchoolsList.aspx" OrderNo="1"/>
+		  <Module ModuleID="PAS00000000000000000000000000202" ModuleName="年级数据" ModuleUri="frmSFITGradeList.aspx" OrderNo="3"/>
+		  <Module ModuleID="PAS00000000000000000000000000302" ModuleName="教师数据" ModuleUri="frmSFITeachersList.aspx" OrderNo="4"/>
+		  <Module ModuleID="PAS00000000000000000000000000402" ModuleName="班级数据" ModuleUri="frmSFITClassList.aspx" OrderNo="5"/>
+		  <Module ModuleID="PAS00000000000000000000000000502" ModuleName="学生数据" ModuleUri="frmSFITStudentsList.aspx" OrderNo="6"/>
+	  </Module>
+
+	  <Module ModuleID="PAS00000000000000000000000000003" ModuleName="发布/评论" ModuleUri="" OrderNo="3">
+		  <Module ModuleID="PAS00000000000000000000000000103" ModuleName="收集作品(教育局)" ModuleUri="frmSFITStudentWorksList.aspx" OrderNo="1"/>
+		  <Module ModuleID="PAS00000000000000000000000000203" ModuleName="收集作品(学校)" ModuleUri="frmSFITStudentWorksByUnitList.aspx" OrderNo="2"/>
+		  <!--<Module ModuleID="PAS00000000000000000000000000303" ModuleName="发布设置(教育局)" ModuleUri="" OrderNo="3"/>
+		  <Module ModuleID="PAS00000000000000000000000000403" ModuleName="发布设置(学校)" ModuleUri="" OrderNo="4"/>-->
+		  <Module ModuleID="PAS00000000000000000000000000503" ModuleName="评论汇总(教育局)" ModuleUri="frmSFITWorksCommentsList.aspx" OrderNo="5"/>
+		  <Module ModuleID="PAS00000000000000000000000000603" ModuleName="评论汇总(学校)" ModuleUri="frmSFITWorksCommentsByUnitList.aspx" OrderNo="6"/>
+		  <Module ModuleID="PAS00000000000000000000000000703" ModuleName="任课教师查询" ModuleUri="frmSFITeaStudentWorksList.aspx" OrderNo="7"/>
+		  <Module ModuleID="PAS00000000000000000000000000803" ModuleName="学生查询" ModuleUri="frmSFITStudentWorksQueryList.aspx" OrderNo="8"/>
+
+	  </Module>
+
+	  <Module ModuleID="PAS00000000000000000000000000004" ModuleName="兴趣小组" ModuleUri="" OrderNo="4">
+		  <Module ModuleID="PAS00000000000000000000000000104" ModuleName="小组管理(教育局)" ModuleUri="" OrderNo="1">
+			  <Module ModuleID="PAS00000000000000000000000010104" ModuleName="分组设置" ModuleUri="frmSFITGroupList.aspx?GroupType=0&amp;SID=PAS00000000000000000000000010104" OrderNo="1"/>
+			  <Module ModuleID="PAS00000000000000000000000020104" ModuleName="小组作品" ModuleUri="frmSFITGroupWorksList.aspx?GroupType=0&amp;SID=PAS00000000000000000000000020104" OrderNo="2"/>
+		  </Module>
+		  
+		  <Module ModuleID="PAS00000000000000000000000000204" ModuleName="小组管理(学校)" ModuleUri="" OrderNo="2">
+			  <Module ModuleID="PAS00000000000000000000000010204" ModuleName="分组设置" ModuleUri="frmSFITGroupList.aspx?GroupType=0&amp;IsUnit=true&amp;SID=PAS00000000000000000000000010204" OrderNo="1"/>
+			  <Module ModuleID="PAS00000000000000000000000020204" ModuleName="小组作品" ModuleUri="frmSFITGroupWorksList.aspx?GroupType=0&amp;IsUnit=true&amp;SID=PAS00000000000000000000000020204" OrderNo="2"/>
+		  </Module>
+	  </Module>
+
+	  <Module ModuleID="PAS00000000000000000000000000005" ModuleName="竞赛管理" ModuleUri="" OrderNo="5">
+		  <Module ModuleID="PAS00000000000000000000000000105" ModuleName="赛事管理(教育局)" ModuleUri="" OrderNo="1">
+			  <Module ModuleID="PAS00000000000000000000000010105" ModuleName="赛事设置" ModuleUri="frmSFITGroupList.aspx?GroupType=1&amp;SID=PAS00000000000000000000000010105" OrderNo="1"/>
+			  <Module ModuleID="PAS00000000000000000000000020105" ModuleName="赛事作品" ModuleUri="frmSFITGroupWorksList.aspx?GroupType=1&amp;SID=PAS00000000000000000000000020105" OrderNo="2"/>
+		  </Module>
+
+		  <Module ModuleID="PAS00000000000000000000000000205" ModuleName="赛事管理(学校)" ModuleUri="" OrderNo="2">
+			  <Module ModuleID="PAS00000000000000000000000010205" ModuleName="赛事设置" ModuleUri="frmSFITGroupList.aspx?GroupType=1&amp;IsUnit=true&amp;SID=PAS00000000000000000000000010205" OrderNo="1"/>
+			  <Module ModuleID="PAS00000000000000000000000020205" ModuleName="赛事作品" ModuleUri="frmSFITGroupWorksList.aspx?GroupType=1&amp;IsUnit=true&amp;SID=PAS00000000000000000000000020205" OrderNo="2"/>
+		  </Module>
+	  </Module>
+
+	  <!--<Module ModuleID="PAS00000000000000000000000000007" ModuleName="报表统计" ModuleUri="" OrderNo="7">
+		
+	  </Module>-->
+  </System>
+</Jeason>

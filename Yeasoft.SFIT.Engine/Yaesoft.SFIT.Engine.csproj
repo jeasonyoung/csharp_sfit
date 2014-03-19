@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27A1F808-7AA7-4B4F-A700-20AB60720D12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yaesoft.SFIT.Engine</RootNamespace>
+    <AssemblyName>Yaesoft.SFIT.Engine</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\IRMP\iPower.IRMP\bin\Debug\iPower.IRMP.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\iPower\iPower.Platform\bin\Debug\iPower.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Platform.Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\iPower\iPower.Platform.Engine\bin\Debug\iPower.Platform.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Yaesoft.SFIT\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Domain\SecurityRoleEmployee.cs" />
+    <Compile Include="Domain\SFITAccessories.cs" />
+    <Compile Include="Domain\SFITCatalog.cs" />
+    <Compile Include="Domain\SFITCatalogKnowledgePoints.cs" />
+    <Compile Include="Domain\SFITCenterAccess.cs" />
+    <Compile Include="Domain\SFITClass.cs" />
+    <Compile Include="Domain\SFITClassStudents.cs" />
+    <Compile Include="Domain\SFITeachers.cs" />
+    <Compile Include="Domain\SFITeaReviewStudent.cs" />
+    <Compile Include="Domain\SFITEvaluate.cs" />
+    <Compile Include="Domain\SFITEvaluateItems.cs" />
+    <Compile Include="Domain\SFITEvaluateSet.cs" />
+    <Compile Include="Domain\SFITGrade.cs" />
+    <Compile Include="Domain\SFITGroup.cs" />
+    <Compile Include="Domain\SFITGroupCatalog.cs" />
+    <Compile Include="Domain\SFITGroupStudents.cs" />
+    <Compile Include="Domain\SFITKnowledgePoints.cs" />
+    <Compile Include="Domain\SFITSchools.cs" />
+    <Compile Include="Domain\SFITSchoolSetCatalog.cs" />
+    <Compile Include="Domain\SFITStudentAttachment.cs" />
+    <Compile Include="Domain\SFITStudents.cs" />
+    <Compile Include="Domain\SFITStudentWorks.cs" />
+    <Compile Include="Domain\SFITTeaClass.cs" />
+    <Compile Include="Domain\SFITWorksComments.cs" />
+    <Compile Include="GetLocalUserInfo.cs" />
+    <Compile Include="Index\DataCollection.cs" />
+    <Compile Include="Index\IndexAllWorks.cs" />
+    <Compile Include="Index\IndexBastWorks.cs" />
+    <Compile Include="Index\IndexComments.cs" />
+    <Compile Include="Index\IndexData.cs" />
+    <Compile Include="Index\IndexDataResult.cs" />
+    <Compile Include="Index\IndexDataService.cs" />
+    <Compile Include="Index\IndexHotWorks.cs" />
+    <Compile Include="Index\IndexNewWorks.cs" />
+    <Compile Include="Index\IndexReports.cs" />
+    <Compile Include="Index\IndexUnitData.cs" />
+    <Compile Include="OrgFactory.cs" />
+    <Compile Include="Persistence\DbModuleEntity.cs" />
+    <Compile Include="Persistence\ModuleConfiguration.cs" />
+    <Compile Include="Persistence\ModuleConstants.cs" />
+    <Compile Include="Persistence\ModuleEnums.cs" />
+    <Compile Include="Persistence\ModuleUtils.cs" />
+    <Compile Include="Persistence\SecurityRoleEmployeeEntity.cs" />
+    <Compile Include="Persistence\SFITAccessoriesEntity.cs" />
+    <Compile Include="Persistence\SFITCatalogEntity.cs" />
+    <Compile Include="Persistence\SFITCatalogKnowledgePointsEntity.cs" />
+    <Compile Include="Persistence\SFITCenterAccessEntity.cs" />
+    <Compile Include="Persistence\SFITClassEntity.cs" />
+    <Compile Include="Persistence\SFITClassStudentsEntity.cs" />
+    <Compile Include="Persistence\SFITeachersEntity.cs" />
+    <Compile Include="Persistence\SFITeaReviewStudentEntity.cs" />
+    <Compile Include="Persistence\SFITEvaluateEntity.cs" />
+    <Compile Include="Persistence\SFITEvaluateItemsEntity.cs" />
+    <Compile Include="Persistence\SFITEvaluateSetEntity.cs" />
+    <Compile Include="Persistence\SFITGradeEntity.cs" />
+    <Compile Include="Persistence\SFITGroupCatalogEntity.cs" />
+    <Compile Include="Persistence\SFITGroupEntity.cs" />
+    <Compile Include="Persistence\SFITGroupStudentsEntity.cs" />
+    <Compile Include="Persistence\SFITKnowledgePointsEntity.cs" />
+    <Compile Include="Persistence\SFITSchoolsEntity.cs" />
+    <Compile Include="Persistence\SFITSchoolSetCatalogEntity.cs" />
+    <Compile Include="Persistence\SFITStudentAttachmentEntity.cs" />
+    <Compile Include="Persistence\SFITStudentsEntity.cs" />
+    <Compile Include="Persistence\SFITStudentWorksEntity.cs" />
+    <Compile Include="Persistence\SFITTeaClassEntity.cs" />
+    <Compile Include="Persistence\SFITWorksCommentsEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+    <Compile Include="Service\IndexClassesPresenter.cs" />
+    <Compile Include="Service\IndexDetailsPresenter.cs" />
+    <Compile Include="Service\IndexRptPresenter.cs" />
+    <Compile Include="Service\IndexSchoolPresenter.cs" />
+    <Compile Include="Service\IndexSearchPresenter.cs" />
+    <Compile Include="Service\WorkDownloadService.cs" />
+    <Compile Include="Service\CatalogPresenterExtend.cs" />
+    <Compile Include="Service\CreateCredentialsPresenter.cs" />
+    <Compile Include="Service\DefaultPresenter.cs" />
+    <Compile Include="Service\ModulePresenter.cs" />
+    <Compile Include="Service\ReviewStudentPresenter.cs" />
+    <Compile Include="Service\SFITCatalogByUnitPresenter.cs" />
+    <Compile Include="Service\SFITCatalogPresenter.cs" />
+    <Compile Include="Service\SFITCenterAccessPresenter.cs" />
+    <Compile Include="Service\SFITClassPresenter.cs" />
+    <Compile Include="Service\SFITeachersPickerPresenter.cs" />
+    <Compile Include="Service\SFITeachersPresenter.cs" />
+    <Compile Include="Service\SFITeaReviewStudentPresenter.cs" />
+    <Compile Include="Service\SFITeaStudentWorksPresenter.cs" />
+    <Compile Include="Service\SFITEvaluatePresenter.cs" />
+    <Compile Include="Service\SFITEvaluateSetPresenter.cs" />
+    <Compile Include="Service\SFITGradePresenter.cs" />
+    <Compile Include="Service\SFITGroupPresenter.cs" />
+    <Compile Include="Service\SFITGroupPresenterExtend.cs" />
+    <Compile Include="Service\SFITGroupWorksPresenter.cs" />
+    <Compile Include="Service\SFITKnowledgePointsPresenter.cs" />
+    <Compile Include="Service\SFITSchoolPickerPresenter.cs" />
+    <Compile Include="Service\SFITSchoolsPresenter.cs" />
+    <Compile Include="Service\SFITStudentsPresenter.cs" />
+    <Compile Include="Service\SFITStudentWorksByUnitPresenter.cs" />
+    <Compile Include="Service\SFITStudentWorksPresenter.cs" />
+    <Compile Include="Service\SFITStudentWorksQueryPresenter.cs" />
+    <Compile Include="Service\SFITTeaClassByUnitPresenter.cs" />
+    <Compile Include="Service\SFITTeaClassPresenter.cs" />
+    <Compile Include="Service\SFITWorksCommentsByUnitPresenter.cs" />
+    <Compile Include="Service\SFITWorksCommentsPresenter.cs" />
+    <Compile Include="Service\StudentAttachmentPresenter.cs" />
+    <Compile Include="Service\TeaClassPresenterExtend.cs" />
+    <Compile Include="Service\TeaClientServiceProvider.cs" />
+    <Compile Include="Service\UCGroupListPresenter.cs" />
+    <Compile Include="Service\UCStudentWorkPresenter.cs" />
+    <Compile Include="Service\UCStudentWorksListPresenter.cs" />
+    <Compile Include="Service\UCWorksCommentsPresenter.cs" />
+    <Compile Include="Service\SFITWorksCommentsExtend.cs" />
+    <Compile Include="TeaClientServiceHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkStorageFactory.cs" />
+    <Compile Include="WorkThumbnailsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\iPower\iPower.Data\iPower.Data.csproj">
+      <Project>{49E097D0-FCDA-4CB2-A27D-CA4EDCD5403B}</Project>
+      <Name>iPower.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPower\iPower\iPower.csproj">
+      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
+      <Name>iPower</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT.Resources\Yaesoft.SFIT.Resources.csproj">
+      <Project>{735FED15-2A42-4C6A-984E-6C8C9C2F642A}</Project>
+      <Name>Yaesoft.SFIT.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT\Yaesoft.SFIT.csproj">
+      <Project>{4FD4EFD8-C7E9-4A7E-A7EB-1B549FF5582B}</Project>
+      <Name>Yaesoft.SFIT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

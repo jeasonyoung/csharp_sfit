@@ -1,0 +1,40 @@
+﻿<%--
+//================================================================================
+//  FileName: ModuleBaseMaster.Master
+//  Desc:
+//
+//  Called by
+//
+//  Auth:杨勇（jeason1914@gmail.com）
+//  Date: 2011/8/10
+//================================================================================
+//  Change History
+//================================================================================
+//  Date  Author  Description
+//  ----    ------  -----------------
+//
+//================================================================================
+//  Copyright (C) 2004-2009 Jeason Young Corporation
+//================================================================================
+//--%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ModuleBaseMaster.master.cs" Inherits="Yaesoft.SFIT.Web.Share.ModuleBaseMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
+    <asp:ContentPlaceHolder ID="ContentHead" runat="server" >
+            <link rel="Shortcut Icon" type="image/ico" href="../Include/yaesoftb.ico" />
+            <link rel="Bookmark" type="image/x-icon" href="../Include/yaesoftb.ico" />
+            <link rel="icon" type="image/x-icon" href="../Include/yaesoftb.ico" />    
+    </asp:ContentPlaceHolder>
+    <base target="_self" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlace" runat="server" />
+    </form>
+    <asp:ContentPlaceHolder ID="ContentPlaceScript" runat="server" />
+</body>
+</html>

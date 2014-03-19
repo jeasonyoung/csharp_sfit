@@ -1,0 +1,1172 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E98ECFCA-4518-4CF7-B711-51146A4C04E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yaesoft.SFIT.Web</RootNamespace>
+    <AssemblyName>Yaesoft.SFIT.Web</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iPower.IRMP.Security.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Security\bin\iPower.IRMP.Security.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.SSOService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SSO\bin\iPower.IRMP.SSOService.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.SysMgr.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Sys\bin\iPower.IRMP.SysMgr.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Platform.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\iPower\iPower.Platform.UI\bin\Debug\iPower.Platform.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\iPower\iPower.Web\bin\Debug\iPower.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Summer\Button\AddDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\AddOut.gif" />
+    <Content Include="App_Themes\Summer\Button\AddOver.gif" />
+    <Content Include="App_Themes\Summer\Button\ApprovalDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\ApprovalOut.gif" />
+    <Content Include="App_Themes\Summer\Button\ApprovalOver.gif" />
+    <Content Include="App_Themes\Summer\Button\BatchDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\BatchOut.gif" />
+    <Content Include="App_Themes\Summer\Button\BatchOver.gif" />
+    <Content Include="App_Themes\Summer\Button\btnBg.gif" />
+    <Content Include="App_Themes\Summer\Button\CancelDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\CancelOut.gif" />
+    <Content Include="App_Themes\Summer\Button\CancelOver.gif" />
+    <Content Include="App_Themes\Summer\Button\DelDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\DelOut.gif" />
+    <Content Include="App_Themes\Summer\Button\DelOver.gif" />
+    <Content Include="App_Themes\Summer\Button\Disabled.gif" />
+    <Content Include="App_Themes\Summer\Button\DisableDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\DisableOut.gif" />
+    <Content Include="App_Themes\Summer\Button\DisableOver.gif" />
+    <Content Include="App_Themes\Summer\Button\EnableDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\EnableOut.gif" />
+    <Content Include="App_Themes\Summer\Button\EnableOver.gif" />
+    <Content Include="App_Themes\Summer\Button\ExportDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\ExportOut.gif" />
+    <Content Include="App_Themes\Summer\Button\ExportOver.gif" />
+    <Content Include="App_Themes\Summer\Button\HaveReadDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\HaveReadOut.gif" />
+    <Content Include="App_Themes\Summer\Button\HaveReadOver.gif" />
+    <Content Include="App_Themes\Summer\Button\ImportDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\ImportOut.gif" />
+    <Content Include="App_Themes\Summer\Button\ImportOver.gif" />
+    <Content Include="App_Themes\Summer\Button\LoginOut.png" />
+    <Content Include="App_Themes\Summer\Button\LoginOver.png" />
+    <Content Include="App_Themes\Summer\Button\Out.gif" />
+    <Content Include="App_Themes\Summer\Button\Over.gif" />
+    <Content Include="App_Themes\Summer\Button\SaveDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\SaveOut.gif" />
+    <Content Include="App_Themes\Summer\Button\SaveOver.gif" />
+    <Content Include="App_Themes\Summer\Button\SearchDisabled.gif" />
+    <Content Include="App_Themes\Summer\Button\SearchOut.gif" />
+    <Content Include="App_Themes\Summer\Button\SearchOver.gif" />
+    <Content Include="App_Themes\Summer\Default.css" />
+    <Content Include="App_Themes\Summer\Images\Banner.png" />
+    <Content Include="App_Themes\Summer\Images\BannerBg.jpg" />
+    <Content Include="App_Themes\Summer\Images\bg.png" />
+    <Content Include="App_Themes\Summer\Images\bgcolor.gif" />
+    <Content Include="App_Themes\Summer\Images\Footer.jpg" />
+    <Content Include="App_Themes\Summer\Images\LeftMenuBg.png" />
+    <Content Include="App_Themes\Summer\Images\MainAreaMiddleBg.png" />
+    <Content Include="App_Themes\Summer\Images\MainMenu.jpg" />
+    <Content Include="App_Themes\Summer\Images\MainMenuOut.png" />
+    <Content Include="App_Themes\Summer\Images\MainMenuOver.png" />
+    <Content Include="App_Themes\Summer\Images\TopBanner.jpg" />
+    <Content Include="App_Themes\Summer\Images\TopBannerMenu.png" />
+    <Content Include="App_Themes\Summer\Images\TopBannerMenuLeft.png" />
+    <Content Include="App_Themes\Summer\Images\UserInfo.png" />
+    <Content Include="App_Themes\Summer\Images\WorkPlaceMainTopBg.png" />
+    <Content Include="App_Themes\Summer\Images\WorkPlaceTopHeader.png" />
+    <Content Include="App_Themes\Summer\Layout.css" />
+    <Content Include="App_Themes\Summer\LoginLayout.css" />
+    <Content Include="App_Themes\Summer\Login\left.jpg" />
+    <Content Include="App_Themes\Summer\Login\main_v.jpg" />
+    <Content Include="App_Themes\Summer\Login\right.jpg" />
+    <Content Include="App_Themes\Summer\WebControls.css" />
+    <Content Include="IndexData.ashx" />
+    <None Include="lib\themes\default\images\Thumbs.db" />
+    <None Include="lib\themes\gray\images\Thumbs.db" />
+    <None Include="Web.config" />
+    <Content Include="WorkThumbnails.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Yaesoft.SFIT\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AccessoriesDownload.ashx.cs">
+      <DependentUpon>AccessoriesDownload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LeftMenu.ascx.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LeftMenu.ascx.designer.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TopBanner.ascx.cs">
+      <DependentUpon>TopBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TopBanner.ascx.designer.cs">
+      <DependentUpon>TopBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCredentials.ashx.cs">
+      <DependentUpon>CreateCredentials.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultCenter.aspx.cs">
+      <DependentUpon>DefaultCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultCenter.aspx.designer.cs">
+      <DependentUpon>DefaultCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopCenter.aspx.cs">
+      <DependentUpon>DesktopCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesktopCenter.aspx.designer.cs">
+      <DependentUpon>DesktopCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCatalogByUnitEdit.aspx.cs">
+      <DependentUpon>frmSFITCatalogByUnitEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCatalogByUnitEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITCatalogByUnitEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCatalogByUnitList.aspx.cs">
+      <DependentUpon>frmSFITCatalogByUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCatalogByUnitList.aspx.designer.cs">
+      <DependentUpon>frmSFITCatalogByUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCatalogEdit.aspx.cs">
+      <DependentUpon>frmSFITCatalogEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCatalogEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITCatalogEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCatalogList.aspx.cs">
+      <DependentUpon>frmSFITCatalogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCatalogList.aspx.designer.cs">
+      <DependentUpon>frmSFITCatalogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCatalogPicker.aspx.cs">
+      <DependentUpon>frmSFITCatalogPicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCatalogPicker.aspx.designer.cs">
+      <DependentUpon>frmSFITCatalogPicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCenterAccessEdit.aspx.cs">
+      <DependentUpon>frmSFITCenterAccessEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCenterAccessEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITCenterAccessEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITCenterAccessList.aspx.cs">
+      <DependentUpon>frmSFITCenterAccessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITCenterAccessList.aspx.designer.cs">
+      <DependentUpon>frmSFITCenterAccessList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITClassEdit.aspx.cs">
+      <DependentUpon>frmSFITClassEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITClassEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITClassEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITClassList.aspx.cs">
+      <DependentUpon>frmSFITClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITClassList.aspx.designer.cs">
+      <DependentUpon>frmSFITClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITeachersEdit.aspx.cs">
+      <DependentUpon>frmSFITeachersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITeachersEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITeachersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITeachersList.aspx.cs">
+      <DependentUpon>frmSFITeachersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITeachersList.aspx.designer.cs">
+      <DependentUpon>frmSFITeachersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITeachersPicker.aspx.cs">
+      <DependentUpon>frmSFITeachersPicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITeachersPicker.aspx.designer.cs">
+      <DependentUpon>frmSFITeachersPicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITeaReviewStudentEdit.aspx.cs">
+      <DependentUpon>frmSFITeaReviewStudentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITeaReviewStudentEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITeaReviewStudentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITeaStudentWorksList.aspx.cs">
+      <DependentUpon>frmSFITeaStudentWorksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITeaStudentWorksList.aspx.designer.cs">
+      <DependentUpon>frmSFITeaStudentWorksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITEvaluateEdit.aspx.cs">
+      <DependentUpon>frmSFITEvaluateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITEvaluateEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITEvaluateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITEvaluateList.aspx.cs">
+      <DependentUpon>frmSFITEvaluateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITEvaluateList.aspx.designer.cs">
+      <DependentUpon>frmSFITEvaluateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITEvaluateSetEdit.aspx.cs">
+      <DependentUpon>frmSFITEvaluateSetEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITEvaluateSetEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITEvaluateSetEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITEvaluateSetList.aspx.cs">
+      <DependentUpon>frmSFITEvaluateSetList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITEvaluateSetList.aspx.designer.cs">
+      <DependentUpon>frmSFITEvaluateSetList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITGradeEdit.aspx.cs">
+      <DependentUpon>frmSFITGradeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITGradeEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITGradeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITGradeList.aspx.cs">
+      <DependentUpon>frmSFITGradeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITGradeList.aspx.designer.cs">
+      <DependentUpon>frmSFITGradeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITGroupEdit.aspx.cs">
+      <DependentUpon>frmSFITGroupEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITGroupEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITGroupEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITGroupWorksList.aspx.cs">
+      <DependentUpon>frmSFITGroupWorksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITGroupWorksList.aspx.designer.cs">
+      <DependentUpon>frmSFITGroupWorksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITGroupList.aspx.cs">
+      <DependentUpon>frmSFITGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITGroupList.aspx.designer.cs">
+      <DependentUpon>frmSFITGroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITKnowledgePointsEdit.aspx.cs">
+      <DependentUpon>frmSFITKnowledgePointsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITKnowledgePointsEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITKnowledgePointsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITKnowledgePointsList.aspx.cs">
+      <DependentUpon>frmSFITKnowledgePointsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITKnowledgePointsList.aspx.designer.cs">
+      <DependentUpon>frmSFITKnowledgePointsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITSchoolPicker.aspx.cs">
+      <DependentUpon>frmSFITSchoolPicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITSchoolPicker.aspx.designer.cs">
+      <DependentUpon>frmSFITSchoolPicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITSchoolsEdit.aspx.cs">
+      <DependentUpon>frmSFITSchoolsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITSchoolsEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITSchoolsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITSchoolsList.aspx.cs">
+      <DependentUpon>frmSFITSchoolsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITSchoolsList.aspx.designer.cs">
+      <DependentUpon>frmSFITSchoolsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentsEdit.aspx.cs">
+      <DependentUpon>frmSFITStudentsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentsEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentsList.aspx.cs">
+      <DependentUpon>frmSFITStudentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentsList.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentsPicker.aspx.cs">
+      <DependentUpon>frmSFITStudentsPicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentsPicker.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentsPicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksByUnitList.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksByUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksByUnitList.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksByUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksEdit.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksList.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksList.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksQueryEdit.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksQueryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksQueryEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksQueryEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksQueryList.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksQueryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksQueryList.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksQueryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITTeaClassByUnitEdit.aspx.cs">
+      <DependentUpon>frmSFITTeaClassByUnitEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITTeaClassByUnitEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITTeaClassByUnitEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITTeaClassByUnitList.aspx.cs">
+      <DependentUpon>frmSFITTeaClassByUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITTeaClassByUnitList.aspx.designer.cs">
+      <DependentUpon>frmSFITTeaClassByUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITTeaClassEdit.aspx.cs">
+      <DependentUpon>frmSFITTeaClassEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITTeaClassEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITTeaClassEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITTeaClassList.aspx.cs">
+      <DependentUpon>frmSFITTeaClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITTeaClassList.aspx.designer.cs">
+      <DependentUpon>frmSFITTeaClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsByUnitList.aspx.cs">
+      <DependentUpon>frmSFITWorksCommentsByUnitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsByUnitList.aspx.designer.cs">
+      <DependentUpon>frmSFITWorksCommentsByUnitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsEdit.aspx.cs">
+      <DependentUpon>frmSFITWorksCommentsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsEdit.aspx.designer.cs">
+      <DependentUpon>frmSFITWorksCommentsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsList.aspx.cs">
+      <DependentUpon>frmSFITWorksCommentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITWorksCommentsList.aspx.designer.cs">
+      <DependentUpon>frmSFITWorksCommentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexClasses.aspx.cs">
+      <DependentUpon>IndexClasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexClasses.aspx.designer.cs">
+      <DependentUpon>IndexClasses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexControls\UCIndexBanner.ascx.cs">
+      <DependentUpon>UCIndexBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexControls\UCIndexBanner.ascx.designer.cs">
+      <DependentUpon>UCIndexBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexControls\UCIndexFooter.ascx.cs">
+      <DependentUpon>UCIndexFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexControls\UCIndexFooter.ascx.designer.cs">
+      <DependentUpon>UCIndexFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexData.ashx.cs">
+      <DependentUpon>IndexData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexDetails.aspx.cs">
+      <DependentUpon>IndexDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexDetails.aspx.designer.cs">
+      <DependentUpon>IndexDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexRpt.aspx.cs">
+      <DependentUpon>IndexRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexRpt.aspx.designer.cs">
+      <DependentUpon>IndexRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexSchool.aspx.cs">
+      <DependentUpon>IndexSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexSchool.aspx.designer.cs">
+      <DependentUpon>IndexSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexSearch.aspx.cs">
+      <DependentUpon>IndexSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexSearch.aspx.designer.cs">
+      <DependentUpon>IndexSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+    <Compile Include="Share\ModuleBaseMaster.Master.cs">
+      <DependentUpon>ModuleBaseMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\ModuleBaseMaster.Master.designer.cs">
+      <DependentUpon>ModuleBaseMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Share\ModuleFrameMasterPage.Master.cs">
+      <DependentUpon>ModuleFrameMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\ModuleFrameMasterPage.Master.designer.cs">
+      <DependentUpon>ModuleFrameMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Share\ModuleFrameSetMasterPage.Master.cs">
+      <DependentUpon>ModuleFrameSetMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\ModuleFrameSetMasterPage.Master.designer.cs">
+      <DependentUpon>ModuleFrameSetMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Share\ModuleIndexMaster.master.cs">
+      <DependentUpon>ModuleIndexMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\ModuleIndexMaster.master.designer.cs">
+      <DependentUpon>ModuleIndexMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Share\ModuleNormalMasterPage.Master.cs">
+      <DependentUpon>ModuleNormalMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share\ModuleNormalMasterPage.Master.designer.cs">
+      <DependentUpon>ModuleNormalMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UCReviewStudent.ascx.cs">
+      <DependentUpon>UCReviewStudent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCReviewStudent.ascx.designer.cs">
+      <DependentUpon>UCReviewStudent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCStudentAttachment.ascx.cs">
+      <DependentUpon>UCStudentAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCStudentAttachment.ascx.designer.cs">
+      <DependentUpon>UCStudentAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCStudentWork.ascx.cs">
+      <DependentUpon>UCStudentWork.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCStudentWork.ascx.designer.cs">
+      <DependentUpon>UCStudentWork.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCStudentWorksList.ascx.cs">
+      <DependentUpon>UCStudentWorksList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCStudentWorksList.ascx.designer.cs">
+      <DependentUpon>UCStudentWorksList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCWorksComments.ascx.cs">
+      <DependentUpon>UCWorksComments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCWorksComments.ascx.designer.cs">
+      <DependentUpon>UCWorksComments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCWriteComments.ascx.cs">
+      <DependentUpon>UCWriteComments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCWriteComments.ascx.designer.cs">
+      <DependentUpon>UCWriteComments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebException.cs" />
+    <Compile Include="WorkThumbnails.ashx.cs">
+      <DependentUpon>WorkThumbnails.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\SFIT_ModuleConfig.xml" />
+    <Content Include="Controls\Footer.ascx" />
+    <Content Include="Controls\LeftMenu.ascx" />
+    <Content Include="Controls\MainMenu.ascx" />
+    <Content Include="Controls\TopBanner.ascx" />
+    <Content Include="Include\loading.gif" />
+    <Content Include="Include\menu_close.gif" />
+    <Content Include="Include\menu_close_s.png" />
+    <Content Include="Include\menu_open.gif" />
+    <Content Include="Include\menu_open_s.png" />
+    <Content Include="Include\yaesoftb.ico" />
+    <Content Include="App_Data\IRMP_SecurityModuleConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Share\ModuleBaseMaster.Master" />
+    <Content Include="Share\ModuleFrameMasterPage.Master" />
+    <Content Include="Share\ModuleFrameSetMasterPage.Master" />
+    <Content Include="Share\ModuleNormalMasterPage.Master" />
+    <Content Include="App_Data\IRMP_SysMgrModuleConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="DefaultCenter.aspx" />
+    <Content Include="DesktopCenter.aspx" />
+    <Content Include="frmSFITCatalogEdit.aspx" />
+    <Content Include="frmSFITCatalogList.aspx" />
+    <Content Include="frmSFITCenterAccessEdit.aspx" />
+    <Content Include="frmSFITCenterAccessList.aspx" />
+    <Content Include="frmSFITClassEdit.aspx" />
+    <Content Include="frmSFITClassList.aspx" />
+    <Content Include="frmSFITeachersEdit.aspx" />
+    <Content Include="frmSFITeachersList.aspx" />
+    <Content Include="frmSFITEvaluateEdit.aspx" />
+    <Content Include="frmSFITEvaluateList.aspx" />
+    <Content Include="frmSFITEvaluateSetEdit.aspx" />
+    <Content Include="frmSFITEvaluateSetList.aspx" />
+    <Content Include="frmSFITGradeEdit.aspx" />
+    <Content Include="frmSFITGradeList.aspx" />
+    <Content Include="frmSFITSchoolPicker.aspx" />
+    <Content Include="frmSFITSchoolsEdit.aspx" />
+    <Content Include="frmSFITSchoolsList.aspx" />
+    <Content Include="frmSFITStudentsEdit.aspx" />
+    <Content Include="frmSFITStudentsList.aspx" />
+    <Content Include="TeaClientService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\iPower\iPower.Platform.Engine\iPower.Platform.Engine.csproj">
+      <Project>{BF08EF30-A60B-40E1-8FAE-243E964ECBB6}</Project>
+      <Name>iPower.Platform.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPower\iPower.Platform\iPower.Platform.csproj">
+      <Project>{349E7E3F-0050-4728-A5D5-8A7ADD0F9FAF}</Project>
+      <Name>iPower.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPower\iPower.Resources\iPower.Resources.csproj">
+      <Project>{5BAE93E8-A48C-48F6-8726-C65379B22658}</Project>
+      <Name>iPower.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iPower\iPower\iPower.csproj">
+      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
+      <Name>iPower</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRMP\iPower.IRMP.Engine\iPower.IRMP.Engine.csproj">
+      <Project>{7EE919AF-588F-403B-81FB-E2B462341C66}</Project>
+      <Name>iPower.IRMP.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRMP\iPower.IRMP.Security.Client\iPower.IRMP.Security.Client.csproj">
+      <Project>{2ED372A4-83E4-4269-9537-C9E972E1BD4A}</Project>
+      <Name>iPower.IRMP.Security.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRMP\iPower.IRMP.SSOClient\iPower.IRMP.SSOClient.csproj">
+      <Project>{B544B8DF-44E0-4830-B512-DC5277BD81F2}</Project>
+      <Name>iPower.IRMP.SSOClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRMP\iPower.IRMP\iPower.IRMP.csproj">
+      <Project>{3AC24990-D86C-4989-84DC-4EDF9592520C}</Project>
+      <Name>iPower.IRMP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.Furong\Yaesoft.Furong.csproj">
+      <Project>{67E73266-2783-4139-BFC3-D2C7FBC42FB1}</Project>
+      <Name>Yaesoft.Furong</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT.AutoUpdateService\Yaesoft.SFIT.AutoUpdateService.csproj">
+      <Project>{CB1FF951-098A-4243-9D57-AB25AD760C1F}</Project>
+      <Name>Yaesoft.SFIT.AutoUpdateService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yaesoft.SFIT\Yaesoft.SFIT.csproj">
+      <Project>{4FD4EFD8-C7E9-4A7E-A7EB-1B549FF5582B}</Project>
+      <Name>Yaesoft.SFIT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yeasoft.SFIT.Engine\Yaesoft.SFIT.Engine.csproj">
+      <Project>{27A1F808-7AA7-4B4F-A700-20AB60720D12}</Project>
+      <Name>Yaesoft.SFIT.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreateCredentials.ashx" />
+    <Content Include="frmSFITeaReviewStudentEdit.aspx" />
+    <Content Include="frmSFITKnowledgePointsEdit.aspx" />
+    <Content Include="frmSFITKnowledgePointsList.aspx" />
+    <Content Include="frmSFITStudentWorksList.aspx" />
+    <Content Include="frmSFITTeaClassEdit.aspx" />
+    <Content Include="frmSFITTeaClassList.aspx" />
+    <Content Include="frmSFITWorksCommentsList.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessoriesDownload.ashx" />
+    <Content Include="frmSFITCatalogByUnitEdit.aspx" />
+    <Content Include="frmSFITCatalogByUnitList.aspx" />
+    <Content Include="frmSFITeachersPicker.aspx" />
+    <Content Include="frmSFITeaStudentWorksList.aspx" />
+    <Content Include="frmSFITGroupEdit.aspx" />
+    <Content Include="frmSFITGroupList.aspx" />
+    <Content Include="frmSFITStudentWorksByUnitList.aspx" />
+    <Content Include="frmSFITStudentWorksEdit.aspx" />
+    <Content Include="frmSFITStudentWorksQueryEdit.aspx" />
+    <Content Include="frmSFITStudentWorksQueryList.aspx" />
+    <Content Include="frmSFITTeaClassByUnitEdit.aspx" />
+    <Content Include="frmSFITTeaClassByUnitList.aspx" />
+    <Content Include="frmSFITWorksCommentsByUnitList.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="IndexControls\UCIndexBanner.ascx" />
+    <Content Include="UCReviewStudent.ascx" />
+    <Content Include="UCStudentAttachment.ascx" />
+    <Content Include="UCStudentWork.ascx" />
+    <Content Include="UCStudentWorksList.ascx" />
+    <Content Include="UCWorksComments.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoginHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="frmSFITCatalogPicker.aspx" />
+    <Content Include="frmSFITGroupWorksList.aspx" />
+    <Content Include="frmSFITStudentsPicker.aspx" />
+    <Content Include="IndexControls\UCIndexFooter.ascx" />
+    <Content Include="Share\ModuleIndexMaster.master" />
+    <Content Include="UCWriteComments.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\AutoUpdateConfig.xml" />
+    <Content Include="App_Themes\Index\base.css" />
+    <Content Include="App_Themes\Index\Images\arrow.png" />
+    <Content Include="App_Themes\Index\Images\bookbg.jpg" />
+    <Content Include="App_Themes\Index\Images\btn01.jpg" />
+    <Content Include="App_Themes\Index\Images\downloadbg.jpg" />
+    <Content Include="App_Themes\Index\Images\filebg.jpg" />
+    <Content Include="App_Themes\Index\Images\homebg.png" />
+    <Content Include="App_Themes\Index\Images\listbg.png" />
+    <Content Include="App_Themes\Index\Images\loginbg.png" />
+    <Content Include="App_Themes\Index\Images\morebg.png" />
+    <Content Include="App_Themes\Index\Images\page-button.jpg" />
+    <Content Include="App_Themes\Index\Images\page.jpg" />
+    <Content Include="App_Themes\Index\Images\searchbg.jpg" />
+    <Content Include="App_Themes\Index\Images\sidebarbg.png" />
+    <Content Include="App_Themes\Index\Images\tabbg.png" />
+    <Content Include="App_Themes\Summer\Images\MainMenuOut.gif" />
+    <Content Include="App_Themes\Summer\Images\MainMenuOver.gif" />
+    <Content Include="App_Themes\Summer\Images\TopBannerMenu.gif" />
+    <Content Include="App_Themes\Summer\Images\TopBannerMenuLeft.gif" />
+    <Content Include="App_Themes\Summer\Images\WorkPlaceMainTopBg.gif" />
+    <Content Include="App_Themes\Summer\Images\WorkPlaceTopHeader.gif" />
+    <Content Include="Include\ar01.jpg" />
+    <Content Include="Include\filebg.jpg" />
+    <Content Include="IndexClasses.aspx" />
+    <Content Include="IndexDetails.aspx" />
+    <Content Include="IndexRpt.aspx" />
+    <Content Include="IndexSchool.aspx" />
+    <Content Include="IndexSearch.aspx" />
+    <Content Include="lib\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="App_Themes\Index\Images\headerbg.jpg" />
+    <Content Include="App_Themes\Index\index.css" />
+    <Content Include="App_Themes\Summer\Login\main.jpg" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="frmSFITWorksCommentsEdit.aspx" />
+    <Content Include="Include\formbg.jpg" />
+    <Content Include="Include\header02.png" />
+    <Content Include="Include\logo.png" />
+    <Content Include="lib\easyloader.js" />
+    <Content Include="lib\globalUtils.js" />
+    <Content Include="lib\index-ext.css" />
+    <Content Include="lib\index.js" />
+    <Content Include="lib\indexClasses.js" />
+    <Content Include="lib\indexDetails.js" />
+    <Content Include="lib\indexRpt.js" />
+    <Content Include="lib\indexSchool.js" />
+    <Content Include="lib\indexSearch.js" />
+    <Content Include="lib\jquery-1.8.0.min.js" />
+    <Content Include="lib\jquery.easyui.min.js" />
+    <Content Include="lib\jquery.lazyload.mini.js" />
+    <Content Include="lib\locale\easyui-lang-zh_CN.js" />
+    <Content Include="lib\plugins\jquery.accordion.js" />
+    <Content Include="lib\plugins\jquery.calendar.js" />
+    <Content Include="lib\plugins\jquery.combo.js" />
+    <Content Include="lib\plugins\jquery.combobox.js" />
+    <Content Include="lib\plugins\jquery.combogrid.js" />
+    <Content Include="lib\plugins\jquery.combotree.js" />
+    <Content Include="lib\plugins\jquery.datagrid.js" />
+    <Content Include="lib\plugins\jquery.datebox.js" />
+    <Content Include="lib\plugins\jquery.datetimebox.js" />
+    <Content Include="lib\plugins\jquery.dialog.js" />
+    <Content Include="lib\plugins\jquery.draggable.js" />
+    <Content Include="lib\plugins\jquery.droppable.js" />
+    <Content Include="lib\plugins\jquery.form.js" />
+    <Content Include="lib\plugins\jquery.layout.js" />
+    <Content Include="lib\plugins\jquery.linkbutton.js" />
+    <Content Include="lib\plugins\jquery.menu.js" />
+    <Content Include="lib\plugins\jquery.menubutton.js" />
+    <Content Include="lib\plugins\jquery.messager.js" />
+    <Content Include="lib\plugins\jquery.numberbox.js" />
+    <Content Include="lib\plugins\jquery.numberspinner.js" />
+    <Content Include="lib\plugins\jquery.pagination.js" />
+    <Content Include="lib\plugins\jquery.panel.js" />
+    <Content Include="lib\plugins\jquery.parser.js" />
+    <Content Include="lib\plugins\jquery.progressbar.js" />
+    <Content Include="lib\plugins\jquery.propertygrid.js" />
+    <Content Include="lib\plugins\jquery.resizable.js" />
+    <Content Include="lib\plugins\jquery.searchbox.js" />
+    <Content Include="lib\plugins\jquery.slider.js" />
+    <Content Include="lib\plugins\jquery.spinner.js" />
+    <Content Include="lib\plugins\jquery.splitbutton.js" />
+    <Content Include="lib\plugins\jquery.tabs.js" />
+    <Content Include="lib\plugins\jquery.timespinner.js" />
+    <Content Include="lib\plugins\jquery.tree.js" />
+    <Content Include="lib\plugins\jquery.treegrid.js" />
+    <Content Include="lib\plugins\jquery.validatebox.js" />
+    <Content Include="lib\plugins\jquery.window.js" />
+    <Content Include="lib\themes\default\accordion.css" />
+    <Content Include="lib\themes\default\calendar.css" />
+    <Content Include="lib\themes\default\combo.css" />
+    <Content Include="lib\themes\default\combobox.css" />
+    <Content Include="lib\themes\default\datagrid.css" />
+    <Content Include="lib\themes\default\datebox.css" />
+    <Content Include="lib\themes\default\dialog.css" />
+    <Content Include="lib\themes\default\easyui.css" />
+    <Content Include="lib\themes\default\images\accordion_collapse.png" />
+    <Content Include="lib\themes\default\images\accordion_expand.png" />
+    <Content Include="lib\themes\default\images\blank.gif" />
+    <Content Include="lib\themes\default\images\button_a_bg.gif" />
+    <Content Include="lib\themes\default\images\button_plain_hover.png" />
+    <Content Include="lib\themes\default\images\button_span_bg.gif" />
+    <Content Include="lib\themes\default\images\calendar_nextmonth.gif" />
+    <Content Include="lib\themes\default\images\calendar_nextyear.gif" />
+    <Content Include="lib\themes\default\images\calendar_prevmonth.gif" />
+    <Content Include="lib\themes\default\images\calendar_prevyear.gif" />
+    <Content Include="lib\themes\default\images\combo_arrow.gif" />
+    <Content Include="lib\themes\default\images\datagrid_header_bg.gif" />
+    <Content Include="lib\themes\default\images\datagrid_row_collapse.gif" />
+    <Content Include="lib\themes\default\images\datagrid_row_expand.gif" />
+    <Content Include="lib\themes\default\images\datagrid_sort_asc.gif" />
+    <Content Include="lib\themes\default\images\datagrid_sort_desc.gif" />
+    <Content Include="lib\themes\default\images\datagrid_title_bg.png" />
+    <Content Include="lib\themes\default\images\datebox_arrow.png" />
+    <Content Include="lib\themes\default\images\layout_arrows.png" />
+    <Content Include="lib\themes\default\images\menu.gif" />
+    <Content Include="lib\themes\default\images\menu_downarrow.png" />
+    <Content Include="lib\themes\default\images\menu_rightarrow.png" />
+    <Content Include="lib\themes\default\images\menu_sep.png" />
+    <Content Include="lib\themes\default\images\menu_split_downarrow.png" />
+    <Content Include="lib\themes\default\images\messager_error.gif" />
+    <Content Include="lib\themes\default\images\messager_info.gif" />
+    <Content Include="lib\themes\default\images\messager_question.gif" />
+    <Content Include="lib\themes\default\images\messager_warning.gif" />
+    <Content Include="lib\themes\default\images\pagination_first.gif" />
+    <Content Include="lib\themes\default\images\pagination_last.gif" />
+    <Content Include="lib\themes\default\images\pagination_load.png" />
+    <Content Include="lib\themes\default\images\pagination_loading.gif" />
+    <Content Include="lib\themes\default\images\pagination_next.gif" />
+    <Content Include="lib\themes\default\images\pagination_prev.gif" />
+    <Content Include="lib\themes\default\images\panel_loading.gif" />
+    <Content Include="lib\themes\default\images\panel_title.png" />
+    <Content Include="lib\themes\default\images\panel_tools.gif" />
+    <Content Include="lib\themes\default\images\searchbox_button.png" />
+    <Content Include="lib\themes\default\images\slider_handle.png" />
+    <Content Include="lib\themes\default\images\spinner_arrow_down.gif" />
+    <Content Include="lib\themes\default\images\spinner_arrow_up.gif" />
+    <Content Include="lib\themes\default\images\tabs_active.png" />
+    <Content Include="lib\themes\default\images\tabs_close.gif" />
+    <Content Include="lib\themes\default\images\tabs_enabled.png" />
+    <Content Include="lib\themes\default\images\tabs_leftarrow.png" />
+    <Content Include="lib\themes\default\images\tabs_rightarrow.png" />
+    <Content Include="lib\themes\default\images\tree_arrows.gif" />
+    <Content Include="lib\themes\default\images\tree_checkbox_0.gif" />
+    <Content Include="lib\themes\default\images\tree_checkbox_1.gif" />
+    <Content Include="lib\themes\default\images\tree_checkbox_2.gif" />
+    <Content Include="lib\themes\default\images\tree_dnd_no.png" />
+    <Content Include="lib\themes\default\images\tree_dnd_yes.png" />
+    <Content Include="lib\themes\default\images\tree_elbow.png" />
+    <Content Include="lib\themes\default\images\tree_file.gif" />
+    <Content Include="lib\themes\default\images\tree_folder.gif" />
+    <Content Include="lib\themes\default\images\tree_folder_open.gif" />
+    <Content Include="lib\themes\default\images\tree_loading.gif" />
+    <Content Include="lib\themes\default\images\validatebox_pointer.gif" />
+    <Content Include="lib\themes\default\images\validatebox_warning.png" />
+    <Content Include="lib\themes\default\layout.css" />
+    <Content Include="lib\themes\default\linkbutton.css" />
+    <Content Include="lib\themes\default\menu.css" />
+    <Content Include="lib\themes\default\menubutton.css" />
+    <Content Include="lib\themes\default\messager.css" />
+    <Content Include="lib\themes\default\pagination.css" />
+    <Content Include="lib\themes\default\panel.css" />
+    <Content Include="lib\themes\default\progressbar.css" />
+    <Content Include="lib\themes\default\propertygrid.css" />
+    <Content Include="lib\themes\default\searchbox.css" />
+    <Content Include="lib\themes\default\slider.css" />
+    <Content Include="lib\themes\default\spinner.css" />
+    <Content Include="lib\themes\default\splitbutton.css" />
+    <Content Include="lib\themes\default\tabs.css" />
+    <Content Include="lib\themes\default\tree.css" />
+    <Content Include="lib\themes\default\validatebox.css" />
+    <Content Include="lib\themes\default\window.css" />
+    <Content Include="lib\themes\gray\accordion.css" />
+    <Content Include="lib\themes\gray\calendar.css" />
+    <Content Include="lib\themes\gray\combo.css" />
+    <Content Include="lib\themes\gray\combobox.css" />
+    <Content Include="lib\themes\gray\datagrid.css" />
+    <Content Include="lib\themes\gray\datebox.css" />
+    <Content Include="lib\themes\gray\dialog.css" />
+    <Content Include="lib\themes\gray\easyui.css" />
+    <Content Include="lib\themes\gray\images\accordion_collapse.png" />
+    <Content Include="lib\themes\gray\images\accordion_expand.png" />
+    <Content Include="lib\themes\gray\images\blank.gif" />
+    <Content Include="lib\themes\gray\images\button_a_bg.gif" />
+    <Content Include="lib\themes\gray\images\button_plain_hover.png" />
+    <Content Include="lib\themes\gray\images\button_span_bg.gif" />
+    <Content Include="lib\themes\gray\images\calendar_nextmonth.gif" />
+    <Content Include="lib\themes\gray\images\calendar_nextyear.gif" />
+    <Content Include="lib\themes\gray\images\calendar_prevmonth.gif" />
+    <Content Include="lib\themes\gray\images\calendar_prevyear.gif" />
+    <Content Include="lib\themes\gray\images\combo_arrow.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_header_bg.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_row_collapse.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_row_expand.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_sort_asc.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_sort_desc.gif" />
+    <Content Include="lib\themes\gray\images\datagrid_title_bg.gif" />
+    <Content Include="lib\themes\gray\images\datebox_arrow.png" />
+    <Content Include="lib\themes\gray\images\layout_arrows.png" />
+    <Content Include="lib\themes\gray\images\menu.gif" />
+    <Content Include="lib\themes\gray\images\menu_downarrow.png" />
+    <Content Include="lib\themes\gray\images\menu_rightarrow.png" />
+    <Content Include="lib\themes\gray\images\menu_sep.png" />
+    <Content Include="lib\themes\gray\images\menu_split_downarrow.png" />
+    <Content Include="lib\themes\gray\images\messager_error.gif" />
+    <Content Include="lib\themes\gray\images\messager_info.gif" />
+    <Content Include="lib\themes\gray\images\messager_question.gif" />
+    <Content Include="lib\themes\gray\images\messager_warning.gif" />
+    <Content Include="lib\themes\gray\images\pagination_first.gif" />
+    <Content Include="lib\themes\gray\images\pagination_last.gif" />
+    <Content Include="lib\themes\gray\images\pagination_load.png" />
+    <Content Include="lib\themes\gray\images\pagination_loading.gif" />
+    <Content Include="lib\themes\gray\images\pagination_next.gif" />
+    <Content Include="lib\themes\gray\images\pagination_prev.gif" />
+    <Content Include="lib\themes\gray\images\panel_loading.gif" />
+    <Content Include="lib\themes\gray\images\panel_title.gif" />
+    <Content Include="lib\themes\gray\images\panel_tools.gif" />
+    <Content Include="lib\themes\gray\images\searchbox_button.png" />
+    <Content Include="lib\themes\gray\images\slider_handle.png" />
+    <Content Include="lib\themes\gray\images\spinner_arrow_down.gif" />
+    <Content Include="lib\themes\gray\images\spinner_arrow_up.gif" />
+    <Content Include="lib\themes\gray\images\tabs_close.gif" />
+    <Content Include="lib\themes\gray\images\tabs_enabled.gif" />
+    <Content Include="lib\themes\gray\images\tabs_leftarrow.png" />
+    <Content Include="lib\themes\gray\images\tabs_rightarrow.png" />
+    <Content Include="lib\themes\gray\images\tree_arrows.gif" />
+    <Content Include="lib\themes\gray\images\tree_checkbox_0.gif" />
+    <Content Include="lib\themes\gray\images\tree_checkbox_1.gif" />
+    <Content Include="lib\themes\gray\images\tree_checkbox_2.gif" />
+    <Content Include="lib\themes\gray\images\tree_dnd_no.png" />
+    <Content Include="lib\themes\gray\images\tree_dnd_yes.png" />
+    <Content Include="lib\themes\gray\images\tree_elbow.png" />
+    <Content Include="lib\themes\gray\images\tree_file.gif" />
+    <Content Include="lib\themes\gray\images\tree_folder.gif" />
+    <Content Include="lib\themes\gray\images\tree_folder_open.gif" />
+    <Content Include="lib\themes\gray\images\tree_loading.gif" />
+    <Content Include="lib\themes\gray\images\validatebox_pointer.gif" />
+    <Content Include="lib\themes\gray\images\validatebox_warning.png" />
+    <Content Include="lib\themes\gray\layout.css" />
+    <Content Include="lib\themes\gray\linkbutton.css" />
+    <Content Include="lib\themes\gray\menu.css" />
+    <Content Include="lib\themes\gray\menubutton.css" />
+    <Content Include="lib\themes\gray\messager.css" />
+    <Content Include="lib\themes\gray\pagination.css" />
+    <Content Include="lib\themes\gray\panel.css" />
+    <Content Include="lib\themes\gray\progressbar.css" />
+    <Content Include="lib\themes\gray\propertygrid.css" />
+    <Content Include="lib\themes\gray\searchbox.css" />
+    <Content Include="lib\themes\gray\slider.css" />
+    <Content Include="lib\themes\gray\spinner.css" />
+    <Content Include="lib\themes\gray\splitbutton.css" />
+    <Content Include="lib\themes\gray\tabs.css" />
+    <Content Include="lib\themes\gray\tree.css" />
+    <Content Include="lib\themes\gray\validatebox.css" />
+    <Content Include="lib\themes\gray\window.css" />
+    <Content Include="lib\themes\icon.css" />
+    <Content Include="lib\themes\icons\back.png" />
+    <Content Include="lib\themes\icons\blank.gif" />
+    <Content Include="lib\themes\icons\cancel.png" />
+    <Content Include="lib\themes\icons\cut.png" />
+    <Content Include="lib\themes\icons\edit_add.png" />
+    <Content Include="lib\themes\icons\edit_remove.png" />
+    <Content Include="lib\themes\icons\filesave.png" />
+    <Content Include="lib\themes\icons\help.png" />
+    <Content Include="lib\themes\icons\mini_add.png" />
+    <Content Include="lib\themes\icons\mini_edit.png" />
+    <Content Include="lib\themes\icons\mini_refresh.png" />
+    <Content Include="lib\themes\icons\no.png" />
+    <Content Include="lib\themes\icons\ok.png" />
+    <Content Include="lib\themes\icons\pencil.png" />
+    <Content Include="lib\themes\icons\print.png" />
+    <Content Include="lib\themes\icons\redo.png" />
+    <Content Include="lib\themes\icons\reload.png" />
+    <Content Include="lib\themes\icons\search.png" />
+    <Content Include="lib\themes\icons\sum.png" />
+    <Content Include="lib\themes\icons\tip.png" />
+    <Content Include="lib\themes\icons\undo.png" />
+    <Content Include="lib\themes\metro\accordion.css" />
+    <Content Include="lib\themes\metro\calendar.css" />
+    <Content Include="lib\themes\metro\combo.css" />
+    <Content Include="lib\themes\metro\combobox.css" />
+    <Content Include="lib\themes\metro\datagrid.css" />
+    <Content Include="lib\themes\metro\datebox.css" />
+    <Content Include="lib\themes\metro\dialog.css" />
+    <Content Include="lib\themes\metro\easyui.css" />
+    <Content Include="lib\themes\metro\images\accordion_collapse.png" />
+    <Content Include="lib\themes\metro\images\accordion_expand.png" />
+    <Content Include="lib\themes\metro\images\blank.gif" />
+    <Content Include="lib\themes\metro\images\calendar_nextmonth.gif" />
+    <Content Include="lib\themes\metro\images\calendar_nextyear.gif" />
+    <Content Include="lib\themes\metro\images\calendar_prevmonth.gif" />
+    <Content Include="lib\themes\metro\images\calendar_prevyear.gif" />
+    <Content Include="lib\themes\metro\images\combo_arrow.gif" />
+    <Content Include="lib\themes\metro\images\datagrid_row_collapse.gif" />
+    <Content Include="lib\themes\metro\images\datagrid_row_expand.gif" />
+    <Content Include="lib\themes\metro\images\datagrid_sort_asc.gif" />
+    <Content Include="lib\themes\metro\images\datagrid_sort_desc.gif" />
+    <Content Include="lib\themes\metro\images\datebox_arrow.png" />
+    <Content Include="lib\themes\metro\images\layout_arrows.png" />
+    <Content Include="lib\themes\metro\images\menu_downarrow.png" />
+    <Content Include="lib\themes\metro\images\menu_rightarrow.png" />
+    <Content Include="lib\themes\metro\images\menu_sep.png" />
+    <Content Include="lib\themes\metro\images\menu_split_downarrow.png" />
+    <Content Include="lib\themes\metro\images\messager_error.gif" />
+    <Content Include="lib\themes\metro\images\messager_info.gif" />
+    <Content Include="lib\themes\metro\images\messager_question.gif" />
+    <Content Include="lib\themes\metro\images\messager_warning.gif" />
+    <Content Include="lib\themes\metro\images\pagination_first.gif" />
+    <Content Include="lib\themes\metro\images\pagination_last.gif" />
+    <Content Include="lib\themes\metro\images\pagination_load.png" />
+    <Content Include="lib\themes\metro\images\pagination_loading.gif" />
+    <Content Include="lib\themes\metro\images\pagination_next.gif" />
+    <Content Include="lib\themes\metro\images\pagination_prev.gif" />
+    <Content Include="lib\themes\metro\images\panel_loading.gif" />
+    <Content Include="lib\themes\metro\images\panel_tools.gif" />
+    <Content Include="lib\themes\metro\images\searchbox_button.png" />
+    <Content Include="lib\themes\metro\images\slider_handle.png" />
+    <Content Include="lib\themes\metro\images\tabs_close.gif" />
+    <Content Include="lib\themes\metro\images\tabs_leftarrow.png" />
+    <Content Include="lib\themes\metro\images\tabs_rightarrow.png" />
+    <Content Include="lib\themes\metro\images\tree_arrows.gif" />
+    <Content Include="lib\themes\metro\images\tree_checkbox_0.gif" />
+    <Content Include="lib\themes\metro\images\tree_checkbox_1.gif" />
+    <Content Include="lib\themes\metro\images\tree_checkbox_2.gif" />
+    <Content Include="lib\themes\metro\images\tree_dnd_no.png" />
+    <Content Include="lib\themes\metro\images\tree_dnd_yes.png" />
+    <Content Include="lib\themes\metro\images\tree_elbow.png" />
+    <Content Include="lib\themes\metro\images\tree_file.gif" />
+    <Content Include="lib\themes\metro\images\tree_folder.gif" />
+    <Content Include="lib\themes\metro\images\tree_folder_open.gif" />
+    <Content Include="lib\themes\metro\images\tree_loading.gif" />
+    <Content Include="lib\themes\metro\images\validatebox_warning.png" />
+    <Content Include="lib\themes\metro\layout.css" />
+    <Content Include="lib\themes\metro\linkbutton.css" />
+    <Content Include="lib\themes\metro\menu.css" />
+    <Content Include="lib\themes\metro\menubutton.css" />
+    <Content Include="lib\themes\metro\messager.css" />
+    <Content Include="lib\themes\metro\pagination.css" />
+    <Content Include="lib\themes\metro\panel.css" />
+    <Content Include="lib\themes\metro\progressbar.css" />
+    <Content Include="lib\themes\metro\propertygrid.css" />
+    <Content Include="lib\themes\metro\searchbox.css" />
+    <Content Include="lib\themes\metro\slider.css" />
+    <Content Include="lib\themes\metro\splitbutton.css" />
+    <Content Include="lib\themes\metro\tabs.css" />
+    <Content Include="lib\themes\metro\tree.css" />
+    <Content Include="lib\themes\metro\validatebox.css" />
+    <Content Include="lib\themes\metro\window.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Download\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2179</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,69 @@
+﻿<%--
+//================================================================================
+//  FileName: ModuleFrameMasterPage.Master
+//  Desc:
+//
+//  Called by
+//
+//  Auth:杨勇（jeason1914@gmail.com）
+//  Date: 2011/8/10
+//================================================================================
+//  Change History
+//================================================================================
+//  Date  Author  Description
+//  ----    ------  -----------------
+//
+//================================================================================
+//  Copyright (C) 2004-2009 Jeason Young Corporation
+//================================================================================
+//--%>
+<%@ Master Language="C#" MasterPageFile="~/Share/ModuleBaseMaster.Master" AutoEventWireup="true" CodeBehind="ModuleFrameMasterPage.master.cs" Inherits="Yaesoft.SFIT.Web.Share.ModuleFrameMasterPage" %>
+<%@ Register Src="~/Controls/TopBanner.ascx" TagName="BannerUserControl" TagPrefix="iPower" %>
+<%@ Register Src="~/Controls/MainMenu.ascx" TagName="MainMenuControl" TagPrefix="iPower" %>
+<%@ Register Src="~/Controls/Footer.ascx" TagName="FooterUserControl" TagPrefix="iPower" %>
+
+<%--<asp:Content ID="ContentHead" ContentPlaceHolderID="ContentHead" runat="server">
+    <link rel="Shortcut Icon" type="image/ico" href="../Include/yaesoftb.ico" />
+    <link rel="Bookmark" type="image/x-icon" href="../Include/yaesoftb.ico" />
+    <link rel="icon" type="image/x-icon" href="../Include/yaesoftb.ico" />    
+</asp:Content>--%>
+
+<asp:Content ID="ContentPlace" ContentPlaceHolderID="ContentPlace" runat="server">
+    <!--头部-->
+    <div class="TopBanner">
+        <iPower:BannerUserControl ID="BannerControl" runat="server" />
+    </div>
+    <!--主菜单-->
+    <asp:ContentPlaceHolder ID="MainMenuPlace" runat="server">
+        <div class="MainMenu">
+            <iPower:MainMenuControl ID="MainMenuControl" runat="server" />
+        </div>
+    </asp:ContentPlaceHolder>
+    <!--中间主体-->
+    <div id="MainArea">
+        <asp:ContentPlaceHolder ID="MainPlace" runat="server" />
+    </div>
+    <!--底部版权-->
+    <div class="Footer">
+         <iPower:FooterUserControl ID="FooterControl" runat="server" />
+    </div>     
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceScript" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceButtom" runat="server" />
+     <script language="javascript" type="text/javascript">
+        <!--
+        //调整高度。
+        var height = window.screen.availHeight;
+        var c = document.body.offsetHeight;
+        if (height > c) {
+            var target = document.getElementById("MainArea");
+            var offsetHeight = 86 + 31 + 27;
+            height -= offsetHeight;
+            if (target && height > 0) {
+                target.style.height = height;
+            }
+        }
+        //-->
+    </script>
+</asp:Content>

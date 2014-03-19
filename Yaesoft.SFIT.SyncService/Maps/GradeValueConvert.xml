@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Converts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Convert source="一年级" target="1"/>
+  <Convert source="二年级" target="2"/>
+  <Convert source="三年级" target="3"/>
+  <Convert source="四年级" target="4"/>
+  <Convert source="五年级" target="5"/>
+  <Convert source="六年级" target="6"/>
+  <Convert source="初一年级" target="7"/>
+  <Convert source="初二年级" target="8"/>
+  <Convert source="初三年级" target="9"/>
+  <Convert source="毕业" target="0"/>
+</Converts>

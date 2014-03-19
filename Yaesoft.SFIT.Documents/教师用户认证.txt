@@ -1,0 +1,20 @@
+﻿教师用户认证
+ http://webservice.furongedu.com/LoginService/Loginservice.asmx
+SOAP的用户名：Changcheng
+SOAP的密码：Changcheng2011
+使用方举例:'获得认证服务
+            Dim myLogin As New LoginService
+            myLogin.Url = System.Configuration.ConfigurationSettings.AppSettings("LoginServiceURL") & ""
+            Dim myHeader As New Furongedu.LoginService.AuthHeader
+            myHeader.UserName = "Changcheng"
+            myHeader.PassWord = "Changcheng2011"
+            myLogin.AuthHeaderValue = myHeader
+ 
+
+
+
+教师测试帐号用户:测试帐号密码:654321学生帐号直接取数据，用户名与密码就是学生的学籍号。
+
+
+
+

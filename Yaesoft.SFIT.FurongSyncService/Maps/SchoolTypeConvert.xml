@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Converts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Convert source="幼儿园" target="0"/>
+  <Convert source="小学" target="1"/>
+  <Convert source="中学" target="2"/>
+  <Convert source="二级机构" target="5"/>
+  <Convert source="局机关" target="6"/>
+</Converts>

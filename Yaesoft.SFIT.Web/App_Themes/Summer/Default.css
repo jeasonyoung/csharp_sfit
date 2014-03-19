@@ -1,0 +1,227 @@
+﻿/****************************************************************************************
+* 细节样式表
+*****************************************************************************************/
+
+/*TopBannerMenu begin*/
+.TopBannerMenu
+{
+	float:right;
+	height:25px;
+	border:solid 0px red;
+}
+.TopBannerMenuLeft
+{
+	float:left;
+	width:96px;
+	height:25px;
+	background-image:url("Images/TopBannerMenuLeft.gif");
+}
+.TopBannerMenuLeft span
+{
+	float:right; 
+	margin-top:5px; 
+	margin-right:10px;
+}
+.TopBannerMenuMain
+{
+	float:left;
+	width:68px;
+	height:25px;
+	background-image:url("Images/TopBannerMenu.gif");
+}
+.TopBannerMenuMain span
+{
+	float:left;
+	margin-top:5px;
+	margin-left:15px;
+}
+/*TopBannerMenu end*/
+
+/*UserInfo begin*/
+.UserInfo
+{
+	float:right; 
+	width:180px; 
+	height:45px; 
+	margin-top:5px; 
+	margin-right:5px; 
+}
+.UserInfoIcon
+{
+	float:left; 
+	width:34px; 
+	height:100%; 
+	background-image:url("Images/UserInfo.png");
+}
+.UserInfoMain
+{
+	float:left; 
+	height:20px; 
+	width:120px; 
+}
+.UserInfoMain span
+{
+	float:left;
+	margin-top:3px;
+}
+.UserInfoDate
+{
+	float:left; 
+	height:20px; 
+	width:143px; 
+}
+.UserInfoDate span
+{
+	margin-top:3px;
+	color:#fff;
+}
+/*UserInfo end*/
+
+/*MainMenu begin*/
+.MainMenuOut,.MainMenuOver
+{
+	width:115px;
+	height:31px;
+	cursor:hand;
+	border:solid 0px red;
+}
+.MainMenuOut
+{
+	background-image:url("Images/MainMenuOut.gif")
+}
+.MainMenuOut span
+{
+	border:solid 0px red;
+}
+.MainMenuOver
+{
+	background-image:url("Images/MainMenuOver.gif");
+}
+/*MainMenu end*/
+
+/*TreeView begin*/
+.TreeViewA  
+{
+ 	color:#4164b7;	
+}
+ .TreeViewA:hover 
+{ 
+	color:#5674b9;
+} 
+.TreeViewA:Normal 
+{ 
+	color:#7da7d9;
+}
+.TreeViewCurrentNode
+{ 
+	color: red;
+}
+.TreeViewTd 
+{ 
+	float:left; 
+	text-align:left; 
+	font-size:9pt;
+	vertical-align:bottom;
+}
+.TreeView img
+{ 
+	width:16px; 
+	margin:0;
+	padding:0;
+	display:inline;
+	border:solid 0px red;
+}
+/*TreeView end*/
+
+/*WorkPlace begin*/
+.WorkPlaceTop
+{
+	float:left; 
+	margin-top:5px; 
+	width:98%;
+	margin-left:2px;
+}
+.WorkPlaceTopHeader
+{
+	float:left;
+	width:117px;
+	height:33px;
+	background-image:url("Images/WorkPlaceTopHeader.gif");
+}
+.WorkPlaceTopHeader span
+{
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	font-size:12px;
+	font-weight:bold;
+	font-family:宋体;
+}
+.WorkPlaceMain
+{
+	float:left; 
+	width:98%; 
+	height:92%; 
+	margin-left:2px; 
+	border-left:solid 1px #82c8f2;
+	border-right:solid 1px #82c8f2;
+	border-bottom:solid 1px #82c8f2;
+}
+.WorkPlaceMainTop
+{
+	float:left;
+	width:100%;
+	height:10px;
+	background-image:url("Images/WorkPlaceMainTopBg.gif");
+}
+/*WorkPlace end*/
+
+/*Page begin*/
+.TitleBar
+{
+	float:left;
+}
+.TitleBar div
+{
+	margin-right:5px;
+}
+.LabelTitle
+{
+	color:Black;
+}
+.LabelTitle span
+{
+	float:left;
+	margin-left:5px;
+}
+
+.TableSearch,.TableControl
+{
+	float:left;
+	width:98%;
+	margin-top:15px;
+	margin-left:3px;
+	border:solid 1px #cccccc;
+	background-color:#F5F5F5;
+}
+.TableSearch span
+{
+    float:left;
+    margin-top:8px;
+    margin-left:5px;
+}
+.TableSearch input,.TableSearch textarea
+{
+    float:left;
+    margin-top:3px;
+}
+.TableSearch table
+{
+    float:left;
+}
+.TableSearch label
+{
+    float:left;
+    margin-top:8px;
+}
+/*Page end*/

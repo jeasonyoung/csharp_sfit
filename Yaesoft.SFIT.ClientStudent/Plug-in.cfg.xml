@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Plug-in xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Plugins>
+		<PluginCfg id="CaptureScreenPlugin" name="截屏工具插件" hotkeys="F4" order="4">
+			<HostID>main</HostID>
+			<Location>Bottom</Location>
+			<Assembly>Yaesoft.SFIT.ClientStudent.Plugins.CaptureScreenPlugin,Yaesoft.SFIT.ClientStudent</Assembly>
+			<Description>截屏工具插件。</Description>
+		</PluginCfg>
+	</Plugins>
+</Plug-in>

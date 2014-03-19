@@ -1,0 +1,95 @@
+/*首页开始*/
+.contant .part_title{ padding-left:50px; font-size:28px; color:#666; font-family:"微软雅黑", "宋体"; background:url(Images/bookbg.jpg) no-repeat; height:42px; line-height:42px; margin-bottom:10px;}
+.contant .tab_title{ border:1px solid #dedede; border-bottom:0px; height:36px;padding:8px 15px 0px 15px; background:#eee;}
+.contant .tab_title dd{ float:left;width:130px; height:36px; line-height:33px; color:#999;font-weight:bold; text-align:center;font-size:14px; margin-right:10px; cursor:pointer;}
+.contant .tab_title dd.current{ background:url(Images/tabbg.png) no-repeat; color:#666; }
+
+.contant .tab_title dt{ float:right; padding-top:4px;}
+.contant .tab_title dt a{ display:inline-block;width:56px; height:19px; text-align:center; line-height:19px; background:url(Images/morebg.png) no-repeat; color:#fff;}
+
+
+/*最新作品开始*/
+.contant .new_works{ border:1px solid #dedede; border-top:0px;}
+.contant .new_works ul{ border-bottom:1px dashed #dedede;}
+.contant .new_works ul li{ margin:15px 16px;_margin:15px 13px; float:left; width:150px; text-align:center;}
+.contant .new_works ul li a{ text-align:center;}
+.contant .new_works ul li img{ width:131px; height:130px;}
+.contant .new_works ul li a span{ display:block; text-align:center; line-height:24px;}
+.contant .new_works ul li a .name{ color:#666;}
+.contant .new_works ul li a .name b{ color:#666;font-weight:normal; padding-right:5px;}
+.contant .new_works ul li a .course{ color:#0066ff;}
+.contant .new_works ul li a .course b{ color:#0066ff;font-weight:normal; padding-right:5px;}
+.contant .new_works ul li a .course em{ color:#ff6600; font-style:normal;}
+/*最新作品结束*/
+
+
+/*点击率最高作品开始*/
+.contant .hot_works{border:1px solid #dedede; border-top:0px;} 
+.contant .hot_works ul{border-bottom:1px solid #dedede;}
+.contant .hot_works ul li{ float:left; width:220px; margin:13px;_margin:10px;} 
+.contant .hot_works ul li a span{ display:block; background:#efefef;line-height:22px; text-align:center;}
+.contant .hot_works ul li a span.pic{ margin-bottom:1px;}
+.contant .hot_works ul li a span.pic img{ width:200px; height:133px; border:10px solid #efefef; }
+.contant .hot_works ul li a span.pic img.current{ border:10px solid #ffcc00;}
+.contant .hot_works ul li a:hover span.pic img{ border:10px solid #ffcc00;}
+.contant .hot_works ul li a .name{color:#666;}
+.contant .hot_works ul li a .name b{color:#666; font-weight:normal; padding-right:5px;}
+.contant .hot_works ul li a .course{color:#0066ff;}
+.contant .hot_works ul li a .course b{color:#0066ff; font-weight:normal; padding-right:5px;}
+/*点击率最高作品结束*/
+
+/*首页结束*/
+
+/*搜索列表页开始*/
+
+.search_list h3{padding-left:55px; font-size:28px; color:#666; font-family:"微软雅黑", "宋体"; background:url(Images/searchbg.jpg) no-repeat; height:52px; line-height:52px; margin-bottom:10px;}
+.search_list .searchbar{ background:#f5f5f5; border:1px solid #ccc; padding:12px 15px;}
+.search_list .searchbar dd{ float:left; margin-right:15px; height:24px; line-height:24px;}
+.search_list .searchbar dd span{ display:inline-block; color:#666; line-height:24px; vertical-align:middle;}
+.search_list .searchbar dd select{ color:#666; border:1px solid #ccc;width:180px; vertical-align:middle;}
+.search_list .searchbar dd input{ color:#666; height:22px; line-height:22px; border:1px solid #ccc; width:100px; vertical-align:middle;}
+
+.hot_works ul li{ float:left; width:220px; margin:10px;} 
+.hot_works ul li a span{ display:block; background:#efefef;line-height:22px; text-align:center;}
+.hot_works ul li a span.pic{ margin-bottom:1px;}
+.hot_works ul li a span.pic img{ width:200px; height:133px; border:10px solid #efefef; }
+.hot_works ul li a span.pic img.current{ border:10px solid #ffcc00;}
+.hot_works ul li a:hover span.pic img{ border:10px solid #ffcc00;}
+.hot_works ul li a .name{color:#666;}
+.hot_works ul li a .name b{color:#666; font-weight:normal; padding-right:5px;}
+.hot_works ul li a .course{color:#0066ff;}
+.hot_works ul li a .course b{color:#0066ff; font-weight:normal; padding-right:5px;}
+
+/*搜索列表页结束*/
+
+/*学生档案页面开始*/
+.search_list h3.file_title{ background:url(Images/filebg.jpg) no-repeat 0px 4px;}
+.search_list .archives .archives_pic{ float:left; width:230px; margin-right:10px;}
+.search_list .archives .archives_pic p img{ width:200px; height:133px; border:10px solid #efefef;}
+.search_list .archives .archives_pic h6{ color:#333; font-size:14px; font-weight:bold; line-height:30px; text-align:center;}
+.search_list .archives .archives_pic h6 span{ color:#333;padding-right:7px;}
+.search_list .archives .archives_con{ float:left; width:730px;}
+.search_list .archives .archives_con .file_info dd{ line-height:100%; padding-bottom:25px;}
+.search_list .archives .archives_con .file_info dd span{ color:#333;line-height:100%; display:inline-block;}
+.search_list .archives .archives_con .file_info dd span b{ color:#333; display:inline-block; padding-right:10px;}
+.search_list .archives .archives_con .file_info dd span.left{width:285px; margin-right:10px;}
+.search_list .archives .archives_con .file_info dd span.right{width:420px;}
+.search_list .archives .archives_con .file_info dt a{ display:inline-block;width:222px; height:55px; background:url(Images/downloadbg.jpg) no-repeat;}
+
+.search_list .comment{  margin-top:20px;}
+.search_list .comment dl{border:1px solid #ededed; border-top:5px solid #e6e6e6; padding:10px;}
+.search_list .comment dl dt{ position:relative; line-height:200%; padding-bottom:10px;}
+.search_list .comment dl dt b{ font-weight:bold; font-size:14px; color:#333; padding-left:5px;}
+.search_list .comment dl dt span{ position:absolute; right:5px; top:0px; color:#999;}
+.search_list .comment dl dt span em{ padding:0px 3px; color:#ff6600;}
+.search_list .comment dl dd{ margin-bottom:10px;}
+.search_list .comment dl dd textarea{ border:1px solid #ededed; color:#333; width:696px; background:#fff;}
+.search_list .comment dl dd.reback{padding-right:5px; height:25px; line-height:25px; position:relative;}
+.search_list .comment dl dd.reback span{ color:#999; vertical-align:middle; padding-left:3px;}
+.search_list .comment dl dd input{width:90px; height:30px; border:0px; cursor:pointer; font-weight:bold; font-size:14px; background:url(Images/btn01.jpg) no-repeat;color:#fff; position:absolute; right:5px;top:0px;}
+.search_list .comment_list li{ margin-top:10px; border:1px solid #ededed; padding:0px 10px; background:#fbfbfb; line-height:200%; position:relative;}
+.search_list .comment_list li .name{ border-bottom:1px dashed #ccc; color:#666; padding:7px 0px; position:relative;}
+.search_list .comment_list li .name span{ color:#666;}
+.search_list .comment_list li .name em{ position:absolute; right:10px;_right:25px;top:7px;}
+.search_list .comment_list li .con{ color:#265a99;padding:7px 0px; }
+/*学生档案页面结束*/

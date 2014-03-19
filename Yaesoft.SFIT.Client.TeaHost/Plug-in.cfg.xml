@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Plug-in xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Plugins>
+		<PluginCfg id="ClassSettingPlugin" name="上课设置插件" order="0">
+			<HostID>main</HostID>
+			<Location>Top</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.ClassPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>上课设置插件,主要负责上课前设置。</Description>
+		</PluginCfg>
+		
+		<PluginCfg id="SyncDataPlugin" name="同步数据插件" order="0">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.SyncPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>同步数据插件,主要负责从服务器下载数据。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="WorkPlugin" name="作品管理插件" order="1">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.WorkPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>作品管理插件,主要负责作品数据的管理。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="NetPlugin" name="网络设置插件" order="2">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.NetPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>网络设置插件,主要负责教师客户端主机网络地址设置。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="CredentialsPlugin" name="变更密钥插件" order="3">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.CredentialsPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>变更密钥插件,主要负责教师客户端主机变更密钥。</Description>
+		</PluginCfg>
+
+		<!--<PluginCfg id="IssueWorkPlugin" name="下发学生作品插件" order="4">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.IssueWorkPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>下发学生作品插件,主要负责教师客户端主机下发学生作品。</Description>
+		</PluginCfg>-->
+
+		<PluginCfg id="CaptureScreenPlugin" name="截屏工具插件" hotkeys="F4" order="4">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.CaptureScreenPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>截屏工具插件。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="WorkExportImportPlugin" name="导出导入学生作品" order="5">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.WorkExportImportPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>导出导入学生作品。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="SystemSettingsPlugin" name="系统设置插件" order="6">
+			<HostID>main</HostID>
+			<Location>Right</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.SystemSettingsPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>系统设置插件。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="MessagePlugin" name="消息显示插件" order="0">
+			<HostID>main</HostID>
+			<Location>Bottom</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.MessagePlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>消息显示插件,主要负责展示普通消息数据。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="MonitorPlugin" name="监控学生上课插件" order="0">
+			<HostID>main</HostID>
+			<Location>Fill</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.MonitorPlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>监控学生上课插件,主要负责监控学生与教师通讯，数据上传。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="WorkMessagePlugin" name="消息显示插件" order="0">
+			<HostID>work</HostID>
+			<Location>Bottom</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.MessagePlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>消息显示插件,主要负责展示普通消息数据。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="ThumbnailsMessagePlugin" name="消息显示插件" order="0">
+			<HostID>thumbnails</HostID>
+			<Location>Bottom</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.MessagePlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>消息显示插件,主要负责展示普通消息数据。</Description>
+		</PluginCfg>
+
+		<PluginCfg id="DetailsMessagePlugin" name="消息显示插件" order="0">
+			<HostID>details</HostID>
+			<Location>Bottom</Location>
+			<Assembly>Yaesoft.SFIT.Client.TeaHost.Plugins.MessagePlugin,Yaesoft.SFIT.Client.TeaHost</Assembly>
+			<Description>消息显示插件,主要负责展示普通消息数据。</Description>
+		</PluginCfg>
+	</Plugins>
+</Plug-in>

@@ -1,0 +1,436 @@
+﻿/****************************************************************************************
+* 按钮样式表
+*****************************************************************************************/
+.BtnFlatMouseOut,.BtnFlatMouseOver,.BtnFlatDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+	
+	text-align:center;
+	font-size: 9pt;
+	padding-top: 2px; 
+}
+.BtnFlatMouseOut
+{
+	background-image:url("Button/Out.gif");
+}
+.BtnFlatMouseOver
+{
+	background-image:url("Button/Over.gif");
+}
+.BtnFlatDisabled
+{
+	background-image:url("Button/Disabled.gif");
+}
+
+/*Login begin*/
+.BtnLoginMouseOut,.BtnLoginMouseOver
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnLoginMouseOut
+{
+	background-image: url("Button/LoginOut.png");
+
+}
+.BtnLoginMouseOver
+{
+	background-image:url("Button/LoginOver.png");
+}
+/*Login end*/
+
+/*新增*/
+.BtnAddMouseOut,.BtnAddMouseOver,.BtnAddDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnAddMouseOut
+{
+	background-image: url("Button/AddOut.gif");
+}
+.BtnAddMouseOver
+{
+	background-image:url("Button/AddOver.gif");
+}
+.BtnAddDisabled
+{
+	background-image:url("Button/AddDisabled.gif");
+}
+/*保存*/
+.BtnSaveMouseOut,.BtnSaveMouseOver,.BtnSaveDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnSaveMouseOut
+{
+	background-image: url("Button/SaveOut.gif");
+}
+.BtnSaveMouseOver
+{
+	background-image: url("Button/SaveOver.gif");
+}
+.BtnSaveDisabled
+{
+	background-image:url("Button/SaveDisabled.gif");
+}
+/*取消*/
+.BtnCancelMouseOut,.BtnCancelMouseOver,.BtnCancelDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnCancelMouseOut
+{
+	background-image:url("Button/CancelOut.gif");
+}
+.BtnCancelMouseOver
+{
+	background-image:url("Button/CancelOver.gif");
+}
+.BtnCancelDisabled
+{
+	background-image:url("Button/CancelDisabled.gif");
+}
+/*删除*/
+.BtnDelMouseOut,.BtnDelMouseOver,.BtnDelDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnDelMouseOut
+{
+	background-image: url("Button/DelOut.gif");
+}
+.BtnDelMouseOver
+{
+	background-image:url("Button/DelOver.gif");
+}
+.BtnDelDisabled
+{
+	background-image:url("Button/DelDisabled.gif");
+}
+/*查询*/
+.BtnSearchMouseOut,.BtnSearchMouseOver,.BtnSearchDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnSearchMouseOut
+{
+	background-image:url("Button/SearchOut.gif");
+}
+.BtnSearchMouseOver
+{
+	background-image:url("Button/SearchOver.gif");
+}
+.BtnSearchDisabled
+{
+	background-image:url("Button/SearchDisabled.gif");
+}
+/*导出*/
+.BtnExportMouseOut,.BtnExportMouseOver,.BtnExportDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnExportMouseOut
+{
+	background-image:url("Button/ExportOut.gif");
+}
+.BtnExportMouseOver
+{
+	background-image:url("Button/ExportOver.gif");
+}
+.BtnExportDisabled
+{
+	background-image:url("Button/ExportDisabled.gif");
+}
+/*导入*/
+.BtnImportMouseOut,.BtnImportMouseOver,.BtnImportDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnImportMouseOut
+{
+	background-image:url("Button/ImportOut.gif");
+}
+.BtnImportMouseOver
+{
+	background-image:url("Button/ImportOver.gif");
+}
+.BtnImportDisabled
+{
+	background-image:url("Button/ImportDisabled.gif");
+}
+/*启用*/
+.BtnEnableMouseOut,.BtnEnableMouseOver,.BtnEnableMouseDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnEnableMouseOut
+{
+	background-image:url("Button/EnableOut.gif");
+}
+.BtnEnableMouseOver
+{
+	background-image:url("Button/EnableOver.gif");
+}
+.BtnEnableMouseDisabled
+{
+	background-image:url("Button/ExportDisabled.gif");
+}
+/*禁用*/
+.BtnDisableMouseOut,.BtnDisableMouseOver,.BtnDisableMouseDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnDisableMouseOut
+{
+	background-image:url("Button/DisableOut.gif");
+}
+.BtnDisableMouseOver
+{
+	background-image:url("Button/DisableOver.gif");
+}
+.BtnDisableMouseDisabled
+{
+	background-image:url("Button/DisableDisabled.gif");
+}
+/*批量处理*/
+.BtnBatchMouseOut,.BtnBatchMouseOver,.BtnBatchMouseDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnBatchMouseOut
+{
+	background-image:url("Button/BatchOut.gif");
+}
+.BtnBatchMouseOver
+{
+	background-image:url("Button/BatchOver.gif");
+}
+.BtnBatchMouseDisabled
+{
+	background-image:url("Button/BatchDisabled.gif");
+}
+/*提交审核*/
+.BtnApprovalMouseOut,.BtnApprovalMouseOver,.BtnApprovalMouseDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnApprovalMouseOut
+{
+	background-image:url("Button/ApprovalOut.gif");
+}
+.BtnApprovalMouseOver
+{
+	background-image:url("Button/ApprovalOver.gif");
+}
+.BtnApprovalMouseDisabled
+{
+	background-image:url("Button/ApprovalDisabled.gif");
+}
+/*已阅*/
+.BtnHavereadMouseOut,.BtnHavereadMouseOver,.BtnHavereadMouseDisabled
+{
+	border-width:0px;
+	height:24px;
+	width: 70px;
+	cursor:hand;
+}
+.BtnHavereadMouseOut
+{
+	background-image:url("Button/HaveReadOut.gif");
+}
+.BtnHavereadMouseOver
+{
+	background-image:url("Button/HaveReadOver.gif");
+}
+.BtnHavereadMouseDisabled
+{
+	background-image:url("Button/HaveReadDisabled.gif");
+}
+
+/*DataGrid*/
+.DataGrid
+{
+	float:left;
+	margin-top:5px;
+    margin-left:3px;
+	border:solid 1px #afd8f5;
+	background-color:White;
+	color:Black;
+}
+.DataGrid tr,.DataGrid td,.DataGrid th
+{
+    border:solid 1px #cccccc;
+}
+
+.DataGridHeader
+{
+	height:20px;
+	font-style:normal;
+	font-weight:normal;
+	background-color:#dceafc;
+}
+.DataGridHeaderLinkCSS,.DataGridFooterLinkCSS
+{
+	color:#0a3aa0;
+}
+.DataGridFooterCSS
+{
+	color:#403f3f;
+}
+.DataGridFooterInputCSS input
+{
+	color:red;
+	border:solid 1px #87bcd3;
+	height:17px;
+	width:30px;
+	font-size:11px;
+}
+.DataGridFooter
+{
+	height:20px;
+	font-style:normal;
+	font-weight:normal;
+	background-color:#dceafc;
+}
+.DataGridExportDataCss
+{
+	float:right;
+ 	border:solid 1px #87bcd3;
+}
+.DataGridPagingDataCss
+{
+	float:left;
+}
+.DataGridItem
+{
+	height:24px;
+	background-color:#fcfcfc;
+}
+
+.DataGridAlter
+{
+	background-color:#ffffff;
+	height:24px;
+}
+.DataGridHighLight
+{
+	height:24px;
+	border:inset 1px Olive;
+	background-color:#f5f5f5;
+}
+/*DataGrid end*/
+
+/*TabMultiView样式开始*/
+.TabMultiView
+{
+	float:left;
+	margin-top:5px;
+    margin-left:3px;
+	border:solid 1px #ccc;
+	background-color:#fff;
+	color:#000;
+}
+.TabMultiView
+{
+	float:left;
+	width:98%;
+	border:solid 1px #ccc;
+}
+.TabHeader
+{
+	height:20px;
+	font-weight:bold;
+	background:url("Images/bgcolor.gif");
+}
+.TabHeaderNormal
+{
+	margin-left:2px;
+	padding-top:2px;
+	height:98%;
+	color:Gray;
+	background-image:url("Button/btnBg.gif");
+}
+.TabHeaderHighLight
+{
+	margin-left:2px;
+	padding-top:2px;
+	height:98%;
+	color:Yellow;
+	font-size:large;
+	font-weight:bolder;
+	background-image:url("Button/btnBg.gif");
+}
+.TabHeaderSelected
+{
+	margin-left:2px;
+	padding-top:2px;
+	height:98%;
+	color:Red;
+	background-image:url("Button/btnBg.gif");
+}
+.TabBackground
+{
+	background-color:#f5fafc;
+}
+/*TabMultiView样式结束*/
+.DropDownList,.TextBoxFlat,.NumberTextBoxFlat,select,textarea
+{
+	border: solid 1px Olive;
+}
+/*DropDownList begin*/
+.BorderDropDownList
+{
+    float:left;
+    margin-top:5px;
+    border: solid 1px Olive;
+    overflow:hidden;
+}
+.BorderDropDownList select
+{
+    margin:-2px;
+}
+/*DropDownList end*/
+
+/*Number TextBoxFlat */
+.NumberTextBoxFlat
+{
+	text-align:right;
+}

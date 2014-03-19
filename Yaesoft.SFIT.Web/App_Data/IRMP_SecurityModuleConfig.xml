@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Jeason version="1.0">
+  <!--组织架构管理-->
+  <System SystemID="AH000000000000000000000000000000" SystemSign="yaesoft.IRMP.Security" SystemName="安全管理" SystemDescription="管理系统权限">
+    
+    <Module ModuleID="AH000000000000000000000000000001" ModuleName="系统安全" ModuleUri="" OrderNo="1">
+      <Module ModuleID="AH000000000000000000000000000101" ModuleName="应用系统注册" ModuleUri="frmSecurityRegsiterList.aspx" OrderNo="1"/>
+      <Module ModuleID="AH000000000000000000000000000201" ModuleName="系统模块注册" ModuleUri="frmSecurityModuleList.aspx" OrderNo="2"/>
+      <Module ModuleID="AH000000000000000000000000000301" ModuleName="权限元操作" ModuleUri="frmSecurityActionList.aspx" OrderNo="3"/>
+      <Module ModuleID="AH000000000000000000000000000401" ModuleName="模块权限" ModuleUri="frmSecurityRightList.aspx" OrderNo="4"/>
+    </Module>
+    
+    <Module ModuleID="AH000000000000000000000000000002" ModuleName="角色权限" ModuleUri="" OrderNo="2">
+      <Module ModuleID="AH000000000000000000000000000102" ModuleName="角色定义" ModuleUri="frmSecurityRoleList.aspx" OrderNo="1"/>
+      <Module ModuleID="AH000000000000000000000000000202" ModuleName="角色权限" ModuleUri="frmSecurityRoleRightList.aspx" OrderNo="2"/>
+      <Module ModuleID="AH000000000000000000000000000302" ModuleName="角色岗位级别" ModuleUri="frmSecurityRoleRankList.aspx" OrderNo="3"/>
+      <Module ModuleID="AH000000000000000000000000000402" ModuleName="角色岗位" ModuleUri="frmSecurityRolePostList.aspx" OrderNo="4"/>
+      <Module ModuleID="AH000000000000000000000000000502" ModuleName="角色部门" ModuleUri="frmSecurityRoleDepartmentList.aspx" OrderNo="5"/>
+      <Module ModuleID="AH000000000000000000000000000602" ModuleName="角色用户" ModuleUri="frmSecurityRoleEmployeeList.aspx" OrderNo="6"/>
+    </Module>
+  </System>
+</Jeason>

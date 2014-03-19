@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Share/ModuleBaseMaster.Master" CodeBehind="ModuleNormalMasterPage.master.cs" Inherits="Yaesoft.SFIT.Web.Share.ModuleNormalMasterPage" %>
+
+<asp:Content ID="ContentPlace" ContentPlaceHolderID="ContentPlace" runat="server">
+    <div class="NormalMainArea">
+        <asp:ContentPlaceHolder ID="workPlace" runat="server" />
+    </div>
+</asp:Content>

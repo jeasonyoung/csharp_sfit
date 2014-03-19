@@ -1,0 +1,118 @@
+using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using com.furongedu.webservice;
+using System.Net;
+using com.furongedu.jxgl;
+
+public partial class Logins : System.Web.UI.Page
+{
+   
+
+    protected void dls_Click(object sender, EventArgs e)//检查用户是否合法
+    {
+     
+      if (ddllx.SelectedValue == "2")//学生家长登录
+      {
+          if (GetXSJZ())//验证家长账号密码
+              Response.Redirect("~/main/default.aspx");
+          else
+          {
+              Response.Write("<script>alert('你的帐号或密码不正确!')</script>");
+              return;
+          }
+      }
+      else//学生登录
+      {
+          if (GetXS())//验证学生账号密码
+              Response.Redirect("~/main/default.aspx");
+          else
+          {
+              Response.Write("<script>alert('你的帐号或密码不正确!')</script>");
+              return;
+          }
+      }
+    }
+    
+
+    private bool GetXSJZ()//学生家长验证
+    {
+        ValidService vs = new ValidService();
+        ValidHeader vh = new ValidHeader();
+         vh.User = "furongedu";
+      vh.PassWord = "furong";
+        vs.ValidHeaderValue = vh;
+        DataTable dtxs;
+        try
+        {
+            dtxs = vs.VerifyJZ(users.Value.Replace("'", "''"), pw.Value.ToString());
+        }
+        catch
+        {
+            Session.Clear();
+            return false;
+        }
+        if (dtxs.Rows.Count > 0)
+        {
+            SetSession4(dtxs);
+            return true;
+        }
+        Session.Clear();
+        return false;
+    }
+    private bool GetXS()//学生验证
+    {
+      ValidService vs = new ValidService();
+      ValidHeader vh = new ValidHeader();
+      vh.User = "furongedu";
+      vh.PassWord = "furong";
+      vs.ValidHeaderValue = vh;
+      DataTable dtxs;
+      try
+      {
+       dtxs= vs.VerifyUser(users.Value.Replace("'", "''"), pw.Value.ToString());
+          
+     
+      }
+      catch
+      {
+        Session.Clear();
+        return false;
+      }
+      if (dtxs.Rows.Count > 0)
+      {
+        SetSession3(dtxs);
+        return true;
+      }
+      Session.Clear();
+      return false;
+    }
+  /// <summary>
+  /// 登录成功后给记录必要的用户信息，并设置有效时间为30分钟
+  /// </summary>
+  /// <param name="dt">数据源</param>
+  
+   
+
+    private void SetSession3(DataTable dt)
+    {
+      Session.Timeout = 30;
+      Session["ID"] = dt.Rows[0]["xh"];
+      Session["ACC"] = dt.Rows[0]["xh"];//学号
+      Session["PS"] = dt.Rows[0]["xspasswd"];//密码
+      Session["XM"] = dt.Rows[0]["xm"];
+      
+    }
+    private void SetSession4(DataTable dt)
+    {
+        Session.Timeout = 30;
+        Session["ID"] = dt.Rows[0]["xh"];
+        Session["ACC"] = dt.Rows[0]["xm"] + "家长";
+        Session["PS"] = dt.Rows[0]["ZZPASSWD"];
+        Session["XM"] = dt.Rows[0]["xm"] + "家长";
+        
+    }
+

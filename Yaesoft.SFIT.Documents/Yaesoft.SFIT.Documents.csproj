@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28F084AA-212B-4259-A723-130F19ED3261}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yaesoft.SFIT.Documents</RootNamespace>
+    <AssemblyName>Yaesoft.SFIT.Documents</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Yaesoft.SFIT\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security_Functions.sql" />
+    <None Include="SFIT_AlterSysMgr_Authentication.sql" />
+    <None Include="SFIT_Functions.sql" />
+    <None Include="SFIT_Init.sql" />
+    <None Include="SFIT_InitializeUserApp.sql" />
+    <None Include="SFIT_Procedures.sql" />
+    <None Include="SFIT_Procedures_extends.sql" />
+    <None Include="SFIT_Procedures_Index.sql" />
+    <None Include="SFIT_Procedures_WorksComments.sql" />
+    <None Include="SFIT_Procedures_StudentWorks.sql" />
+    <None Include="SFIT_Tables_extends.sql" />
+    <None Include="SFIT_TeaSyncProcedures.sql" />
+    <None Include="SFIT_Tables.sql" />
+    <None Include="SFIT_Views.sql" />
+    <None Include="关于知识点的评价问题.doc" />
+    <None Include="学生信息技术档案管理-实施计划.mpp" />
+    <None Include="学生信息技术档案管理系统接口说明书.doc" />
+    <None Include="学生信息技术档案管理系统数据字典.doc" />
+    <None Include="学生信息系统客户端修改意见整理.doc" />
+    <None Include="芙蓉区常规教学管理接口说明-2011-10-12.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SFIT_Modify.txt" />
+    <None Include="SFIT_Alter_20120621.sql" />
+    <None Include="SFIT_InitializeSchoolReg.sql" />
+    <None Include="SFIT_Paging_20121231.sql" />
+    <None Include="SFIT_Tables_Alter_20120528.sql" />
+    <None Include="SFIT_View_20131231.sql" />
+    <None Include="学生信息技术档案管理系统.pptx" />
+    <None Include="学生信息技术档案管理系统操作手册（任课教师）.doc" />
+    <None Include="学生信息技术档案管理系统操作手册（学校管理员）.doc" />
+    <None Include="学生信息技术档案管理系统操作手册（学生）.doc" />
+    <None Include="学生信息技术档案管理系统操作手册（教育局管理员）.doc" />
+    <None Include="学生信息技术档案管理系统操作手册（系统管理员）.doc" />
+    <None Include="学生信息技术档案管理系统需求说明书.docx" />
+    <None Include="学生信息档案管理系统第二次测试报告.doc" />
+    <Content Include="教师用户认证.txt" />
+    <Content Include="测试帐号.txt" />
+    <Content Include="示例.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
