@@ -1,0 +1,2260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.Security.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityModuleView">
+            <summary>
+             ISecurityModuleView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.IModuleView">
+            <summary>
+            模块UI接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityModuleView.ShowMessage(System.String)">
+            <summary>
+            展示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityModuleView.BindSystem(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定所属系统。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityModuleListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleListView.ModuleName">
+            <summary>
+            获取模块名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleListView.SystemID">
+            <summary>
+            获取所属系统ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityModuleEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityModuleEditView.BindParentModule(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定上级模块。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityModuleEditView.BindModuleStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定模块状态。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleEditView.ModuleID">
+            <summary>
+            获取模块ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleEditView.SystemID">
+            <summary>
+            获取所属系统ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityModuleImportView">
+            <summary>
+            模块导入界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleImportView.ImportSystemID">
+            <summary>
+            获取导入的系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityModuleImportView.UploadFile">
+            <summary>
+            获取上传文件对象。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter">
+            <summary>
+             SecurityModulePresenter行为类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ModulePresenter`1">
+            <summary>
+            模块行为基础类。
+            </summary>
+            <typeparam name="T">UI视图接口。</typeparam>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ModulePresenter`1.#ctor(`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view">UI视图接口对象。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ModulePresenter`1.CreateModuleConfiguration">
+            <summary>
+            获取模块配置实例。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityModuleView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.PreViewLoadData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.Security.Engine.Domain.SecurityModule}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.BatchDeleteModule(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.UpdateModule(iPower.IRMP.Security.Engine.Domain.SecurityModule)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.ChangeSystemSelected">
+            <summary>
+            变更所属系统选项。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.CheckUploadFormat(System.IO.Stream)">
+            <summary>
+            检查上传文件格式。
+            </summary>
+            <param name="upload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.UploadModuleDefineSave(System.Collections.Specialized.StringCollection)">
+            <summary>
+            保存上存
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityModulePresenter.ImportListViewDataSource">
+            <summary>
+            获取导入列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity">
+            <summary>
+            SecurityRoleRightEntity实体类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.DbModuleEntity`1">
+            <summary>
+             实体基类。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.DbModuleEntity`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.DbModuleEntity`1.NotSelfGetOffSprings(System.String,System.String)">
+            <summary>
+            获取不包含给定值子孙的数据。
+            </summary>
+            <param name="fieldValue"></param>
+            <param name="systemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity.GetRoleSystemAllRightData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity.GetRoleRight(System.String)">
+            <summary>
+            获取角色下的所有权限。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            获取列表数据。
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleRightName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRightEntity.DeleteRecord(System.String)">
+            <summary>
+            删除。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.ModuleConstants">
+            <summary>
+            模块常量。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.Regsiter_ModuleID">
+            <summary>
+            应用系统注册模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.Module_ModuleID">
+            <summary>
+            系统模块注册模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.Action_ModuleID">
+            <summary>
+            权限元数据模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.Right_ModuleID">
+            <summary>
+            模块权限模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.Role_ModuleID">
+            <summary>
+            角色模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.RoleRight_ModuleID">
+            <summary>
+            角色权限模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.RoleRank_ModuleID">
+            <summary>
+            角色岗位级别模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.RolePost_ModuleID">
+            <summary>
+            角色岗位模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.RoleDepartment_ModuleID">
+            <summary>
+            角色部门模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConstants.RoleEmployee_ModuleID">
+            <summary>
+            角色用户模块ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRoleSystem">
+            <summary>
+            tblSecurityRoleSystem映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRoleSystem.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleSystem.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleSystem.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRoleRank">
+            <summary>
+            tblSecurityRoleRank映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRoleRank.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleRank.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleRank.RankID">
+            <summary>
+            获取或设置RankID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleRank.RankName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankView">
+            <summary>
+             ISecurityRoleRankView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankListView">
+            <summary>
+            角色岗位级别列表接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankListView.RankName">
+            <summary>
+            获取岗位级别名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankEditView">
+            <summary>
+            角色岗位级别编辑接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankEditView.BindRank(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定岗位级别数据。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankEditView.RankSelected(System.Collections.Specialized.StringCollection)">
+            <summary>
+            选中。
+            </summary>
+            <param name="selected"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRankEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter">
+            <summary>
+             SecurityRoleRankPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRoleRankView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.ChangeRole(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.UpdateRoleRank(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <param name="ranks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.BatchDeleteRoleRank(System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRoleRankPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRole">
+            <summary>
+            tblSecurityRole映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRole.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRole.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRole.RoleName">
+            <summary>
+            获取或设置RoleName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRole.ParentRoleID">
+            <summary>
+            获取或设置ParentRoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRole.RoleDescription">
+            <summary>
+            获取或设置RoleDescription。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRole.RoleStatus">
+            <summary>
+            获取或设置RoleStatus。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRightView">
+            <summary>
+             ISecurityRightView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRightListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightListView.BindModuleTree(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定模块树结构。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightListView.BindSystem(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定所属系统数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightListView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRightListView.SystemID">
+            <summary>
+            获取所属系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRightListView.ModuleName">
+            <summary>
+            获取模块名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.BindModule(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定模块。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.BindAction(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定元操作。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.BindSystem(iPower.Platform.Engine.DataSource.IListControlsTreeViewData,System.String)">
+            <summary>
+            绑定所属系统数据。
+            </summary>
+            <param name="data"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.RightID">
+            <summary>
+            获取权限ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRightEditView.SystemID">
+            <summary>
+            获取所属系统ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter">
+            <summary>
+             SecurityRightPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRightView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.PreViewLoadData">
+            <summary>
+            装载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.ChangeSystemRefershModuleTree">
+            <summary>
+            变更所属系统刷新模块信息。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.ChangeSystemRefershModule(System.String)">
+            <summary>
+            变更所属系统。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.BatchDeleteRight(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.Security.Engine.Domain.SecurityRight}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.UpdateRight(iPower.IRMP.Security.Engine.Domain.SecurityRight)">
+            <summary>
+            更新权限。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRightPresenter.ListDataSource">
+            <summary>
+            获取列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRoleRight">
+            <summary>
+            tblSecurityRoleRight映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRoleRight.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleRight.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleRight.RightID">
+            <summary>
+            获取或设置RightID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeView">
+            <summary>
+             ISecurityRoleEmployeeView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeEditView.BindEmployee(System.String[],System.String[])">
+            <summary>
+            绑定用户。
+            </summary>
+            <param name="text"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.DisplayEmployeePanel(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            显示用户信息。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.SearchEmployeeResult(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            显示查询结果。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.MultiSelect">
+            <summary>
+            获取是否多选。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.Values">
+            <summary>
+            获取数据值。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.DepartmentName">
+            <summary>
+            获取部门名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.PostName">
+            <summary>
+            获取岗位名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeePickerView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter">
+            <summary>
+             SecurityRoleEmployeePresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRoleEmployeeView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.ChangeRole(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.UpdateRoleEmployee(iPower.GUIDEx,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <param name="emps"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.BatchDeleteRoleEmployee(System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.SeachEmployee">
+            <summary>
+            查询数据。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRoleEmployeePresenter.ListDataSource">
+            <summary>
+            列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterView">
+            <summary>
+             ISecurityRegsiterView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterView.ShowMessage(System.String)">
+            <summary>
+            显示数据。
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterListView.BindParentSystem(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定上级系统。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterListView.SystemName">
+            <summary>
+            获取系统名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterListView.ParentSystemID">
+            <summary>
+            获取上级系统ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterEditView.BindSystemType(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定系统类型。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterEditView.BindSystemStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定系统状态。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterEditView.BindParentSystem(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定上级系统。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterEditView.SystemID">
+            <summary>
+            获取系统ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView">
+            <summary>
+            导入界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView.BindSystemType(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定系统类型。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView.BindSystemStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定系统状态。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView.UploadFile">
+            <summary>
+            获取上传文件对象。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView.SystemStatus">
+            <summary>
+            获取系统状态。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRegsiterImportView.SystemType">
+            <summary>
+            获取系统类型。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter">
+            <summary>
+             SecurityRegsiterPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRegsiterView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.BatchDeleteRegsiter(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.BatchInitAppModuleRight">
+            <summary>
+            批量初始化系统模块权限。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.Security.Engine.Domain.SecurityRegsiter}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.UpdateRegsiter(iPower.IRMP.Security.Engine.Domain.SecurityRegsiter)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.CheckUploadFormat(System.IO.Stream)">
+            <summary>
+            检查上传文件格式。
+            </summary>
+            <param name="upload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.UploadSystemDefineSave(System.Collections.Specialized.StringCollection)">
+            <summary>
+            保存上存
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.ListDataSource">
+            <summary>
+            列表数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRegsiterPresenter.ImportListViewDataSource">
+            <summary>
+            获取导入列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.SecurityPermissionFactory">
+            <summary>
+            安全权限元操作工厂类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityPermissionFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityPermissionFactory.ModulePermissions(System.String,System.String,System.String)">
+            <summary>
+            获取权限。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="moduleID">模块ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns>模块权限集合。</returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.EnumSystemType">
+            <summary>
+            系统类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemType.PlatformModule">
+            <summary>
+            平台模块。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemType.WebApplication">
+            <summary>
+            应用系统。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemType.InfoShowFront">
+            <summary>
+            信息展示前台。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemType.ClientServerApp">
+            <summary>
+            CS应用系统。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.EnumSystemStatus">
+            <summary>
+            系统状态。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemStatus.Stop">
+            <summary>
+            停用。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumSystemStatus.Start">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.EnumActionType">
+            <summary>
+            元操作类型。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumActionType.Basic">
+            <summary>
+            基本。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.EnumActionType.Extend">
+            <summary>
+            扩展。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.SecurityFactoryProvider">
+            <summary>
+            安全管理应用系统注册数据提供类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityFactoryProvider.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityFactoryProvider.AppRegister(System.String)">
+            <summary>
+            获取注册系统集合。
+            </summary>
+            <param name="appName">应用系统名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityFactoryProvider.Roles">
+            <summary>
+            获取角色集合。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityFactoryProvider.GetEmployeeRoles(System.String,System.String)">
+            <summary>
+            获取用户角色集合。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.SecurityFactoryProvider.GetAllEmployeeByRole(System.String)">
+            <summary>
+            根据角色ID获取用户信息。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity">
+            <summary>
+            SecurityRoleDepartmentEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.GetAllDeprtment(iPower.GUIDEx)">
+            <summary>
+            获取角色下的部门ID。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.GetDepartment(iPower.GUIDEx)">
+            <summary>
+            获取角色下的部门ID。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            获取列表数据。
+            </summary>
+            <param name="roleName"></param>
+            <param name="deptName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.UpdateRoleDepartment(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            更新角色部门。
+            </summary>
+            <param name="roleID"></param>
+            <param name="depts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleDepartmentEntity.BatchDeleteRoleDepartment(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除。
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityModuleEntity">
+            <summary>
+            SecurityModuleEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityModuleEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityModuleEntity.ParentModule(iPower.GUIDEx)">
+            <summary>
+            获取所有的模块数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityModuleEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            列表数据。
+            </summary>
+            <param name="moduleName"></param>
+            <param name="systemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityModuleEntity.DeleteModule(System.String,System.String@)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="moduleID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity">
+            <summary>
+            SecurityRoleRankEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.GetAllRank(iPower.GUIDEx)">
+            <summary>
+            获取角色下的岗位级别ID。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.GetRank(iPower.GUIDEx)">
+            <summary>
+            获取角色下的岗位级别。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            获取列表数据。
+            </summary>
+            <param name="roleName"></param>
+            <param name="rankName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.UpdateRoleRank(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            更新角色岗位级别。
+            </summary>
+            <param name="roleID"></param>
+            <param name="rankIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleRankEntity.BatchDeleteRoleRank(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除。
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentView">
+            <summary>
+             ISecurityRoleDepartmentView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentListView.DepartmentName">
+            <summary>
+            获取部门名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentEditView.BindDepartment(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定部门数据。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentEditView.DepartmentSelected(System.Collections.Specialized.StringCollection)">
+            <summary>
+            选中。
+            </summary>
+            <param name="selected"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter">
+            <summary>
+             SecurityRoleDepartmentPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRoleDepartmentView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.PreViewLoadData">
+            <summary>
+            加载。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.ChangeRole(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.UpdateRoleDepartment(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <param name="depts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.BatchDeleteRoleDepartment(System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRoleDepartmentPresenter.ListDataSource">
+            <summary>
+            列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleSystemEntity">
+            <summary>
+            SecurityRoleSystemEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleSystemEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleSystemEntity.LoadSystemData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityModule">
+            <summary>
+            tblSecurityModule映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityModule.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.ModuleID">
+            <summary>
+            获取或设置ModuleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.ParentModuleID">
+            <summary>
+            获取或设置ParentModuleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.ModuleName">
+            <summary>
+            获取或设置ModuleName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.OrderNo">
+            <summary>
+            获取或设置OrderNo。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.ModuleStatus">
+            <summary>
+            获取或设置ModuleStatus。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityModule.ModuleDescription">
+            <summary>
+            获取或设置ModuleDescription。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity">
+            <summary>
+            SecurityRoleEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.GetRole(System.String)">
+            <summary>
+            根据角色名称获取角色数据。
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据源。
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.UpdateRole(iPower.IRMP.Security.Engine.Domain.SecurityRole,System.Collections.Specialized.StringCollection)">
+            <summary>
+            更新角色。
+            </summary>
+            <param name="data"></param>
+            <param name="sysCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.DeleteRole(System.String,System.String@)">
+            <summary>
+            删除角色。
+            </summary>
+            <param name="roleID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.GetEmployeeRoles(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取用户角色。
+            </summary>
+            <param name="systemID"></param>
+            <param name="employeeID"></param>
+            <param name="departmentID"></param>
+            <param name="rankID"></param>
+            <param name="postID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEntity.Role">
+            <summary>
+            获取角色数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityActionEntity">
+            <summary>
+            SecurityActionEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityActionEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityActionEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据。
+            </summary>
+            <param name="actionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityActionEntity.DeleteAction(System.String,System.String@)">
+            <summary>
+            删除权限元操作。
+            </summary>
+            <param name="actionID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Persistence.SecurityActionEntity.Action">
+            <summary>
+            获取填充数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity">
+            <summary>
+            SecurityRegsiterEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            列表数据源。
+            </summary>
+            <param name="systemName"></param>
+            <param name="parentSystemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity.DeleteRegsiter(iPower.GUIDEx,System.String@)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="systemID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity.BatchInitAppModuleRight(iPower.GUIDEx,System.String@)">
+            <summary>
+            批量初始化模块权限。
+            </summary>
+            <param name="systemID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Persistence.SecurityRegsiterEntity.RegsiterSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity">
+            <summary>
+            SecurityRoleEmployeeEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.GetAllEmployee(iPower.GUIDEx)">
+            <summary>
+            获取角色下的用户ID。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.GetEmployees(iPower.GUIDEx,System.String[]@,System.String[]@)">
+            <summary>
+            获取角色下的用户。
+            </summary>
+            <param name="roleID"></param>
+            <param name="text"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.BindEmployees(System.String[])">
+            <summary>
+            绑定用户数据。
+            </summary>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.ListDataSource(System.String,System.String)">
+            <summary>
+             列表数据源。
+            </summary>
+            <param name="roleName"></param>
+            <param name="employeeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.UpdateRoleEmployee(iPower.GUIDEx,System.String[])">
+            <summary>
+            更新角色用户。
+            </summary>
+            <param name="roleID"></param>
+            <param name="emps"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRoleEmployeeEntity.BatchDeleteRoleEmployee(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除。
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.ModuleConfigurationKeys">
+            <summary>
+             模块配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Engine.Persistence.ModuleConfigurationKeys.OrgFactoryAssemblyKey">
+            <summary>
+            用户信息程序集配置键。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.ModuleConfiguration">
+            <summary>
+            模块配置类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Persistence.ModuleConfiguration.ModuleConfig">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Persistence.ModuleConfiguration.OrgFactory">
+            <summary>
+            获取用户信息。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter">
+            <summary>
+            tblSecurityRegsiter映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.ParentSystemID">
+            <summary>
+            获取或设置ParentSystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemSign">
+            <summary>
+            获取或设置SystemSign。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemName">
+            <summary>
+            获取或设置SystemName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemURL">
+            <summary>
+            获取或设置SystemURL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SecurityURL">
+            <summary>
+            获取或设置SecurityURL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.PatchURL">
+            <summary>
+            获取或设置PatchURL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.ModuleConfigURL">
+            <summary>
+            获取或设置ModuleConfigURL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemType">
+            <summary>
+            获取或设置SystemType。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemStatus">
+            <summary>
+            获取或设置SystemStatus。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRegsiter.SystemDescription">
+            <summary>
+            获取或设置SystemDescription。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityAction">
+            <summary>
+            系统权限元操作类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityAction.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityAction.ActionID">
+            <summary>
+            获取或设置ActionID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityAction.ActionSign">
+            <summary>
+            获取或设置ActionSign。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityAction.ActionType">
+            <summary>
+            获取或设置ActionType。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityAction.ActionName">
+            <summary>
+            获取或设置ActionName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityAction.ActionDescription">
+            <summary>
+            获取或设置ActionDescription。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityActionCollection">
+            <summary>
+            系统权限元操作集合类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityActionCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityActionCollection.Serializer(System.IO.Stream)">
+            <summary>
+            序列化当前对象。
+            </summary>
+            <param name="output">输出流。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityActionCollection.DeSerializer(System.IO.Stream)">
+            <summary>
+            反序列化。
+            </summary>
+            <param name="input">数据输入流。</param>
+            <returns> 菜单模块工厂类。</returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityActionCollection.Item(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="actionID"></param>
+             <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleView">
+            <summary>
+             ISecurityRoleView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleListView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEditView.BindRoleStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定角色状态。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEditView.BindParentRole(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定上级角色。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleEditView.BindSystemTree(iPower.Platform.Engine.DataSource.IListControlsTreeViewData,System.Collections.Specialized.StringCollection)">
+            <summary>
+            绑定所属系统数据。
+            </summary>
+            <param name="data"></param>
+            <param name="chkSelected"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRolePickerView">
+            <summary>
+            Picker页面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRolePickerView.BindRole(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定角色数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRolePickerView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRolePickerView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter">
+            <summary>
+             SecurityRolePresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRoleView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.Security.Engine.Domain.SecurityRole}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.UpdateRole(iPower.IRMP.Security.Engine.Domain.SecurityRole,System.Collections.Specialized.StringCollection)">
+            <summary>
+            更新角色。
+            </summary>
+            <param name="data"></param>
+            <param name="sysCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.BatchDeleteRole(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除角色。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.PickerSeach">
+            <summary>
+            Pick查询
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRolePresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRolePostView">
+            <summary>
+             ISecurityRolePostView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRolePostListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRolePostListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRolePostListView.PostName">
+            <summary>
+            获取岗位名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRolePostEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRolePostEditView.BindPost(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定岗位数据。
+            </summary>
+            <param name="data">数据源。</param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRolePostEditView.PostSelected(System.Collections.Specialized.StringCollection)">
+            <summary>
+            选中。
+            </summary>
+            <param name="selected"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRolePostEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter">
+            <summary>
+             SecurityRolePostPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRolePostView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.ChangeRole(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.UpdateRolePost(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <param name="posts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.BatchDeleteRolePost(System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRolePostPresenter.ListDataSource">
+            <summary>
+            列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityActionView">
+            <summary>
+             ISecurityActionView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityActionListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityActionListView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityActionListView.ActionName">
+            <summary>
+            获取元操作名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityActionEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityActionEditView.BindActionType(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定元操作类型。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityActionEditView.ActionID">
+            <summary>
+            获取元操作ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityActionImportView">
+            <summary>
+            导入界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityActionImportView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityActionImportView.UploadFile">
+            <summary>
+            获取或设置上传数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityActionExportView">
+            <summary>
+            导出界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityActionExportView.ExportActionCollection(System.String,System.String,System.String)">
+            <summary>
+            导出数据。
+            </summary>
+            <param name="type"></param>
+            <param name="className"></param>
+            <param name="query"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityActionExportView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter">
+            <summary>
+             SecurityActionPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityActionView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.Security.Engine.Domain.SecurityAction}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.UpdateAction(iPower.IRMP.Security.Engine.Domain.SecurityAction)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.BatchDeleteAction(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.PreViewLoadData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.ExportAction(System.Collections.Specialized.StringCollection)">
+            <summary>
+            导出数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.DownloadSecurityAction(System.String)">
+            <summary>
+            导出数据静态类。
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.CheckUploadFormat(System.IO.Stream)">
+            <summary>
+            检查上传文件格式。
+            </summary>
+            <param name="upload"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.UploadSecurityActionCollection(System.Collections.Specialized.StringCollection)">
+            <summary>
+            保存上存
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.ExportListDataSource">
+            <summary>
+            导出列表数据。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityActionPresenter.ImportListViewDataSource">
+            <summary>
+            获取导入列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity">
+            <summary>
+            SecurityRolePostEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.GetAllPost(iPower.GUIDEx)">
+            <summary>
+            获取角色下的岗位。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.GetPost(iPower.GUIDEx)">
+            <summary>
+            获取角色下的岗位ID。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            获取列表数据。
+            </summary>
+            <param name="roleName"></param>
+            <param name="postName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.UpdateRolePost(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            更新角色岗位级别。
+            </summary>
+            <param name="roleID"></param>
+            <param name="posts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRolePostEntity.BatchDeleteRolePost(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除。
+            </summary>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightView">
+            <summary>
+             ISecurityRoleRightView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightListView.RoleName">
+            <summary>
+            获取角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightListView.RightName">
+            <summary>
+            获取权限名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightEditView">
+            <summary>
+            编辑界面借口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightEditView.BindModuleRight(iPower.Platform.Engine.DataSource.IListControlsTreeViewData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightEditView.SelectedRight(System.Collections.Specialized.StringCollection)">
+            <summary>
+            
+            </summary>
+            <param name="rightCollection"></param>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.ISecurityRoleRightEditView.RoleID">
+            <summary>
+            获取角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter">
+            <summary>
+             SecurityRoleRightPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.#ctor(iPower.IRMP.Security.Engine.Service.ISecurityRoleRightView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.BatchDeleteRoleRight(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.ChangeRole(iPower.GUIDEx)">
+            <summary>
+            角色改变。
+            </summary>
+            <param name="roleID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            重载加载。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.BatchSaveRoleRight(iPower.GUIDEx,System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量保存角色权限。
+            </summary>
+            <param name="roleID"></param>
+            <param name="rightCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Service.SecurityRoleRightPresenter.ListDataSource">
+            <summary>
+            获取列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity">
+            <summary>
+            SecurityRightEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity.ListDataSource(System.String,System.String)">
+            <summary>
+            列表数据。
+            </summary>
+            <param name="systemID"></param>
+            <param name="moduleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity.DeleteRight(System.String,System.String@)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="rightID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity.UpdateRecord(iPower.IRMP.Security.Engine.Domain.SecurityRight,System.String@)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="entity"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Persistence.SecurityRightEntity.GetModulePermissions(iPower.GUIDEx,iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            获取权限。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="moduleID">模块ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns>模块权限集合。</returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRolePost">
+            <summary>
+            tblSecurityRolePost映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRolePost.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRolePost.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRolePost.PostID">
+            <summary>
+            获取或设置PostID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRolePost.PostName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Persistence.ModuleUtils">
+            <summary>
+            模块工具类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRoleEmployee">
+            <summary>
+            tblSecurityRoleEmployee映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRoleEmployee.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleEmployee.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleEmployee.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleEmployee.EmployeeName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRoleDepartment">
+            <summary>
+            tblSecurityRoleDepartment映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRoleDepartment.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleDepartment.RoleID">
+            <summary>
+            获取或设置RoleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleDepartment.DepartmentID">
+            <summary>
+            获取或设置DepartmentID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRoleDepartment.DepartmentName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Engine.Domain.SecurityRight">
+            <summary>
+            tblSecurityRight映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Engine.Domain.SecurityRight.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRight.RightID">
+            <summary>
+            获取或设置RightID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRight.ModuleID">
+            <summary>
+            获取或设置ModuleID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRight.ActionID">
+            <summary>
+            获取或设置ActionID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRight.RightName">
+            <summary>
+            获取或设置RightName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Engine.Domain.SecurityRight.SystemID">
+            <summary>
+            获取或设置所属系统ID。
+            </summary>
+        </member>
+    </members>
+</doc>

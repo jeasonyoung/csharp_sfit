@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.SSO.ISSOTicketDbProvider">
+             <summary>
+            单点登录票据存储提供接口。
+             </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.ISSOTicketDbProvider.CreateTicket(iPower.IRMP.SSO.SSOAuthTicket,System.String)">
+            <summary>
+            创建票据数据存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSO.ISSOTicketDbProvider.TicketVerification(iPower.IRMP.SSO.SSOAuthTicket@,System.String,System.String@)">
+            <summary>
+            验证票据的存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <param name="err">异常错误信息。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSO.ISSOTicketDbProvider.DestroyTicket(iPower.IRMP.SSO.SSOAuthTicket@,System.String)">
+            <summary>
+            销毁票据。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgRank">
+            <summary>
+            岗位级别。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRank.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRank.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parentRankID">上级岗位级别。</param>
+            <param name="rankID">岗位级别ID。</param>
+            <param name="rankName">岗位级别名称。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRank.#ctor(System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="rankID">岗位级别ID。</param>
+            <param name="rankName">岗位级别名称。</param>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgRank.ParentRankID">
+            <summary>
+            获取或设置上级岗位级别ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgRank.RankID">
+            <summary>
+            获取或设置岗位级别ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgRank.RankName">
+            <summary>
+            获取或设置岗位级别名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgRankCollection">
+            <summary>
+            岗位级别集合接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRankCollection.FindByParent(iPower.GUIDEx)">
+            <summary>
+            根据上级岗位级别ID查找。
+            </summary>
+            <param name="parentRankID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRankCollection.Contains(iPower.IRMP.Org.OrgRank)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgRankCollection.Compare(iPower.IRMP.Org.OrgRank,iPower.IRMP.Org.OrgRank)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgRankCollection.Item(iPower.GUIDEx)">
+            <summary>
+            根据岗位级别ID获取数据。
+            </summary>
+            <param name="rankID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SSO.SSOCallResult">
+            <summary>
+            单点登录的调用结果返回类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOCallResult.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOCallResult.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resultCode">结果值。</param>
+            <param name="resultMessage">结果信息。</param>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOCallResult.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resultCode">结果值。</param>
+            <param name="ticket">票据。</param>
+            <param name="resultMessage">结果信息。</param>
+        </member>
+        <member name="P:iPower.IRMP.SSO.SSOCallResult.Ticket">
+            <summary>
+            获取或设置票据串。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.SecurityRole">
+            <summary>
+            安全角色数据类。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.SecurityRole.RoleID">
+            <summary>
+            获取或设置角色ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.SecurityRole.RoleName">
+            <summary>
+            获取或设置角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.SecurityRole.ParentRoleID">
+            <summary>
+            获取或设置上级角色ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.SecurityRoleCollection">
+            <summary>
+            安全角色数据集合。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.SecurityRoleCollection.Contains(iPower.IRMP.Security.SecurityRole)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.SecurityRoleCollection.Compare(iPower.IRMP.Security.SecurityRole,iPower.IRMP.Security.SecurityRole)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Security.SecurityRoleCollection.Item(iPower.GUIDEx)">
+            <summary>
+            安全角色数据类。
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.ISecurityFactory">
+            <summary>
+            安全模块接口工厂。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.ISecurityFactory.AppRegister(System.String)">
+            <summary>
+            获取注册系统集合。
+            </summary>
+            <param name="appName">应用系统名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.ISecurityFactory.Roles">
+            <summary>
+            获取角色集合。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.ISecurityFactory.GetEmployeeRoles(System.String,System.String)">
+            <summary>
+            获取用户角色集合。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.ISecurityFactory.GetAllEmployeeByRole(System.String)">
+            <summary>
+            根据角色ID获取用户信息。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgDepartment">
+            <summary>
+            部门数据接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartment.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartment.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parentDepartmentID">上级部门ID。</param>
+            <param name="departmentID">部门ID。</param>
+            <param name="departmentName">部门名称。</param>
+            <param name="order">排序。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartment.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="departmentID">部门ID。</param>
+            <param name="departmentName">部门名称。</param>
+            <param name="order">排序。</param>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgDepartment.DepartmentID">
+            <summary>
+            获取部门ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgDepartment.ParentDepartmentID">
+            <summary>
+            获取上级部门ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgDepartment.DepartmentName">
+            <summary>
+            获取部门名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgDepartment.Order">
+            <summary>
+            获取或设置排序。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgDepartmentCollection">
+            <summary>
+            部门数据集合接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartmentCollection.FindByParent(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="parentDepartmentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartmentCollection.Compare(iPower.IRMP.Org.OrgDepartment,iPower.IRMP.Org.OrgDepartment)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgDepartmentCollection.Contains(iPower.IRMP.Org.OrgDepartment)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgDepartmentCollection.Item(iPower.GUIDEx)">
+            <summary>
+            根据部门ID查找部门数据。
+            </summary>
+            <param name="departmentID">部门ID。</param>
+            <returns>部门数据。</returns>
+        </member>
+        <member name="T:iPower.IRMP.SSO.IAuthenticationProvider">
+            <summary>
+            提供单点登录身份认证接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.IAuthenticationProvider.UserAuthorizationVerification(System.String,System.String,System.String@)">
+            <summary>
+            验证用户名和密码。
+            </summary>
+            <param name="userSign">用户账号。</param>
+            <param name="password">用户密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果用户名和密码有效，则返回用户信息；否则返回null。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSO.IAuthenticationProvider.ChangePassword(System.String,System.String,System.String,System.String@)">
+            <summary>
+            修改密码。
+            </summary>
+            <param name="userSign">用户账号。</param>
+            <param name="oldPassword">用户旧密码。</param>
+            <param name="newPassword">用户新密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果修改成功，则返回True；否则返回false。</returns>
+        </member>
+        <member name="T:iPower.IRMP.SSO.EnumLocalStorage">
+            <summary>
+            本地存储类型。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSO.EnumLocalStorage.Cookies">
+            <summary>
+            Cookies。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSO.EnumLocalStorage.Session">
+            <summary>
+            Session。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.IEmployeeGetPassword">
+            <summary>
+            用户找回密码接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.IEmployeeGetPassword.GetPassword(System.String,iPower.IRMP.Org.EnumGetPasswordMode,System.String@)">
+            <summary>
+            找回密码。
+            </summary>
+            <param name="employeeSign">用户登录帐号。</param>
+            <param name="mode">找回密码方式枚举。</param>
+            <param name="err">异常或错误信息。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.EnumGetPasswordMode">
+            <summary>
+            找回密码方式枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.EnumGetPasswordMode.SMS">
+            <summary>
+            短信。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.EnumGetPasswordMode.Email">
+            <summary>
+            邮件。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.IAuthorizedToVerify">
+            <summary>
+            授权验证接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.IAuthorizedToVerify.AppAuthorization(iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证系统授权。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="authPassword">授权密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.IAuthorizedToVerify.UserAuthorizationVerification(iPower.GUIDEx,iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证用户授权。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="systemID">系统ID。</param>
+            <param name="clientIP">用户登录IP地址。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.IOrgFactory">
+            <summary>
+            组织架构工厂接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.IOrgFactory.GetAllDepartment(System.String)">
+            <summary>
+            获取所有的部门数据。
+            </summary>
+            <param name="departmentID">部门ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.IOrgFactory.GetSubCharge(System.String)">
+            <summary>
+            获取用户下的部门数据。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.IOrgFactory.GetAllRank(System.String)">
+            <summary>
+            获取所有的岗位级别数据。
+            </summary>
+            <param name="rankID">岗位级别ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.IOrgFactory.GetAllPost(System.String)">
+            <summary>
+            获取所有的岗位数据。
+            </summary>
+            <param name="postID">岗位ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.IOrgFactory.GetAllEmployee(System.String)">
+            <summary>
+            获取所有的用户数据。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SSO.IUserLogin">
+            <summary>
+            用户登录接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.IUserLogin.SignIn(System.String,System.String,System.String@)">
+            <summary>
+            用户登录。
+            </summary>
+            <param name="userSign">用户帐号。</param>
+            <param name="password">用户密码。</param>
+            <param name="msg">返回信息。</param>
+            <returns>登录失败返回false,成功返回true并自动跳转页面。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSO.IUserLogin.SignOut(System.String@)">
+            <summary>
+            用户注销。
+            </summary>
+            <param name="msg">返回信息。</param>
+            <returns>失败返回false,成功返回true并自动跳转页面。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSO.IUserLogin.ChangePassword(System.String,System.String,System.String,System.String@)">
+            <summary>
+            修改密码。
+            </summary>
+            <param name="userSign">用户帐号。</param>
+            <param name="oldPassword">用户旧密码。</param>
+            <param name="newPassword">用户新密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果修改成功，则返回True；否则返回false。</returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgEmployee">
+            <summary>
+            用户数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployee.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployee.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="employeeSign">用户标识。</param>
+            <param name="employeeName">用户名称。</param>
+            <param name="departmentID">部门ID。</param>
+            <param name="postID">岗位ID。</param>
+            <param name="order">排序。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployee.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="employeeSign">用户标识。</param>
+            <param name="employeeName">用户名称。</param>
+            <param name="departmentID">部门ID。</param>
+            <param name="order">排序。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployee.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.EmployeeID">
+            <summary>
+            获取或设置用户ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.DepartmentID">
+            <summary>
+            获取或设置所属部门ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.PostID">
+            <summary>
+            获取或设置所属岗位ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.EmployeeSign">
+            <summary>
+            获取或设置用户标识。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.EmployeeName">
+            <summary>
+            获取或设置用户姓名。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployee.Order">
+            <summary>
+            获取或设置排序。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgEmployeeCollection">
+            <summary>
+            用户数据集合接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.Contains(iPower.IRMP.Org.OrgEmployee)">
+            <summary>
+            重载。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.Compare(iPower.IRMP.Org.OrgEmployee,iPower.IRMP.Org.OrgEmployee)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.Add(iPower.IRMP.Org.OrgEmployeeCollection)">
+            <summary>
+            添加元素。
+            </summary>
+            <param name="employeeCollection"></param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.FindByPost(System.String)">
+            <summary>
+            根据岗位ID查找用户数据。
+            </summary>
+            <param name="postID">岗位ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.FindByDepartment(System.String)">
+            <summary>
+            根据部门ID查找用户数据。
+            </summary>
+            <param name="departmentID">部门ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgEmployeeCollection.FindByEmployee(System.String)">
+            <summary>
+             根据条件模糊检索数据。
+            </summary>
+            <param name="employeeName">姓名。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgEmployeeCollection.Item(iPower.GUIDEx)">
+            <summary>
+            根据用户ID查找用户数据。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SSO.SSOAuthTicket">
+            <summary>
+            单点登录票据类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOAuthTicket.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOAuthTicket.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="ticket">票据串。</param>
+        </member>
+        <member name="M:iPower.IRMP.SSO.SSOAuthTicket.#ctor(System.String,iPower.IUser,System.DateTime,System.DateTime)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="token">令牌。</param>
+            <param name="userInfo">用户数据。</param>
+            <param name="issueDate">票据发布时间。</param>
+            <param name="expiration">票据过期时间。</param>
+        </member>
+        <member name="P:iPower.IRMP.SSO.SSOAuthTicket.Ver">
+            <summary>
+            获取票据版本。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSO.SSOAuthTicket.AL">
+            <summary>
+            获取算法标识。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSO.SSOAuthTicket.CurrentUserID">
+            <summary>
+            获取用户ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSO.SSOAuthTicket.CurrentUserName">
+            <summary>
+            获取用户姓名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.AppSystem">
+            <summary>
+            应用系统数据类。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.AppSystem.AppID">
+            <summary>
+            获取或设置应用ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.AppSystem.AppName">
+            <summary>
+            获取或设置应用名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.AppSystemCollection">
+            <summary>
+            应用系统数据集合。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.AppSystemCollection.Item(System.String)">
+            <summary>
+            获取系统数据。
+            </summary>
+            <param name="appID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgPost">
+            <summary>
+            岗位数据接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPost.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPost.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parentPostID">上级岗位ID。</param>
+            <param name="postID">岗位ID。</param>
+            <param name="postName">岗位名称。</param>
+            <param name="departmentID">所属部门ID。</param>
+            <param name="rankID">所属岗位级别ID。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPost.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="postID">岗位ID。</param>
+            <param name="postName">岗位名称。</param>
+            <param name="departmentID">所属部门ID。</param>
+            <param name="rankID">所属岗位级别ID。</param>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPost.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="postID">岗位ID。</param>
+            <param name="postName">岗位名称。</param>
+            <param name="departmentID">所属部门ID。</param>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPost.PostID">
+            <summary>
+            获取或设置岗位ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPost.ParentPostID">
+            <summary>
+            获取或设置上级岗位ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPost.DepartmentID">
+            <summary>
+            获取或设置所属部门ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPost.RankID">
+            <summary>
+            获取或设置所属岗位级别ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPost.PostName">
+            <summary>
+            获取或设置岗位名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.OrgPostCollection">
+            <summary>
+            岗位数据集合接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPostCollection.FindByRank(iPower.GUIDEx)">
+            <summary>
+            根据岗位级别ID获取岗位数据。
+            </summary>
+            <param name="rankID">岗位级别ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPostCollection.FindByDepartment(iPower.GUIDEx)">
+            <summary>
+            根据部门ID获取岗位数据。
+            </summary>
+            <param name="departmentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPostCollection.FindByParent(iPower.GUIDEx)">
+            <summary>
+            根据上级岗位ID获取岗位数据。
+            </summary>
+            <param name="parentPostID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPostCollection.Contains(iPower.IRMP.Org.OrgPost)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.OrgPostCollection.Compare(iPower.IRMP.Org.OrgPost,iPower.IRMP.Org.OrgPost)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.Org.OrgPostCollection.Item(iPower.GUIDEx)">
+            <summary>
+            根据岗位ID获取岗位数据。
+            </summary>
+            <param name="postID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.ISecurityPermissionFactory">
+            <summary>
+            安全权限元操作工厂接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.ISecurityPermissionFactory.ModulePermissions(System.String,System.String,System.String)">
+            <summary>
+            获取权限。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="moduleID">模块ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns>模块权限集合。</returns>
+        </member>
+    </members>
+</doc>

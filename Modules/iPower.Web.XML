@@ -1,0 +1,4989 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.Web</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Web.Upload.UploadViewDataItem">
+            <summary>
+            上传数据项。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItem.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItem.LoadViewState(System.Object)">
+            <summary>
+            加载服务器控件以前保存的控件视图状态。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItem.SaveViewState">
+            <summary>
+            将服务器控件的视图状态更改保存到 <see cref="T:System.Object"/>。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItem.TrackViewState">
+            <summary>
+            指示服务器控件跟踪其视图状态更改。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItem.FileID">
+            <summary>
+            获取或设置文件ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItem.FileName">
+            <summary>
+            获取或设置文件名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItem.Extension">
+            <summary>
+            获取或设置扩展名。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItem.Size">
+            <summary>
+            获取或设置文件大小。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItem.IsTrackingViewState">
+            <summary>
+            指示服务器控件是否正在跟踪其视图状态更改。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.Upload.UploadViewDataItemCollection">
+            <summary>
+            上传数据项集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemCollection.LoadViewState(System.Object)">
+            <summary>
+             加载服务器控件以前保存的控件视图状态。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemCollection.SaveViewState">
+            <summary>
+            将服务器控件的视图状态更改保存到 <see cref="T:System.Object"/>。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemCollection.TrackViewState">
+            <summary>
+            指示服务器控件跟踪其视图状态更改。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItemCollection.Item(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="fileID"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItemCollection.IsTrackingViewState">
+            <summary>
+             指示服务器控件是否正在跟踪其视图状态更改。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.Upload.UploadViewDataItemRaw">
+            <summary>
+            数据项数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemRaw.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewDataItemRaw.#ctor(iPower.Web.Upload.UploadViewDataItem,System.String,System.Byte[])">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="item"></param>
+            <param name="contentType"></param>
+            <param name="raw"></param>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItemRaw.ContentType">
+            <summary>
+            获取或设置MIME内容类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItemRaw.FileRaw">
+            <summary>
+            获取或设置文件数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewDataItemRaw.CheckCode">
+            <summary>
+            获取数据校验码。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlFieldHeaderCellEx">
+            <summary>
+            呈现表中的标题单元格。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlFieldCellEx">
+            <summary>
+            表示表格 ASP.NET 数据绑定控件的已呈现表中的单元格。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldCellEx.#ctor(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="containingField"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldCellEx.ContainingField">
+            <summary>
+            获取包含当前单元格的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 对象。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldHeaderCellEx.#ctor(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="containingField"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldHeaderCellEx.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldHeaderCellEx.AbbreviatedText">
+            <summary>
+            获取或设置缩写文本，该文本呈现在 HTML abbr 属性中并由屏幕阅读器使用。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldHeaderCellEx.Scope">
+            <summary>
+            获取或设置 HTML 表内标题单元格的范围。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlFieldEx">
+            <summary>
+            用作所有数据控件字段类型的基类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataControlFieldEx.FieldChanged">
+            <summary>
+            字段变更事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.OnFieldChanged">
+            <summary>
+            触发<see cref="F:iPower.Web.UI.DataControlFieldEx.FieldChanged"/>事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.LoadViewState(System.Object)">
+            <summary>
+            将数据源视图还原为保存过的前一视图状态。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.SaveViewState">
+            <summary>
+            保存在页回发到服务器后对视图状态所做的更改。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.TrackViewState">
+            <summary>
+            使对象跟踪对其视图状态所做的更改，以便这些更改可以存储在控件的 ViewState 属性中并且能够在同一页的不同请求间得以保持。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.CloneField">
+            <summary>
+            基础结构。创建当前 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 派生对象的副本。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.CopyProperties(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            将当前 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 派生对象的属性复制到指定的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/>  对象。
+            </summary>
+            <param name="newField"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.CreateField">
+            <summary>
+            当在派生类中重写时，创建一个空的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 派生对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,iPower.Web.UI.DataControlFieldCellEx,iPower.Web.UI.DataGridViewRowState,System.Boolean)">
+            <summary>
+            从当前表格单元格中提取数据控件字段的值，并将该值添加到指定的 <see cref="T:System.Collections.IDictionary"/> 集合中。
+            </summary>
+            <param name="dictionary"></param>
+            <param name="cell"></param>
+            <param name="rowState"></param>
+            <param name="includeReadOnly">如果要指示只读字段的值包括在 dictionary 集合中，则为 true；否则为 false。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.Initialize(System.Boolean,System.Web.UI.Control)">
+            <summary>
+            为数据控件字段执行基础实例初始化。
+            </summary>
+            <param name="sortingEnabled">是否支持数据列排序的值。</param>
+            <param name="control">拥有 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 的数据控件。</param>
+            <returns>始终返回 false。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.InitializeCell(iPower.Web.UI.DataControlFieldCellEx,System.Web.UI.WebControls.DataControlCellType,iPower.Web.UI.DataGridViewRowState,System.Int32)">
+            <summary>
+            将文本或控件添加到单元格的控件集合中。
+            </summary>
+            <param name="cell"></param>
+            <param name="cellType"></param>
+            <param name="rowState"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.SetDirty">
+            <summary>
+            设置对象状态。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldEx.ValidateSupportsCallback">
+            <summary>
+            当在派生类中重写时，发出信号表示字段所包含的控件支持回调。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.AccessibleHeaderText">
+            <summary>
+            获取或设置某些控件中呈现为 AbbreviatedText 属性值的文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.ControlStyle">
+            <summary>
+            获取或设置对象所包含的任何 Web 服务器控件的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.FooterText">
+            <summary>
+            获取或设置数据控件字段的脚注项中显示的文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.FooterStyle">
+            <summary>
+            获取或设置数据控件字段脚注的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.HeaderImageUrl">
+            <summary>
+            获取或设置数据控件字段的标题项中显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.HeaderText">
+            <summary>
+            获取或设置数据控件字段的标题项中显示的文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.HeaderStyle">
+            <summary>
+            获取或设置数据控件字段标头的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.ItemStyle">
+            <summary>
+            获取获取由数据控件字段显示的任何基于文本的内容的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.ShowHeader">
+            <summary>
+            获取或设置是否呈现数据控件字段的标题项。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.SortExpression">
+            <summary>
+            获取或设置数据源控件用来对数据进行排序的排序表达式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.Visible">
+            <summary>
+            获取或设置指示是否呈现数据控件字段的值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.ViewState">
+            <summary>
+            获取状态信息的字典。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.Control">
+            <summary>
+            获取对数据控件的引用。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.DesignMode">
+            <summary>
+            是否设计时模式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.IsTrackingViewState">
+            <summary>
+            获取或设置是否将更改保存到其视图状态。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldEx.DataSourceViewSchema">
+            <summary>
+            基础结构。获取或设置与该对象关联的架构。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataBoundControlExHelper">
+            <summary>
+            帮助类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlExHelper.ExtractValuesFromBindableControls(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.Control)">
+            <summary>
+            
+            </summary>
+            <param name="dictionary"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlExHelper.IsBindableType(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.ControlExportData">
+            <summary>
+            导出控件数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ControlExportData.#ctor(System.Web.UI.Control,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="control">需导出的控件。</param>
+            <param name="exportFileName">导出的文件名称。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ControlExportData.#ctor(System.Web.UI.Control)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="ctrol">需导出的控件。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ControlExportData.ExportContent">
+            <summary>
+            导出内容。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ControlExportData.ExportDownload">
+            <summary>
+            下载文件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ControlExportData.ExportFileName">
+            <summary>
+            获取或设置下载文件保存的文件名。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.LockHandler">
+            <summary>
+            实现对Lock的支持。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.IVerbHandler">
+            <summary>
+            Verb处理接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.IVerbHandler.Process(System.Web.HttpContext)">
+            <summary>
+            处理函数。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:iPower.Web.WebDAV.LockHandler.Process(System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.Web.WebDAV.UnLockHandler">
+            <summary>
+            实现对UnLock的支持。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.UnLockHandler.Process(System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.Web.WebDAV.Document">
+            <summary>
+            Office文档实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.Document.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.Document.FileID">
+            <summary>
+            获取或设置文件ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.Document.FileName">
+            <summary>
+            获取或设置文件名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.Document.ContentType">
+            <summary>
+            获取或设置MIME内容类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.Document.Content">
+            <summary>
+            获取或设置文档内容。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.Document.UserInfo">
+            <summary>
+            获取或设置用户信息。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.RadioButtonListEx">
+            <summary>
+            单选框列表。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.RadioButtonListEx.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.RadioButtonListEx.OnUnload(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.RadioButtonListEx.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.RadioButtonListEx.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.RadioButtonListEx.Validate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.RadioButtonListEx.IsRequired">
+            <summary>
+            获取或设置是否必选。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.RadioButtonListEx.EnableClientScript">
+            <summary>
+            获取或设置是否启用客户端校验。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.RadioButtonListEx.ErrorMessage">
+            <summary>
+            获取或设置选择项没有被选择时的提示信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.RadioButtonListEx.IsValid">
+            <summary>
+            获取或设置是否通过验证。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ReadOnlyDataSourceViewEx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataSourceViewEx">
+            <summary>
+            用作所有数据源视图类的基类，这些视图类定义数据源控件的功能。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceViewEx.#ctor(iPower.Web.UI.IDataSourceEx,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceViewEx.OnDataSourceViewChanged(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataSourceViewEx.DataSourceViewChanged"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceViewEx.ExecuteSelect(iPower.Web.UI.DataSourceSelectArgumentsEx)">
+            <summary>
+            从基础数据存储获取数据列表。
+            </summary>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceViewEx.RaiseUnsupportedCapabilityError(System.Web.UI.DataSourceCapabilities)">
+            <summary>
+            由 <see cref="M:iPower.Web.UI.DataSourceSelectArgumentsEx.RaiseUnsupportedCapabilitiesError(iPower.Web.UI.DataSourceViewEx)"/> 方法调用，以将<see cref="M:iPower.Web.UI.DataSourceViewEx.ExecuteSelect(iPower.Web.UI.DataSourceSelectArgumentsEx)"/> 操作所请求的功能与视图所支持的功能进行比较。
+            </summary>
+            <param name="capability"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceViewEx.Select(iPower.Web.UI.DataSourceSelectArgumentsEx,System.Web.UI.DataSourceViewSelectCallback)">
+            <summary>
+            从基础数据存储中异步获取数据列表。
+            </summary>
+            <param name="arguments">用于请求对数据执行基本数据检索以外的操作。</param>
+            <param name="callback">用于在异步操作完成时通知数据绑定控件的 <see cref="T:System.Web.UI.DataSourceViewSelectCallback"/> 委托。</param>
+        </member>
+        <member name="E:iPower.Web.UI.DataSourceViewEx.DataSourceViewChanged">
+            <summary>
+            在数据源视图已更改时发生。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceViewEx.Name">
+            <summary>
+            获取数据源视图的名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceViewEx.CanPage">
+            <summary>
+            获取是否支持对通过<see cref="M:iPower.Web.UI.DataSourceViewEx.ExecuteSelect(iPower.Web.UI.DataSourceSelectArgumentsEx)"/> 方法检索到的数据进行分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceViewEx.CanRetrieveTotalRowCount">
+            <summary>
+            获取与当前 <see cref="T:System.Web.UI.DataSourceControl"/> 对象相关联的 <see cref="T:iPower.Web.UI.DataSourceViewEx"/> 对象是否支持检索数据的总行数（而不是数据）。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceViewEx.CanSort">
+            <summary>
+            获取与当前  <see cref="T:System.Web.UI.DataSourceControl"/> 对象相关联的 <see cref="T:iPower.Web.UI.DataSourceViewEx"/> 对象是否支持基础数据源的排序视图。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceViewEx.Events">
+            <summary>
+            获取数据源视图的事件处理程序委托的列表。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ReadOnlyDataSourceViewEx.#ctor(iPower.Web.UI.ReadOnlyDataSourceEx,System.String,System.Collections.IEnumerable)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ReadOnlyDataSourceViewEx.ExecuteSelect(iPower.Web.UI.DataSourceSelectArgumentsEx)">
+            <summary>
+            
+            </summary>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.PagerSettingsEx">
+            <summary>
+            支持分页的控件中的分页控件的属性。无法继承此类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PagerSettingsEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PagerSettingsEx.LoadViewState(System.Object)">
+            <summary>
+            加载以前保存的对象的视图状态。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PagerSettingsEx.SaveViewState">
+            <summary>
+            保存对象的当前视图状态。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.PagerSettingsEx.TrackViewState">
+            <summary>
+            标记开始跟踪并将视图状态更改保存到对象的起始点。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PagerSettingsEx.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:iPower.Web.UI.PagerSettingsEx.PropertyChanged">
+            <summary>
+            属性更改值时发生。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.ViewState">
+            <summary>
+            获取状态视图。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.FirstPageImageUrl">
+            <summary>
+            获取或设置第一页按钮显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.FirstPageText">
+            <summary>
+            获取或设置为第一页按钮显示的文字。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.IsPagerOnBottom">
+            <summary>
+            获取导航是否在底部。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.IsPagerOnTop">
+            <summary>
+            获取导航是否在顶部。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.LastPageImageUrl">
+            <summary>
+            获取或设置为最后一页按钮显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.LastPageText">
+            <summary>
+            获取或设置为最后一页按钮显示的文字。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.Mode">
+            <summary>
+            获取或设置支持分页的控件中的页导航控件的显示模式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.NextPageImageUrl">
+            <summary>
+            获取或设置为下一页按钮显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.NextPageText">
+            <summary>
+            获取或设置为下一页按钮显示的文字。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.PageButtonCount">
+            <summary>
+            获取或设置在 <see cref="P:iPower.Web.UI.PagerSettingsEx.Mode"/> 属性设置为 Numeric 或 NumericFirstLast 值时页导航中显示的页按钮的数量。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.Position">
+            <summary>
+            获取或设置一个值，该值指定页导航的显示位置。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.PreviousPageImageUrl">
+            <summary>
+            获取或设置为上一页按钮显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.PreviousPageText">
+            <summary>
+            获取或设置为上一页按钮显示的文字。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.Visible">
+            <summary>
+            获取或设置是否在支持分页的控件中显示分页控件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagerSettingsEx.IsTrackingViewState">
+            <summary>
+            获取服务器控件是否正在跟踪其视图状态更改。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.MultiQueryStringFieldEx">
+            <summary>
+            <see cref="T:iPower.Web.UI.DataGridView"/> 控件的列类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.BoundFieldEx">
+            <summary>
+            表示数据绑定控件中作为文本显示的字段。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.CopyProperties(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            复制属性。
+            </summary>
+            <param name="newField"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.CreateField">
+            <summary>
+            创建字段对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.Initialize(System.Boolean,System.Web.UI.Control)">
+            <summary>
+            初始化。
+            </summary>
+            <param name="sortingEnabled"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.InitializeCell(iPower.Web.UI.DataControlFieldCellEx,System.Web.UI.WebControls.DataControlCellType,iPower.Web.UI.DataGridViewRowState,System.Int32)">
+            <summary>
+            初始化为指定的行状态。
+            </summary>
+            <param name="cell"></param>
+            <param name="cellType"></param>
+            <param name="rowState"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.LoadViewState(System.Object)">
+            <summary>
+            还原视图。
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.ValidateSupportsCallback">
+            <summary>
+            对象中的控件是否支持回调。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.OnDataBindField(System.Object,System.EventArgs)">
+            <summary>
+            引发 FieldChanged 事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.InitializeDataCell(iPower.Web.UI.DataControlFieldCellEx,iPower.Web.UI.DataGridViewRowState)">
+            <summary>
+            初始化为指定的行状态。
+            </summary>
+            <param name="cell"></param>
+            <param name="rowState"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.FormatDataValue(System.String,System.Object[],System.Boolean)">
+            <summary>
+            格式化指定字段值。
+            </summary>
+            <param name="dataFormat">数据格式化。</param>
+            <param name="dataValue">字段值对象。</param>
+            <param name="encode">若对该值进行编码，则为 true；否则，为 false。</param>
+            <returns>已转换为所指定格式的字段值。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.FormatDataValue(System.String,System.Object[])">
+            <summary>
+            格式化指定字段值。
+            </summary>
+            <param name="dataFormat">数据格式化。</param>
+            <param name="dataValue">字段值对象。</param>
+            <returns>已转换为所指定格式的字段值。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.GetDesignTimeValue">
+            <summary>
+            设计时用于字段值的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.GetValue(System.Web.UI.Control,System.String)">
+            <summary>
+            检索绑定到对象的字段值。
+            </summary>
+            <param name="controlContainer">字段值的容器。</param>
+            <param name="dataField">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.BoundFieldEx.GetValue(System.Web.UI.Control)">
+            <summary>
+            检索绑定到对象的字段值。
+            </summary>
+            <param name="controlContainer">字段值的容器。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.ShowRowSelectingEvent">
+            <summary>
+            获取或设置是否启用行选中事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.ShowToolTip">
+            <summary>
+            获取或设置ToolTip。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.CharCount">
+            <summary>
+            获取或设置要显示的字符数，一个汉字当作两个字符;
+            设置该属性时列表显示的文本具有ToolTip的功能。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.ToolTipField">
+            <summary>
+            获取或设置ToolTip字段的名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.ToolTipFieldFormatString">
+            <summary>
+            获取或设置ToolTip值的显示格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.DataField">
+            <summary>
+            获取或设置数据字段的名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.DataFormatString">
+            <summary>
+            获取或设置字段值的显示格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.HeaderText">
+            <summary>
+            获取或设置显示在数据控件标头中的文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.HtmlEncode">
+            <summary>
+            获取或设置显示字段值之前，是否对这些字段值进行 HTML 编码。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.HtmlEncodeFormatString">
+            <summary>
+            获取或设置格式化的文本在显示时是否应经过 HTML 编码。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BoundFieldEx.SupportsHtmlEncode">
+            <summary>
+            是否支持 HTML 编码。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.CopyProperties(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            
+            </summary>
+            <param name="newField"></param>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.CreateField">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.GetDesignTimeValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.InitializeCell(iPower.Web.UI.DataControlFieldCellEx,System.Web.UI.WebControls.DataControlCellType,iPower.Web.UI.DataGridViewRowState,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="cell"></param>
+            <param name="cellType"></param>
+            <param name="rowState"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.InitializeDataCell(iPower.Web.UI.DataControlFieldCellEx,iPower.Web.UI.DataGridViewRowState)">
+            <summary>
+            
+            </summary>
+            <param name="cell"></param>
+            <param name="rowState"></param>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.OnDataBindField(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.BuildNormalWin(iPower.Web.UI.DataGridView)">
+            <summary>
+            生成并注册弹出普通窗口的脚本。
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:iPower.Web.UI.MultiQueryStringFieldEx.BuildModalWin(iPower.Web.UI.DataGridView)">
+            <summary>
+            生成并注册弹出模式窗口的脚本。
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.DataNavigateUrlField">
+            <summary>
+            获取或设置数据源中要绑定到Column中的超级链接的 URL 的字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.DataNavigateUrlFormatString">
+            <summary>
+            获取或设置当 URL 数据绑定到数据源中的字段时，Column 中的超级链接的 URL 的显示格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.NavigateUrl">
+            <summary>
+            获取或设置当单击 列中的超级链接时链接到的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.PopupWin">
+            <summary>
+            获取或设置是否弹出窗口,默认为false。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.WinType">
+            <summary>
+            获取或设置弹出窗口的类别，默认为普通窗口
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.WinHeight">
+            <summary>
+            获取或设置窗口的高度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.WinWidth">
+            <summary>
+            获取或设置窗口的宽度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.MultiQueryStringFieldEx.Target">
+            <summary>
+            获取或设置单击列中的超级链接时显示链接到的 Web 页内容的目标窗口或框架。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridView">
+            <summary>
+            选中事件处理。
+            </summary>
+            <summary>
+            导出数据。
+            </summary>
+            <summary>
+            分页处理部分。
+            </summary>
+            <summary>
+            样式控制。
+            </summary>
+            <summary>
+            排序处理部分。
+            </summary>
+            <summary>
+            数据呈现控件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.CompositeDataBoundControlEx">
+            <summary>
+            由其他服务器控件组成的表格数据绑定控件的基类。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataBoundControlEx">
+            <summary>
+            作为所有以列表或表格形式显示数据的数据绑定控件的基类使用。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.BaseDataBoundControlEx">
+            <summary>
+            用作控件的基类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnDataBound(System.EventArgs)">
+            <summary>
+            引发<see cref="E:iPower.Web.UI.BaseDataBoundControlEx.DataBound"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnBuildDataSource(System.EventArgs)">
+            <summary>
+             触发<see cref="E:iPower.Web.UI.BaseDataBoundControlEx.BuildDataSource"/>事件。
+            </summary>
+            <param name="e">包含事件数据的对象。</param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.ConfirmInitState">
+            <summary>
+            设置数据绑定控件的初始化状态。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.DataBind">
+            <summary>
+            将数据源绑定到被调用的服务器控件及其所有子控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnInit(System.EventArgs)">
+            <summary>
+            处理<see cref="E:System.Web.UI.Control.Init"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnPreRender(System.EventArgs)">
+            <summary>
+            处理<see cref="E:System.Web.UI.Control.PreRender"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnPagePreLoad(System.Object,System.EventArgs)">
+            <summary>
+            在加载数据绑定控件之前设置该控件的初始化状态。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.OnDataPropertyChanged">
+            <summary>
+            在某一基数据源标识属性更改后，将数据绑定控件重新绑定到其数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.PerFormSelect">
+            <summary>
+            当在派生类中重写时，控制如何检索数据并将数据绑定到控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.ValidateDataSource(System.Object)">
+            <summary>
+            当在派生类中重写时，验证数据绑定控件绑定到的对象是它可以使用的对象。
+            </summary>
+            <param name="dataSource">数据绑定控件绑定到的对象。</param>
+        </member>
+        <member name="M:iPower.Web.UI.BaseDataBoundControlEx.ValidateEvent(System.String,System.String)">
+            <summary>
+            验证客户端脚本事件。
+            </summary>
+            <param name="uniqueID"></param>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="E:iPower.Web.UI.BaseDataBoundControlEx.DataBound">
+            <summary>
+            在服务器控件绑定到数据源后发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.BaseDataBoundControlEx.BuildDataSource">
+            <summary>
+            给控件提供数据源的事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BaseDataBoundControlEx.RequiresDataBinding">
+            <summary>
+            获取或设置一个值，该值指示是否应调用<see cref="M:iPower.Web.UI.BaseDataBoundControlEx.DataBind"/> 方法
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BaseDataBoundControlEx.DataSource">
+            <summary>
+            获取或设置对象，数据绑定控件从该对象中检索其数据项列表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.BaseDataBoundControlEx.Initialized">
+            <summary>
+            设置指示数据绑定控件是否已经初始化。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.OnDataPropertyChanged">
+            <summary>
+            在某一基数据源标识属性更改后，将数据绑定控件重新绑定到其数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.OnLoad(System.EventArgs)">
+            <summary>
+            触发<see cref="E:System.Web.UI.Control.Load"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.OnPagePreLoad(System.Object,System.EventArgs)">
+            <summary>
+            在加载数据绑定控件之前设置该控件的初始化状态。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.PerFormSelect">
+            <summary>
+            从关联的数据源中检索数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.ValidateDataSource(System.Object)">
+            <summary>
+            验证数据绑定控件绑定到的对象是否可以和该控件一同使用。
+            </summary>
+            <param name="dataSource"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.OnDataSourceViewChanged(System.Object,System.EventArgs)">
+            <summary>
+            引发 DataSourceViewChanged 事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.CreateDataSourceSelectArguments">
+            <summary>
+            如果未指定参数，则创建由数据绑定控件使用的默认 <see cref="T:iPower.Web.UI.DataSourceSelectArgumentsEx"/> 对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.GetData">
+            <summary>
+            检索数据绑定控件用于执行数据操作的 <see cref="T:iPower.Web.UI.DataSourceViewEx"/> 对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.GetDataSource">
+            <summary>
+            检索与数据绑定控件关联的 <see cref="T:System.Web.UI.IDataSource"/> 接口（如果有）。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.MarkAsDataBound">
+            <summary>
+            将视图状态中的控件状态设置为成功绑定到数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataBoundControlEx.PerformDataBinding(System.Collections.IEnumerable)">
+            <summary>
+            在派生类中重写时，将数据源中的数据绑定到控件。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataBoundControlEx.DataMember">
+            <summary>
+            当数据源包含多个不同的数据项列表时，获取或设置数据绑定控件绑定到的数据列表的名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataBoundControlEx.SelectArguments">
+            <summary>
+            获取数据绑定控件从数据源控件检索数据时使用的 <see cref="T:iPower.Web.UI.DataSourceSelectArgumentsEx"/> 对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataBoundControlEx.DataSourceObject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.CompositeDataBoundControlEx.ItemCountViewStateKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CompositeDataBoundControlEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CompositeDataBoundControlEx.CreateChildControls">
+            <summary>
+            创建用于呈现复合数据绑定控件的控件层次结构。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CompositeDataBoundControlEx.PerformDataBinding(System.Collections.IEnumerable)">
+            <summary>
+            将数据源中的数据绑定到复合数据绑定控件。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.Web.UI.CompositeDataBoundControlEx.CreateChildControls(System.Collections.IEnumerable,System.Boolean)">
+            <summary>
+            由 ASP.NET 页面框架调用，以通知使用基于合成的实现的服务器控件创建它们包含的任何子控件，以便为回发或呈现做准备。
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataBinding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.CompositeDataBoundControlEx.DataSourceSorting(System.Object)">
+            <summary>
+            给数据源排序。
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.CompositeDataBoundControlEx.Controls">
+            <summary>
+            获取复合数据绑定控件内的子控件的集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnRowSelecting(System.Object)">
+            <summary>
+            触发事件。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateExportControl(System.Web.UI.WebControls.TableCell)">
+            <summary>
+            数据导出控制。
+            </summary>
+            <param name="cell"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.ExportCommand(iPower.Web.UI.ExportFileType)">
+            <summary>
+            导出数据。
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnPageIndexChanging(iPower.Web.UI.DataGridViewPageEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.PageIndexChanging"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnPageIndexChanged(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.PageIndexChanged"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.InitializePager(iPower.Web.UI.DataGridViewRow,System.Int32,iPower.Web.UI.PagedDataSourceEx)">
+            <summary>
+            初始化在分页功能启用时显示的页导航行。
+            </summary>
+            <param name="row">表示要初始化的页导航行。</param>
+            <param name="columnSpan">页导航行应跨越的列数。</param>
+            <param name="pagedDataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateDefaultNextPreviousFirstLastPager(System.Web.UI.WebControls.TableRow,iPower.Web.UI.PagedDataSourceEx)">
+            <summary>
+            创建默认分页
+            </summary>
+            <param name="row"></param>
+            <param name="pagedDataSource"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnSorting(iPower.Web.UI.DataGridViewSortEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.Sorting"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnSorted(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.Sorted"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.BuildCallbackArgument(System.String,System.Web.UI.WebControls.SortDirection)">
+            <summary>
+            构建回调参数字符串。
+            </summary>
+            <param name="sortExpression"></param>
+            <param name="sortDirection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.DataSourceSorting(System.Object)">
+            <summary>
+            数据排序。
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateChildTable">
+            <summary>
+            基础结构。创建一个新的子表。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateControlStyle">
+            <summary>
+            基础结构。为控件创建默认样式。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            基础结构。将 Web 服务器控件内容呈现给客户端浏览器。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateChildControls(System.Collections.IEnumerable,System.Boolean)">
+            <summary>
+            基础结构。已重载。 创建用于呈现控件层次结构。
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataBinding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateDataSourceSelectArguments">
+            <summary>
+            创建 <see cref="T:iPower.Web.UI.DataSourceSelectArgumentsEx"/> 对象，该对象包含传递到数据源进行处理的参数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.LoadViewState(System.Object)">
+            <summary>
+            加载以前保存的控件的视图状态。
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.SaveViewState">
+            <summary>
+            基础结构。加载以前保存的控件的视图状态。 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.TrackViewState">
+            <summary>
+            基础结构。跟踪控件的视图状态更改
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.GetPostBackOptions(System.Web.UI.WebControls.IButtonControl)">
+            <summary>
+            为指定的按钮控件返回回发脚本所需的选项。
+            </summary>
+            <param name="buttonControl">包含生成 buttonControl 的回发脚本所需的选项。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.RaisePostBackEvent(System.String)">
+            <summary>
+             控件回发到服务器时引发此控件的合适的事件。
+            </summary>
+            <param name="eventArgument">事件参数。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.GetCallbackScript(System.Web.UI.WebControls.IButtonControl,System.String)">
+            <summary>
+            创建一个脚本，以便启动针对 Web 服务器的客户端回调。
+            </summary>
+            <param name="buttonControl">启动回调请求的控件。</param>
+            <param name="argument">用于生成回调脚本的参数。</param>
+            <returns>在客户端运行时，将启动针对 Web 服务器回调的脚本。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.GetCallbackResult">
+            <summary>
+            返回以控件为目标的回调事件的结果。
+            </summary>
+            <returns>回调的结果。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.RaiseCallbackEvent(System.String)">
+            <summary>
+            处理以控件为目标的回调事件。
+            </summary>
+            <param name="eventArgument">示要传递到事件处理程序的事件参数。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateRow(System.Int32,System.Int32,iPower.Web.UI.DataGridViewRowType,iPower.Web.UI.DataGridViewRowState)">
+            <summary>
+            创建行。
+            </summary>
+            <param name="rowIndex">要创建的行的索引。</param>
+            <param name="dataSourceIndex">要绑定到行的数据源项的索引。</param>
+            <param name="rowType">行类型。</param>
+            <param name="rowState">行状态。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.HandleEvent(System.EventArgs,System.Boolean,System.String)">
+            <summary>
+            客户端回调事件处理。
+            </summary>
+            <param name="e"></param>
+            <param name="causesValidation"></param>
+            <param name="validationGroup"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnRowCommand(iPower.Web.UI.DataGridViewCommandEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.RowCommand"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnRowCreated(iPower.Web.UI.DataGridViewRowEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.RowCreated"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.OnRowDataBound(iPower.Web.UI.DataGridViewRowEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.DataGridView.RowDataBound"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.InvokeBuildDataSource">
+            <summary>
+            触发获取数据源事件的方法。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.DataBind">
+            <summary>
+            重载绑定。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.RenderTableContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            绘制表内容。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.Render(System.Web.UI.HtmlTextWriter,System.Boolean)">
+            <summary>
+            绘制Web服务器控件，输出页面。
+            </summary>
+            <param name="writer"></param>
+            <param name="renderPanel"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.PrepareControlHierarchy">
+            <summary>
+            基础结构。建立控件层次结构。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.CreateColumns(iPower.Web.UI.PagedDataSourceEx,System.Boolean)">
+            <summary>
+            创建用来构建控件层次结构的列字段集。
+            </summary>
+            <param name="dataSource">表示数据源。</param>
+            <param name="useDataSource">true 表示使用 dataSource 参数指定的数据源；否则为 false。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.ExtractRowValues(System.Collections.Specialized.IOrderedDictionary,iPower.Web.UI.DataGridViewRow,System.Boolean,System.Boolean)">
+            <summary>
+            检索在指定行中声明的每个字段的值，并将它们存储在指定的 <see cref="T:System.Collections.Specialized.IOrderedDictionary"/> 对象中。
+            </summary>
+            <param name="fieldValues">用来存储字段值的<see cref="T:System.Collections.Specialized.IOrderedDictionary"/> 。</param>
+            <param name="row">将从其中检索字段值的<see cref="T:iPower.Web.UI.DataGridViewRow"/>。</param>
+            <param name="includeReadOnlyFields">true 表示包含只读字段；否则为 false。</param>
+            <param name="includePrimaryKey">true 表示包含主键字段；否则为 false。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.InitializeRow(iPower.Web.UI.DataGridViewRow,iPower.Web.UI.DataControlFieldEx[])">
+            <summary>
+            初始化行。
+            </summary>
+            <param name="row"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridView.IsBindableType(System.Type)">
+            <summary>
+            确定指定的数据类型是否能绑定到控件中的列。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.RowSelecting">
+            <summary>
+            选中事件。由<see cref="P:iPower.Web.UI.BoundFieldEx.ShowRowSelectingEvent"/>触发。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.AllowExport">
+            <summary>
+            获取或设置一个值，该值指示是否启用数据导出功能。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.DownloadFileName">
+            <summary>
+            获取或设置导出保存的文件名。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.FooterLinkCSS">
+            <summary>
+            获取或设置表尾中的连接的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.ExportDataCss">
+            <summary>
+            获取或设置导出框样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.AllowPaging">
+            <summary>
+            获取或设置是否启用分页功能。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.PagingDataCss">
+            <summary>
+            获取或设置分页部分样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.FooterInputCSS">
+            <summary>
+            获取或设置分页中页面跳转样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.PageIndex">
+            <summary>
+            获取或设置当前显示页的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.PageSize">
+            <summary>
+            获取或设置每页上所显示的记录的数目。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.PageCount">
+            <summary>
+            获取显示的页数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.PagerSettings">
+            <summary>
+            获取页导航按钮的属性。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.PageIndexChanging">
+            <summary>
+            分页操作之前发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.PageIndexChanged">
+            <summary>
+            分页操作之后发生。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.BackImageUrl">
+            <summary>
+             获取或设置背景中显示的图像的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.Caption">
+            <summary>
+            获取或设置标题元素中呈现的文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.CaptionAlign">
+            <summary>
+             获取或设置标题元素的水平或垂直位置。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.CellPadding">
+            <summary>
+            获取或设置单元格的内容和单元格的边框之间的空间量。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.CellSpacing">
+            <summary>
+            获取或设置单元格间的空间量。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.HorizontalAlign">
+            <summary>
+            获取或设置控件在页面上的水平对齐方式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.GridLines">
+            <summary>
+            获取或设置控件的网格线样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.MouseoverCssClass">
+            <summary>
+            获取或设置鼠标移动时高亮显示的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.AlternatingRowStyle">
+            <summary>
+            获取控件中交替数据行的外观。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.RowStyle">
+            <summary>
+            获取控件中的数据行的外观。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.ShowHeader">
+            <summary>
+            获取或设置显示标题行。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.HeaderStyle">
+            <summary>
+            获取标题行的外观。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.HeaderRow">
+            <summary>
+            获取标题行对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.ShowFooter">
+            <summary>
+            获取或设置是否显示脚注行。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.FooterStyle">
+            <summary>
+            获取脚注行的外观。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.FooterRow">
+            <summary>
+            获取脚注行对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.AllowSorting">
+            <summary>
+            获取或设置是否启用排序功能。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.SortDirection">
+            <summary>
+            获取或设置正在排序的列的排序方向。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.SortExpression">
+            <summary>
+            获取或设置排序表达式。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.Sorting">
+            <summary>
+            排序操作进行处理之前发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.Sorted">
+            <summary>
+            排序操作进行处理之后发生。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.StateFormatter">
+            <summary>
+            获取序列化对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.EnableSortingAndPagingCallbacks">
+            <summary>
+            获取或设置客户端回调是否用于排序和分页操作。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.Rows">
+            <summary>
+            获取数据行的对象的集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.CheckedValue">
+            <summary>
+            获取或设置选择列默认选中的值的集合,
+            (仅有CheckBoxColumn列时该属性才起作用)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.SelectedIDList">
+            <summary>
+            获取已选择行的ID列表,以逗号(,)分隔。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.Columns">
+            <summary>
+            获取控件中列字段对象的集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.RowHeaderColumn">
+            <summary>
+            获取或设置用作控件的列标题的列的名称。提供此属性的目的是使辅助技术设备的用户更易于访问控件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridView.UseAccessibleHeader">
+            <summary>
+            获取或设置控件是否以易于访问的格式呈现其标题。提供此属性的目的是使辅助技术设备的用户更易于访问控件。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.RowCommand">
+            <summary>
+            单击 <see cref="T:iPower.Web.UI.DataGridView"/> 控件中的按钮时发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.RowCreated">
+            <summary>
+            创建行时发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.DataGridView.RowDataBound">
+            <summary>
+            将数据行绑定到数据时发生。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry">
+            <summary>
+            文档数据操作工厂类。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.IWebDAVDocumentHandler">
+            <summary>
+            文档数据操作接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.IWebDAVDocumentHandler.GetDocument(System.Web.HttpContext)">
+            <summary>
+            获取文档数据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.IWebDAVDocumentHandler.CreateDocument(System.Web.HttpContext)">
+            <summary>
+            创建文档数据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.IWebDAVDocumentHandler.ModifyDocumentContent(iPower.Web.WebDAV.Document)">
+            <summary>
+            修改文档内容。
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry.#ctor(iPower.Web.WebDAV.IWebDAVDocumentHandler)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="documentHandler"></param>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry.GetDocument(System.Web.HttpContext)">
+            <summary>
+            获取文档数据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry.CreateDocument(System.Web.HttpContext)">
+            <summary>
+            创建文档数据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry.ModifyDocumentContent(iPower.Web.WebDAV.Document)">
+            <summary>
+            修改文档内容。
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="P:iPower.Web.WebDAV.WebDAVDocumentHandlerFacotry.Instance">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.PutHandler">
+            <summary>
+            Put行为处理。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.PutHandler.#ctor">
+             <summary>
+            构造函数。
+             </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.PutHandler.Process(System.Web.HttpContext)">
+            <summary>
+             
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.Web.Utility.ListBoxHelper">
+            <summary>
+            列表框的处理帮助类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.GetAll(System.Web.UI.WebControls.ListBox,System.String[]@,System.String[]@)">
+            <summary>
+            获取源的所有数据。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="text">获取的文本数组。</param>
+            <param name="values">获取的值数组。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.GetSelected(System.Web.UI.WebControls.ListBox,System.String[]@,System.String[]@)">
+            <summary>
+            获取源的选中数据。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="text">获取的文本数组。</param>
+            <param name="values">获取的值数组。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.IsExistedValueInListBox(System.Web.UI.WebControls.ListBox,System.String)">
+            <summary>
+            判断<see cref="T:System.Web.UI.WebControls.ListBox"/>里是否存在指定的值。
+            </summary>
+            <param name="listBox">要判断<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="itemValue">要检查的值。</param>
+            <returns>是否存在。</returns>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.AddAll(System.Web.UI.WebControls.ListBox,System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将源<see cref="T:System.Web.UI.WebControls.ListBox"/> 里的所有的项移到目标<see cref="T:System.Web.UI.WebControls.ListBox"/>里。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="dest">目标<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.AddSelected(System.Web.UI.WebControls.ListBox,System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将源<see cref="T:System.Web.UI.WebControls.ListBox"/>里的所有选择的项移到目标<see cref="T:System.Web.UI.WebControls.ListBox"/>里。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="dest">目标<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.RemoveSelected(System.Web.UI.WebControls.ListBox,System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将目标<see cref="T:System.Web.UI.WebControls.ListBox"/>里的所有选择的项移到源<see cref="T:System.Web.UI.WebControls.ListBox"/>里。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+            <param name="dest">目标<see cref="T:System.Web.UI.WebControls.ListBox"/>。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.RemoveAll(System.Web.UI.WebControls.ListBox,System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将目标<see cref="T:System.Web.UI.WebControls.ListBox"/> 里的所有项移到源<see cref="T:System.Web.UI.WebControls.ListBox"/> 里。
+            </summary>
+            <param name="source">源<see cref="T:System.Web.UI.WebControls.ListBox"/></param>
+            <param name="dest">目标<see cref="T:System.Web.UI.WebControls.ListBox"/></param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.InitValue(System.Web.UI.WebControls.ListBox,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            初始化列表。
+            </summary>
+            <param name="listBox"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.MoveUp(System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将列表的项向上移。
+            </summary>
+            <param name="listBox">列表框对象。</param>
+        </member>
+        <member name="M:iPower.Web.Utility.ListBoxHelper.MoveDown(System.Web.UI.WebControls.ListBox)">
+            <summary>
+            将列表框的项向下移。
+            </summary>
+            <param name="listBox">列表框对象。</param>
+        </member>
+        <member name="T:iPower.Web.UI.LabelEx">
+            <summary>
+            表示在网页上显示文本的标签。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.LabelEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.LabelEx.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.LabelEx.Style">
+            <summary>
+            获取或设置样式。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ExportFileType">
+            <summary>
+            导出文件的类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.ExportFileType.csv">
+            <summary>
+            CSV格式(逗分隔)。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.ExportFileType.txt">
+            <summary>
+            文本格式(制表符分隔)。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.OutlookView.OutlookView">
+            <summary>
+            Outlook风格控件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeView">
+            <summary>
+            树形菜单。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.LoadViewState(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.SaveViewState">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.TrackViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            绘制内容。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.CreateTreeView(iPower.Web.TreeView.TreeViewNode,System.Web.UI.WebControls.TableCell)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.OnNodeClick(iPower.Web.TreeView.TreeViewNodeClickEventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.TreeView.TreeView.NodeClick"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.BuildItems">
+            <summary>
+            构建数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.BuildTree">
+            <summary>
+            构建树。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeView.RaisePostBackEvent(System.String)">
+            <summary>
+            使服务器控件能够处理将窗体发送到服务器时引发的事件。
+            </summary>
+            <param name="eventArgument">表示要传递到事件处理程序的可选事件参数。</param>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.Items">
+            <summary>
+            获取节点项数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.CheckedValue">
+            <summary>
+            获取或设置选择时的所有值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.EnabledCheckValueChecked">
+            <summary>
+            获取或设置是否启用CheckedValue选中。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.CheckType">
+            <summary>
+            获取或设置选择类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.ClickActionField">
+            <summary>
+            获取或设置选项单击动作映射字段，必须有效的JS方法。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.CurrentFolderValue">
+            <summary>
+            获取或设置当前目录Value。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.ExpandFirstLevel">
+            <summary>
+            获取或设置是否展开第一层次。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.ExpandAllLevel">
+            <summary>
+            获取或设置是否全部展开。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.HrefField">
+            <summary>
+            获取或设置选项链接映射字段，必须为有效的URL地址。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.IDField">
+            <summary>
+            获取或设置ID映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.PIDField">
+            <summary>
+            获取或设置父ID值映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.StatusField">
+            <summary>
+            获取或设置树选项展开状态映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.TitleField">
+            <summary>
+            获取或设置标题映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.OrderNoField">
+            <summary>
+            获取或设置排序映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.ShowCheckBox">
+            <summary>
+            获取是否显示选择框，默认为否。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.ShowScrollBar">
+            <summary>
+            获取或设置是否显示滚动条。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeView.EnabledNodeClickEvent">
+            <summary>
+            获取或设置是否启用节点单击事件。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.TreeView.TreeView.NodeClick">
+            <summary>
+            节点点击事件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeView.CheckBoxType">
+            <summary>
+            选择框类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.TreeView.TreeView.CheckBoxType.None">
+            <summary>
+            无。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.TreeView.TreeView.CheckBoxType.CheckBox">
+            <summary>
+            CheckBox。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.TreeView.TreeView.CheckBoxType.RadioButton">
+            <summary>
+            Radio。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.OutlookView.OutlookView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.OutlookView.OutlookView.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.OutlookView.OutlookView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            绘制内容。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRow">
+            <summary>
+            表示 <see cref="T:iPower.Web.UI.DataGridView"/> 控件中的单独行。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRow.#ctor(System.Int32,System.Int32,iPower.Web.UI.DataGridViewRowType,iPower.Web.UI.DataGridViewRowState)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="dataItemIndex"></param>
+            <param name="rowType"></param>
+            <param name="rowState"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRow.OnBubbleEvent(System.Object,System.EventArgs)">
+            <summary>
+            确定是否将事件沿页面的 ASP.NET 服务器控件层次结构向上传递。
+            </summary>
+            <param name="source"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.RowIndex">
+            <summary>
+            获取来自 <see cref="T:iPower.Web.UI.DataGridView"/> 控件的 <see cref="P:iPower.Web.UI.DataGridView.Rows"/>  集合的 <see cref="T:iPower.Web.UI.DataGridViewRow"/>  对象的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.RowState">
+            <summary>
+            获取或设置当前对象的行状态。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.RowType">
+            <summary>
+            获取或设置当前对象的行类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.DataItem">
+            <summary>
+            获取或设置在简化的数据绑定操作中所使用的 object。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.DataItemIndex">
+            <summary>
+            获取绑定到控件的数据项的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRow.DisplayIndex">
+            <summary>
+            获取在控件中所显示的数据项的位置。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRowState">
+            <summary>
+            指定数据控件中行的状态。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowState.Normal">
+            <summary>
+            正常行。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowState.AlterNate">
+            <summary>
+            交替行。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowState.Selected">
+            <summary>
+            选中行。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRowType">
+            <summary>
+             指定数据控件中行的类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowType.Header">
+            <summary>
+            标题行。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowType.Footer">
+            <summary>
+            脚注行。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataGridViewRowType.DataRow">
+            <summary>
+            数据行。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewPageEventHandler">
+            <summary>
+            分页委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewPageEventArgs">
+            <summary>
+            为分页提供数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewPageEventArgs.#ctor(System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="newPageIndex"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewPageEventArgs.NewPageIndex">
+            <summary>
+            获取或设置新页索引。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ButtonEx">
+             <summary>
+             在 Web 页上显示普通按钮控件。
+             </summary>
+             <remarks>
+            使用 Button 控件在 Web 页上创建普通按钮。既可以创建 submit 按钮，也可以创建 command 按钮。
+            submit 按钮不具有与按钮关联的命令名（由 CommandName 属性指定）而只是将 Web 页回发到服务器。默认情况下，Button 控件是提交按钮。可以为 Click 事件提供事件处理程序，以便以编程方式控制在单击提交按钮时所执行的操作。
+            通过设置 CommandName 属性，command 按钮具有与该按钮关联的命令名，例如 Sort。这使您可以在一个 Web 页上创建多个 Button 控件，并以编程方式确定单击了哪个 Button 控件。您还可以将 CommandArgument 属性与命令按钮一起使用，提供有关要执行的命令的附加信息，例如 Ascending。可以为 Command 事件提供事件处理程序，以便以编程方式控制在单击 command 按钮时所执行的操作。
+            
+            功能：
+            	1.客户端的提示确认框.
+            	2.处理了页面有校验控件时不能弹出提示框的bug
+            	3.支持弹出模式窗口，并等模式窗口的业务处理完成后再执行服务端的点击事件
+            	4.可以定义按钮的前置、后置空格
+            	5.可以定义服务端事件执行之前要执行的客户端事件
+            	6.可以定义MouseOver、MouseOut的样式
+            	7.支持在客户端校验通过后先执行指定的脚本再提交(AfterValidScript)。
+            </remarks>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.#cctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            已重写。<see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)"/>
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.OnPreRender(System.EventArgs)">
+            <summary>
+            已重载。
+            </summary>
+            <param name="e">包含事件数据的 EventArgs 对象。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.Render(System.Web.UI.HtmlTextWriter)">
+            <summary> 
+            将此控件呈现给指定的输出参数。
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器。 </param>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.GetPostBackOptions">
+            <summary>
+            创建表示控件的回发行为的 <see cref="T:System.Web.UI.PostBackOptions"/> 对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.OnClick(System.EventArgs)">
+            <summary>
+             引发 Button 控件的 Click 事件。
+            </summary>
+            <param name="e">包含事件数据的 System.EventArgs。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.OnCommand(System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            引发 Button 控件的 Command 事件。
+            </summary>
+            <param name="e">引发 Button 控件的 Command 事件。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ButtonEx.RaisePostBackEvent(System.String)">
+            <summary>
+            使服务器控件能够处理将窗体发送到服务器时引发的事件。
+            </summary>
+            <param name="eventArgument"> 表示要传递到事件处理程序的可选事件参数。</param>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.UseSubmitBehavior">
+            <summary>
+            获取或设置是否启用Submit提交。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.OnClientClick">
+            <summary>
+            获取或设置在引发控件的 <see cref="E:iPower.Web.UI.ButtonEx.Click"/> 事件时所执行的客户端脚本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ShowConfirmMsg">
+            <summary>
+            是否显示确认消息框,默认值为False.
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ConfirmMsg">
+            <summary>
+            要显示的提示消息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.LeftSpace">
+            <summary>
+            按钮前置空格数，默认为0。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.RightSpace">
+            <summary>
+            按钮后置空格数，默认为0。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.Parameters">
+            <summary>
+            入口参数(查询参数)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ObjParameters">
+            <summary>
+            入口参数(客户端参数)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ReturnValue">
+            <summary>
+            返回值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.PickerType">
+            <summary>
+            弹出窗口的类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.PickerPage">
+            <summary>
+            弹出窗口打开的页面。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.PickerWidth">
+            <summary>
+            获取或设置弹出窗体宽度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.PickerHeight">
+            <summary>
+            获取或设置弹出窗体高度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.BeforeClickScript">
+            <summary>
+            在按钮的单击事件执行之前执行的脚本(提示框之后，客户端校验之前)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.AfterValidScript">
+            <summary>
+            在按钮的校验事件后要执行的脚本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.MouseOverCssClass">
+            <summary>
+            MouseOver时的按钮的样式表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.MouseOutCssClass">
+            <summary>
+            MouseOut时的按钮的样式表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ButtonType">
+            <summary>
+            获取或设置按钮类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.CausesValidation">
+            <summary>
+            获取或设置一个值，该值指示在单击<see cref="T:iPower.Web.UI.ButtonEx"/> 控件时是否执行了验证。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.CommandName">
+            <summary>
+            获取或设置命令名，该命令名与传递给 Command 事件的 Button 控件相关联。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.CommandArgument">
+            <summary>
+            获取或设置可选参数，该参数与关联的 CommandName 一起被传递到 Command 事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.PostBackUrl">
+            <summary>
+            获取或设置单击<see cref="T:iPower.Web.UI.ButtonEx"/> 控件时从当前页发送到的网页的 URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.Text">
+            <summary>
+            获取或设置在 Button 控件中显示的文本标题。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.ValidationGroup">
+            <summary>
+            获取或设置在控件回发到服务器时要进行验证的控件组。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.ButtonEx.Click">
+            <summary>
+            在单击Button控件时发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.ButtonEx.Command">
+            <summary>
+            在单击Button控件时发生
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ButtonEx.Enabled">
+            <summary>
+            获取或设置一个值，该值指示是否启用服务器控件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.WebDAVHandler">
+            <summary>
+            Office在线编辑处理。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVHandler.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.WebDAVHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 <see cref="T:System.Web.IHttpHandler"/> 接口的自定义 <see cref="T:System.Web.IHttpHandler"/> 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:iPower.Web.WebDAV.WebDAVHandler.IsReusable">
+            <summary>
+            获取一个值，该值指示其他请求是否可以使用 <see cref="T:System.Web.IHttpHandler"/> 实例。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.Utility.Util">
+            <summary>
+            工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Utility.Util.EnsureEndWithSemiColon(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.Utility.Util.MergeScript(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="firstScript"></param>
+            <param name="secondScript"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.OrderedDictionaryStateHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.OrderedDictionaryStateHelper.LoadViewState(System.Collections.Specialized.IOrderedDictionary,System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="dictionary"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.UI.OrderedDictionaryStateHelper.SaveViewState(System.Collections.Specialized.IOrderedDictionary)">
+            <summary>
+            
+            </summary>
+            <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.IDataSourceEx">
+            <summary>
+            表示数据绑定控件绑定到的抽象数据源。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.IDataSourceEx.GetView(System.String)">
+            <summary>
+            获取与数据源控件关联的命名的数据源视图。
+            </summary>
+            <param name="viewName">要检索的视图的名称。 </param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.IDataSourceEx.GetViewNames">
+            <summary>
+            获取名称的集合，这些名称表示与 <see cref="T:iPower.Web.UI.IDataSourceEx"/> 接口关联的视图对象的列表。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:iPower.Web.UI.IDataSourceEx.DataSourceChanged">
+            <summary>
+            当数据源控件以某种影响数据绑定控件的方式发生变化时发生。 
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRowCollection">
+            <summary>
+            表示 <see cref="T:iPower.Web.UI.DataGridView"/> 控件中的 <see cref="T:iPower.Web.UI.DataGridViewRow"/> 对象的集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRowCollection.#ctor(System.Collections.ArrayList)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="rows"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRowCollection.CopyTo(iPower.Web.UI.DataGridViewRow[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRowCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRowCollection.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRowCollection.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRowCollection.IsSynchronized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRowCollection.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.ModuleConfigurationKeys">
+            <summary>
+            WebDAV模块配置键类。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.WebDAV.ModuleConfigurationKeys.DocumentFactoryAssemblyKey">
+            <summary>
+            文档处理程序集配置键。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.ModuleConfiguration">
+            <summary>
+            WebDAV模块配置类。
+            </summary>
+            <example>
+            &lt;configuration&gt;
+                &lt;!--注册配置节--&gt;
+                &lt;configSections&gt;
+                     &lt;!--注册WebDAV配置--&gt;
+                     &lt;section name ="WebDAV" type="iPower.Configuration.iPowerSection,iPower"/&gt;
+                &lt;/configSections&gt;
+            &lt;/configuration&gt;
+            
+            &lt;!--WebDAV配置--&gt;
+            &lt;WebDAV&gt;
+                &lt;!--文档处理程序集--&gt;
+                &lt;add key="iPower.DocumentFactoryAssembly" value="iPower.Web.WebDAV.DefaultWebDAVDocumentHandler,iPower.Web"/&gt;
+            &lt;/WebDAV&gt;
+            </example>
+        </member>
+        <member name="M:iPower.Web.WebDAV.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.WebDAV.ModuleConfiguration.DocumentFactoryAssembly">
+            <summary>
+            获取文档处理程序集配置(iPower.DocumentFactoryAssembly)。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ValidationSummaryEx">
+            <summary>
+            显示所有验证错误摘要的扩展。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ValidationSummaryEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.RequiredFieldValidatorEx">
+            <summary>
+            必选验证。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.RequiredFieldValidatorEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.CompareValidatorEx">
+            <summary>
+            比较验证。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CompareValidatorEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.RegularExpressionValidatorEx">
+            <summary>
+            正则表达式验证。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.RegularExpressionValidatorEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.RangeValidatorEx">
+            <summary>
+            范围验证。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.RangeValidatorEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.TabMultiView">
+            <summary>
+            表示的控件用作一组 <see cref="T:iPower.Web.UI.TabView"/> 控件的容器。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.OnChangedActiveTab">
+            <summary>
+            触发切换tab页事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.AddParsedSubObject(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.CreateControlCollection">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabMultiView.RaisePostBackEvent(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.DefaultActiveTabIndex">
+            <summary>
+            获取或设置默认激活的<see cref="T:iPower.Web.UI.TabView"/>的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.EnableServerActive">
+            <summary>
+            获取或设置是否启用服务器端激活<see cref="T:iPower.Web.UI.TabView"/>。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabHeaderCssName">
+             <summary>
+            获取或设置标题样式。
+             </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabHeaderNormalCssName">
+             <summary>
+            获取或设置标题普通样式。
+             </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabHeaderSelectedCssName">
+            <summary>
+            获取或设置标题选中时的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabHeaderHighLightCssName">
+            <summary>
+            获取或设置标题高亮的样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabBackgroundCssName">
+            <summary>
+            获取或设置Tab页背景样式。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.TabMultiView.ChangedActiveTab">
+            <summary>
+            切换tab页事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabMultiView.TabViewControls">
+            <summary>
+            获取<see cref="T:iPower.Web.UI.TabView"/>控件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ExportData">
+            <summary>
+            导出数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.#ctor(iPower.Web.UI.DataGridView)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="gridView">gridView<see cref="T:iPower.Web.UI.DataGridView"/>。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.#ctor(System.Web.UI.Page)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="page">page<see cref="T:System.Web.UI.Page"/>。</param>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.Download">
+            <summary>
+            下载文件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.Download(iPower.Web.UI.ExportFileType)">
+            <summary>
+            导出数据实现。
+            </summary>
+            <param name="fileType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.Export(iPower.Web.UI.DataGridView,iPower.Web.UI.ExportFileType)">
+            <summary>
+            导出数据。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.ExportDataSourceData(System.Data.DataTable,iPower.Web.UI.ExportFileType)">
+            <summary>
+            导出数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.ExportHeader(iPower.Web.UI.DataControlFieldExCollection,System.String)">
+            <summary>
+            设置导出标题split字段之间的分隔符号。
+            </summary>
+            <param name="colums">DataControlFieldCollection<see cref="T:System.Web.UI.WebControls.DataControlFieldCollection"/>。</param>
+            <param name="split">分隔符。</param>
+            <returns>导出标题。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.ExportItem(iPower.Web.UI.DataGridViewRow,iPower.Web.UI.DataControlFieldExCollection,System.String)">
+            <summary>
+            导出数据体。
+            </summary>
+            <param name="row">数据行。</param>
+            <param name="columns">列名集合。</param>
+            <param name="split">分隔符。</param>
+            <returns>数据字符串。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.RemoveHtmlTag(System.String)">
+            <summary>
+            去除HTML标记。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ExportData.CellDataFormat(System.String)">
+            <summary>
+            数据格式处理。
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.ExportData.DownloadFileName">
+            <summary>
+            下载文件保存的文件名。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ExportData.ExportFileType">
+            <summary>
+            导出文件的类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.CheckBoxFieldEx">
+            <summary>
+            表示数据绑定控件中作为CheckBox<see cref="T:System.Web.UI.WebControls.CheckBox"/>显示的字段扩展。 
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.CopyProperties(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            将当前 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/> 对象的属性复制到指定的 DataControlField<see cref="T:System.Web.UI.WebControls.DataControlField"/> 对象。
+            </summary>
+            <param name="newField">当前 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/> 的属性将复制到的 DataControlField<see cref="T:System.Web.UI.WebControls.DataControlField"/>。</param>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.CreateField">
+            <summary>
+            创建一个空的 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/> 对象。
+            </summary>
+            <returns>一个空 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/>。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.GetDesignTimeValue">
+            <summary>
+            检索在设计器中呈现 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/> 对象时用于字段值的值。
+            </summary>
+            <returns>要在设计器中作为字段值显示的值。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.InitializeCell(iPower.Web.UI.DataControlFieldCellEx,System.Web.UI.WebControls.DataControlCellType,iPower.Web.UI.DataGridViewRowState,System.Int32)">
+            <summary>
+            将指定的 TableCell 对象初始化为指定的行状态。
+            </summary>
+            <param name="cell">要初始化的 TableCell。</param>
+            <param name="cellType">DataControlCellType<see cref="T:System.Web.UI.WebControls.DataControlCellType"/> 值之一。</param>
+            <param name="rowState">DataControlRowState<see cref="T:System.Web.UI.WebControls.DataControlRowState"/> 值之一。</param>
+            <param name="rowIndex">从零开始的行索引。</param>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.InitializeDataCell(iPower.Web.UI.DataControlFieldCellEx,iPower.Web.UI.DataGridViewRowState)">
+            <summary>
+            将指定的 TableCell 对象初始化为指定的行状态。
+            </summary>
+            <param name="cell">要初始化的 TableCell。</param>
+            <param name="rowState">DataControlRowState<see cref="T:System.Web.UI.WebControls.DataControlRowState"/> 值之一。</param>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxFieldEx.OnDataBindField(System.Object,System.EventArgs)">
+            <summary>
+            将字段的值绑定到 CheckBoxFieldEx<seealso cref="T:iPower.Web.UI.CheckBoxFieldEx"/> 对象。
+            </summary>
+            <param name="sender">事件源。</param>
+            <param name="e">包含事件数据的 EventArgs<see cref="T:System.EventArgs"/>。</param>
+        </member>
+        <member name="T:iPower.Web.UI.PickerBase">
+            <summary>
+            数据选择控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.OnInit(System.EventArgs)">
+            <summary>
+            重载OnInit方法。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.OnUnload(System.EventArgs)">
+            <summary>
+            重载OnUnload。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.CreateChildControls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.Validate">
+            <summary>
+            计算它检查的条件并更新 IsValid 属性。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.OnTextChanged(System.EventArgs)">
+            <summary>
+            触发数据发生改变事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PickerBase.RaisePostBackEvent(System.String)">
+            <summary>
+            事件发回处理。
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="E:iPower.Web.UI.PickerBase.TextChanged">
+            <summary>
+            数据发生改变事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.TextBoxMode">
+            <summary>
+            获取或设置文本框模式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Rows">
+            <summary>
+            获取或设置文本框行数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.AutoPostBack">
+            <summary>
+            获取或设置事件回发。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Enabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.EnableClientScript">
+            <summary>
+            获取或设置是否允许客户端验证。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.MultiSelect">
+            <summary>
+            获取或设置是否允许多选择,默认为多选。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.PickerPage">
+            <summary>
+            获取或设置要打开的页面。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Readonly">
+            <summary>
+            获取或设置控件是否是不可编辑的。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.SendPickedValueToPickerPage">
+            <summary>
+            获取或设置是否将已选择的值做为查询参数传给选择页面(QueryString的参数名为Value)，默认为true(多选用户时建议设为false)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Text">
+            <summary>
+            获取或设置控件显示值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.Value">
+            <summary>
+            获取或设置控件返回值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.AllowInput">
+            <summary>
+            获取或设置是否允许输入。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.PickerWidth">
+            <summary>
+            获取或设置弹出窗体宽度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.PickerHeight">
+            <summary>
+            获取或设置弹出窗体高度。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.IsRequired">
+            <summary>
+            至少必选一项非空值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.ErrorMessage">
+            <summary>
+            获取或设置条件验证失败时生成的错误信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PickerBase.IsValid">
+            <summary>
+            获取或设置一个值，通过该值指示用户在指定控件中输入的内容是否通过验证。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.PagedDataSourceEx">
+            <summary>
+            数据绑定控的与分页相关的属性，以允许该控件执行分页操作。无法继承此类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PagedDataSourceEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.PagedDataSourceEx.CopyTo(System.Array,System.Int32)">
+            <summary>
+            复制。
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:iPower.Web.UI.PagedDataSourceEx.GetEnumerator">
+            <summary>
+            包含数据源中的所有项。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.PagedDataSourceEx.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            返回表示用于绑定数据的每项上属性。
+            </summary>
+            <param name="listAccessors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.PagedDataSourceEx.GetListName(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            返回列表的名称。此方法不适用于此类。
+            </summary>
+            <param name="listAccessors"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.AllowCustomPaging">
+            <summary>
+            获取或设置启用自定义分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.AllowPaging">
+            <summary>
+            获取或设置启用分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.AllowServerPaging">
+            <summary>
+            获取或设置是否启用服务器端分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsPagingEnabled">
+            <summary>
+            获取是否启用分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsCustomPagingEnabled">
+            <summary>
+            获取是否启用自定义分页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsServerPagingEnabled">
+            <summary>
+            获取是否启用服务器端分页支持。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsFirstPage">
+            <summary>
+            获取当前页是否是首页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsLastPage">
+            <summary>
+            获取当前页是否是最后一页。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.CurrentPageIndex">
+            <summary>
+             获取或设置当前页的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.DataSourceCount">
+            <summary>
+            获取数据源中的项数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.FirstIndexInPage">
+            <summary>
+            获取页面中显示的首条记录的索引。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.PageCount">
+            <summary>
+            获取总页数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.PageSize">
+            <summary>
+            获取或设置要在单页上显示的项数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.VirtualCount">
+            <summary>
+            获取或设置在使用自定义分页时数据源中的实际项数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.Count">
+            <summary>
+            获取要从数据源使用的项数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.IsSynchronized">
+            <summary>
+            获取是否同步对数据源的访问（线程安全）。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.PagedDataSourceEx.SyncRoot">
+            <summary>
+            获取可用于同步集合访问的对象。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataSourceHelper">
+            <summary>
+            帮助工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceHelper.GetResolvedDataSource(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataMember"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.TabView">
+            <summary>
+            表示一个控件，该控件作为 <see cref="T:iPower.Web.UI.TabMultiView"/> 控件中的一组控件的容器。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.TabView.Text">
+            <summary>
+            获取或设置标签名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabView.Index">
+            <summary>
+            获取或设置控件索引号。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabView.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabView.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TabView.ViewControls">
+            <summary>
+            获取<see cref="T:iPower.Web.UI.TabView"/>的内容子控件。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.TabViewCollection">
+            <summary>
+            <see cref="T:iPower.Web.UI.TabView"/>控件集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TabViewCollection.#ctor(System.Web.UI.Control)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabViewCollection.Add(System.Web.UI.Control)">
+            <summary>
+            
+            </summary>
+            <param name="child"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TabViewCollection.AddAt(System.Int32,System.Web.UI.Control)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="child"></param>
+        </member>
+        <member name="P:iPower.Web.UI.TabViewCollection.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.ServerAlert">
+            <summary>
+            在服务端实现与JavaScript的alert("message")等效的消息提示框。
+            说明：一个页面仅能有一个这样的控件。
+            由于本控件会重写页面的window.onload方法，为了在使用了本控件的页面上的onload事件里增加执行的方法，
+            特为控件增加属性BeforeAlertFunction。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.OnPreRender(System.EventArgs)">
+            <summary>
+            重载。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重载。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重载。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ServerAlert.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.ServerAlert.Message">
+            <summary>
+            获取或设置要显示的消息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ServerAlert.Alert">
+            <summary>
+            是否显示消息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ServerAlert.BeforeAlertFunction">
+            <summary>
+            在发出提示信息前要执行的javascript方法。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.ServerAlert.AfterAlertFunction">
+            <summary>
+            在发出提示信息后要执行的javascript方法。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.FormEx">
+            <summary>
+            The Form class extends the HtmlForm HTML control by overriding its RenderAttributes()
+            method and NOT emitting an action attribute.
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.FormEx.RenderAttributes(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            The RenderAttributes method adds the attributes to the rendered &lt;form&gt; tag.
+            We override this method so that the action attribute is not emitted.
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.FormExControlDesigner">
+            <summary>
+            FormEx的设计时支持。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.FormExControlDesigner.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.FormExControlDesigner.FrameCaption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.FormExControlDesigner.FrameStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.FormExControlDesigner.UsePreviewControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.FormExControlDesigner.AllowResize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ReadOnlyDataSourceEx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ReadOnlyDataSourceEx.#ctor(System.Object,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ReadOnlyDataSourceEx.GetView(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="viewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.ReadOnlyDataSourceEx.GetViewNames">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:iPower.Web.UI.ReadOnlyDataSourceEx.iPower#Web#UI#IDataSourceEx#DataSourceChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewCommandEventHandler">
+            <summary>
+            单击控件按钮委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewCommandEventArgs">
+            <summary>
+            为 RowCommand 事件提供数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewCommandEventArgs.#ctor(iPower.Web.UI.DataGridViewRow,System.Object,System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="row"></param>
+            <param name="commandSource"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewCommandEventArgs.CommandSource">
+            <summary>
+            获取命令源。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewCommandEventArgs.Row">
+            <summary>
+            获取行对象。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.ChildTable">
+            <summary>
+            子表格类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ChildTable.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.ChildTable.#ctor(System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parentLevel"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ChildTable.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parentID"></param>
+        </member>
+        <member name="M:iPower.Web.UI.ChildTable.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:iPower.Web.UI.CheckBoxListEx">
+            <summary>
+            创建多项选择复选框组，该复选框组可以通过将控件绑定到数据源动态创建。
+            扩展功能:
+            	1.支持验证是否至少选择一个选项；
+            	2.支持通过CheckedValue(2)属性来设置或获取选中的选项(String[]或StringCollection)；
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxListEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxListEx.Validate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxListEx.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxListEx.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.CheckBoxListEx.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:iPower.Web.UI.CheckBoxListEx.IsRequired">
+            <summary>
+            获取或设置是否为必选项。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.CheckBoxListEx.CheckedValue">
+            <summary>
+            获取或设置控件当前选中的选项的值集合(StringCollection)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.CheckBoxListEx.CheckedValueToArray">
+            <summary>
+            获取或设置控件当前选中的选项的值集合(数组)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.CheckBoxListEx.ErrorMessage">
+            <summary>
+            获取或设置条件验证失败时生成的错误信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.CheckBoxListEx.IsValid">
+            <summary>
+            获取或设置是否通过验证。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler">
+            <summary>
+            默认文档数据操作。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler.GetDocument(System.Web.HttpContext)">
+            <summary>
+             获取文档数据。
+             </summary>
+             <param name="context"></param>
+             <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler.CreateDocument(System.Web.HttpContext)">
+            <summary>
+            创建文档数据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler.ModifyDocumentContent(iPower.Web.WebDAV.Document)">
+            <summary>
+            修改文档内容。
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:iPower.Web.WebDAV.DefaultWebDAVDocumentHandler.GetDocumentID(System.Web.HttpContext)">
+            <summary>
+            获取文档的ID。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.TextBoxCalendar">
+            <summary>
+            为用户提供一个输入日期的控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.OnUnload(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            处理回发数据。
+            </summary>
+            <param name="postDataKey">控件的主要标识符。 </param>
+            <param name="postCollection">所有传入名称值的集合。</param>
+            <returns>如果服务器控件的状态由于回发而发生更改，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.RaisePostDataChangedEvent">
+            <summary>
+            用信号要求服务器控件对象通知 ASP.NET 应用程序该控件的状态已更改。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.OnTextChanged(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Web.UI.TextBoxCalendar.TextChanged"/>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxCalendar.Validate">
+            <summary>
+            将计算它检查的条件，然后更新 <see cref="P:iPower.Web.UI.TextBoxCalendar.IsValid"/> 属性。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.AutoPostBack">
+            <summary>
+            获取或设置事件回发。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.Readonly">
+            <summary>
+            获取或设置控件是否是不可编辑的。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.ClientID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:iPower.Web.UI.TextBoxCalendar.TextChanged">
+            <summary>
+            当文本的内容在向服务器的发送操作之间更改时发生。 
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.Text">
+            <summary>
+            获取或设置控件的文本内容。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.IsRequired">
+            <summary>
+            至少必选一项非空值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.ErrorMessage">
+            <summary>
+            获取或设置条件验证失败时生成的错误消息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxCalendar.IsValid">
+            <summary>
+            获取或设置用户在指定控件中输入的内容是否通过验证。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.SupportsEventValidationExAttribute">
+            <summary>
+            定义元数据属性，Web 服务器控件使用它来表明支持事件验证。无法继承此类。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.SupportsEventValidationExAttribute.SupportsEventValidation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRowEventHandler">
+            <summary>
+            表示处理 <see cref="T:iPower.Web.UI.DataGridView"/> 控件的 <see cref="E:iPower.Web.UI.DataGridView.RowCreated"/> 和 <see cref="E:iPower.Web.UI.DataGridView.RowDataBound"/> 事件的方法。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewRowEventArgs">
+            <summary>
+            提供有关 <see cref="E:iPower.Web.UI.DataGridView.RowCreated"/> 和<see cref="E:iPower.Web.UI.DataGridView.RowDataBound"/>  事件的数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewRowEventArgs.#ctor(iPower.Web.UI.DataGridViewRow)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewRowEventArgs.Row">
+            <summary>
+            获取行对象。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlPagerLinkButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlLinkButton">
+            <summary>
+            链接按钮数据控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlLinkButton.#ctor(System.Web.UI.WebControls.IPostBackContainer)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlLinkButton.EnableCallback(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="argument"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlLinkButton.GetPostBackOptions">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlLinkButton.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlLinkButton.SetForeColor">
+            <summary>
+            设置前景色。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlLinkButton.CausesValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlPagerLinkButton.#ctor(System.Web.UI.WebControls.IPostBackContainer)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlPagerLinkButton.SetForeColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlPagerLinkButton.CausesValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeViewNodeClickHandler">
+            <summary>
+            单击委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeViewNodeClickEventArgs">
+            <summary>
+            为单击事件提供数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeClickEventArgs.#ctor(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeClickEventArgs.Node">
+            <summary>
+            获取节点对象。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.GetHandler">
+            <summary>
+            Get动作处理。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.GetHandler.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.GetHandler.Process(System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.Web.UI.Designer.ButtonExDesigner">
+            <summary>
+            控钮控件(ButtonEx)的设计器。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExDesigner.#ctor">
+            <summary>
+            构造器。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExDesigner.GetDesignTimeHtml">
+            <summary>
+            重载。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.Upload.UploadViewExceptionHandler">
+            <summary>
+            上传异常委托。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.Upload.UploadView">
+            <summary>
+            上传处理控件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.OnUploadViewExceptionEvent(System.Exception)">
+            <summary>
+            触发异常。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.LoadViewState(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.SaveViewState">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.TrackViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.RaisePostBackEvent(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.SaveFileRawToPage(iPower.GUIDEx,System.String,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="fileID"></param>
+            <param name="contentType"></param>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.DeleteFileRawToPage(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="fileID"></param>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.BuildUploadView">
+            <summary>
+            构建数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadView.SaveUploadAs(System.EventHandler{iPower.Web.Upload.UploadViewEventArgs})">
+            <summary>
+            保存上传文件。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.Items">
+            <summary>
+            数据项集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.MaxUploadSize">
+            <summary>
+            获取或设置上传最大的文件大小(为0不限制)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.MaxUploadCount">
+            <summary>
+            获取或设置上传的文件个数(为0不限制)。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.ShowDeleteButtom">
+            <summary>
+            获取或设置是否显示删除按钮。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.AllowOfficeOnlineEdit">
+            <summary>
+            获取或设置允许Office在线编辑。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.OfficeSuffix">
+            <summary>
+            获取或设置Office文件后缀名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DeleteFileID">
+            <summary>
+            获取删除的文件ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.ReadOnly">
+            <summary>
+            获取或设置是否只读。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.AllowDownload">
+            <summary>
+            获取或设置是否允许下载文件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DownloadBaseURI">
+            <summary>
+            获取或设置下载页面根URI。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataItemClass">
+            <summary>
+            获取或设置数据样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataItemHeaderClass">
+            <summary>
+            获取或设置标题样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataItemNormalClass">
+            <summary>
+            获取或设置数据普通行样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataItemAlterClass">
+            <summary>
+            获取或设置数据交替行样式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.DataItemFooterClass">
+            <summary>
+            获取或设置标题样式。
+            </summary>
+        </member>
+        <member name="E:iPower.Web.Upload.UploadView.UploadViewExceptionEvent">
+            <summary>
+            异常事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.PostedFile">
+            <summary>
+            获取客户端上传文件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.HasFile">
+            <summary>
+            是否有上传文件。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.UploadRaws">
+            <summary>
+            获取或设置上传的数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.FileIDField">
+            <summary>
+            获取或设置文件ID字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.FileNameField">
+            <summary>
+            获取或设置文件字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.ExtensionField">
+            <summary>
+            获取或设置扩展名字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadView.SizeField">
+            <summary>
+            获取或设置文件大小字段名称。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.Upload.UploadViewEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.Upload.UploadViewEventArgs.#ctor(iPower.Web.Upload.UploadViewDataItemRaw)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.Upload.UploadViewEventArgs.ItemRaw">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataSourceSelectArgumentsEx">
+            <summary>
+            提供一种机制，数据绑定控件可使用这种机制向数据源控件请求在检索数据之后执行与数据相关的操作。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.#ctor(System.String)">
+            <summary>
+             构造函数。
+            </summary>
+            <param name="sortExpression">用来排序数据检索操作结果的排序表达式。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="startRowIndex">数据行的索引，标记数据检索操作返回数据的起始位置。</param>
+            <param name="maximumRows">数据检索操作返回的最大行数。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="sortExpression">用来排序数据检索操作结果的排序表达式。</param>
+            <param name="startRowIndex">数据行的索引，标记数据检索操作返回数据的起始位置。</param>
+            <param name="maximumRows">数据检索操作返回的最大行数。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.AddSupportedCapabilities(System.Web.UI.DataSourceCapabilities)">
+            <summary>
+            向  <see cref="T:iPower.Web.UI.DataSourceSelectArgumentsEx"/> 实例添加一个功能，用于对支持的功能和请求的功能进行比较。 
+            </summary>
+            <param name="capabilities"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.RaiseUnsupportedCapabilitiesError(iPower.Web.UI.DataSourceViewEx)">
+            <summary>
+            将为 ExecuteSelect(DataSourceSelectArguments) 操作请求的功能与指定的数据源视图所支持的功能进行比较。
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.Equals(System.Object)">
+            <summary>
+            实例是否等于当前实例。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataSourceSelectArgumentsEx.GetHashCode">
+            <summary>
+            用作特定类型的哈希函数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.Empty">
+            <summary>
+            获取一个排序表达式设置为 Empty 的 <see cref="T:iPower.Web.UI.DataSourceSelectArgumentsEx"/>对象。 
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.MaximumRows">
+            <summary>
+            获取或设置在一次数据检索操作中，数据源控件返回的最大数据行数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.RetrieveTotalRowCount">
+            <summary>
+            获取或设置在数据检索操作过程中，数据源控件是否应检索所有数据行的计数。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.SortExpression">
+            <summary>
+            获取或设置数据源视图使用该表达式对 Select(DataSourceSelectArguments, DataSourceViewSelectCallback) 方法检索的数据进行排序。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.StartRowIndex">
+            <summary>
+            获取或设置在数据检索操作过程中，检索数据行时数据源控件应使用的起始位置。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataSourceSelectArgumentsEx.TotalRowCount">
+            <summary>
+            获取或设置在数据检索操作过程中检索的行数。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlFieldExCollection">
+            <summary>
+            表示数据绑定控件使用的<see cref="T:iPower.Web.UI.DataControlFieldEx"/>对象的集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.DataControlFieldExCollection.FieldsChanged">
+            <summary>
+            发生在集合中的字段更改时事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.Add(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            将指定的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 对象追加到集合的结尾。
+            </summary>
+            <param name="field"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.CloneFields">
+            <summary>
+            创建当前集合的副本。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.Contains(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            集合中是否包含对象。
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.CopyTo(iPower.Web.UI.DataControlFieldEx[],System.Int32)">
+            <summary>
+            复制。
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.IndexOf(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            确定集合中特定 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 对象的索引。
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.Insert(System.Int32,iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            将指定的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 对象插入<see cref="T:iPower.Web.UI.DataControlFieldExCollection"/> 集合中指定的索引位置。
+            </summary>
+            <param name="index"></param>
+            <param name="field"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.Remove(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            从 <see cref="T:iPower.Web.UI.DataControlFieldExCollection"/> 集合中移除指定的<see cref="T:iPower.Web.UI.DataControlFieldEx"/>  对象。
+            </summary>
+            <param name="field"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.RemoveAt(System.Int32)">
+            <summary>
+            从 <see cref="T:iPower.Web.UI.DataControlFieldExCollection"/> 集合中移除位于指定索引位置的 <see cref="T:iPower.Web.UI.DataControlFieldEx"/> 对象。
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.CreateKnownType(System.Int32)">
+            <summary>
+            在派生类中重写时，创建实现 IStateManager 的类的实例。创建的对象的类型依赖于由 GetKnownTypes 方法返回的集合的指定成员。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.GetKnownTypes">
+            <summary>
+            在派生类中重写时，获取 StateManagedCollection 集合可以包含的 IStateManager 类型的数组。 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.OnClearComplete">
+            <summary>
+            在 Clear 方法完成从集合中移除所有项之后执行额外的工作。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.OnInsertComplete(System.Int32,System.Object)">
+            <summary>
+            当在派生类中重写时，在 Insert(Int32, Object) 或 Add(Object) 方法向集合中添加项之后执行额外的工作。
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>
+            在派生类中重写时，在 Remove(Object) 或 RemoveAt(Int32) 方法从集合中移除指定项之后执行额外的工作。
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.OnValidate(System.Object)">
+            <summary>
+            当在派生类中重写时，验证 <see cref="T:System.Web.UI.StateManagedCollection"/> 集合的元素。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlFieldExCollection.SetDirtyObject(System.Object)">
+            <summary>
+            当在派生类中重写时，指示由集合包含的 object 将其整个状态记录到视图状态，而不是仅仅记录更改信息。
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlFieldExCollection.Item(System.Int32)">
+            <summary>
+            索引。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Web.UI.EnumWindowType">
+            <summary>
+            弹出窗口的类型.
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.EnumWindowType.Modal">
+            <summary>
+            模式窗口。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.EnumWindowType.Normal">
+            <summary>
+            普通窗口(没有IE菜单及工具栏)。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.UI.EnumWindowType.Normal2">
+            <summary>
+            普通窗口(带IE菜单及工具栏)。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewSortEventHandler">
+            <summary>
+            排序委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Web.UI.DataGridViewSortEventArgs">
+            <summary>
+            为排序事件提供数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataGridViewSortEventArgs.#ctor(System.String,System.Web.UI.WebControls.SortDirection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="sortExpression"></param>
+            <param name="sortDirection"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewSortEventArgs.SortDirection">
+            <summary>
+            获取或设置排序方向。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DataGridViewSortEventArgs.SortExpression">
+            <summary>
+            获取或设置排序的表达式。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeViewNode">
+            <summary>
+            菜单节点。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.#ctor(iPower.Web.TreeView.TreeViewNode,System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parent">父节点。</param>
+            <param name="text">节点文本。</param>
+            <param name="value">节点值。</param>
+            <param name="orderNo">排序数据。</param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.#ctor(iPower.Web.TreeView.TreeViewNode,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parent">父节点。</param>
+            <param name="text">节点文本。</param>
+            <param name="value">节点值。</param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.#ctor(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parent">父节点。</param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.#ctor(System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="text">节点文本。</param>
+            <param name="value">节点值。</param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="F:iPower.Web.TreeView.TreeViewNode.ChangedExpand">
+            <summary>
+            展开或收缩事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.OnChangedExpand">
+            <summary>
+            触发事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.SetExpand(System.Boolean)">
+            <summary>
+            设置是否展开。
+            </summary>
+            <param name="expand"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.LoadViewState(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.SaveViewState">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNode.TrackViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Parent">
+            <summary>
+            获取或设置父节点。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Text">
+            <summary>
+            获取或设置节点文本。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Value">
+            <summary>
+            获取或设置节点值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.OrderNo">
+            <summary>
+            获取或设置排序。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.ClickAction">
+            <summary>
+            获取或设置单击数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.HrefURL">
+            <summary>
+            获取或设置链接URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Checked">
+            <summary>
+            获取或设置是否选中。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Expand">
+            <summary>
+            获取或设置是否展开。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.Childs">
+            <summary>
+            获取子节点。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNode.IsTrackingViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.TreeView.TreeViewNodeCollection">
+            <summary>
+            菜单节点集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.#ctor(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.Add(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.Contains(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.CopyTo(iPower.Web.TreeView.TreeViewNode[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.Remove(iPower.Web.TreeView.TreeViewNode)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.LoadViewState(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.SaveViewState">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.TreeView.TreeViewNodeCollection.TrackViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeCollection.Item(System.Int32)">
+            <summary>
+            获取或设置节点。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeCollection.Item(System.String)">
+            <summary>
+            获取节点。
+            </summary>
+            <param name="value">节点值。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeCollection.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeCollection.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.TreeView.TreeViewNodeCollection.IsTrackingViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.WebDAV.OptionsHandler">
+            <summary>
+            实现对Options请求的处理。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.WebDAV.OptionsHandler.Process(System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.Web.UI.TextBoxEx">
+            <summary>
+            为用户输入显示一个文本框控件
+            </summary>
+            <remarks>
+            扩展的TextBox控件,实现了:
+                1.只能输入由0-9组成的数字;
+                2.文本框有焦点时按回车触发指定的按钮的单击事件
+                3.集成RequiredFieldValidator,RangeValidator,CompareValidator及RegularExpressValidator控件的功能
+            </remarks>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.OnLoad(System.EventArgs)">
+            <summary>
+            重载。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将需要呈现的 HTML 属性和样式添加到指定的 System.Web.UI.HtmlTextWriter 中
+            </summary>
+            <param name="writer">表示要在客户端呈现 HTML 内容的输出流</param>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.CreateChildControls">
+            <summary>
+            重载。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TextBoxEx.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重载。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.EnableClientScript">
+            <summary>
+            获取或设置是否允许客户端验证。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.MouseOutCssClass">
+            <summary>
+            获取或设置MouseOut时的按钮的样式表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.MouseOverCssClass">
+            <summary>
+            获取或设置MouseOver时的按钮的样式表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.DisabledCssClass">
+            <summary>
+            获取或设置Disabled时的按钮的样式表。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.IsRequired">
+            <summary>
+            获取或设置该域是否必填。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.RequiredErrorMessage">
+            <summary>
+            获取或设置必填时的出错提示信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.ValidationExpression">
+            <summary>
+            获取或设置确定字段验证模式的正则表达式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.RegularErrorMessage">
+            <summary>
+            获取或设置输入值跟指定正则表达式不匹配时的提示信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.MaxValue">
+            <summary>
+            获取或设置允许输入的最大值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.MinValue">
+            <summary>
+            获取或设置允许输入的最小值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.RangeErrorMessage">
+            <summary>
+            获取或设置输入值超出指定范围的提示信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.ControlToCompare">
+            <summary>
+            获取或设置要与所验证的输入控件进行比较的输入控件，不能与ValueToCompare同时设置。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.ValueToCompare">
+            <summary>
+            获取或设置要与所验证的输入控件进行比较的值,不能与ControlToCompare同时设置。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.Operator">
+            <summary>
+            获取或设置要执行的比较操作。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.Type">
+            <summary>
+            获取或设置在比较之前将所比较的值转换到的数据类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.CompareErrorMessage">
+            <summary>
+            获取或设置输入值跟指定控件的值进行指定比较不相符时的提示信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.OnlyNumber">
+            <summary>
+            只能输入由0-9组成的数字
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.DataFormatString">
+            <summary>
+            获取或设置显示数据格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.Text">
+            <summary>
+            获取或设置值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TextBoxEx.EnterInvokeControlID">
+            <summary>
+            当前的文本框有焦点时按回车触发的按钮,没有指定时不作动作。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DropDownListEx">
+             <summary>
+             允许用户从下拉列表中选择一项的控件,
+             扩展功能：
+            		1.DataTextFiled支持多个数据列绑定,DataTextField多个字段之间用[,]分开;
+            		2.支持树状选项列表的显示(ShowTreeView属性);
+            		3.支持显示表示未定义选项或表示全部选项的选项
+            		(在ShowUnDefine属性为true时，通过UnDefineTitle,UndefineValue的值来构造选项;
+             </summary>
+            <example>下面例子演示了DropDownListEx控件的各种用法
+            <code>
+            <![CDATA[
+            DataSet ds=CreateDataSet();
+             //显示树状
+            ddl.ShowTreeView=true;
+            ddl.DataValueField="SystemID";
+            ddl.DataValueParentField="ParentSystemID";
+            ddl.DataTextField="SystemName";
+            ddl.DataSource=ds;
+            ddl.DataBind();
+             //显示平板状
+            ddl.DataValueField="SystemID";
+            ddl.DataTextField="SystemName";
+            ddl.DataSource=ds;
+            ddl.DataBind();
+             //显示未定义选项
+            ddl.ShowUnDefine=true;
+            ddl.UnDefineTitle="=====全部======";
+            ddl.UnDefineValue="";
+            ddl.DataValueField="SystemID";
+            ddl.DataTextField="SystemName";
+            ddl.DataSource=ds;
+            ddl.DataBind();
+             ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.Validate">
+            <summary>
+            计算它检查的条件并更新 IsValid 属性。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.OnInit(System.EventArgs)">
+            <summary>
+            重载OnInit方法。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.OnUnload(System.EventArgs)">
+            <summary>
+            重载OnUnload。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.OnDataBinding(System.EventArgs)">
+            <summary>
+            重载OnDataBinding方法用于绑定多个数据表字段。
+            </summary>
+            <param name="e">包含事件数据的 EventArgs 对象。</param>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DropDownListEx.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.ShowTreeView">
+            <summary>
+            以树状形式显示列表数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.DataValueParentField">
+            <summary>
+            树状形式显示时过滤数据的父ID字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.TreeParentID">
+            <summary>
+            获取或设置上级ID的字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.TreeID">
+            <summary>
+            获取或设置树结构的字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.ShowUnDefine">
+            <summary>
+            显示表示未定义选项或表示全部选项的项目。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.UnDefineTitle">
+            <summary>
+            表示未定义选项或表示全部选项的项目的标题。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.UnDefineValue">
+            <summary>
+            表示未定义选项或表示全部选项的项目的值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.SplitChar">
+            <summary>
+            数据列之间的分隔符,默认为[:]。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.EnableClientScript">
+            <summary>
+            获取或设置是否允许客户端验证。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.IsRequired">
+            <summary>
+            至少必选一项非空值。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.IsValid">
+            <summary>
+            获取或设置一个值，通过该值指示用户在指定控件中输入的内容是否通过验证。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.ErrorMessage">
+            <summary>
+            获取或设置条件验证失败时生成的错误信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.DropDownListEx.BorderCssClass">
+            <summary>
+            获取或设置样式表。
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.DataControlImageButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlImageButton.#ctor(System.Web.UI.WebControls.IPostBackContainer)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlImageButton.EnableCallback(System.String)">
+            <summary>
+            启用回调函数。
+            </summary>
+            <param name="argument"></param>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlImageButton.GetPostBackOptions">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.DataControlImageButton.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.Web.UI.DataControlImageButton.CausesValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Web.UI.Designer.ButtonExConverter">
+            <summary>
+            ButtonEx控件的类型转换器。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExConverter.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            使用指定的上下文返回此对象是否支持可以从列表中选取的标准值集。
+            </summary>
+            <param name="context">ITypeDescriptorContext，它提供格式上下文。</param>
+            <returns>如果应调用 GetStandardValues 来查找对象支持的一组公共值，则为 true；否则，为 false。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            当与格式上下文一起提供时，返回此类型转换器设计用于的数据类型的标准值集合。
+            </summary>
+            <param name="context">提供格式上下文的 ITypeDescriptorContext，可用来提取有关从中调用此转换器的环境的附加信息。此参数或其属性可以为空引用。</param>
+            <returns>包含标准有效值集的 TypeConverter.StandardValuesCollection；如果数据类型不支持标准值集，则为空引用。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            返回该转换器是否可以使用指定的上下文将给定类型的对象转换为此转换器的类型。
+            </summary>
+            <param name="context">ITypeDescriptorContext，它提供格式上下文。</param>
+            <param name="sourceType">表示要转换的类型。</param>
+            <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:iPower.Web.UI.Designer.ButtonExConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            使用指定的上下文和区域性信息将给定的对象转换为此转换器的类型。
+            </summary>
+            <param name="context">ITypeDescriptorContext，它提供格式上下文。</param>
+            <param name="culture">用作当前区域性的 CultureInfo。</param>
+            <param name="value">要转换的 Object。</param>
+            <returns>Object，表示已转换的值。</returns>
+        </member>
+        <member name="T:iPower.Web.UI.TemplateFieldEx">
+            <summary>
+            表示在数据绑定控件中显示自定义内容的字段。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.CopyProperties(iPower.Web.UI.DataControlFieldEx)">
+            <summary>
+            复制。
+            </summary>
+            <param name="newField"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.CreateField">
+            <summary>
+            创建控件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,iPower.Web.UI.DataControlFieldCellEx,iPower.Web.UI.DataGridViewRowState,System.Boolean)">
+            <summary>
+            从当前表单元格提取由一个或多个双向绑定语句 (DataBind) 指定的数据控件字段的值，并将这些值添加到指定的 IOrderedDictionary 集合。
+            </summary>
+            <param name="dictionary"></param>
+            <param name="cell"></param>
+            <param name="rowState"></param>
+            <param name="includeReadOnly"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.InitializeCell(iPower.Web.UI.DataControlFieldCellEx,System.Web.UI.WebControls.DataControlCellType,iPower.Web.UI.DataGridViewRowState,System.Int32)">
+            <summary>
+            将文本或控件添加到单元格的控件集合中。
+            </summary>
+            <param name="cell"></param>
+            <param name="cellType"></param>
+            <param name="rowState"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:iPower.Web.UI.TemplateFieldEx.ValidateSupportsCallback">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TemplateFieldEx.AlternatingItemTemplate">
+            <summary>
+            获取或设置交替项的模板。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TemplateFieldEx.ConvertEmptyStringToNull">
+            <summary>
+            获取或设置象绑定到的值是 Empty，它是否应转换为 null。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TemplateFieldEx.FooterTemplate">
+            <summary>
+            获取或设置脚注部分的模板。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TemplateFieldEx.HeaderTemplate">
+            <summary>
+            获取或设置标头部分的模板。
+            </summary>
+        </member>
+        <member name="P:iPower.Web.UI.TemplateFieldEx.ItemTemplate">
+            <summary>
+            获取或设置用于显示数据绑定控件中的项的模板。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.WinService</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.WinService.ModuleConst">
+            <summary>
+            Windows服务全局常量。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.ModuleConst.CONST_STR_JOBSTARTFLAG">
+            <summary>
+            工作启动标示
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.ModuleConst.CONST_DOU_TIMEINTERVAL">
+            <summary>
+            定时器时间间隔。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.ModuleConst.CONST_INT_THREAHSLEEP">
+            <summary>
+            线程睡眠时间。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.IJobLog">
+            <summary>
+            Windows服务的Job日志接口。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Config.ServiceJobsConfig">
+            <summary>
+            Window服务的所有的Job的运行状态配置。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Config.ServiceJobsConfig.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceJobsConfig.ModuleConfig">
+            <summary>
+            静态属性。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceJobsConfig.AllJobs">
+             <summary>
+            获取所有工作集合。
+             </summary>
+        </member>
+        <member name="T:iPower.WinService.Config.ServiceConfigKey">
+            <summary>
+            Window Service配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.ServiceNameKey">
+            <summary>
+            服务名称键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.DisplayNameKey">
+            <summary>
+            服务显示名称键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.DescriptionKey">
+            <summary>
+            服务描述键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.UserNameKey">
+            <summary>
+            运行服务应用程序时将使用的用户帐户。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.PasswordKey">
+            <summary>
+            运行服务应用程序时所使用用户帐户关联的密码。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.LogFileHeadKey">
+            <summary>
+            日志文件名键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Config.ServiceConfigKey.LogFileRuleKey">
+            <summary>
+            日志文件生成规则键。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Config.ServiceConfig">
+            <summary>
+            Window Service配置。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Config.ServiceConfig.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.ModuleConfig">
+            <summary>
+            静态函数。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.ServiceName">
+            <summary>
+            服务名称(iPower.ServiceName)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.DisplayName">
+            <summary>
+            显示名称(iPower.DisplayName)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.Description">
+            <summary>
+            服务描述(iPower.Description)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.Username">
+            <summary>
+            运行服务应用程序时将使用的用户帐户(iPower.UserName)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.Password">
+            <summary>
+            运行服务应用程序时所使用用户帐户关联的密码(iPower.Password)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.LogFileHead">
+            <summary>
+            日志文件名(iPower.LogFileHead)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Config.ServiceConfig.LogFileRule">
+            <summary>
+            日志文件生成规则(iPower.LogFileRule).
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Logs.WinServiceLog">
+            <summary>
+            Windows服务的日志类。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.#ctor(iPower.WinService.IJobLog)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="jobConfig"></param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.ContentLog(System.String)">
+            <summary>
+            记录日志。
+            </summary>
+            <param name="logs">日志内容</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.ErrorLog(System.Exception)">
+            <summary>
+            记录错误日志。
+            </summary>
+            <param name="e">Exception</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.ErrorLog(System.String)">
+            <summary>
+            记录错误日志。
+            </summary>
+            <param name="strLog">日志内容</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.RuuningLog(System.String)">
+            <summary>
+            记录运行日志。
+            </summary>
+            <param name="strLog">日志内容</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.WarringLog(System.String)">
+            <summary>
+            记录警告日志。
+            </summary>
+            <param name="strLog">日志内容</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.StartFailureLog(System.String)">
+            <summary>
+            启动失败日志。
+            </summary>
+            <param name="serviceName">服务名称</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.StartSuccessfullLog(System.String)">
+            <summary>
+            启动成功日志。
+            </summary>
+            <param name="serviceName">服务名称</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.StopFailureLog(System.String)">
+            <summary>
+            停止失败日志。
+            </summary>
+            <param name="serviceName">服务名称</param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.StopSuccessfullLog(System.String)">
+            <summary>
+            停止成功。
+            </summary>
+            <param name="serviceName">服务名称</param>
+        </member>
+        <member name="T:iPower.WinService.Logs.WinServiceLog.WinServiceLogStorage">
+            <summary>
+            日志存储。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.WinServiceLogStorage.#ctor(iPower.Logs.ILogFileHead)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="head"></param>
+        </member>
+        <member name="M:iPower.WinService.Logs.WinServiceLog.WinServiceLogStorage.CreateLogBody(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="logContent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.WinService.Jobs.JobConfigurationKey">
+            <summary>
+            Windows服务的Job默认配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.ModuleAssemblyKey">
+            <summary>
+            模块程序集键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.LogFileHeadKey">
+            <summary>
+            日志文件键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.LogFileRuleKey">
+            <summary>
+            日志文件生成规则键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.RunCycleKey">
+            <summary>
+            运行周期键。 
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.RunTimeKey">
+            <summary>
+            运行时刻键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.StartTimeKey">
+            <summary>
+            开始时间键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.EndTimeKey">
+            <summary>
+            结束时间键。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.Jobs.JobConfigurationKey.ConfigFileKey">
+            <summary>
+            扩展配置文件键。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Jobs.JobConfiguration">
+            <summary>
+            Job 配置基类。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.JobConfiguration.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="winServiceJob">Job配置节名。</param>
+        </member>
+        <member name="M:iPower.WinService.Jobs.JobConfiguration.Dispose">
+            <summary>
+            释放配置资源。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.ModuleAssembly">
+            <summary>
+            获取Job程序集(iPower.ModuleAssembly)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.ModuleClassName">
+            <summary>
+            获取Job主类名称。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.LogFileHead">
+            <summary>
+            获取日志文件名称(iPower.LogFileHead)。 
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.StartTimeTicks">
+            <summary>
+            获取开始时间(iPower.StartTime)。 
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.EndTimeTicks">
+            <summary>
+            获取结束时间(iPower.EndTime)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.CycleTicks">
+            <summary>
+            获取运行周期(iPower.RunCycle)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.RunTimeTicks">
+            <summary>
+            获取同步时刻(iPower.RunTime)[HH:mm]。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.ConfigFile">
+            <summary>
+            获取扩展配置文件(iPower.ConfigFile)。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.JobConfiguration.LogFileRule">
+            <summary>
+            日志文件生成规则(iPower.LogFileRule).
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Jobs.Job`1">
+            <summary>
+            Windows服务的Job抽象类。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.Start(System.String[])">
+            <summary>
+            初始化启动任务。
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.Pause">
+            <summary>
+            暂停任务。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.Stop">
+            <summary>
+            停止任务。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.CanRun">
+            <summary>
+            判断是否允许运行。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.Run">
+            <summary>
+            运行任务。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.OnLogChanged(iPower.Logs.EnumLogsType,System.String)">
+            <summary>
+            触发日志事件。
+            </summary>
+            <param name="logType"></param>
+            <param name="logContent"></param>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.IsExpired">
+            <summary>
+            是否过期。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.createRunTicks">
+            <summary>
+            创建任务的运行间隔。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WinService.Jobs.Job`1.RunJob(System.String[])">
+            <summary>
+            任务执行。
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="P:iPower.WinService.Jobs.Job`1.JobName">
+            <summary>
+            获取服务任务名称。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.Job`1.JobConfig">
+            <summary>
+            获取服务任务配置实例。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.Job`1.JobFunction">
+            <summary>
+            获取服务执行函数。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.Job`1.ServiceLog">
+            <summary>
+            获取服务日志。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.Job`1.JobLog">
+            <summary>
+            获取任务日志。
+            </summary>
+        </member>
+        <member name="E:iPower.WinService.Jobs.Job`1.LogChanged">
+            <summary>
+            日志事件。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Jobs.IJobFunction">
+            <summary>
+            Windows服务的Job函数接口。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJobFunction.Run(System.String[])">
+            <summary>
+            执行入口函数。
+            </summary>
+        </member>
+    </members>
+</doc>

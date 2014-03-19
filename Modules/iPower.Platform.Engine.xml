@@ -1,0 +1,853 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.Platform.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Platform.Engine.Service.ITopBannerView">
+            <summary>
+            默认Banner头视图。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Service.IBaseView">
+            <summary>
+            界面视图接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.IBaseView.MapPath(System.String)">
+            <summary>
+            检索虚拟路径（绝对的或相对的）或应用程序相关的路径映射到的物理路径。
+            </summary>
+            <param name="virtualPath"> 表示虚拟路径的 System.String。</param>
+            <returns>与虚拟路径或应用程序相关的路径关联的物理路径。</returns>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.IBaseView.NavigationContent">
+            <summary>
+            获取或设置导航数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.ITopBannerView.TopBannerMenus">
+            <summary>
+            获取或设置顶部菜单集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Service.TopBannerPresenter`1">
+            <summary>
+            默认Banner头行为类。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Service.BasePresenter`2">
+            <summary>
+            行为抽象类。
+            </summary>
+            <summary>
+            WebPart处理。
+            </summary>
+            <summary>
+            日志记录。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.#ctor(`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view">界面接口。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.OnInitComponent(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Platform.Engine.Service.BasePresenter`2.InitComponent">InitComponent</see>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.OnPreViewLoad(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Platform.Engine.Service.BasePresenter`2.PreViewLoad">PreViewLoad</see>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.OnLastViewLoad(System.EventArgs)">
+            <summary>
+            触发<see cref="E:iPower.Platform.Engine.Service.BasePresenter`2.LastViewLoad">LastViewLoad</see>事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.CreateModuleConfiguration">
+            <summary>
+            创建模块配置对象。
+            </summary>
+            <returns>配置类实体。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.InitializeComponent">
+            <summary>
+            初始化数据加载。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.AddServiceToContainer(iPower.IServiceContainer)">
+            <summary>
+            添加服务到服务容器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.LoadResourceConfiguration">
+            <summary>
+            资源配置数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.PreViewLoadData">
+            <summary>
+            在View的LoadData前加载。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.LoadLastData">
+            <summary>
+            最后加载的数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.GetEnumMemberName(System.Type,System.String)">
+            <summary>
+            获取枚举数据。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="Value">枚举名称。</param>
+            <returns>名称数据。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.GetEnumMemberName(System.Type,System.Int32)">
+            <summary>
+            获取枚举数据。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="Value">值。</param>
+            <returns>名称数据。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.GetEnumMemberIntValue(System.Type,System.String)">
+            <summary>
+            获取枚举数据值。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="Value">名称数据。</param>
+            <returns>值。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.EnumDataSource(System.Type)">
+            <summary>
+            绑定枚举数据源。
+            </summary>
+            <param name="type">枚举类。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.HasService(System.Type)">
+            <summary>
+            检查服务容器中服务类型是否存在。
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.AddService(System.Type,iPower.ServiceCreatorCallback)">
+            <summary>
+            将指定的服务添加到服务容器中。
+            </summary>
+            <param name="serviceType">要添加的服务类型。</param>
+            <param name="callback">用于创建服务的回调对象。这允许将服务声明为可用，但将对象的创建延迟到请求该服务之后。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.AddService(System.Type,System.Object)">
+            <summary>
+            将指定的服务添加到服务容器中。
+            </summary>
+            <param name="serviceType">要添加的服务类型。</param>
+            <param name="serviceInstance">要添加的服务类型的实例。此对象必须实现 serviceType 参数指示的类型或从其继承。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.RemoveService(System.Type)">
+            <summary>
+            从服务容器中移除指定的服务类型。
+            </summary>
+            <param name="serviceType">要移除的服务类型。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.GetService(System.Type)">
+            <summary>
+            获取指定类型的服务对象。
+            </summary>
+            <param name="serviceType">一个对象，它指定要获取的服务对象的类型。</param>
+            <returns>serviceType 类型的服务对象。- 或 - 如果没有 serviceType 类型的服务对象，则为 nullNothingnullptrnull 引用（在 Visual Basic 中为 Nothing）。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.RenderNavigation(System.String)">
+            <summary>
+            绘制导航数据。
+            </summary>
+            <param name="seperator">分隔符。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.GetWebPartQueryCollection(iPower.Platform.WebPart.EnumWebPartAlignment)">
+            <summary>
+            获取当前系统当前用户指定位置的WebPart组件集合。
+            </summary>
+            <param name="zoneMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.BasePresenter`2.CreateCommonLog(System.String,System.String)">
+            <summary>
+            创建日志记录到数据库。
+            </summary>
+            <param name="head"></param>
+            <param name="content"></param>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.View">
+            <summary>
+            获取界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.ModuleConfig">
+            <summary>
+            获取模块配置。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.Cache">
+            <summary>
+            获取缓存。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.NavigationSeperator">
+            <summary>
+            获取导航分隔符。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.MainMenuDefineConfig">
+            <summary>
+            获取主菜单定义配置。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.BasePresenter`2.ModuleDefineConfig">
+            <summary>
+            获取模块菜单定义配置。
+            </summary>
+        </member>
+        <member name="E:iPower.Platform.Engine.Service.BasePresenter`2.InitComponent">
+            <summary>
+            初始化数据加载事件。
+            </summary>
+        </member>
+        <member name="E:iPower.Platform.Engine.Service.BasePresenter`2.PreViewLoad">
+            <summary>
+            在ViewLoad前发生。
+            </summary>
+        </member>
+        <member name="E:iPower.Platform.Engine.Service.BasePresenter`2.LastViewLoad">
+            <summary>
+            在ViewLoad后发生。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.TopBannerPresenter`1.#ctor(iPower.Platform.Engine.Service.ITopBannerView)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view">默认Banner头视图。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.TopBannerPresenter`1.LoadResourceConfiguration">
+            <summary>
+            加载资源配置。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.TopBannerPresenter`1.CreateModuleConfiguration">
+            <summary>
+            创建模块配置对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.TopBannerPresenter`1.LoadLastData">
+            <summary>
+            数据加载。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.DbBaseEntity`2">
+            <summary>
+            ORM基类。
+            </summary>
+            <typeparam name="T">实体类。</typeparam>
+            <typeparam name="K">配置类。</typeparam>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.DbBaseEntity`2.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.DbBaseEntity`2.#ctor(`1)">
+            <summary>
+            构造函数。
+            <param name="config">模块配置实例。</param>
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.DbBaseEntity`2.CreateDBAccess">
+            <summary>
+            创建数据链接。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.DbBaseEntity`2.ModuleConfig">
+            <summary>
+            获取模块配置信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.DbBaseEntity`2.Cache">
+            <summary>
+            获取缓存。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.DataSource.ListControlsDataSource">
+            <summary>
+            列表控件数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.DataSource.IListControlsData">
+            <summary>
+             列表类型控件数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsData.DataTextField">
+            <summary>
+            获取或设置显示字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsData.DataTextFormatString">
+            <summary>
+            获取或设置显示数据格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsData.DataValueField">
+            <summary>
+            获取或设置值字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsData.OrderNoField">
+            <summary>
+            获取或设置排序字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsData.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsDataSource.#ctor(System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+             构造函数。
+            </summary>
+            <param name="dataTextField">显示字段。</param>
+            <param name="dataTextFormatString">显示数据格式。</param>
+            <param name="dataValueField">值字段。</param>
+            <param name="orderNoField">排序字段。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsDataSource.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="dataTextField">显示字段。</param>
+            <param name="dataValueField">值字段。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsDataSource.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsDataSource.DataTextField">
+            <summary>
+            获取或设置显示字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsDataSource.DataTextFormatString">
+            <summary>
+            获取或设置显示数据格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsDataSource.DataValueField">
+            <summary>
+            获取或设置值字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsDataSource.OrderNoField">
+            <summary>
+            获取或设置排序字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsDataSource.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource">
+            <summary>
+             列表控件树型展示数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.DataSource.IListControlsTreeViewData">
+            <summary>
+            列表类型控件树型数据展示数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.IListControlsTreeViewData.ParentDataValueField">
+            <summary>
+            获取或设置父字段。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource.#ctor(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+             构造函数。
+            </summary>
+            <param name="dataTextField">显示字段。</param>
+            <param name="dataTextFormatString">显示数据格式。</param>
+            <param name="dataValueField">值字段。</param>
+            <param name="parentDataValueField">父字段。</param>
+            <param name="orderNoField">排序字段。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource.#ctor(System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="dataTextField">显示字段。</param>
+            <param name="dataValueField">值字段。</param>
+            <param name="parentDataValueField">父字段。</param>
+            <param name="orderNoField">排序字段。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource.#ctor(System.String,System.String,System.String,System.Object)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="dataTextField">显示字段。</param>
+            <param name="dataValueField">值字段。</param>
+            <param name="parentDataValueField">父字段。</param>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ListControlsTreeViewDataSource.ParentDataValueField">
+            <summary>
+             获取或设置父字段。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Service.EntityEventArgs`1">
+            <summary>
+            事件数据类。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.EntityEventArgs`1.#ctor(`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="entity">实体类。</param>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.EntityEventArgs`1.Entity">
+            <summary>
+            获取实体数据。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Service.IPickerView">
+            <summary>
+            Picker视图接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Service.IPickerView.BindSearchResult(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定查询结果。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.IPickerView.MultiSelect">
+            <summary>
+            获取是否多选。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Service.IPickerView.Values">
+            <summary>
+            获取值数组。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1">
+            <summary>
+            枚举下拉数据源。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.#ctor(System.Type,System.Int32[],`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="enumClassType">枚举类型。</param>
+            <param name="ignoreValues">过滤的值。</param>
+            <param name="config">模块配置实例。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.#ctor(System.Type,`0)">
+            <summary>
+             构造函数。
+            </summary>
+            <param name="enumClassType">枚举类型。</param>
+            <param name="config">模块配置实例。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.#ctor(`0)">
+            <summary>
+             构造函数。
+            </summary>
+            <param name="config">模块配置实例。</param>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.EnumClassType">
+            <summary>
+            获取或设置枚举类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.IgnoreValues">
+            <summary>
+            获取或设置过滤的值。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.DataTextField">
+            <summary>
+             获取显示字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.DataValueField">
+            <summary>
+            获取值字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.DataSource.ConstListControlsDataSource`1.DataSource">
+            <summary>
+            获取数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Domain.CommonEnums">
+            <summary>
+            公共枚举类。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Domain.CommonEnums.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Domain.CommonEnums.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Domain.CommonEnums.EnumName">
+            <summary>
+            获取或设置枚举名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Domain.CommonEnums.Member">
+            <summary>
+            获取或设置枚举成员。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Domain.CommonEnums.MemberName">
+            <summary>
+            获取或设置成员中文名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Domain.CommonEnums.IntValue">
+            <summary>
+            获取或设置成员值。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Domain.CommonEnums.OrderNo">
+            <summary>
+            获取或设置序号。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1">
+            <summary>
+            公共枚举实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1.#ctor(`0)">
+            <summary>
+            构造函数，析够函数。
+            </summary>
+            <param name="config">模块配置实例。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1.GetEnumMemberName(System.Type,System.String)">
+            <summary>
+            获取枚举数据。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="Value">枚举名称。</param>
+            <returns>名称数据。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1.GetEnumMemberName(System.Type,System.Int32)">
+            <summary>
+            获取枚举数据。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="Value">值。</param>
+            <returns>名称数据。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1.GetEnumMemberIntValue(System.Type,System.String)">
+            <summary>
+            获取枚举数据值。
+            </summary>
+            <param name="type">枚举类型。</param>
+            <param name="value">名称数据。</param>
+            <returns>值。</returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.CommonEnumsEntity`1.LoadEnumAndConst(System.String)">
+            <summary>
+            获取枚举数据。
+            </summary>
+            <param name="className"></param>
+            <returns></returns>s
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys">
+            <summary>
+            模块默认配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_SystemIdKey">
+            <summary>
+            获取系统标示键（iPower.SystemID）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_SystemNameKey">
+            <summary>
+            获取系统名称键（iPower.SystemName）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_CopyRightKey">
+            <summary>
+            获取版权名称键（iPower.CopyRight）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_MyDefaultURLKey">
+            <summary>
+            获取系统默认页面URL键（iPower.MyDefaultURL）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_MyDesktopURLKey">
+            <summary>
+            获取系统默认我的桌面URL键（iPower.MyDesktopURL）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_TopBannerMenus">
+            <summary>
+            获取顶部菜单键名(iPower.TopBannerMenus)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_LogoutURLKey">
+            <summary>
+            获取注销页面URL键（iPower.LogoutURL）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_MainMenuDefineConfigFileKey">
+            <summary>
+            获取主菜单地址URI键（iPower.MainMenuDefineConfigFile）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_ModuleDefineConfigFileKey">
+            <summary>
+            获取菜单地址URI键（iPower.ModuleDefineConfigFile）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_BannerImageUrlKey">
+            <summary>
+            获取Benner头图片URL及宽度键（iPower.BannerImageUrl）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_LogoImageUrlKey">
+            <summary>
+            获取Logo图片URL及宽度键（iPower.LogoImageUrl）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_EffectImageURLKey">
+            <summary>
+            特效图片URL键（iPower.EffectImageURL）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_WebCssPathKey">
+            <summary>
+            获取样式表资源键（iPower.WebCssPath）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_WebScriptPathKey">
+            <summary>
+            获取脚本资源键（iPower.WebScriptPath）。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_WebPartMgrAssemblyKey">
+            <summary>
+            获取WebPart管理程序集(iPower.WebPartMgrAssembly)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfigurationKeys.iPower_Const_DbCommonLogAssemblyKey">
+            <summary>
+            获取日志记录程序集(iPower.DbCommonLogAssembly)。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.BaseModuleConfiguration">
+            <summary>
+            模块默认配置类。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.htbCache">
+            <summary>
+            Hashtable
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="sectionName">配置节名称。</param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.GetModuleDefineConfig(System.String,iPower.GUIDEx)">
+            <summary>
+            获取菜单配置数据。
+            </summary>
+            <param name="file">菜单文件物理地址。</param>
+            <param name="systemID">系统ID。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.CurrentSystemID">
+            <summary>
+            获取系统标示。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.CurrentSystemName">
+            <summary>
+            获取系统名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.MainMenuDefineConfigFile">
+            <summary>
+            获取主菜单的物理地址。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.ModuleDefineConfigFile">
+            <summary>
+            获取菜单的物理地址。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.MyDefaultURL">
+            <summary>
+            获取系统默认页面URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.MyDesktopURL">
+            <summary>
+            获取系统我的桌面URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.TopBannerMenus">
+            <summary>
+            获取顶部菜单集合(规则：Name|Target|Url;)。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.LogoutURL">
+            <summary>
+            获取注销页面URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.CopyRight">
+            <summary>
+            获取版权名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.BannerImageUrl">
+            <summary>
+            获取Benner头图片路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.LogoImageUrl">
+            <summary>
+            获取Logo图片路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.EffectImageURL">
+            <summary>
+            获取特效图片URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.WebCssPaths">
+            <summary>
+            获取样式表资源集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.WebScriptPaths">
+            <summary>
+            获取脚本资源集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.ModuleDefaultDatabase">
+            <summary>
+            获取默认数据库连接实体。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.WebPartMgrAssembly">
+            <summary>
+            获取WebPart管理接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.BaseModuleConfiguration.DbCommonLogAssembly">
+            <summary>
+            获取记录日志程序集。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.TopBannerMenu">
+            <summary>
+            顶部菜单。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.TopBannerMenu.Name">
+            <summary>
+            获取或设置菜单名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.TopBannerMenu.Target">
+            <summary>
+            获取或设置链接方式。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.TopBannerMenu.Url">
+            <summary>
+            获取或设置URL地址。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Engine.Persistence.TopBannerMenu.Order">
+            <summary>
+            获取或设置排序。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Engine.Persistence.TopBannerMenuCollection">
+            <summary>
+            顶部菜单集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.TopBannerMenuCollection.Contains(iPower.Platform.Engine.Persistence.TopBannerMenu)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.TopBannerMenuCollection.Add(iPower.Platform.Engine.Persistence.TopBannerMenu)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Platform.Engine.Persistence.TopBannerMenuCollection.Compare(iPower.Platform.Engine.Persistence.TopBannerMenu,iPower.Platform.Engine.Persistence.TopBannerMenu)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

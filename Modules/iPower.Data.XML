@@ -1,0 +1,1012 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.Data</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Data.ORM.DbFieldAttribute">
+            <summary>
+            字段属性。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.ORM.DbFieldAttribute.#ctor(System.String,iPower.Data.ORM.DbFieldUsage,System.Object,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="fieldName">字段名。</param>
+            <param name="usage">字段类型。</param>
+            <param name="defaultValue">缺省值。</param>
+            <param name="description">字段描述。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.DbFieldAttribute.#ctor(System.String,iPower.Data.ORM.DbFieldUsage,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="fieldName">字段名。</param>
+            <param name="usage">字段类型。</param>
+            <param name="description">字段描述。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.DbFieldAttribute.#ctor(System.String,iPower.Data.ORM.DbFieldUsage)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="fieldName">字段名。</param>
+            <param name="usage">字段类型。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.DbFieldAttribute.#ctor(System.String)">
+            <summary>
+            字段属性
+            </summary>
+            <param name="fieldName">字段名。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.DbFieldAttribute.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.FieldName">
+            <summary>
+            获取字段名。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.FieldUsage">
+            <summary>
+            获取字段类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.DefaultValue">
+            <summary>
+            获取字段默认值。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.FieldDescription">
+            <summary>
+            获取字段描述。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.IsPrimaryKey">
+            <summary>
+            获取是否是关键字。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.IsUniqueKey">
+            <summary>
+            获取是否是唯一约束。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.IsBySystem">
+            <summary>
+            获取是否自增字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.DbFieldAttribute.IsEmptyOrNullNotUpdate">
+            <summary>
+            获取是否为空数据不更新字段。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.DataAccess.SqlDBAccess">
+            <summary>
+            SqlServer访问数据库
+            </summary>
+        </member>
+        <member name="T:iPower.Data.DataAccess.DBAccess">
+            <summary>
+            统一数据访问抽象类。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.IDBAccess">
+             <summary>
+            统一数据访问接口。
+             </summary>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.OpenConnection">
+            <summary>
+            打开数据库连接。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.CloseConnection">
+            <summary>
+            关闭数据库连接，回滚事务。 
+            </summary>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.CloseConnection(System.Boolean)">
+            <summary>
+            关闭数据库连接
+            </summary>
+            <param name="bCloseTrans">是否回滚事务，true表示回滚事务，false表示不处理有事务的连接。</param>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.BeginTransaction">
+            <summary>
+            开始数据库事务（不支持并行事务要重载该函数）。
+            </summary>
+            <returns>成功启动事务则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.CommitTransaction">
+            <summary>
+            提交当前数据库事务。
+            </summary>
+            <returns>成功提交事务则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.RollbackTransaction">
+            <summary>
+            回滚当前数据库事务。 
+            </summary>
+            <returns>成功回滚事务则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.HasTransaction">
+            <summary>
+            是否存在事务。
+            </summary>
+            <returns>存在事务则返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.ConvertToDBString(System.String)">
+            <summary>
+            将字符里的特殊字符转化为数据库支持字符格式。
+            </summary>
+            <param name="context">需要转化的字符。</param>
+            <returns>转化后的字符。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.ExecuteDataset(System.String)">
+            <summary>
+            执行命令返回数据集。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>数据集。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.ExecuteNonQuery(System.String)">
+            <summary>
+            执行命令。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.ExecuteReader(System.String)">
+            <summary>
+            执行命令获取只进结果集，调用此方法后需要调用CloseConnection（）方法关闭连接。 
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>只进结果集。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.ExecuteScalar(System.String)">
+            <summary>
+            执行命令，并返回查询所返回的结果集中第一行的第一列。忽略额外的列或行。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>结果集中第一行的第一列。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.BatchInsert(System.String,System.Data.DataTable)">
+            <summary>
+            批量插入数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.BatchUpdate(System.String,System.Data.DataTable)">
+            <summary>
+            批量更新数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.IDBAccess.BatchDelete(System.String,System.Data.DataTable)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="P:iPower.Data.IDBAccess.CommandTimeout">
+            <summary>
+             获取或设置命令超时时间(秒)。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="connectionString">连接字符串。</param>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.OpenConnection">
+            <summary>
+            打开数据连接。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CloseConnection">
+            <summary>
+            关闭数据连接。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CloseConnection(System.Boolean)">
+            <summary>
+            关闭数据连接。
+            </summary>
+            <param name="bCloseTrans">是否关闭事务。</param>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.BeginTransaction">
+            <summary>
+            开始事务。
+            </summary>
+            <returns>开始事务是否成功。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CommitTransaction">
+            <summary>
+            提交事务。
+            </summary>
+            <returns>提交事务是否成功。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.RollbackTransaction">
+            <summary>
+            回滚事务。
+            </summary>
+            <returns>回滚事务是否成功。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.HasTransaction">
+            <summary>
+            是否有事务。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ConvertToDBString(System.String)">
+            <summary>
+            过滤非法字符。
+            </summary>
+            <param name="context">过滤字符。</param>
+            <returns>过滤后的字符。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ExecuteDataset(System.String)">
+            <summary>
+            执行命令返回数据集。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>数据集。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ExecuteNonQuery(System.String)">
+            <summary>
+            执行命令。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ExecuteReader(System.String)">
+            <summary>
+            执行命令获取只进结果集，调用此方法后需要调用CloseConnection（）方法关闭连接。 
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>只进结果集。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ExecuteScalar(System.String)">
+            <summary>
+            执行命令，并返回查询所返回的结果集中第一行的第一列。忽略额外的列或行。
+            </summary>
+            <param name="commandText">命令。</param>
+            <returns>结果集中第一行的第一列。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.BatchInsert(System.String,System.Data.DataTable)">
+            <summary>
+            批量插入数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.BatchUpdate(System.String,System.Data.DataTable)">
+            <summary>
+            批量更新数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.BatchDelete(System.String,System.Data.DataTable)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="tableName">表名。</param>
+            <param name="dtValue">数据(主键字段在dtValue中设置)。</param>
+            <returns>影响数据行数。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.OnBatchUpdate(System.String,System.Data.DataTable,iPower.Data.DataAccess.DBAccess.BuildCommandOpera)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="dtValue"></param>
+            <param name="opera"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.OnBatchBulkCopy(System.String,System.Data.DataTable)">
+            <summary>
+            批量复制数据。
+            </summary>
+            <param name="tableName"></param>
+            <param name="dtValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CreateAdapter">
+            <summary>
+            创建适配器。
+            </summary>
+            <returns>适配器。</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CreateConnection(System.String)">
+            <summary>
+            创建连接。
+            </summary>
+            <param name="connectionString">连接字符串</param>
+            <returns>连接对象</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.CreateAdapter(System.Data.Common.DbCommand)">
+            <summary>
+            创建适配器。
+            </summary>
+            <param name="command">IDbCommand</param>
+            <returns>适配器对象</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.BuildCommand(System.String,System.Data.DataColumnCollection,System.Data.DataColumn[],iPower.Data.DataAccess.DBAccess.BuildCommandOpera)">
+            <summary>
+            构建Command对象。
+            </summary>
+            <param name="tableName"></param>
+            <param name="cols"></param>
+            <param name="pks"></param>
+            <param name="opera"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.ConvertTo(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DBAccess.Dispose">
+            <summary>
+            资源释放。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataAccess.DBAccess.CommandTimeout">
+            <summary>
+            获取或设置命令超时时间(秒)。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataAccess.DBAccess.Connection">
+            <summary>
+            获取或设置数据库连接对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataAccess.DBAccess.Transaction">
+            <summary>
+            获取或设置数据库事务对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataAccess.DBAccess.TransactionCount">
+            <summary>
+            获取或设置数据库事务个数。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.DataAccess.DBAccess.BuildCommandOpera">
+            <summary>
+            构建Cmd类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.DataAccess.DBAccess.BuildCommandOpera.Insert">
+            <summary>
+            插入。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.DataAccess.DBAccess.BuildCommandOpera.Update">
+            <summary>
+            更新。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.DataAccess.DBAccess.BuildCommandOpera.Delete">
+            <summary>
+            删除。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.BeginTransaction">
+            <summary>
+            启动事务。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.ConvertToDBString(System.String)">
+            <summary>
+            字符过滤。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.CreateAdapter">
+            <summary>
+            创建适配器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.CreateConnection(System.String)">
+            <summary>
+            创建连接。
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.OnBatchBulkCopy(System.String,System.Data.DataTable)">
+            <summary>
+            批量插入。
+            </summary>
+            <param name="tableName"></param>
+            <param name="dtValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.SqlDBAccess.BuildCommand(System.String,System.Data.DataColumnCollection,System.Data.DataColumn[],iPower.Data.DataAccess.DBAccess.BuildCommandOpera)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="cols"></param>
+            <param name="pks"></param>
+            <param name="opera"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Data.DataAccess.OleDBAccess">
+            <summary>
+            OleDb数据库访问。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.#ctor(System.String)">
+            <summary>
+            构造行数。
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.BeginTransaction">
+            <summary>
+            启动事务。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.ConvertToDBString(System.String)">
+            <summary>
+            字符过滤。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.CreateAdapter">
+            <summary>
+            创建适配器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.CreateConnection(System.String)">
+            <summary>
+            创建连接。
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.OnBatchBulkCopy(System.String,System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="dtValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.OleDBAccess.BuildCommand(System.String,System.Data.DataColumnCollection,System.Data.DataColumn[],iPower.Data.DataAccess.DBAccess.BuildCommandOpera)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="cols"></param>
+            <param name="pks"></param>
+            <param name="opera"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Data.DataAccess.EnumDbType">
+            <summary>
+            数据库类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.DataAccess.EnumDbType.SqlServer">
+            <summary>
+            SqlServer数据库类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.DataAccess.EnumDbType.OleDb">
+            <summary>
+            OleDb数据库类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.ORM.DbFieldUsage">
+            <summary>
+            字段属性枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.ORM.DbFieldUsage.None">
+            <summary>
+            未设置。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.ORM.DbFieldUsage.PrimaryKey">
+            <summary>
+            关键字。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.ORM.DbFieldUsage.UniqueKey">
+            <summary>
+            唯一约束。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.ORM.DbFieldUsage.BySystem">
+            <summary>
+            自增字段。
+            </summary>
+        </member>
+        <member name="F:iPower.Data.ORM.DbFieldUsage.EmptyOrNullNotUpdate">
+            <summary>
+            空数据不更新。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.ORM.DbTableAttribute">
+            <summary>
+            表属性。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.ORM.DbTableAttribute.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="tableName">表名。</param>
+        </member>
+        <member name="P:iPower.Data.ORM.DbTableAttribute.TableName">
+            <summary>
+            获取表名。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.ORM.DbEntityDataChangeLogHandler">
+            <summary>
+            数据变更日志委托。
+            </summary>
+            <param name="head">日志头。</param>
+            <param name="content">日志体。</param>
+        </member>
+        <member name="T:iPower.Data.ORM.ORMDbEntity`1">
+            <summary>
+            ORM实体基础类。
+            </summary>
+            <typeparam name="T">实体类。</typeparam>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.OnDbEntityDataChangeLogHandler(System.String,System.String)">
+            <summary>
+            记录日志。
+            </summary>
+            <param name="head">日志头。</param>
+            <param name="logContent">日志体。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.loadFieldMembersAttributes(System.Collections.Hashtable@,System.Collections.Hashtable@,System.Collections.Hashtable@,System.Collections.Hashtable@)">
+            <summary>
+            
+            </summary>
+            <param name="tableCache"></param>
+            <param name="members"></param>
+            <param name="pks"></param>
+            <param name="all"></param>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.CreateDBAccess">
+            <summary>
+            创建数据访问接口。
+            </summary>
+            <returns>数据访问接口</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.Assignment(System.Data.DataRow)">
+            <summary>
+            给属性赋值。
+            </summary>
+            <param name="row">数据行。</param>
+            <returns>数据对象实例。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.Assignment(System.Data.IDataReader)">
+            <summary>
+            给属性赋值。
+            </summary>
+            <param name="reader">数据行。</param>
+            <returns>数据对象实例。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadEntityValues(`0@,System.Collections.Specialized.NameValueCollection@,System.Collections.Specialized.NameValueCollection@)">
+            <summary>
+            获取对象实例的值。
+            </summary>
+            <param name="entity">对象实例。</param>
+            <param name="primaryNameValues">主键键-值。</param>
+            <param name="fieldNameValues">非主键键-值。</param>
+            <returns>获取数据成功。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.SetPrimaryKeys(System.Data.DataTable@,System.String[])">
+            <summary>
+            设置DataTable的主键。
+            </summary>
+            <param name="dt"></param>
+            <param name="pks">主键字段名称数组。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadRecord(`0@)">
+            <summary>
+            加载数据。
+            </summary>
+            <param name="entity">实例。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadRecord(`0@,System.Boolean)">
+            <summary>
+            加载数据。
+            </summary>
+            <param name="entity">实例。</param>
+            <param name="bPrimary">是否主键。</param>
+            <returns>加载成功为true。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadRecord(System.Object)">
+            <summary>
+            加载数据。
+            </summary>
+            <param name="primaryValue">主键值（只有一个主键）。</param>
+            <returns>返回实例。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadRecord(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            加载数据。
+            </summary>
+            <param name="where">条件集合（字段名称/字段值）。</param>
+            <returns>实例集合。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.LoadRecord(System.String)">
+            <summary>
+            加载数据。
+            </summary>
+            <param name="where">条件集合（字段名称/字段值）。</param>
+            <returns>实例集合。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord">
+            <summary>
+            获取全部记录。
+            </summary>
+            <returns>DataTable.</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord(System.String[])">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord(System.String[],System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <param name="sortExpression">排序表达式。</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord(System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="filterExpression">过滤条件。</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord(System.String,System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="filterExpression">过滤条件。</param>
+            <param name="sortExpression">排序表达式</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetAllRecord(System.String[],System.String,System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <param name="filterExpression">过滤条件。</param>
+            <param name="sortExpression">排序。</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord(System.String[],System.String,System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <param name="filterExpression">过滤条件。</param>
+            <param name="sortExpression">排序。</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord(System.String,System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="filterExpression">过滤条件。</param>
+            <param name="sortExpression">排序表达式。</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord(System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="filterExpression">过滤条件。</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord(System.String[],System.String)">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <param name="sortExpression">排序表达式。</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord(System.String[])">
+            <summary>
+            获取全部记录。
+            </summary>
+            <param name="colsName">列名。</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.GetReaderRecord">
+            <summary>
+            获取全部记录。
+            </summary>
+            <returns>IDataReader.</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.InsertRecord(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            插入数据。
+            </summary>
+            <param name="colsNameValues">字段及数据。</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.UpdateRecord(`0)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="entity">实例。</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.UpdateRecord(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="colsNameValues">列名－数据。</param>
+            <param name="whereExpression">过滤条件。</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DeleteRecord(`0)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="entity">实例。</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DeleteRecord(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除(适用于只有一个主键的表)。
+            </summary>
+            <param name="primaryValues">主键值集合</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DeleteRecord(System.String[])">
+            <summary>
+            批量删除(适用于只有一个主键的表)。
+            </summary>
+            <param name="primaryValues">主键值集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DeleteRecord(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="primaryValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DeleteRecord(System.String)">
+            <summary>
+             删除数据。
+            </summary>
+            <param name="where">条件。</param>
+            <returns>成功返回true,否则false。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.DataSource(System.String)">
+            <summary>
+            获取数据源。
+            </summary>
+            <param name="where">查询条件。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.ConvertDataSource(System.Data.DataTable)">
+            <summary>
+            数据源转换。
+            </summary>
+            <param name="dtSource">数据源。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.ConvertDataSource(System.Data.IDataReader)">
+            <summary>
+            数据源转换。
+            </summary>
+            <param name="drSource">数据源。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.ORMDbEntity`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:iPower.Data.ORM.ORMDbEntity`1.DbEntityDataChangeLogEvent">
+            <summary>
+            数据变更写入日志事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.ORMDbEntity`1.TableName">
+            <summary>
+            获取表名。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.ORMDbEntity`1.DatabaseAccess">
+            <summary>
+            获取或设置数据访问接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.ORMDbEntity`1.AllFieldName">
+            <summary>
+            获取所有字段名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.ORMDbEntity`1.PrimaryFieldName">
+            <summary>
+            获取主键字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.ORMDbEntity`1.LoadFieldMemberInfoData">
+            <summary>
+            加载字段数据信息。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.ORM.FieldMemberInfo">
+            <summary>
+            字段成员信息。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.#ctor(iPower.Data.ORM.DbFieldAttribute,System.Reflection.PropertyInfo)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="fieldAttribute">字段属性。</param>
+            <param name="property">函数属性。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.GetValue(System.Object)">
+            <summary>
+            获取字段的值。
+            </summary>
+            <param name="entity">包含此字段的实例。</param>
+            <returns>返回字段的值。</returns>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.SetValue(System.Object,System.Object)">
+            <summary>
+            设置字段的值。
+            </summary>
+            <param name="entity">包含此字段的实例。</param>
+            <param name="value">字段的值。</param>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.ConvertDateTimeToString(System.Object,System.Type)">
+            <summary>
+            将时间类型转化为带微秒的字符串，其他类型不变。
+            </summary>
+            <param name="obj"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.ConvertToPropertyType(System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.GetConvertToPropertyType(System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.ORM.FieldMemberInfo.SetConvertToPropertyType(System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Data.ORM.FieldMemberInfo.FieldAttribute">
+            <summary>
+            获取字段属性。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.ORM.FieldMemberInfo.Property">
+            <summary>
+            获取函数属性。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.DataAccess.DatabaseFactory">
+            <summary>
+            数据访问工厂。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.Instance(System.String,iPower.Data.DataAccess.EnumDbType)">
+            <summary>
+            静态数据访问对象。 
+            </summary>
+            <param name="connectionString">数据链接字符串</param>
+            <param name="dbType">数据库类型</param>
+            <returns>数据访问接口</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.Instance(System.String)">
+            <summary>
+            静态数据访问对象,默认为SqlServer数据库。 
+            </summary>
+            <param name="connectionString">数据链接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.Instance(iPower.Configuration.ConnectionStringConfiguration)">
+            <summary>
+            静态数据访问对象。 
+            </summary>
+            <param name="csc">数据库配置。</param>
+            <returns>数据访问接口</returns>
+        </member>
+        <member name="M:iPower.Data.DataAccess.DatabaseFactory.CreateInstance(iPower.Data.DataAccess.EnumDbType,System.String)">
+            <summary>
+            创建数据访问接口实例。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

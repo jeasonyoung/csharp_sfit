@@ -1,0 +1,5 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Share/ModuleFrameSetMasterPage.Master" AutoEventWireup="true" CodeBehind="ModuleFrameSetMasterPage.master.cs" Inherits="iPower.IRMP.Security.Web.Share.ModuleFrameSetMasterPage" %>
+
+<asp:Content ID="contentWorkPlace" ContentPlaceHolderID="workPlace" runat="server">
+    <asp:ContentPlaceHolder ID="workPlace" runat="server" />
+</asp:Content>

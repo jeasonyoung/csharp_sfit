@@ -35,17 +35,29 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Modules\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="iPower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.Data.dll</HintPath>
+    </Reference>
     <Reference Include="iPower.IRMP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\IRMP\iPower.IRMP\bin\Debug\iPower.IRMP.dll</HintPath>
+      <HintPath>..\Modules\iPower.IRMP.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.Engine.dll</HintPath>
     </Reference>
     <Reference Include="iPower.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iPower\iPower.Platform\bin\Debug\iPower.Platform.dll</HintPath>
+      <HintPath>..\Modules\iPower.Platform.dll</HintPath>
     </Reference>
     <Reference Include="iPower.Platform.Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iPower\iPower.Platform.Engine\bin\Debug\iPower.Platform.Engine.dll</HintPath>
+      <HintPath>..\Modules\iPower.Platform.Engine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -177,14 +189,6 @@
     <Compile Include="WorkThumbnailsService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\iPower\iPower.Data\iPower.Data.csproj">
-      <Project>{49E097D0-FCDA-4CB2-A27D-CA4EDCD5403B}</Project>
-      <Name>iPower.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower\iPower.csproj">
-      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
-      <Name>iPower</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Yaesoft.SFIT.Resources\Yaesoft.SFIT.Resources.csproj">
       <Project>{735FED15-2A42-4C6A-984E-6C8C9C2F642A}</Project>
       <Name>Yaesoft.SFIT.Resources</Name>

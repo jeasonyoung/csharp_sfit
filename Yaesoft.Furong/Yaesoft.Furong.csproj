@@ -34,11 +34,11 @@
   <ItemGroup>
     <Reference Include="iPower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iPower\iPower\bin\Debug\iPower.dll</HintPath>
+      <HintPath>..\Modules\iPower.dll</HintPath>
     </Reference>
     <Reference Include="iPower.IRMP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\IRMP\iPower.IRMP\bin\Debug\iPower.IRMP.dll</HintPath>
+      <HintPath>..\Modules\iPower.IRMP.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

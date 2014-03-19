@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.Org.Poxy</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgFactory">
+            <summary>
+            组织架构工厂类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.GetAllDepartment(System.String)">
+            <summary>
+             获取所有的部门数据。
+            </summary>
+            <param name="departmentID">部门ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.GetSubCharge(System.String)">
+            <summary>
+            获取用户下的部门数据。
+            </summary>
+            <param name="employeeID">部门ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.GetAllRank(System.String)">
+            <summary>
+             获取所有的岗位级别数据。
+            </summary>
+            <param name="rankID">岗位级别ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.GetAllPost(System.String)">
+            <summary>
+            获取所有的岗位数据。
+            </summary>
+            <param name="postID">岗位ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactory.GetAllEmployee(System.String)">
+            <summary>
+            获取所有的用户数据。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllDepartment(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.BeginGetAllDepartment(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.EndGetAllDepartment(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllDepartmentAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllDepartmentAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetSubCharge(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.BeginGetSubCharge(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.EndGetSubCharge(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetSubChargeAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetSubChargeAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllRank(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.BeginGetAllRank(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.EndGetAllRank(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllRankAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllRankAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllPost(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.BeginGetAllPost(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.EndGetAllPost(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllPostAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllPostAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllEmployee(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.BeginGetAllEmployee(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.EndGetAllEmployee(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllEmployeeAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllEmployeeAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllDepartmentCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetSubChargeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllRankCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllPostCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.OrgFactoryServicePoxy.GetAllEmployeeCompleted">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgDepartment">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgDepartment.DepartmentID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgDepartment.ParentDepartmentID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgDepartment.DepartmentName">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgDepartment.order">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgEmployee">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.EmployeeID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.EmployeSign">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.EmployeeName">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.DepartmentID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.PostID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgEmployee.order">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgPost">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgPost.PostID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgPost.ParentPostID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgPost.PostName">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgPost.departmentID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgPost.rankID">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.OrgRank">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgRank.ParentRankID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgRank.RankID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.OrgRank.RankName">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllDepartmentCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllDepartmentCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.GetAllDepartmentCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetSubChargeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetSubChargeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.GetSubChargeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllRankCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllRankCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.GetAllRankCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllPostCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllPostCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.GetAllPostCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllEmployeeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.GetAllEmployeeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.GetAllEmployeeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.ModuleConfigurationKeys">
+            <summary>
+            配置键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.Poxy.ModuleConfigurationKeys.OrgFactoryServiceURLKey">
+            <summary>
+            Org服务URL。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.Poxy.ModuleConfigurationKeys.OrgAuthenticationProviderURLKey">
+            <summary>
+            身份认证URL。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.Poxy.ModuleConfigurationKeys.LogFileHeadKey">
+            <summary>
+            日志文件头键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Org.Poxy.ModuleConfigurationKeys.LogFileRuleKey">
+            <summary>
+            日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.ModuleConfiguration">
+            <summary>
+            模块配置。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ModuleConfiguration.ModuleConfig">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ModuleConfiguration.OrgFactoryServiceURL">
+            <summary>
+            获取Org服务URL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ModuleConfiguration.AuthenticationProviderURL">
+            <summary>
+            获取身份认证Url。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ModuleConfiguration.LogFileHead">
+            <summary>
+            获取日志文件头。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ModuleConfiguration.LogFileRule">
+            <summary>
+            获取日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.AuthenticationProvider">
+            <summary>
+            提供单点登录身份认证。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationProvider.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationProvider.UserAuthorizationVerification(System.String,System.String,System.String@)">
+            <summary>
+            验证用户名和密码。
+            </summary>
+            <param name="userSign">用户账号。</param>
+            <param name="password">用户密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果用户名和密码有效，则返回用户信息；否则返回null。</returns>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationProvider.ChangePassword(System.String,System.String,System.String,System.String@)">
+            <summary>
+            修改密码。
+            </summary>
+            <param name="userSign">用户账号。</param>
+            <param name="oldPassword">用户旧密码。</param>
+            <param name="newPassword">用户新密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果修改成功，则返回True；否则返回false。</returns>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.UserAuthorizationVerification(System.String,System.String,iPower.IRMP.Org.Poxy.UserInfo@)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.BeginUserAuthorizationVerification(System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.EndUserAuthorizationVerification(System.IAsyncResult,iPower.IRMP.Org.Poxy.UserInfo@)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.UserAuthorizationVerificationAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.UserAuthorizationVerificationAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.ChangePassword(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.BeginChangePassword(System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.EndChangePassword(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.ChangePasswordAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.ChangePasswordAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.UserAuthorizationVerificationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Org.Poxy.AuthenticationServicePoxy.ChangePasswordCompleted">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.CallResult">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.CallResult.ResultCode">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.CallResult.ResultMessage">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.UserInfo">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.UserInfo.CurrentUserID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.UserInfo.CurrentUserName">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.UserAuthorizationVerificationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.UserAuthorizationVerificationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.UserAuthorizationVerificationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.UserAuthorizationVerificationCompletedEventArgs.UserInfo">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.ChangePasswordCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Org.Poxy.ChangePasswordCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Org.Poxy.ChangePasswordCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

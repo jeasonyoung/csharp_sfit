@@ -30,25 +30,61 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="iPower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.Security.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.Security.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.Security.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.Security.Engine.dll</HintPath>
+    </Reference>
     <Reference Include="iPower.IRMP.Security.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Security\bin\iPower.IRMP.Security.Web.dll</HintPath>
+      <HintPath>..\Modules\iPower.IRMP.Security.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.SSOClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.SSOClient.dll</HintPath>
     </Reference>
     <Reference Include="iPower.IRMP.SSOService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>SSO\bin\iPower.IRMP.SSOService.dll</HintPath>
+      <HintPath>..\Modules\iPower.IRMP.SSOService.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.IRMP.SysMgr.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.IRMP.SysMgr.Engine.dll</HintPath>
     </Reference>
     <Reference Include="iPower.IRMP.SysMgr.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Sys\bin\iPower.IRMP.SysMgr.Web.dll</HintPath>
+      <HintPath>..\Modules\iPower.IRMP.SysMgr.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Platform.Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.Platform.Engine.dll</HintPath>
     </Reference>
     <Reference Include="iPower.Platform.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iPower\iPower.Platform.UI\bin\Debug\iPower.Platform.UI.dll</HintPath>
+      <HintPath>..\Modules\iPower.Platform.UI.dll</HintPath>
     </Reference>
     <Reference Include="iPower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\iPower\iPower.Web\bin\Debug\iPower.Web.dll</HintPath>
+      <HintPath>..\Modules\iPower.Web.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -131,6 +167,11 @@
     <Content Include="IndexData.ashx" />
     <None Include="lib\themes\default\images\Thumbs.db" />
     <None Include="lib\themes\gray\images\Thumbs.db" />
+    <Content Include="Sys\Share\ModuleFrameSetMasterPage.Master" />
+    <Content Include="Sys\Share\ModuleNormalMasterPage.Master" />
+    <Content Include="Security\Download.ashx" />
+    <Content Include="Security\Share\ModuleFrameSetMasterPage.Master" />
+    <Content Include="Security\Share\ModuleNormalMasterPage.Master" />
     <None Include="Web.config" />
     <Content Include="WorkThumbnails.ashx" />
   </ItemGroup>
@@ -696,38 +737,6 @@
     <Content Include="TeaClientService.asmx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\iPower\iPower.Platform.Engine\iPower.Platform.Engine.csproj">
-      <Project>{BF08EF30-A60B-40E1-8FAE-243E964ECBB6}</Project>
-      <Name>iPower.Platform.Engine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower.Platform\iPower.Platform.csproj">
-      <Project>{349E7E3F-0050-4728-A5D5-8A7ADD0F9FAF}</Project>
-      <Name>iPower.Platform</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower.Resources\iPower.Resources.csproj">
-      <Project>{5BAE93E8-A48C-48F6-8726-C65379B22658}</Project>
-      <Name>iPower.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower\iPower.csproj">
-      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
-      <Name>iPower</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\IRMP\iPower.IRMP.Engine\iPower.IRMP.Engine.csproj">
-      <Project>{7EE919AF-588F-403B-81FB-E2B462341C66}</Project>
-      <Name>iPower.IRMP.Engine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\IRMP\iPower.IRMP.Security.Client\iPower.IRMP.Security.Client.csproj">
-      <Project>{2ED372A4-83E4-4269-9537-C9E972E1BD4A}</Project>
-      <Name>iPower.IRMP.Security.Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\IRMP\iPower.IRMP.SSOClient\iPower.IRMP.SSOClient.csproj">
-      <Project>{B544B8DF-44E0-4830-B512-DC5277BD81F2}</Project>
-      <Name>iPower.IRMP.SSOClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\IRMP\iPower.IRMP\iPower.IRMP.csproj">
-      <Project>{3AC24990-D86C-4989-84DC-4EDF9592520C}</Project>
-      <Name>iPower.IRMP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Yaesoft.Furong\Yaesoft.Furong.csproj">
       <Project>{67E73266-2783-4139-BFC3-D2C7FBC42FB1}</Project>
       <Name>Yaesoft.Furong</Name>
@@ -1137,6 +1146,76 @@
     <Content Include="lib\themes\metro\tree.css" />
     <Content Include="lib\themes\metro\validatebox.css" />
     <Content Include="lib\themes\metro\window.css" />
+    <Content Include="Security\Default.aspx" />
+    <Content Include="Security\frmSecurityActionEdit.aspx" />
+    <Content Include="Security\frmSecurityActionExport.aspx" />
+    <Content Include="Security\frmSecurityActionImport.aspx" />
+    <Content Include="Security\frmSecurityActionList.aspx" />
+    <Content Include="Security\frmSecurityEmployeePicker.aspx" />
+    <Content Include="Security\frmSecurityModuleEdit.aspx" />
+    <Content Include="Security\frmSecurityModuleImport.aspx" />
+    <Content Include="Security\frmSecurityModuleList.aspx" />
+    <Content Include="Security\frmSecurityRegsiterEdit.aspx" />
+    <Content Include="Security\frmSecurityRegsiterImport.aspx" />
+    <Content Include="Security\frmSecurityRegsiterList.aspx" />
+    <Content Include="Security\frmSecurityRightEdit.aspx" />
+    <Content Include="Security\frmSecurityRightList.aspx" />
+    <Content Include="Security\frmSecurityRoleDepartmentEdit.aspx" />
+    <Content Include="Security\frmSecurityRoleDepartmentList.aspx" />
+    <Content Include="Security\frmSecurityRoleEdit.aspx" />
+    <Content Include="Security\frmSecurityRoleEmployeeEdit.aspx" />
+    <Content Include="Security\frmSecurityRoleEmployeeList.aspx" />
+    <Content Include="Security\frmSecurityRoleList.aspx" />
+    <Content Include="Security\frmSecurityRolePicker.aspx" />
+    <Content Include="Security\frmSecurityRolePostEdit.aspx" />
+    <Content Include="Security\frmSecurityRolePostList.aspx" />
+    <Content Include="Security\frmSecurityRoleRankEdit.aspx" />
+    <Content Include="Security\frmSecurityRoleRankList.aspx" />
+    <Content Include="Security\frmSecurityRoleRightEdit.aspx" />
+    <Content Include="Security\frmSecurityRoleRightList.aspx" />
+    <Content Include="Sys\Default.aspx" />
+    <Content Include="Sys\frmCommonEnumsEdit.aspx" />
+    <Content Include="Sys\frmCommonEnumsList.aspx" />
+    <Content Include="Sys\frmIRMPCommonLogEdit.aspx" />
+    <Content Include="Sys\frmIRMPCommonLogList.aspx" />
+    <Content Include="Sys\frmLogin.aspx" />
+    <Content Include="Sys\frmLogout.aspx" />
+    <Content Include="Sys\frmResourcesEdit.aspx" />
+    <Content Include="Sys\frmResourcesList.aspx" />
+    <Content Include="Sys\frmSSOTicketEdit.aspx" />
+    <Content Include="Sys\frmSSOTicketList.aspx" />
+    <Content Include="Sys\frmSysMgrAppAuthorizationEdit.aspx" />
+    <Content Include="Sys\frmSysMgrAppAuthorizationList.aspx" />
+    <Content Include="Sys\frmSysMgrAppAuthorizationPicker.aspx" />
+    <Content Include="Sys\frmSysMgrEmployeeAuthorizationEdit.aspx" />
+    <Content Include="Sys\frmSysMgrEmployeeAuthorizationList.aspx" />
+    <Content Include="Sys\frmSysMgrLimitBindIPAddrEdit.aspx" />
+    <Content Include="Sys\frmSysMgrLimitBindIPAddrList.aspx" />
+    <Content Include="Sys\frmSysMgrLimitLoginEdit.aspx" />
+    <Content Include="Sys\frmSysMgrLimitLoginList.aspx" />
+    <Content Include="Sys\frmSysMgrLimitRefusedIPAddrEdit.aspx" />
+    <Content Include="Sys\frmSysMgrLimitRefusedIPAddrList.aspx" />
+    <Content Include="Sys\frmSysMgrLimitSpecifyTimeZoneEdit.aspx" />
+    <Content Include="Sys\frmSysMgrLimitSpecifyTimeZoneList.aspx" />
+    <Content Include="Sys\frmSysMgrLinksEdit.aspx" />
+    <Content Include="Sys\frmSysMgrLinksList.aspx" />
+    <Content Include="Sys\frmSysMgrOrgPicker.aspx" />
+    <Content Include="Sys\frmSysMgrRegWebPartTemplateEdit.aspx" />
+    <Content Include="Sys\frmSysMgrRegWebPartTemplateList.aspx" />
+    <Content Include="Sys\frmSysMgrRegWebPartTemplatePicker.aspx" />
+    <Content Include="Sys\frmSysMgrSettingEdit.aspx" />
+    <Content Include="Sys\frmSysMgrSettingList.aspx" />
+    <Content Include="Sys\frmSysMgrSettingPersonalEdit.aspx" />
+    <Content Include="Sys\frmSysMgrSettingPersonalList.aspx" />
+    <Content Include="Sys\frmSysMgrSettingPicker.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartEdit.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartList.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartPersonalEdit.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartPersonalList.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartPicker.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartZoneEdit.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartZoneList.aspx" />
+    <Content Include="Sys\frmSysMgrWebPartZonePicker.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Download\" />

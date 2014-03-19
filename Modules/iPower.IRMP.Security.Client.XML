@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.Security.Client</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.ModulePermissions(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.BeginModulePermissions(System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.EndModulePermissions(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.ModulePermissionsAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.ModulePermissionsAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Security.Client.Poxy.SecurityPermissionFacotryService.ModulePermissionsCompleted">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.SecurityPermission">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.SecurityPermission.PermissionID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.SecurityPermission.PermissionName">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.ModulePermissionsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.ModulePermissionsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.ModulePermissionsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.PermissionModule">
+            <summary>
+            权限模块。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.PermissionModule.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.PermissionModule.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.PermissionModule.Init(System.Web.HttpApplication)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.ModuleConfigurationKeys">
+            <summary>
+            模块配置键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Client.ModuleConfigurationKeys.SecurityPermissionFactoryAssemblyKey">
+            <summary>
+            权限模块程序集配置。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Client.ModuleConfigurationKeys.LogFileHeadKey">
+            <summary>
+            日志文件头键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.Security.Client.ModuleConfigurationKeys.LogFileRuleKey">
+            <summary>
+            日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.ModuleConfiguration">
+            <summary>
+            模块配置类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.ModuleConfiguration.ModuleConfigurationInstance">
+            <summary>
+            模块配置静态实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.ModuleConfiguration.SecurityPermissionFactory">
+            <summary>
+            获取安全权限工厂实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.ModuleConfiguration.LogFileHead">
+            <summary>
+            获取日志文件头。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.ModuleConfiguration.LogFileRule">
+            <summary>
+            获取日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.SecurityPermissionFacotryProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.SecurityPermissionFacotryProvider.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.SecurityPermissionFacotryProvider.ModulePermissions(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="systemID"></param>
+            <param name="moduleID"></param>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.AppRegister(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.BeginAppRegister(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.EndAppRegister(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.AppRegisterAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.AppRegisterAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.Roles">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.BeginRoles(System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.EndRoles(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.RolesAsync">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.RolesAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetEmployeeRoles(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.BeginGetEmployeeRoles(System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.EndGetEmployeeRoles(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetEmployeeRolesAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetEmployeeRolesAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetAllEmployeeByRole(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.BeginGetAllEmployeeByRole(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.EndGetAllEmployeeByRole(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetAllEmployeeByRoleAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetAllEmployeeByRoleAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.AppRegisterCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.RolesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetEmployeeRolesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.Security.Client.Poxy.SecurityFactoryProviderServicePoxy.GetAllEmployeeByRoleCompleted">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.AppSystem">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.AppSystem.AppID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.AppSystem.AppName">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.OrgEmployee">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.OrgEmployee.EmployeeID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.OrgEmployee.DepartmentID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.OrgEmployee.PostID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.OrgEmployee.EmployeeName">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.SecurityRole">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.SecurityRole.RoleID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.SecurityRole.RoleName">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.SecurityRole.ParentRoleID">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.AppRegisterCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.AppRegisterCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.AppRegisterCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.RolesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.RolesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.RolesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.GetEmployeeRolesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.GetEmployeeRolesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.GetEmployeeRolesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.GetAllEmployeeByRoleCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.Poxy.GetAllEmployeeByRoleCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.Security.Client.Poxy.GetAllEmployeeByRoleCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider">
+            <summary>
+            验证用户模块。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.#ctor(iPower.IRMP.Security.ISecurityPermissionFactory)">
+             <summary>
+            构造函数。
+             </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.SetPagePermissions(iPower.Platform.Security.ISecurity,iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            设置页面按钮权限。
+            </summary>
+            <param name="security"></param>
+            <param name="systemID"></param>
+            <param name="userID"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(iPower.Platform.ModuleDefineCollection,iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            验证用户模块。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(iPower.GUIDEx,iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            验证用户模块。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="userID">用户ID。</param>
+            <param name="moduleID">模块ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(System.Data.DataTable@,iPower.Platform.ModuleDefineCollection)">
+            <summary>
+            
+            </summary>
+            <param name="dt"></param>
+            <param name="collection"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(System.Data.DataTable,iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="dtSource"></param>
+            <param name="systemID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(System.Data.DataTable@,System.Data.DataRow[],System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="dtResult"></param>
+            <param name="parentRows"></param>
+            <param name="dtSource"></param>
+        </member>
+        <member name="M:iPower.IRMP.Security.Client.AuthenticateUserModulesProvider.AuthenticateUserModules(iPower.Platform.ModuleDefine,System.Data.DataRow[],System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="parent"></param>
+            <param name="drs"></param>
+            <param name="dtResult"></param>
+        </member>
+    </members>
+</doc>

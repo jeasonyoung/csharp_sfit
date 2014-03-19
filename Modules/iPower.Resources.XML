@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.Resources</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Resources.ResourceFactory">
+            <summary>
+            资源工厂。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.#ctor(iPower.Resources.IResourceStorage)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.AddResource(System.String,System.Byte[],System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name">键。</param>
+            <param name="value">值。</param>
+            <param name="description">描述。</param>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.AddResource(System.String,System.Object,System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name">键。</param>
+            <param name="value">值。</param>
+            <param name="description">描述。</param>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.AddResource(System.String,System.String,System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name">键。</param>
+            <param name="value">值。</param>
+            <param name="description">描述。</param>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.Close">
+            <summary>
+            关闭资源。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.Generate">
+            <summary>
+            资源写到输出文件或输出流中。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.RemoveResource(System.String)">
+            <summary>
+            移除资源。
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.SetResourcesCulture(System.Globalization.CultureInfo)">
+            <summary>
+            设置资源语言区域。
+            </summary>
+            <param name="cultrueInfo"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.Dispose">
+            <summary>
+            释放资源。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.EnsureResourcesManagement">
+            <summary>
+            取保资源管理对象。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.GetResoucePath">
+            <summary>
+            获取资源文件路径。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceFactory.ResourcesManagement_ResourcesPersist(iPower.Resources.ResourceCollection)">
+            <summary>
+            资源持久化。
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="P:iPower.Resources.ResourceFactory.Instance">
+            <summary>
+            获取静态对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceFactory.Resources">
+            <summary>
+            获取资源集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.ResourceConfigurationKeys">
+            <summary>
+            资源配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.Resources.ResourceConfigurationKeys.ResourceStorageKey">
+            <summary>
+            资源存储地址键(iPower.Resources.Storage)。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.ResourceConfiguration">
+            <summary>
+            资源配置（配置节点：Resources）。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.IResourceStorage">
+            <summary>
+            资源存储接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.IResourceStorage.ResourceStorage">
+            <summary>
+            资源存储。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceConfiguration.ModuleConfig">
+            <summary>
+            获取静态配置属性。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceConfiguration.ResourceStorage">
+            <summary>
+            获取资源存储地址。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.ResourceProviderFactory">
+            <summary>
+            资源提供工厂。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.ResourceProvider">
+            <summary>
+            资源提供基础类。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceProvider.#ctor(iPower.Resources.IResourceStorage)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceProvider.CreateResources">
+            <summary>
+            创建资源集合。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceProvider.GetObject(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            返回键和区域性的资源对象。
+            </summary>
+            <param name="resourceKey">标识特定资源的键。</param>
+            <param name="culture">标识资源本地化值的区域性。</param>
+            <returns>包含 resourceKey 和 culture 的资源值。</returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceProvider.EnsureResourceManager">
+            <summary>
+            确保资源管理类。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Resources.ResourceProvider.ResourceStorage">
+            <summary>
+            获取资源存储地址接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceProvider.ClassKey">
+            <summary>
+            获取或设置资源类的名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceProvider.VirtualPath">
+            <summary>
+            获取或设置资源文件的路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceProvider.ResourceReader">
+            <summary>
+            获取一个对象，以便从资源文件中读取资源值。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceProviderFactory.#ctor(iPower.Resources.IResourceStorage)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="rs"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceProviderFactory.CreateResources">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceProviderFactory.GetObject(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="resourceKey"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Resources.WebResourceProviderFactory">
+            <summary>
+            资源提供类。
+            <example>
+             <code>
+                &lt;system.web&gt;
+                    &lt;!--资源文件配置--&gt;
+                    &lt;globalization culture="auto:zh-CN" uiCulture="auto:zh-CN" requestEncoding="UTF-8" responseEncoding="UTF-8" resourceProviderFactoryType="iPower.Resources.WebResourceProviderFactory,iPower.Resources"/&gt;
+                &lt;/system.web&gt;
+             </code>
+            </example>
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.WebResourceProviderFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.WebResourceProviderFactory.EnsureResourceProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.WebResourceProviderFactory.CreateGlobalResourceProvider(System.String)">
+            <summary>
+            创建一个全局资源提供程序。 
+            </summary>
+            <param name="classKey">资源类的名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.WebResourceProviderFactory.CreateLocalResourceProvider(System.String)">
+            <summary>
+            创建一个本地资源提供程序。 
+            </summary>
+            <param name="virtualPath">资源文件的路径。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Resources.UpdateResourcesPersistHandler">
+            <summary>
+            更新资源到持久层。
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="T:iPower.Resources.ResourcesManagement">
+            <summary>
+            资源管理。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.#ctor(iPower.Resources.ResourceCollection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.OnResourcesPersist(iPower.Resources.ResourceCollection)">
+            <summary>
+            触发资源持久事件。
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.OnResourcesPersistAfter(System.EventArgs)">
+            <summary>
+            触发资源持久事件之后事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.Close">
+            <summary>
+            释放与资源阅读器关联的所有资源后将该阅读器关闭。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.GetEnumerator">
+            <summary>
+            返回此阅读器的资源。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.Byte[])">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.Byte[],System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.Object)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.Object,System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.AddResource(System.String,System.String,System.String)">
+            <summary>
+            添加资源。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.Generate">
+            <summary>
+            资源写到输出文件或输出流中。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.RemoveResource(System.String)">
+            <summary>
+            移除资源。
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:iPower.Resources.ResourcesManagement.Resources">
+            <summary>
+            获取资源。
+            </summary>
+        </member>
+        <member name="E:iPower.Resources.ResourcesManagement.ResourcesPersist">
+            <summary>
+            资源持久事件。
+            </summary>
+        </member>
+        <member name="E:iPower.Resources.ResourcesManagement.ResourcesPersistAfter">
+            <summary>
+            资源持久事件之后事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.ResourceEnumerator.#ctor(iPower.Resources.ResourceCollection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.ResourceEnumerator.MoveNext">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourcesManagement.ResourceEnumerator.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourcesManagement.ResourceEnumerator.Entry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourcesManagement.ResourceEnumerator.Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourcesManagement.ResourceEnumerator.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourcesManagement.ResourceEnumerator.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.Resource">
+            <summary>
+            资源。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.Resource.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.Resource.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resKey">资源键名。</param>
+            <param name="resValue">资源键值。</param>
+            <param name="description">注释说明。</param>
+        </member>
+        <member name="M:iPower.Resources.Resource.#ctor(System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resKey">资源键名。</param>
+            <param name="resValue">资源键值。</param>
+        </member>
+        <member name="P:iPower.Resources.Resource.ResKey">
+            <summary>
+            资源键名。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.Resource.ResValue">
+            <summary>
+            资源键值。
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.Resource.Description">
+            <summary>
+            注释说明。
+            </summary>
+        </member>
+        <member name="T:iPower.Resources.ResourceCollection">
+            <summary>
+            资源集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Add(iPower.Resources.Resource)">
+            <summary>
+            添加。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Clear">
+            <summary>
+            清空。
+            </summary>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Contains(iPower.Resources.Resource)">
+            <summary>
+            判断是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.CopyTo(iPower.Resources.Resource[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Remove(iPower.Resources.Resource)">
+            <summary>
+            移除。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Compare(iPower.Resources.Resource,iPower.Resources.Resource)">
+            <summary>
+            比较排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.Serializer(System.IO.Stream,iPower.Resources.ResourceCollection)">
+            <summary>
+            序列化。
+            </summary>
+            <param name="stream"></param>
+            <param name="resources"></param>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.DeSerializer(System.IO.Stream)">
+            <summary>
+            反序列化。
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Resources.ResourceCollection.System#ComponentModel#IListSource#GetList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Resources.ResourceCollection.Item(System.Int32)">
+            <summary>
+            获取索引数据。
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Resources.ResourceCollection.Item(System.String)">
+            <summary>
+            获取索引数据。
+            </summary>
+            <param name="resKey"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Resources.ResourceCollection.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceCollection.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Resources.ResourceCollection.System#ComponentModel#IListSource#ContainsListCollection">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="iPower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="iPower.WinService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5e4fdab5c91944da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\iPower.WinService.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -64,18 +76,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\iPower\iPower.Data\iPower.Data.csproj">
-      <Project>{49E097D0-FCDA-4CB2-A27D-CA4EDCD5403B}</Project>
-      <Name>iPower.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower.WinService\iPower.WinService.csproj">
-      <Project>{5C700A69-C208-4B0A-A78E-BA681015EDB7}</Project>
-      <Name>iPower.WinService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\iPower\iPower\iPower.csproj">
-      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
-      <Name>iPower</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Yaesoft.SFIT.DataSync\Yaesoft.SFIT.DataSync.csproj">
       <Project>{D9C938BB-0399-4D95-BC9C-7D64FB1C8434}</Project>
       <Name>Yaesoft.SFIT.DataSync</Name>

@@ -1,0 +1,3016 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.SysMgr.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IModuleView">
+            <summary>
+            模块UI接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ModulePresenter`1">
+            <summary>
+            模块行为基础类。
+            </summary>
+            <typeparam name="T">UI视图接口。</typeparam>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ModulePresenter`1.#ctor(`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view">UI视图接口对象。</param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ModulePresenter`1.CreateModuleConfiguration">
+            <summary>
+            获取模块配置实例。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartZoneEntity">
+            <summary>
+            SysMgrWebPartZoneEntity实体类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.DbModuleEntity`1">
+            <summary>
+             实体基类。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.DbModuleEntity`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartZoneEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartZoneEntity.ListDataSource(System.String)">
+            <summary>
+            部件位置定义列表
+            </summary>
+            <param name="ZoneName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartZoneEntity.DeleteSysMgrWebPartZone(iPower.GUIDEx,System.String@)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ZoneID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartZoneEntity.WebPartZonePicker(System.String)">
+            <summary>
+            Picker。
+            </summary>
+            <param name="ZoneName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartEntity">
+            <summary>
+            SysMgrWebPartEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据源
+            </summary>
+            <param name="WebPartName">部件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartEntity.DeleteWebPart(iPower.GUIDEx,System.String@)">
+            <summary>
+            批量删除系统部件设置
+            </summary>
+            <param name="WebPartID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartEntity.WebPartPicker(System.String)">
+            <summary>
+            PickerWebPart
+            </summary>
+            <param name="WebPartName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingPersonalEntity">
+            <summary>
+            SysMgrSettingPersonalEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingPersonalEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingPersonalEntity.ListDataSource(System.String)">
+            <summary>
+            数据列表
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingEntity">
+            <summary>
+            SysMgrSettingEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据源
+            </summary>
+            <param name="SystemName">系统名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingEntity.DeleteSysMgrSetting(iPower.GUIDEx,System.String@)">
+            <summary>
+            删除授权用户。
+            </summary>
+            <param name="SettingID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrSettingEntity.SettingPicker(System.String)">
+            <summary>
+             Picker部件
+            </summary>
+            <param name="SettingSign">配置符号</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartProperty">
+            <summary>
+            tblSysMgrWebPartProperty映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartProperty.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartProperty.WebPartID">
+            <summary>
+            获取或设置WebPartID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartProperty.TemplatePropertyID">
+            <summary>
+            获取或设置TemplatePropertyID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartProperty.PropertyValue">
+            <summary>
+            获取或设置PropertyValue。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrEmployeeAuthorization">
+            <summary>
+            tblSysMgrEmployeeAuthorization映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrEmployeeAuthorization.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrEmployeeAuthorization.AppAuthID">
+            <summary>
+            获取或设置AppAuthID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrEmployeeAuthorization.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrEmployeeAuthorization.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrView">
+            <summary>
+             ISysMgrLimitRefusedIPAddrView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrEditView.ShowMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrEditView.RefusedID">
+            <summary>
+            获取拒绝ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter">
+            <summary>
+             SysMgrLimitRefusedIPAddrPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitRefusedIPAddrView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter.UpdateLimitRefusedIPAddr(iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter.BatchDeleteLimitRefusedIPAddr(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitRefusedIPAddrPresenter.ListDataSource">
+            <summary>
+            获取数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketView">
+            <summary>
+             ISSOTicketView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketListView">
+            <summary>
+            列表接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketListView.UserData">
+            <summary>
+            获取用户信息。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketEditView">
+            <summary>
+            编辑接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISSOTicketEditView.Token">
+            <summary>
+            获取令牌。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter">
+            <summary>
+             SSOTicketPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISSOTicketView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SSOTicket}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter.UpdateSSOTicket(iPower.IRMP.SysMgr.Engine.Domain.SSOTicket)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter.BatchDeleteSSOTicket(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SSOTicketPresenter.ListDataSource">
+            <summary>
+            获取列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplateEntity">
+            <summary>
+            SysMgrRegWebPartTemplateEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplateEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplateEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据
+            </summary>
+            <param name="WebPartTemplateName">部件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplateEntity.DeleteSysMgrRegWebPartTemplate(iPower.GUIDEx,System.String@)">
+            <summary>
+            批量删除数据
+            </summary>
+            <param name="WebPartTemplateID">ID</param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplateEntity.WebPartTemplatePicker(System.String)">
+            <summary>
+            WebPartTemplatePicker
+            </summary>
+            <param name="WebPartTemplateName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.CommonEnumsEntity">
+            <summary>
+            CommonEnumsEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.CommonEnumsEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.CommonEnumsEntity.DeleteRecord(System.String)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="fullEnumNameMember"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartView">
+            <summary>
+             ISysMgrWebPartView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartListView.WebPartName">
+            <summary>
+            部件名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartEditView.BindWebPartStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定状态
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartEditView.WebPartID">
+            <summary>
+            部件ID
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartEditView.EditListDataSource">
+            <summary>
+            获取或设置编辑数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPickerView">
+            <summary>
+            部件应用系统
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPickerView.BindWebPart(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPickerView.WebPartID">
+            <summary>
+            获取部件应用系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPickerView.WebPartName">
+            <summary>
+            获取部件应用系统名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter">
+            <summary>
+             SysMgrWebPartPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.PreViewLoadData">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.LoadTemplateProperties(iPower.GUIDEx)">
+            <summary>
+            加载
+            </summary>
+            <param name="webPartTemplateID"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.UpdateSysMgrWebPart(iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart,System.Collections.Generic.List{iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty})">
+            <summary>
+            更新
+            </summary>
+            <param name="data"></param>
+            <param name="listWebPartProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.BatchDeleteSysMgrWebPart(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.PickerSearch">
+            <summary>
+            Picker搜索。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPresenter.ListDataSource">
+            <summary>
+            列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksView">
+            <summary>
+             ISysMgrLinksView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksView.ShowMessage(System.String)">
+            <summary>
+            错误消息
+            </summary>
+            <param name="Msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksListview">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksListview.LinkName">
+            <summary>
+            链接名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksEditview">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksEditview.BindLinkTarget(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定链接方式
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksEditview.BindLinkStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定链接状态
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksEditview.LinkID">
+            <summary>
+            LinkID
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter">
+            <summary>
+             SysMgrLinksPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrLinksView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.PreViewLoadData">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.UpdateSysMgrLinks(iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.BatchDleteSysMgrLinks(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除操作
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLinksPresenter.ListDataSource">
+            <summary>
+            获取列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplatePropertyEntity">
+            <summary>
+            SysMgrRegWebPartTemplatePropertyEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplatePropertyEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplatePropertyEntity.GetAllRecord(iPower.GUIDEx)">
+            <summary>
+            获取模板ID下的模板属性数据。
+            </summary>
+            <param name="webPartTemplateID">模板ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrRegWebPartTemplatePropertyEntity.DeleteRecord(iPower.GUIDEx)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="webPartTemplateID">模板ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SSOTicketEntity">
+            <summary>
+            SSOTicketEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SSOTicketEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SSOTicketEntity.ListDataSource(System.String)">
+            <summary>
+            获取列表数据。
+            </summary>
+            <param name="userData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr">
+            <summary>
+            tblSysMgrLimitBindIPAddr映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr.BindID">
+            <summary>
+            获取或设置BindID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr.BindIPAddr">
+            <summary>
+            获取或设置BindIPAddr。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogView">
+            <summary>
+             IIRMPCommonLogView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView.SystemName">
+            <summary>
+            获取系统名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView.CreateDate">
+            <summary>
+            获取创建时间。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogListView.LogContext">
+            <summary>
+            获取日志内容。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogEditView.LogID">
+            <summary>
+            获取日志ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IRMPCommonLogPresenter">
+            <summary>
+             IRMPCommonLogPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.IRMPCommonLogPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.IIRMPCommonLogView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.IRMPCommonLogPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.IRMPCommonLogPresenter.BatchDeleteCommonLog(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IRMPCommonLogPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart">
+            <summary>
+            tblSysMgrWebPart映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.WebPartID">
+            <summary>
+            获取或设置WebPartID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.WebPartName">
+            <summary>
+            获取或设置WebPartName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.WebPartTemplateID">
+            <summary>
+            获取或设置WebPartTemplateID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.WebPartTemplateName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.DataAssemblyName">
+            <summary>
+            获取或设置DataAssemblyName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.DataClassName">
+            <summary>
+            获取或设置DataClassName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.WebPartStatus">
+            <summary>
+            获取或设置WebPartStatus。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPart.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty">
+            <summary>
+            tblSysMgrRegWebPartTemplateProperty映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.TemplatePropertyID">
+            <summary>
+            获取或设置TemplatePropertyID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.WebPartTemplateID">
+            <summary>
+            获取或设置WebPartTemplateID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.TemplatePropertyName">
+            <summary>
+            获取或设置TemplatePropertyName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.TemplateDefaultValue">
+            <summary>
+            获取或设置TemplateDefaultValue。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalView">
+            <summary>
+             ISysMgrWebPartPersonalView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalListView.WebPartName">
+            <summary>
+            部件名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalEditView.PersonalWebPartID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter">
+            <summary>
+             SysMgrWebPartPersonalPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartPersonalView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter.UpdateSysMgrWebPartPersonal(iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal)">
+            <summary>
+            更新
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter.BatchDeleteSysMgrWebPartPersonal(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartPersonalPresenter.ListDataSource">
+            <summary>
+            首页列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationView">
+            <summary>
+             ISysMgrAppAuthorizationView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationListView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationListView.AppName">
+            <summary>
+            获取系统名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationEditView.BindAuthStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定授权状态。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationEditView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationEditView.AppAuthID">
+            <summary>
+            获取系统授权ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationPickerView">
+            <summary>
+            Picker。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationPickerView.BindApp(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationPickerView.AppID">
+            <summary>
+            获取应用系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationPickerView.AppName">
+            <summary>
+            获取应用系统名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationPickerView.IsLocal">
+            <summary>
+            是否使用本地数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter">
+            <summary>
+             SysMgrAppAuthorizationPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrAppAuthorizationView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.PreViewLoadData">
+            <summary>
+            重载。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.UpdateSysMgrAppAuthorization(iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.BatchDeleteAppAuthorization(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除授权系统。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.PickerSearch">
+            <summary>
+            Picker搜索。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrAppAuthorizationPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr">
+            <summary>
+            tblSysMgrLimitRefusedIPAddr映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr.RefusedID">
+            <summary>
+            获取或设置RefusedID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitRefusedIPAddr.RefusedIPAddr">
+            <summary>
+            获取或设置RefusedIPAddr。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ILoginView">
+            <summary>
+            登录界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ILoginView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ILoginView.EmployeeSign">
+            <summary>
+            获取用户登录帐号。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ILoginView.EmployeePassword">
+            <summary>
+            获取用户登录密码。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLoginPresenter">
+            <summary>
+            登录行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLoginPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ILoginView)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLoginPresenter.Login">
+            <summary>
+            登录。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLoginPresenter.CopyRight">
+            <summary>
+            获取版权信息。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IResourcesView">
+            <summary>
+             IResourcesView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.IResourcesView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IResourcesListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IResourcesListView.ResKey">
+            <summary>
+            获取资源键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.IResourcesEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.IResourcesEditView.ResKey">
+            <summary>
+            获取资源键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter">
+            <summary>
+             ResourcesPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.IResourcesView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.Resources.Resource}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter.UpdateResources(iPower.Resources.Resource)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter.BatchDeleteResources(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ResourcesPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.ModuleUtils">
+            <summary>
+            模块工具类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateView">
+            <summary>
+             ISysMgrRegWebPartTemplateView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateListView.WebPartTemplateName">
+            <summary>
+            获取部件名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateeEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateeEditView.WebPartTemplateID">
+            <summary>
+            系统部件ID
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateeEditView.EditListDataSource">
+            <summary>
+            获取或设置编辑页面列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplatePickerView">
+            <summary>
+            Picker界面接口
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplatePickerView.BindWebPartTemplate(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplatePickerView.WebPartTemplateID">
+            <summary>
+            部件模板ID
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplatePickerView.WebPartTemplateName">
+            <summary>
+            部件名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter">
+            <summary>
+             SysMgrRegWebPartTemplatePresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrRegWebPartTemplateView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.PreViewLoadData">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.UpdateMgrRegWebPartTemplate(iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate,System.Collections.Generic.List{iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplateProperty})">
+            <summary>
+            更新数据
+            </summary>
+            <param name="data">数据源</param>
+            <param name="listTemplateProperty">属性集合。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.BatchDeleteSysMgrRegWebPartTemplate(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.PickerSearch">
+            <summary>
+            Picker
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrRegWebPartTemplatePresenter.ListDataSource">
+            <summary>
+            获取列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ILogoutView">
+            <summary>
+            注销界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ILogoutView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLogoutPresenter">
+            <summary>
+            注销行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLogoutPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ILogoutView)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLogoutPresenter.PreViewLoadData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity">
+            <summary>
+            SysMgrAppAuthorizationEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity.ListDataSource(System.String)">
+            <summary>
+            获取列表数据源。
+            </summary>
+            <param name="appName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity.AppAuthorization(iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证系统授权。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="authPassword">授权密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity.DeleteRecord(iPower.GUIDEx,System.String@)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="appAuthID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrAppAuthorizationEntity.AppAuthorizationPicker(System.String)">
+            <summary>
+            Picker授权系统
+            </summary>
+            <param name="SystemName">系统名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants">
+            <summary>
+            模块常量。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.AppAuthorization_ModuleID">
+            <summary>
+            应用系统访问授权模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.EmployeeAuthorization_ModuleID">
+            <summary>
+            用户访问授权模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.LimitRefusedIPAddr_ModuleID">
+            <summary>
+            拒绝IP模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.LimitBindIPAddr_ModuleID">
+            <summary>
+            绑定IP模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.LimitSpecifyTimeZone_ModuleID">
+            <summary>
+            指定时间区段模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.LimitLogin_ModuleID">
+            <summary>
+            限制登录模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.CommonEnums_ModuleID">
+            <summary>
+            枚举数据维护模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.Resources_ModuleID">
+            <summary>
+            资源数据维护模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.CommonLog_ModuleID">
+            <summary>
+            日志数据模块ID。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.Setting_ModuleID">
+            <summary>
+            系统参数设置模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.RegWebPartTemplate_ModuleID">
+            <summary>
+            注册系统部件模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.WebPart_ModuleID">
+            <summary>
+            系统部件设置模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.WebPartZone_ModuleID">
+            <summary>
+            部件位置定义模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.Links_ModuleID">
+            <summary>
+            链接管理模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.WebPartPersonal_ModuleID">
+            <summary>
+            首页设置模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.SettingPersonal_ModuleID">
+            <summary>
+            实例化参数设置模块ID
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConstants.SSOTicket_ModuleID">
+            <summary>
+            单点登录票据模块ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket">
+            <summary>
+            tblSSOTicket映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.Token">
+            <summary>
+            获取或设置Token。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.UserData">
+            <summary>
+            获取或设置UserData。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.IssueDate">
+            <summary>
+            获取或设置IssueDate。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.Expiration">
+            <summary>
+            获取或设置Expiration。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.IssueClientIP">
+            <summary>
+            获取或设置IssueClientIP。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.RenewalCount">
+            <summary>
+            获取或设置RenewalCount。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.LastRenewalIP">
+            <summary>
+            获取或设置LastRenewalIP。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SSOTicket.HasValid">
+            <summary>
+            获取或设置HasValid。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPropertyEntity">
+            <summary>
+            SysMgrWebPartPropertyEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPropertyEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPropertyEntity.GetWebPartProperty(iPower.GUIDEx)">
+            <summary>
+            获取部件属性。
+            </summary>
+            <param name="webPartID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPropertyEntity.DeleteRecord(iPower.GUIDEx)">
+            <summary>
+            删除数据。
+            </summary>
+            <param name="webPartID">部件ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty">
+            <summary>
+            WebPart属性类。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty.PropertyID">
+            <summary>
+            获取或设置属性ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty.PropertyName">
+            <summary>
+            获取或设置属性名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty.PropertyValue">
+            <summary>
+            获取或设置属性值。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.WebPartProperty.PropertyDescription">
+            <summary>
+            获取或设置描述。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfigurationKeys">
+            <summary>
+             模块配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfigurationKeys.OrgFactoryAssemblyKey">
+            <summary>
+            用户信息程序集配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfigurationKeys.SecurityFactoryAssemblyKey">
+            <summary>
+            安全管理应用系统注册程序集配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfigurationKeys.SSOClientUserLoginAssemblyKey">
+            <summary>
+            单点登录客户端程序集键。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration">
+            <summary>
+            模块配置类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration.ModuleConfig">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration.OrgFactory">
+            <summary>
+            获取用户信息。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration.SecurityFactory">
+            <summary>
+            获取系统注册数据。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Persistence.ModuleConfiguration.SSOClientUserLoginAssembly">
+            <summary>
+            单点登录客户端程序集。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums">
+            <summary>
+            tblCommonEnums映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.FullEnumName">
+            <summary>
+            获取或设置EnumName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.EnumName">
+            <summary>
+            获取枚举名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.Member">
+            <summary>
+            获取或设置Member。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.MemberName">
+            <summary>
+            获取或设置MemberName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.IntValue">
+            <summary>
+            获取或设置IntValue。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.CommonEnums.OrderNo">
+            <summary>
+            获取或设置OrderNo。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone">
+            <summary>
+            tblSysMgrWebPartZone映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.ZoneID">
+            <summary>
+            获取或设置ZoneID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.ZoneName">
+            <summary>
+            获取或设置ZoneName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.AppAuthID">
+            <summary>
+            获取或设置AppAuthID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.ZoneMode">
+            <summary>
+            获取或设置ZoneMode。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.ZoneLength">
+            <summary>
+            获取或设置ZoneLength。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone.SystemName">
+            <summary>
+            获取或设置SystemName
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate">
+            <summary>
+            tblSysMgrRegWebPartTemplate映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate.WebPartTemplateID">
+            <summary>
+            获取或设置WebPartTemplateID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate.WebPartTemplateName">
+            <summary>
+            获取或设置WebPartTemplateName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate.WebPartTemplatePath">
+            <summary>
+            获取或设置WebPartTemplatePath。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrRegWebPartTemplate.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin">
+            <summary>
+            tblSysMgrLimitLogin映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin.LimitID">
+            <summary>
+            获取或设置LimitID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPersonalEntity">
+            <summary>
+            SysMgrWebPartPersonalEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPersonalEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrWebPartPersonalEntity.ListDataSource(System.String)">
+            <summary>
+            首页设置列表
+            </summary>
+            <param name="WebPartName">部件名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitSpecifyTimeZoneEntity">
+            <summary>
+            SysMgrLimitSpecifyTimeZoneEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitSpecifyTimeZoneEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationView">
+            <summary>
+             ISysMgrEmployeeAuthorizationView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationEditView.BindNotSelectedApp(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定没有授权的系统。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationEditView.BindSelectedApp(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定授权的系统。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationEditView.EmployeeID">
+            <summary>
+            获取用户ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView">
+            <summary>
+            OrgPicker接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.DisplayEmployeePanel(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定显示数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.SearchEmployeeResult(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            显示查询结果。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.IsLocal">
+            <summary>
+            是否使用本地数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.MultiSelect">
+            <summary>
+            获取是否多选。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.Values">
+            <summary>
+            获取传递值。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationOrgPickerView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter">
+            <summary>
+             SysMgrEmployeeAuthorizationPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrEmployeeAuthorizationView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.PreViewLoadData">
+            <summary>
+            加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{System.String[]}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.UpdateEmployeeAuthorization(iPower.GUIDEx,System.String,System.String[])">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="employeeID"></param>
+            <param name="employeeName"></param>
+            <param name="appID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.BatchDeleteEmployeeAuthorization(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.SearchEmployeeApp(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="employeeID"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.SeachOrgPicker">
+            <summary>
+            查询数据。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrEmployeeAuthorizationPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.IRMPCommonLogEntity">
+            <summary>
+            IRMPCommonLogEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.IRMPCommonLogEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.IRMPCommonLogEntity.ListDataSource(System.String,System.String,System.String,System.String)">
+            <summary>
+            列表数据源。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsView">
+            <summary>
+             ICommonEnumsView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsListView.EnumName">
+            <summary>
+            获取枚举名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsEditView.FullEnumName">
+            <summary>
+            获取枚举全称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsEditView.Member">
+            <summary>
+            获取键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter">
+            <summary>
+             CommonEnumsPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ICommonEnumsView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.CommonEnums}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter.UpdateCommonEnums(iPower.IRMP.SysMgr.Engine.Domain.CommonEnums)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter.BatchDeleteCommonEnums(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.CommonEnumsPresenter.ListDataSource">
+            <summary>
+            获取列表数据。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitRefusedIPAddrEntity">
+            <summary>
+            SysMgrLimitRefusedIPAddrEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitRefusedIPAddrEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumAuthStatus">
+            <summary>
+            授权状态枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumAuthStatus.Stop">
+            <summary>
+            停用。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumAuthStatus.Start">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumSettingType">
+            <summary>
+            配置类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumSettingType.System">
+            <summary>
+            系统。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumSettingType.Personal">
+            <summary>
+            个性化。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumWebPartStatus">
+            <summary>
+            部件模板状态枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumWebPartStatus.Stop">
+            <summary>
+            停用。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumWebPartStatus.Start">
+            <summary>
+            启用。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumZoneMode">
+            <summary>
+            显示位置定义枚举
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumZoneMode.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumZoneMode.Middle">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumZoneMode.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkTarget">
+            <summary>
+            链接方式枚举
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkTarget.Blank">
+            <summary>
+            blank
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkTarget.Self">
+            <summary>
+            self
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkStatus">
+            <summary>
+            链接状态枚举
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkStatus.Disable">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkStatus.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SysMgr.Engine.Persistence.EnumLinkStatus.Application">
+            <summary>
+            申请
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting">
+            <summary>
+            tblSysMgrSetting映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.SettingID">
+            <summary>
+            获取或设置SettingID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.AppAuthID">
+            <summary>
+            获取或设置AppAuthID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.SystemName">
+            <summary>
+            获取或设置SystemName
+            </summary>        
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.SettingType">
+            <summary>
+            获取或设置SettingType。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.SettingSign">
+            <summary>
+            获取或设置SettingSign。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.DefaultValue">
+            <summary>
+            获取或设置DefaultValue。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks">
+            <summary>
+            tblSysMgrLinks映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.LinkID">
+            <summary>
+            获取或设置LinkID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.LinkName">
+            <summary>
+            获取或设置LinkName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.LinkUrl">
+            <summary>
+            获取或设置LinkUrl。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.LinkTarget">
+            <summary>
+            获取或设置LinkTarget。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.LinkStatus">
+            <summary>
+            获取或设置LinkStatus。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.ImageUrlID">
+            <summary>
+            获取或设置ImageUrlID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.Description">
+            <summary>
+            获取或设置Description。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLinks.OrderNo">
+            <summary>
+            获取或设置OrderNo。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingView">
+            <summary>
+             ISysMgrSettingView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingListView.SystemName">
+            <summary>
+            获取系统名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingEditView.BindSettingType(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定配置类型
+            </summary>
+            <param name="data">数据源</param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingEditView.SettingID">
+            <summary>
+            获取系统配置ID
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingEditView.SystemName">
+            <summary>
+            获取系统名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPickerView">
+            <summary>
+            部件应用系统
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPickerView.BindSetting(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPickerView.SettingID">
+            <summary>
+            获取部件应用系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPickerView.SettingSign">
+            <summary>
+            获取部件应用系统名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter">
+            <summary>
+             SysMgrSettingPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.PreViewLoadData">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.UpdateSysMgrSetting(iPower.IRMP.SysMgr.Engine.Domain.SysMgrSetting)">
+            <summary>
+            更新
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.BatchDeleteSysMgrSetting(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.PickerSearch">
+            <summary>
+            Picker搜索。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPresenter.ListDataSource">
+            <summary>
+            获取列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLinksEntity">
+            <summary>
+            SysMgrLinksEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLinksEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLinksEntity.ListDataSource(System.String)">
+            <summary>
+            获取列表数据源。
+            </summary>
+            <param name="linkName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity">
+            <summary>
+            SysMgrEmployeeAuthorizationEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.ListDataSource(System.String)">
+            <summary>
+            列表数据源。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.UserAuthorizationVerification(iPower.GUIDEx,iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证用户授权。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="systemID">系统ID。</param>
+            <param name="clientIP">用户登录IP地址。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.GetEmployeeName(iPower.GUIDEx)">
+            <summary>
+            获取用户姓名。
+            </summary>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.GetAllAuthorizationEmployee(System.String)">
+            <summary>
+            获取全部授权用户。
+            </summary>
+            <param name="employeeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.GetAuthorizationEmployeeApp(iPower.GUIDEx,System.Boolean)">
+            <summary>
+            获取授权用户系统。
+            </summary>
+            <param name="employeeID"></param>
+            <param name="isAuthorization"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.BindAuthorizationEmployees(System.String[])">
+            <summary>
+            绑定授权用户。
+            </summary>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.DeleteAuthorizationEmployee(iPower.GUIDEx,System.String@)">
+            <summary>
+            删除授权用户。
+            </summary>
+            <param name="employeeID"></param>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrEmployeeAuthorizationEntity.DeleteEmployeeAuthApp(iPower.GUIDEx,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="employeeID"></param>
+            <param name="keepApp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal">
+            <summary>
+            tblSysMgrSettingPersonal映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.PersonalSettingID">
+            <summary>
+            获取或设置PersonalSettingID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.SettingID">
+            <summary>
+            获取或设置SettingID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.SettingValue">
+            <summary>
+            获取或设置SettingValue。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal.SettingSign">
+            <summary>
+            获取或设置SettingSignID
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrView">
+            <summary>
+             ISysMgrLimitBindIPAddrView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrEditView.ShowMessage(System.String)">
+            <summary>
+            显示数据。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrEditView.BindID">
+             <summary>
+            获取绑定ID。
+             </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter">
+            <summary>
+             SysMgrLimitBindIPAddrPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitBindIPAddrView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter.UpdateLimitBindIPAddr(iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitBindIPAddr)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter.BatchDeleteLimitBindIPAddr(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitBindIPAddrPresenter.ListDataSource">
+            <summary>
+            获取数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitLoginEntity">
+            <summary>
+            SysMgrLimitLoginEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitLoginEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.WebPartFactory">
+            <summary>
+            WebPart管理类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.WebPartFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.WebPartFactory.QueryList(iPower.Platform.WebPart.EnumWebPartAlignment,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="zoneMode"></param>
+            <param name="systemID"></param>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.WebPartFactory.QueryProperties(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="personalWebPartID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneView">
+            <summary>
+             ISysMgrWebPartZoneView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneView.ShowMessage(System.String)">
+            <summary>
+            显示信息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneListView.ZoneName">
+            <summary>
+            部件位置名称
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZonePickerView">
+            <summary>
+            部件应用系统
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZonePickerView.BindWebPartZone(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZonePickerView.ZoneID">
+            <summary>
+            获取部件应用系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZonePickerView.ZoneName">
+            <summary>
+            获取部件应用系统名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneEditView.BindZoneMode(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            显示模式
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneEditView.ZoneID">
+            <summary>
+            部件ID
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneEditView.AppAuthID">
+            <summary>
+            AppAuthID
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter">
+            <summary>
+             SysMgrWebPartZonePresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrWebPartZoneView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.PreViewLoadData">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.UpdateSysMgrWebPartZone(iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartZone)">
+            <summary>
+            更新
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.BatchDeleteSysMgrWebPartZone(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.PickerSearch">
+            <summary>
+            Picker搜索。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrWebPartZonePresenter.ListDataSource">
+            <summary>
+            列表数据源
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalView">
+            <summary>
+             ISysMgrSettingPersonalView接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalView.ShowMessage(System.String)">
+            <summary>
+            错误消息
+            </summary>
+            <param name="Msg"></param>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalListView">
+            <summary>
+            列表界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalListView.EmployeeName">
+            <summary>
+            用于检索的用户名
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalEditView">
+            <summary>
+            编辑界面接口
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalEditView.PersonalSettingID">
+            <summary>
+            PersonalSettingID
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter">
+            <summary>
+             SysMgrSettingPersonalPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrSettingPersonalView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter.UpdateSysMgrSettingPersonal(iPower.IRMP.SysMgr.Engine.Domain.SysMgrSettingPersonal)">
+            <summary>
+            更新
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter.BatchDeleteSysMgrSettingPersonal(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrSettingPersonalPresenter.ListDataSource">
+            <summary>
+            获取列表数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.AuthorizedToVerifyProvider">
+            <summary>
+            验证授权服务。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.AuthorizedToVerifyProvider.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.AuthorizedToVerifyProvider.AppAuthorization(iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证系统授权。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="authPassword">授权密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.AuthorizedToVerifyProvider.UserAuthorizationVerification(iPower.GUIDEx,iPower.GUIDEx,System.String,System.String@)">
+            <summary>
+            验证用户授权。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="systemID">系统ID。</param>
+            <param name="clientIP">用户登录IP地址。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>获得授权返回true,否则返回false。</returns>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneView">
+            <summary>
+             ISysMgrLimitSpecifyTimeZoneView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneEditView">
+            <summary>
+            边界界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneEditView.BindAuthStatus(iPower.Platform.Engine.DataSource.IListControlsData)">
+            <summary>
+            绑定授权状态。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneEditView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneEditView.ZoneID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter">
+            <summary>
+             SysMgrLimitSpecifyTimeZonePresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitSpecifyTimeZoneView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.PreViewLoadData">
+            <summary>
+            重载加载。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.UpdateLimitSpecifyTimeZone(iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.BatchDeleteLimitSpecifyTimeZone(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitSpecifyTimeZonePresenter.ListDataSource">
+            <summary>
+            获取数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginView">
+            <summary>
+             ISysMgrLimitLoginView接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginListView">
+            <summary>
+            列表界面接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginListView.EmployeeName">
+            <summary>
+            获取用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginEditView">
+            <summary>
+            编辑界面接口。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginEditView.ShowMessage(System.String)">
+            <summary>
+            显示消息。
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginEditView.LimitID">
+            <summary>
+            获取限制ID。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter">
+            <summary>
+             SysMgrLimitLoginPresenter行为类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter.#ctor(iPower.IRMP.SysMgr.Engine.Service.ISysMgrLimitLoginView)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter.LoadEntityData(System.EventHandler{iPower.Platform.Engine.Service.EntityEventArgs{iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin}})">
+            <summary>
+            编辑页面加载数据。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter.UpdateLimitLogin(iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitLogin)">
+            <summary>
+            更新数据。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter.BatchDeleteLimitLogin(System.Collections.Specialized.StringCollection)">
+            <summary>
+            批量删除数据。
+            </summary>
+            <param name="priCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Service.SysMgrLimitLoginPresenter.ListDataSource">
+            <summary>
+            获取数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitBindIPAddrEntity">
+            <summary>
+            SysMgrLimitBindIPAddrEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Persistence.SysMgrLimitBindIPAddrEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal">
+            <summary>
+            tblSysMgrWebPartPersonal映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.PersonalWebPartID">
+            <summary>
+            获取或设置PersonalWebPartID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.WebPartID">
+            <summary>
+            获取或设置WebPartID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.ZoneID">
+            <summary>
+            获取或设置ZoneID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.OrderNo">
+            <summary>
+            获取或设置OrderNo。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.WebPartName">
+            <summary>
+            显示或设置WebPartName
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrWebPartPersonal.ZoneName">
+            <summary>
+            显示或设置ZoneName
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone">
+            <summary>
+            tblSysMgrLimitSpecifyTimeZone映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.ZoneID">
+            <summary>
+            获取或设置ZoneID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.EmployeeID">
+            <summary>
+            获取或设置EmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.EmployeeName">
+            <summary>
+            获取或设置EmployeeName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.StartTime">
+            <summary>
+            获取或设置StartTime。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.EndTime">
+            <summary>
+            获取或设置EndTime。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrLimitSpecifyTimeZone.AuthStatus">
+            <summary>
+            获取或设置AuthStatus。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization">
+            <summary>
+            tblSysMgrAppAuthorization映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.AppAuthID">
+            <summary>
+            获取或设置AppAuthID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.SystemName">
+            <summary>
+            获取或设置SystemName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.AuthPwd">
+            <summary>
+            获取或设置AuthPwd。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.SysMgrAppAuthorization.AuthStatus">
+            <summary>
+            获取或设置AuthStatus。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog">
+            <summary>
+            tblIRMPCommonLog映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.LogID">
+            <summary>
+            获取或设置LogID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.SystemName">
+            <summary>
+            获取或设置SystemName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.RelationTable">
+            <summary>
+            获取或设置RelationTable。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.LogContext">
+            <summary>
+            获取或设置LogContext。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.CreateDate">
+            <summary>
+            获取或设置CreateDate。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.CreateEmployeeID">
+            <summary>
+            获取或设置CreateEmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SysMgr.Engine.Domain.IRMPCommonLog.CreateEmployeeName">
+            <summary>
+            获取或设置CreateEmployeeName。
+            </summary>
+        </member>
+    </members>
+</doc>

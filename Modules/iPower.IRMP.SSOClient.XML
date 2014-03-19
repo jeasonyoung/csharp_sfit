@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.SSOClient</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys">
+            <summary>
+            单点登录客户端配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.IgnoredUrlKey">
+            <summary>
+            用户验证忽略的页面的正则表达式键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.LoginURLKey">
+            <summary>
+            登录URL键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.ServiceURLKey">
+            <summary>
+            单点登录服务器地址键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.SystemIDKey">
+            <summary>
+            系统ID键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.AuthPwdKey">
+            <summary>
+            访问授权密码键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.LocalStorageKey">
+            <summary>
+            本地数据存储方式键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.RequestUrlNameKey">
+            <summary>
+            发起登录验证的请求Url的键名称键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.TicketNameKey">
+            <summary>
+            本地票据键名称键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.LogFileHeadKey">
+            <summary>
+            日志文件头键名。
+            </summary>
+        </member>
+        <member name="F:iPower.IRMP.SSOClient.SSOClientModuleConfigurationKeys.LogFileRuleKey">
+            <summary>
+            日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)键名。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SSOClientModuleConfiguration">
+            <summary>
+            单点登录客户端配置。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.ModuleConfig">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.IgnoredUrls">
+            <summary>
+            获取需忽略的页面的正则表达式。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.LoginURL">
+            <summary>
+            获取登录URL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.ServiceURL">
+            <summary>
+            获取单点登录服务器URL。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.SystemID">
+            <summary>
+            获取系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.AuthPwd">
+            <summary>
+            获取访问授权密码。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.LocalStorage">
+            <summary>
+            获取本地数据存储方式。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.RequestUrlName">
+            <summary>
+            获取发起登录验证的请求Url的键名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.TicketName">
+            <summary>
+            获取本地票据键名称。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.LogFileHead">
+            <summary>
+            获取日志文件头。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModuleConfiguration.LogFileRule">
+            <summary>
+            获取日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SSOClientModule">
+            <summary>
+            单点登录客户端模块。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.Dispose">
+            <summary>
+            处置由实现 IHttpModule 的模块使用的资源（内存除外）。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.Init(System.Web.HttpApplication)">
+            <summary>
+            初始化模块，并使其为处理请求做好准备。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.SignInNotRedirect(System.String,System.String,System.String@)">
+            <summary>
+            用户登录(不跳转)。
+            </summary>
+            <param name="userSign">用户登录账号。</param>
+            <param name="password">用户登录密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>登录成功返回true,失败返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.SignIn(System.String,System.String,System.String@)">
+            <summary>
+            用户登录。
+            </summary>
+            <param name="userSign">用户登录账号。</param>
+            <param name="password">用户登录密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>登录成功返回true,失败返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.SignOut(System.String@)">
+            <summary>
+            用户注销。
+            </summary>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.ChangePassword(System.String,System.String,System.String,System.String@)">
+            <summary>
+            修改密码。
+            </summary>
+            <param name="userSign">用户账号。</param>
+            <param name="oldPassword">用户旧密码。</param>
+            <param name="newPassword">用户新密码。</param>
+            <param name="err">异常错误信息。</param>
+            <returns>如果修改成功，则返回True；否则返回false。</returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.IsIgnore(System.Uri)">
+            <summary>
+            验证URI是否是可以被忽略的。
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.CurrentAuthTicket(System.Web.HttpContext)">
+            <summary>
+            从当前上下文中获取票据。
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.SetCurrentAuthTicket(System.Web.HttpContext,iPower.IRMP.SSO.SSOAuthTicket)">
+            <summary>
+            设置当前上下文的票据。
+            </summary>
+            <param name="context"></param>
+            <param name="ticket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOClientModule.RedirectLogin(System.Web.HttpContext)">
+            <summary>
+            跳转到登录。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOClientModule.ServicePoxy">
+            <summary>
+            获取服务代理对象。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SSOServicePoxy">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignIn(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.BeginSignIn(System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.EndSignIn(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignInAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignInAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.TicketVerification(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.BeginTicketVerification(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.EndTicketVerification(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.TicketVerificationAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.TicketVerificationAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignOut(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.BeginSignOut(System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.EndSignOut(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignOutAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.SignOutAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.ChangePassword(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.BeginChangePassword(System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.EndChangePassword(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.ChangePasswordAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.ChangePasswordAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.UserAuthorizationVerification(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.BeginUserAuthorizationVerification(System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.EndUserAuthorizationVerification(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.UserAuthorizationVerificationAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.UserAuthorizationVerificationAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:iPower.IRMP.SSOClient.SSOServicePoxy.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.SSOClient.SSOServicePoxy.SignInCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.SSOClient.SSOServicePoxy.TicketVerificationCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.SSOClient.SSOServicePoxy.SignOutCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.SSOClient.SSOServicePoxy.ChangePasswordCompleted">
+            <remarks/>
+        </member>
+        <member name="E:iPower.IRMP.SSOClient.SSOServicePoxy.UserAuthorizationVerificationCompleted">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.CredentialSoapHeader">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.CredentialSoapHeader.AppSystemID">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.CredentialSoapHeader.AppSystemPwd">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.CredentialSoapHeader.AnyAttr">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.CallResult">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.CallResult.ResultCode">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.CallResult.ResultMessage">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SSOCallResult">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SSOCallResult.Ticket">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SignInCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SignInCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SignInCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.TicketVerificationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.TicketVerificationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.TicketVerificationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SignOutCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.SignOutCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.SignOutCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.ChangePasswordCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.ChangePasswordCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.ChangePasswordCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.UserAuthorizationVerificationCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:iPower.IRMP.SSOClient.UserAuthorizationVerificationCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:iPower.IRMP.SSOClient.UserAuthorizationVerificationCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

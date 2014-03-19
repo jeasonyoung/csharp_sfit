@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.IRMP.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.IRMP.Engine.Persistence.ModuleConfigurationKeys">
+            <summary>
+             模块配置键。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.ModuleConfiguration">
+            <summary>
+            模块配置类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Persistence.ModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Persistence.ModuleConfiguration.ModuleConfig">
+            <summary>
+            获取静态实例。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.SSOTicketEntity">
+            <summary>
+            SSOTicketEntity实体类。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.DbModuleEntity`1">
+            <summary>
+             实体基类。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Persistence.DbModuleEntity`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Persistence.SSOTicketEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Persistence.SSOTicketEntity.DestroyTicket(System.String)">
+            <summary>
+            根据用户信息销毁票据。
+            </summary>
+            <param name="userData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.IRMPCommonLogEntity">
+            <summary>
+            IRMPCommonLogEntity实体类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Persistence.IRMPCommonLogEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.ModuleConstants">
+            <summary>
+            模块常量。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.SSOTicketDbProviderService">
+            <summary>
+            提供单点登录票据存储。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProviderService.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProviderService.CreateTicket(System.String,System.String)">
+            <summary>
+            创建票据数据存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProviderService.TicketVerification(System.String,System.String)">
+            <summary>
+            验证票据的存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProviderService.DestroyTicket(System.String,System.String)">
+            <summary>
+            销毁票据。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Domain.SSOTicket">
+            <summary>
+            tblSSOTicket映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Domain.SSOTicket.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.Token">
+            <summary>
+            获取或设置Token。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.UserData">
+            <summary>
+            获取或设置UserData。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.IssueDate">
+            <summary>
+            获取或设置IssueDate。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.Expiration">
+            <summary>
+            获取或设置Expiration。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.IssueClientIP">
+            <summary>
+            获取或设置IssueClientIP。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.RenewalCount">
+            <summary>
+            获取或设置RenewalCount。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.LastRenewalIP">
+            <summary>
+            获取或设置LastRenewalIP。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.SSOTicket.HasValid">
+            <summary>
+            获取或设置HasValid。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Service.IModuleView">
+            <summary>
+            模块UI接口。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Service.ModulePresenter`1">
+            <summary>
+            模块行为基础类。
+            </summary>
+            <typeparam name="T">UI视图接口。</typeparam>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Service.ModulePresenter`1.#ctor(`0)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="view">UI视图接口对象。</param>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Service.ModulePresenter`1.CreateModuleConfiguration">
+            <summary>
+            获取模块配置实例。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Domain.IRMPCommonLog">
+            <summary>
+            tblIRMPCommonLog映射类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.Domain.IRMPCommonLog.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.LogID">
+            <summary>
+            获取或设置LogID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.SystemID">
+            <summary>
+            获取或设置SystemID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.SystemName">
+            <summary>
+            获取或设置SystemName。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.RelationTable">
+            <summary>
+            获取或设置RelationTable。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.LogContext">
+            <summary>
+            获取或设置LogContext。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.CreateDate">
+            <summary>
+            获取或设置CreateDate。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.CreateEmployeeID">
+            <summary>
+            获取或设置CreateEmployeeID。
+            </summary>
+        </member>
+        <member name="P:iPower.IRMP.Engine.Domain.IRMPCommonLog.CreateEmployeeName">
+            <summary>
+            获取或设置CreateEmployeeName。
+            </summary>
+        </member>
+        <member name="T:iPower.IRMP.Engine.SSOTicketDbProvider">
+            <summary>
+            单点登录票据存储提供类。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProvider.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProvider.CreateTicket(iPower.IRMP.SSO.SSOAuthTicket,System.String)">
+            <summary>
+            创建票据数据存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProvider.TicketVerification(iPower.IRMP.SSO.SSOAuthTicket@,System.String,System.String@)">
+            <summary>
+            验证票据的存储。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <param name="err">异常错误信息。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.IRMP.Engine.SSOTicketDbProvider.DestroyTicket(iPower.IRMP.SSO.SSOAuthTicket@,System.String)">
+            <summary>
+            销毁票据。
+            </summary>
+            <param name="ticket">票据。</param>
+            <param name="clientIP">客户端IP地址。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Engine.CreateDbCommonLogProvider">
+            <summary>
+            创建数据库日志服务。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.CreateDbCommonLogProvider.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.IRMP.Engine.CreateDbCommonLogProvider.CreateCommonLog(iPower.GUIDEx,System.String,iPower.GUIDEx,System.String,System.String,System.String)">
+            <summary>
+            创建日志。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="systemName">系统名称。</param>
+            <param name="createEmployeeID">创建日志用户ID。</param>
+            <param name="createEmployeeName">创建日志用户名称。</param>
+            <param name="relationTable">关联表名称。</param>
+            <param name="log">日志内容。</param>
+        </member>
+        <member name="M:iPower.IRMP.Engine.CreateDbCommonLogProvider.ReplaceContent(System.String)">
+            <summary>
+            替换内容。
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.IRMP.Engine.Persistence.ModuleUtils">
+            <summary>
+            模块工具类。
+            </summary>
+        </member>
+    </members>
+</doc>

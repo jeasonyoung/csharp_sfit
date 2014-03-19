@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower.Platform</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Platform.ModuleDefineFactory">
+            <summary>
+             菜单模块工厂类。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineFactory.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineFactory.#ctor(System.String,iPower.Platform.ModuleSystemDefineCollection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="ver">版本。</param>
+            <param name="system">系统菜单模块定义集合。</param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineFactory.Serializer(System.IO.Stream)">
+            <summary>
+            序列化当前对象。
+            </summary>
+            <param name="output">输出流。</param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineFactory.DeSerializer(System.IO.Stream)">
+            <summary>
+            反序列化。
+            </summary>
+            <param name="input">数据输入流。</param>
+            <returns> 菜单模块工厂类。</returns>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefineFactory.Ver">
+            <summary>
+            获取或设置版本。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefineFactory.System">
+            <summary>
+            获取或设置系统菜单模块定义集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.ModuleSystemDefineCollection">
+            <summary>
+            系统菜单模块定义集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleSystemDefineCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleSystemDefineCollection.#ctor(iPower.Platform.ModuleSystemDefine)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="define">系统菜单模块定义。</param>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefineCollection.Item(System.String)">
+            <summary>
+            获取系统菜单模块定义。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <returns>系统菜单模块定义。</returns>
+        </member>
+        <member name="T:iPower.Platform.ModuleSystemDefine">
+            <summary>
+            系统菜单模块定义。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleSystemDefine.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleSystemDefine.#ctor(System.String,System.String,System.String,System.String,iPower.Platform.ModuleDefineCollection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="systemSign">系统标识。</param>
+            <param name="systemName">系统名称。</param>
+            <param name="systemDescription">系统描述。</param>
+            <param name="modules">菜单模块集合。</param>
+        </member>
+        <member name="M:iPower.Platform.ModuleSystemDefine.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="systemSign">系统标识。</param>
+            <param name="systemName">系统名称。</param>
+            <param name="systemDescription">系统描述。</param>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefine.SystemID">
+            <summary>
+            获取或设置系统ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefine.SystemSign">
+            <summary>
+            获取或设置系统标识。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefine.SystemName">
+            <summary>
+            获取或设置系统名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefine.SystemDescription">
+            <summary>
+            获取或设置系统描述。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleSystemDefine.Modules">
+            <summary>
+            获取或设置菜单模块集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.ModuleDefineCollection">
+            <summary>
+            菜单模块定义集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.#ctor(iPower.Platform.ModuleDefine)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="parent">父菜单模块。</param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.InsertItem(System.Int32,iPower.Platform.ModuleDefine)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.SetItem(System.Int32,iPower.Platform.ModuleDefine)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefineCollection.Compare(iPower.Platform.ModuleDefine,iPower.Platform.ModuleDefine)">
+            <summary>
+            排序比较。
+            </summary>
+            <param name="x">菜单模块。</param>
+            <param name="y">菜单模块。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefineCollection.Item(System.String)">
+            <summary>
+            获取菜单模块。
+            </summary>
+            <param name="moduleID">菜单模块ID。</param>
+            <returns>菜单模块。</returns>
+        </member>
+        <member name="T:iPower.Platform.ModuleDefine">
+            <summary>
+            菜单模块定义。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefine.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefine.#ctor(System.String,System.String,System.String,System.Int32,iPower.Platform.ModuleDefineCollection)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="moduleID">菜单模块ID。</param>
+            <param name="moduleName">菜单模块名称。</param>
+            <param name="moduleUri">菜单模块Uri。</param>
+            <param name="orderNo">菜单模块排序。</param>
+            <param name="modules">子菜单模块集合。</param>
+        </member>
+        <member name="M:iPower.Platform.ModuleDefine.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="moduleID">菜单模块ID。</param>
+            <param name="moduleName">菜单模块名称。</param>
+            <param name="moduleUri">菜单模块Uri。</param>
+            <param name="orderNo">菜单模块排序。</param>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.Parent">
+            <summary>
+            获取或设置父菜单模块。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.ModuleID">
+            <summary>
+            获取或设置菜单模块ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.ModuleName">
+            <summary>
+            获取或设置菜单模块名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.ModuleUri">
+            <summary>
+            获取或设置菜单模块Uri。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.OrderNo">
+            <summary>
+            获取或设置菜单模块排序。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ModuleDefine.Modules">
+            <summary>
+            获取或设置子菜单模块集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.IDataHandler">
+            <summary>
+            页面数据处理接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.IDataHandler.DataBind">
+            <summary>
+            数据绑定。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.IDataHandler.LoadData">
+            <summary>
+            数据加载。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.IDataHandler.SaveData">
+            <summary>
+            数据保存。
+            </summary>
+            <returns>是否保存成功。</returns>
+        </member>
+        <member name="M:iPower.Platform.IDataHandler.DeleteData">
+            <summary>
+            数据删除。
+            </summary>
+            <returns>是否成功删除数据。</returns>
+        </member>
+        <member name="T:iPower.Platform.Security.SecurityPermissionConstants">
+            <summary>
+            元操作权限常量。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Query">
+            <summary>
+            查询(AAA000000000000000000000000000A1)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Add">
+            <summary>
+            新增(AAA000000000000000000000000000A2)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Save">
+            <summary>
+            保存(AAA000000000000000000000000000A3)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Delete">
+            <summary>
+            删除(AAA000000000000000000000000000A4)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Export">
+            <summary>
+            导出(AAA000000000000000000000000000A5)。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.Security.SecurityPermissionConstants.Import">
+            <summary>
+            导入(AAA000000000000000000000000000A6)。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.IWebPartMgr">
+            <summary>
+            WebPart管理程序接口
+            获取WebPart列表接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPartMgr.QueryList(iPower.Platform.WebPart.EnumWebPartAlignment,System.String,System.String)">
+            <summary>
+            获取某个位置的WebPart集合。
+            </summary>
+            <param name="zoneMode">WebPart组件显示的位置。</param>
+            <param name="systemID">当前系统ID。</param>
+            <param name="employeeID">用户ID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPartMgr.QueryProperties(System.String)">
+            <summary>
+            获取WebPart属性数据集。
+            </summary>
+            <param name="personalWebPartID">WebPart配置的唯一标识。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.WebPart.EnumWebPartAlignment">
+            <summary>
+            WebPart布局枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.WebPart.EnumWebPartAlignment.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.WebPart.EnumWebPartAlignment.Middle">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:iPower.Platform.WebPart.EnumWebPartAlignment.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartQuery">
+            <summary>
+            WebPart信息数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQuery.PersonalWebPartID">
+            <summary>
+            获取或设置WebPart配置的唯一标识。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQuery.WebPartPath">
+            <summary>
+            获取或设置WebPart路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQuery.AssemblyName">
+            <summary>
+            获取或设置程序集名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQuery.ClassName">
+            <summary>
+            获取或设置类名称。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartQueryProperties">
+            <summary>
+            WebPart信息和属性数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartQueryProperties.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartQueryProperties.#ctor(iPower.Platform.WebPart.WebPartQuery)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="webPartQuery"></param>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQueryProperties.WebPartProperties">
+            <summary>
+            获取或设置WebPart属性集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartQueryCollection">
+            <summary>
+            WebPart信息数据集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartQueryCollection.Contains(iPower.Platform.WebPart.WebPartQuery)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQueryCollection.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="personalWebPartID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartQueryPropertiesCollection">
+            <summary>
+             WebPart信息和属性数据集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartQueryPropertiesCollection.Contains(iPower.Platform.WebPart.WebPartQueryProperties)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartQueryPropertiesCollection.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="personalWebPartID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartProperty">
+            <summary>
+            WebPart属性数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartProperty.PropertyName">
+            <summary>
+            获取或设置属性名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartProperty.PropertyValue">
+            <summary>
+            获取或设置属性值。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartPropertyCollection">
+            <summary>
+            WebPart属性数据集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartPropertyCollection.Contains(iPower.Platform.WebPart.WebPartProperty)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartPropertyCollection.Item(System.String)">
+            <summary>
+            根据属性名称获取数据对象。
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.Logs.ICreateDbCommonLog">
+            <summary>
+            创建数据库日志接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Logs.ICreateDbCommonLog.CreateCommonLog(iPower.GUIDEx,System.String,iPower.GUIDEx,System.String,System.String,System.String)">
+            <summary>
+            创建日志。
+            </summary>
+            <param name="systemID">系统ID。</param>
+            <param name="systemName">系统名称。</param>
+            <param name="createEmployeeID">创建日志用户ID。</param>
+            <param name="createEmployeeName">创建日志用户名称。</param>
+            <param name="relationTable">关联表名称。</param>
+            <param name="log">日志内容。</param>
+        </member>
+        <member name="T:iPower.Platform.WebPart.IWebPart">
+            <summary>
+            WebPart组件实现的数据和属性接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPart.QueryPropertyValue(System.String)">
+            <summary>
+            获取WebPart属性的值。
+            </summary>
+            <param name="propertyName">属性名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPart.DataBind">
+            <summary>
+            数据绑定到其所有子控件。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.IWebPart.PersonalWebPartID">
+            <summary>
+            获取或设置WebPart配置的唯一标识。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.IWebPart.WebPartData">
+            <summary>
+            获取或设置WebPart组件数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.IWebPart.WebPartProperties">
+            <summary>
+            获取或设置WebPart属性集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Security.ISecurity">
+            <summary>
+            安全接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Security.ISecurity.VerifyPermissions(iPower.Platform.Security.SecurityPermissionCollection)">
+             <summary>
+            验证权限。
+             </summary>
+             <param name="permissions">权限集合。</param>
+        </member>
+        <member name="P:iPower.Platform.Security.ISecurity.SecurityID">
+            <summary>
+            获取或设置系统安全标示。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.IMenuData">
+            <summary>
+            菜单数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IMenuData.MainMenuData">
+            <summary>
+            获取或设置主菜单数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IMenuData.MenuData">
+            <summary>
+            获取或设置菜单数据。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Security.Role">
+            <summary>
+            角色信息。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Security.Role.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Security.Role.#ctor(iPower.GUIDEx,System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <param name="roleSign">角色标识。</param>
+            <param name="roleName">角色名称。</param>
+            <param name="description">描述。</param>
+        </member>
+        <member name="M:iPower.Platform.Security.Role.#ctor(iPower.GUIDEx,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <param name="roleName">角色名称。</param>
+            <param name="description">描述。</param>
+        </member>
+        <member name="M:iPower.Platform.Security.Role.#ctor(iPower.GUIDEx,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <param name="roleName">角色名称。</param>
+        </member>
+        <member name="M:iPower.Platform.Security.Role.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.Security.Role.RoleID">
+            <summary>
+            获取或设置角色ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.Role.RoleSign">
+            <summary>
+            获取或设置角色标识。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.Role.RoleName">
+            <summary>
+            获取或设置角色名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.Role.Description">
+            <summary>
+            获取或设置描述。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Security.Roles">
+            <summary>
+            角色集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Security.Roles.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.Security.Roles.Contains(iPower.Platform.Security.Role)">
+            <summary>
+            是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Platform.Security.Roles.Compare(iPower.Platform.Security.Role,iPower.Platform.Security.Role)">
+            <summary>
+            排序。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Platform.Security.Roles.Item(iPower.GUIDEx)">
+            <summary>
+            获取角色。
+            </summary>
+            <param name="roleID">角色ID。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.Security.SecurityPermission">
+            <summary>
+            安全权限元操作。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.SecurityPermission.PermissionID">
+            <summary>
+            获取或设置权限元操作ID。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.SecurityPermission.PermissionName">
+            <summary>
+            获取或设置权限元操作名称。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.Security.SecurityPermissionCollection">
+            <summary>
+            安全权限元操作集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.Security.SecurityPermissionCollection.Item(System.String)">
+            <summary>
+            根据权限元操作ID获取操作接口。
+            </summary>
+            <param name="permissionID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.ITopResource">
+            <summary>
+            资源数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.CopyRight">
+            <summary>
+            获取或设置版权名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.BannerImageUrl">
+            <summary>
+            获取或设置Benner头图片路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.LogoImageUrl">
+            <summary>
+            获取或设置Logo图片路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.EffectImageURL">
+            <summary>
+            获取或设置特效图片URL。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.WebCssPaths">
+            <summary>
+            获取或设置样式表资源集合。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITopResource.WebScriptPaths">
+            <summary>
+            获取或设置脚本资源集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.IWebPartData">
+            <summary>
+            WebPart组件的数据提供接口，为相应的WebPart组件提供相应的数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPartData.DynamicTextData(System.String)">
+            <summary>
+            获取动态文本数据源。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <returns>动态文本数据。</returns>
+        </member>
+        <member name="M:iPower.Platform.WebPart.IWebPartData.DataSource(System.String,System.String)">
+            <summary>
+            获取WebPart组件数据。
+            </summary>
+            <param name="employeeID">用户ID。</param>
+            <param name="dataType">数据类型。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartData">
+            <summary>
+            WebPart数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartData.#ctor(System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="title">显示数据。</param>
+            <param name="url">URL数据。</param>
+        </member>
+        <member name="M:iPower.Platform.WebPart.WebPartData.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartData.Title">
+            <summary>
+            获取或设置显示数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.WebPart.WebPartData.Url">
+            <summary>
+            获取或设置URL数据。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.WebPart.WebPartDataCollection">
+            <summary>
+            WebPart数据集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.IUISettings">
+            <summary>
+            界面设置接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IUISettings.CurrentFolderID">
+            <summary>
+            获取或设置当前目录标示。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IUISettings.CurrentModuleTitle">
+            <summary>
+            获取或设置当前模块标题。
+            </summary>
+        </member>
+    </members>
+</doc>

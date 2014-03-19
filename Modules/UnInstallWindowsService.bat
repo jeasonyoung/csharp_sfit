@@ -1,0 +1,1 @@
+iPower.WinService.Shell.exe -u

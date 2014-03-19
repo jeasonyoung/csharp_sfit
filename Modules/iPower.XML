@@ -1,0 +1,3490 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPower</name>
+    </assembly>
+    <members>
+        <member name="T:iPower.Logs.LogRecordHandler">
+            <summary>
+            记录日志到存储委托。
+            </summary>
+            <param name="logType">日志类型。</param>
+            <param name="logContent">日志内容。</param>
+        </member>
+        <member name="T:iPower.Logs.LogContainer">
+            <summary>
+            日志记录容器。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogContainer.storage">
+            <summary>
+            日志存储。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.#ctor">
+            <summary>
+             构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.#ctor(iPower.Logs.ILogFileHead)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.OnLogRecordEvent(iPower.Logs.EnumLogsType,System.String)">
+            <summary>
+            触发日志记录事件。.
+            </summary>
+            <param name="logType">日志类型。</param>
+            <param name="logContent">日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.CreateNormalLog(System.String)">
+            <summary>
+            创建普通日志。
+            </summary>
+            <param name="content">普通日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.CreateWarningLog(System.String)">
+            <summary>
+            创建警告日志。
+            </summary>
+            <param name="content">警告日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.CreateErrorLog(System.String)">
+            <summary>
+            创建错误日志。
+            </summary>
+            <param name="content">错误日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.RecordLogs(iPower.Logs.EnumLogsType,System.String)">
+            <summary>
+            存储日志对象实例。
+            </summary>
+            <param name="logType">日志类型。</param>
+            <param name="logContent">日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogContainer.Dispose">
+            <summary>
+            销毁容器。
+            </summary>
+        </member>
+        <member name="E:iPower.Logs.LogContainer.LogRecordEvent">
+            <summary>
+            日志记录事件。
+            </summary>
+        </member>
+        <member name="T:iPower.Cryptography.CryptographyException">
+            <summary>
+            加密异常。
+            </summary>
+        </member>
+        <member name="T:iPower.BaseException">
+            <summary>
+            异常模块异常，框架的基础异常类，所有的异常请从本类派生。
+            </summary>
+        </member>
+        <member name="F:iPower.BaseException.errorNo">
+            <summary>
+            异常编号
+            </summary>
+        </member>
+        <member name="M:iPower.BaseException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:iPower.BaseException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:iPower.BaseException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:iPower.BaseException.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="errorNo">异常编号</param>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:iPower.BaseException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="errorNo">异常编号</param>
+            <param name="message">异常消息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:iPower.BaseException.FindSourceException(System.Exception)">
+            <summary>
+            查找原始的异常
+            </summary>
+            <param name="e">异常</param>
+            <returns>原始的异常</returns>
+        </member>
+        <member name="M:iPower.BaseException.FindSourceException(System.Exception,System.Type)">
+            <summary>
+            从异常树种查找指定类型的异常
+            </summary>
+            <param name="e">异常</param>
+            <param name="expectedExceptionType">期待的异常类型</param>
+            <returns>所要求的异常，如果找不到，返回null</returns>
+        </member>
+        <member name="P:iPower.BaseException.ErrorNo">
+            <summary>
+            异常编号
+            </summary>
+        </member>
+        <member name="M:iPower.Cryptography.CryptographyException.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常信息</param>
+        </member>
+        <member name="T:iPower.Configuration.iPowerConfigurationKeys">
+            <summary>
+            系统配置键。
+            </summary>
+        </member>
+        <member name="F:iPower.Configuration.iPowerConfigurationKeys.iPower_DbConnectionStringKey">
+            <summary>
+            获取数据库默认连接字符串键（iPower.DbConnectionString）。
+            </summary>
+        </member>
+        <member name="T:iPower.CallResult">
+            <summary>
+            调用返回结果。
+            </summary>
+        </member>
+        <member name="M:iPower.CallResult.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.CallResult.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="resultCode">结果值。</param>
+            <param name="resultMessage">结果信息。</param>
+        </member>
+        <member name="P:iPower.CallResult.ResultCode">
+            <summary>
+            获取或设置结果值。
+            </summary>
+        </member>
+        <member name="P:iPower.CallResult.ResultMessage">
+            <summary>
+            获取或设置结果信息。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.CacheChangedEventHandler">
+            <summary>
+            缓存改变委托。
+            </summary>
+            <param name="e">缓存改变委托参数。</param>
+        </member>
+        <member name="T:iPower.Cache.CacheChangedEventArgs">
+            <summary>
+            缓存改变委托参数。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheChangedEventArgs.ItemKey">
+            <summary>
+            获取或设置缓存项键。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheChangedEventArgs.Item">
+            <summary>
+            获取或设置缓存对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheChangedEventArgs.ChangedType">
+            <summary>
+            获取或设置缓存变更类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.HashCodeCombiner">
+            <summary>
+            哈希函数拼接工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.HashCodeCombiner.CombineHashCodes(System.Int32,System.Int32)">
+            <summary>
+            拼接特定类型的哈希函数。
+            </summary>
+            <param name="h1"></param>
+            <param name="h2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.HashCodeCombiner.CombineHashCodes(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            拼接特定类型的哈希函数。
+            </summary>
+            <param name="h1"></param>
+            <param name="h2"></param>
+            <param name="h3"></param>
+            <param name="h4"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.HashCodeCombiner.CombineHashCodes(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+             拼接特定类型的哈希函数。
+            </summary>
+            <param name="h1"></param>
+            <param name="h2"></param>
+            <param name="h3"></param>
+            <param name="h4"></param>
+            <param name="h5"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Upload.CallbackEventHandler">
+            <summary>
+            上传结果处理事件。
+            </summary>
+            <param name="e">结果处理参数。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Upload.CallbackEventArgs">
+            <summary>
+            上传结果处理参数。
+            </summary>
+        </member>
+        <member name="M:iPower.Upload.CallbackEventArgs.#ctor(System.IO.Stream)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="P:iPower.Upload.CallbackEventArgs.Callback">
+            <summary>
+            获取反馈数据流。
+            </summary>
+        </member>
+        <member name="T:iPower.Upload.HttpUploadFile">
+            <summary>
+            通过HTTP向Web服务器页面上传附件。
+            </summary>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.OnUploadProgress(iPower.Upload.ProgressEventArgs)">
+            <summary>
+            触发上传进度事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.OnUploadCallback(iPower.Upload.CallbackEventArgs)">
+            <summary>
+            触发上传反馈事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.Upload(System.String)">
+            <summary>
+            将本地上传到指定的服务器（HTTP）方式。
+            </summary>
+            <param name="filePath">本地文件路径。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.Upload(System.String,System.String)">
+            <summary>
+            将本地上传到指定的服务器（HTTP）方式。
+            </summary>
+            <param name="filePath">本地文件路径。</param>
+            <param name="saveName">上传后的文件名</param>
+            <returns>上传结果。</returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.Upload(System.IO.Stream,System.String)">
+            <summary>
+            将数据流上传到指定的服务器（HTTP）方式。
+            </summary>
+            <param name="input">上传文件流。</param>
+            <param name="saveName">文件上传后的名称</param>
+            <returns>结果，成功为true,失败返回0</returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.BuildBoundary">
+            <summary>
+            构建时间戳字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.BuildBoundary(System.String)">
+            <summary>
+            构建时间戳。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.BuildPostHeader(System.String,System.String)">
+            <summary>
+            构建请求头部信息。
+            </summary>
+            <param name="boundary">时间戳字符串。</param>
+            <param name="saveName">保存文件名。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Upload.HttpUploadFile.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.HttpUploadFile.URL">
+            <summary>
+            获取或设置上传目标的URL地址。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.HttpUploadFile.Timeout">
+            <summary>
+            设置获取响应的超时时间(秒)。
+            </summary>
+        </member>
+        <member name="E:iPower.Upload.HttpUploadFile.UploadProgress">
+            <summary>
+            上传进度事件。
+            </summary>
+        </member>
+        <member name="E:iPower.Upload.HttpUploadFile.UploadCallback">
+            <summary>
+            上传反馈事件。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.ILogStorage">
+            <summary>
+            日志存储接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.ILogStorage.StorageLog(iPower.Logs.EnumLogsType,System.String)">
+            <summary>
+            存储日志。
+            </summary>
+            <param name="logType">日志类型。</param>
+            <param name="logContent">日志内容。</param>
+        </member>
+        <member name="T:iPower.ISystem">
+            <summary>
+            系统信息接口。
+            </summary>
+        </member>
+        <member name="P:iPower.ISystem.CurrentSystemID">
+            <summary>
+            获取或设置当前系统标示。
+            </summary>
+        </member>
+        <member name="P:iPower.ISystem.CurrentSystemName">
+            <summary>
+            获取或设置当前系统名称。
+            </summary>
+        </member>
+        <member name="T:iPower.Paging.CallbackData">
+            <summary>
+            分页反馈数据。
+            </summary>
+        </member>
+        <member name="T:iPower.Paging.ICallbackData`1">
+            <summary>
+            分页反馈数据接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ICallbackData`1.Success">
+            <summary>
+            获取或设置是否成功。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ICallbackData`1.Data">
+            <summary>
+            获取或设置反馈数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ICallbackData`1.Msg">
+            <summary>
+            获取或设置反馈附加消息。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.CallbackData.Success">
+            <summary>
+            获取或设置是否成功。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.CallbackData.Data">
+            <summary>
+            获取或设置反馈数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.CallbackData.Msg">
+            <summary>
+            获取或设置反馈附加消息。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.MemoryCacheItem">
+            <summary>
+            内存缓存项。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.CacheItem">
+            <summary>
+            缓存项基类。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.ICacheItem">
+            <summary>
+            缓存项接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.ICacheItem.RefreshItem(System.DateTime)">
+            <summary>
+            刷新缓存。
+            </summary>
+            <param name="accessDate"></param>
+        </member>
+        <member name="P:iPower.Cache.ICacheItem.ItemSize">
+            <summary>
+            获取或设置缓存大小。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.ICacheItem.ItemKey">
+            <summary>
+            获取或设置缓存键。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.ICacheItem.LastAccessDate">
+            <summary>
+            获取或设置最后存活时间。
+            </summary>
+        </member>
+        <member name="E:iPower.Cache.ICacheItem.CacheItemChanged">
+            <summary>
+            缓存项改变通知事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.CacheItem.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.CacheItem.RefreshItem(System.DateTime)">
+            <summary>
+            刷新缓存。
+            </summary>
+            <param name="accessDate"></param>
+        </member>
+        <member name="M:iPower.Cache.CacheItem.OnCacheItemChanged">
+            <summary>
+            触发缓存项改变通知事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheItem.ItemSize">
+            <summary>
+            获取或设置缓存大小。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheItem.ItemKey">
+            <summary>
+            获取或设置缓存键。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheItem.LastAccessDate">
+            <summary>
+            获取或设置最后存活时间。
+            </summary>
+        </member>
+        <member name="E:iPower.Cache.CacheItem.CacheItemChanged">
+            <summary>
+            缓存项改变通知事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.MemoryCacheItem.#ctor(System.IO.MemoryStream,iPower.Cache.CacheKeyType)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="ms"></param>
+            <param name="fileKeyType"></param>
+        </member>
+        <member name="P:iPower.Cache.MemoryCacheItem.DataBytes">
+            <summary>
+            获取或设置文件内容。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.CollectionBase`1">
+            <summary>
+            集合基础类（泛型）。
+            </summary>
+            <typeparam name="T">集合收集对象的类型。</typeparam>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.#ctor(System.Boolean)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="uniqueKey">键是否限制为唯一。</param>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.Add(System.String,`0)">
+            <summary>
+            添加一项到集合中。
+            </summary>
+            <param name="key">键值。</param>
+            <param name="value">项。</param>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.Set(System.String,`0)">
+            <summary>
+            添加/替换一项到集合中。
+            </summary>
+            <param name="key">键值。</param>
+            <param name="value">项。</param>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.Contains(System.String)">
+            <summary>
+            集合中是否包含某项。
+            </summary>
+            <param name="key">键值。</param>
+            <returns>是/否。</returns>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.Remove(System.String)">
+            <summary>
+            移除某项。
+            </summary>
+            <param name="key">键值。</param>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.RemoveAt(System.Int32)">
+            <summary>
+            在指定处移除某项。
+            </summary>
+            <param name="index">索引。</param>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.Clear">
+            <summary>
+            清空集合中所有元素。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.CopyToArray">
+            <summary>
+            复制到数组中。
+            </summary>
+            <returns>数组。</returns>
+        </member>
+        <member name="M:iPower.Utility.CollectionBase`1.GetItems(System.String)">
+            <summary>
+            获取具有相同键值的项。
+            </summary>
+            <param name="key">键值。</param>
+            <returns>具有相同键值的项。</returns>
+        </member>
+        <member name="P:iPower.Utility.CollectionBase`1.UniqueKey">
+            <summary>
+            获取或设置键是否限制为唯一。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.CollectionBase`1.Item(System.Int32)">
+            <summary>
+            按索引的方式获取项。
+            </summary>
+            <param name="index">索引。</param>
+            <returns>项。</returns>
+        </member>
+        <member name="P:iPower.Utility.CollectionBase`1.Item(System.String)">
+            <summary>
+            按键值方式获取项。
+            </summary>
+            <param name="key">键值。</param>
+            <returns>项。</returns>
+        </member>
+        <member name="P:iPower.Utility.CollectionBase`1.Values">
+            <summary>
+            获取所以的值。
+            </summary>
+        </member>
+        <member name="T:iPower.Platform.IDataDropDownList">
+            <summary>
+            下拉框数据接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.IDataDropDownList.DataBind">
+            <summary>
+            绑定数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IDataDropDownList.DataTextField">
+            <summary>
+            获取或设置显示字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IDataDropDownList.DataTextFormatString">
+            <summary>
+            获取或设置显示格式。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IDataDropDownList.DataValueField">
+            <summary>
+            获取或设置值字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IDataDropDownList.DataValueParentField">
+            <summary>
+            获取或设置值父字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IDataDropDownList.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="T:iPower.IUser">
+            <summary>
+            用户信息接口。
+            </summary>
+        </member>
+        <member name="P:iPower.IUser.CurrentUserID">
+            <summary>
+            获取或设置当前用户标示。
+            </summary>
+        </member>
+        <member name="P:iPower.IUser.CurrentUserName">
+            <summary>
+            获取或设置当前用户名称。
+            </summary>
+        </member>
+        <member name="T:iPower.ServiceCreatorCallback">
+            <summary>
+            提供一种回调机制，它可以即需创建服务的实例。
+            </summary>
+            <param name="container">请求创建服务的服务容器。</param>
+            <param name="serviceType">要创建的服务的类型。</param>
+            <returns>由 serviceType 指定的服务；如果未能创建服务，则为 nullNothingnullptrnull 引用（在 Visual Basic 中为 Nothing）。</returns>
+        </member>
+        <member name="T:iPower.IServiceContainer">
+            <summary>
+            提供服务的容器。
+            </summary>
+        </member>
+        <member name="M:iPower.IServiceContainer.HasService(System.Type)">
+            <summary>
+            检查服务容器中服务类型是否存在。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+            <returns>是否存在。</returns>
+        </member>
+        <member name="M:iPower.IServiceContainer.AddService(System.Type,iPower.ServiceCreatorCallback)">
+            <summary>
+            将指定的服务添加到服务容器中。
+            </summary>
+            <param name="serviceType">要添加的服务类型。</param>
+            <param name="callback">用于创建服务的回调对象。这允许将服务声明为可用，但将对象的创建延迟到请求该服务之后。</param>
+        </member>
+        <member name="M:iPower.IServiceContainer.AddService(System.Type,System.Object)">
+            <summary>
+            将指定的服务添加到服务容器中。
+            </summary>
+            <param name="serviceType">要添加的服务类型。</param>
+            <param name="serviceInstance">要添加的服务类型的实例。此对象必须实现 serviceType 参数指示的类型或从其继承。</param>
+        </member>
+        <member name="M:iPower.IServiceContainer.RemoveService(System.Type)">
+            <summary>
+            从服务容器中移除指定的服务类型。
+            </summary>
+            <param name="serviceType">要移除的服务类型。</param>
+        </member>
+        <member name="T:iPower.Cryptography.HashCrypto">
+            <summary>
+            关于Hash的一些实用方法。
+            </summary>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.Hash(System.Byte[],System.String)">
+            <summary>
+            Hash算法。
+            </summary>
+            <param name="input">被Hash的字节数组。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash结果字节数组。</returns>
+            <remarks>
+            当参数<paramref name="hashFormat">不为"md5"、"sha1"时，返回<c>null</c>。</paramref>
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.Hash(System.IO.Stream,System.String)">
+            <summary>
+            Hash算法。
+            </summary>
+            <param name="input">被Hash的字节流。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash结果字节数组。</returns>
+            <remarks>
+            当参数<paramref name="hashFormat">不为"md5"、"sha1"时，返回<c>null</c>。</paramref>
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.Hash(System.String,System.String)">
+            <summary>
+            Hash算法。
+            </summary>
+            <param name="data">源数据。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash数据。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.HashFile(System.String,System.String)">
+            <summary>
+            Hash文件。
+            </summary>
+            <param name="fileName">被Hash的文件（包括路径）。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash结果字符串。</returns>
+            <remarks>
+            当参数<paramref name="hashFormat">不为"md5"、"sha1"时，返回<c>null</c>。</paramref>
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.HashFile(System.IO.Stream,System.String)">
+            <summary>
+            Hash数据流。
+            </summary>
+            <param name="fileStream">数据流。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash结果字符串。</returns>
+            <remarks>
+            当参数<paramref name="hashFormat">不为"md5"、"sha1"时，返回<c>null</c>。</paramref>
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.HashCrypto.HashFileReturnRawData(System.String,System.String)">
+            <summary>
+            Hash文件。
+            </summary>
+            <param name="fileName">被Hash的文件（包括路径）。</param>
+            <param name="hashFormat">Hash算法："md5"、"sha1"。</param>
+            <returns>Hash结果。</returns>
+            <remarks>
+            当参数<paramref name="hashFormat">不为"md5"、"sha1"时，返回<c>null</c>。</paramref>
+            </remarks>
+        </member>
+        <member name="T:iPower.Logs.FileAppender">
+            <summary>
+            提供写文件操作。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.FileAppender.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="path">文件路径。</param>
+        </member>
+        <member name="M:iPower.Logs.FileAppender.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="path"></param>
+            <param name="encode"></param>
+        </member>
+        <member name="M:iPower.Logs.FileAppender.CallAddpender(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="content"></param>
+            <param name="append"></param>
+        </member>
+        <member name="M:iPower.Logs.FileAppender.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.FileAppender.Count">
+            <summary>
+            获取队列集合数。
+            </summary>
+        </member>
+        <member name="T:iPower.Upload.UploadProgressEventHandler">
+            <summary>
+            上传进度委托。
+            </summary>
+            <param name="e">进度参数。</param>
+        </member>
+        <member name="T:iPower.Upload.ProgressEventArgs">
+            <summary>
+            上传进度参数。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.ProgressEventArgs.Value">
+            <summary>
+            获取已上传进度((int)(已经上传数据 * (int.MaxValue / 总数据)))。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.ProgressEventArgs.Time">
+            <summary>
+            获取已用时间(秒)。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.ProgressEventArgs.TimeText">
+            <summary>
+            获取已用时间信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.ProgressEventArgs.SpeedText">
+            <summary>
+            获取速度信息。
+            </summary>
+        </member>
+        <member name="P:iPower.Upload.ProgressEventArgs.Status">
+            <summary>
+            获取状态信息。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.iPowerAbstractConfiguration`1">
+            <summary>
+            获取自定义配置节的基础类。
+            </summary>
+            <typeparam name="T">自定义的配置节类（ConfigurationSection的子类）。</typeparam>
+        </member>
+        <member name="F:iPower.Configuration.iPowerAbstractConfiguration`1.Section">
+            <summary>
+            自定义的配置节类。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.iPowerAbstractConfiguration`1.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sectionName">配置节的名称。</param>
+        </member>
+        <member name="M:iPower.Configuration.iPowerAbstractConfiguration`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.iPowerAbstractConfiguration`1.GetKeyValue(System.String)">
+            <summary>
+            获取配置节键值对。
+            </summary>
+            <param name="key">键。</param>
+            <returns>值。</returns>
+        </member>
+        <member name="M:iPower.Configuration.iPowerAbstractConfiguration`1.CreateConfiguration(System.String,System.Collections.Specialized.NameValueCollection@,iPower.Configuration.ConnectionStringConfigurationCollection@)">
+            <summary>
+             创建获取配置对象。
+            </summary>
+            <param name="sectionName">配置节名称。</param>
+            <param name="appSettings">默认配置节数据。</param>
+            <param name="connectionStrings">默认数据连接数据。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Configuration.iPowerAbstractConfiguration`1.Item(System.String)">
+            <summary>
+            获取键值。
+            </summary>
+            <param name="key">键名。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Configuration.iPowerAbstractConfiguration`1.Settings">
+            <summary>
+            获取key-value配置节。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.iPowerAbstractConfiguration`1.AppSettings">
+            <summary>
+            默认配置节。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.iPowerAbstractConfiguration`1.ConnectionStrings">
+            <summary>
+            默认数据库连接字符串集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.ImageHelper">
+            <summary>
+            关于图片处理的一些实用方法。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.ImageHelper.MakeThumbnail(System.Drawing.Image,System.Int32,System.Int32,System.String)">
+            <summary>
+            制作图片的缩略图。
+            </summary>
+            <param name="originalImage">原图。</param>
+            <param name="width">缩略图的宽（像素）。</param>
+            <param name="height">缩略图的高（像素）。</param>
+            <param name="mode">缩略方式。</param>
+            <returns>缩略图。</returns>
+            <remarks>
+            	<paramref name="mode"/>：
+            		<para>HW：指定的高宽缩放（可能变形）。</para>
+            		<para>HWO：指定高宽缩放（可能变形）（过小则不变）。</para>
+            		<para>W：指定宽，高按比例。</para>
+            		<para>WO：指定宽（过小则不变），高按比例。</para>
+            		<para>H：指定高，宽按比例。</para>
+            		<para>HO：指定高（过小则不变），宽按比例。</para>
+            		<para>CUT：指定高宽裁减（不变形）。</para>
+            </remarks>
+        </member>
+        <member name="M:iPower.Utility.ImageHelper.MakeThumbnail(System.Drawing.Image,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            制作图片的缩略图。
+            </summary>
+            <param name="originalImage">原图。</param>
+            <param name="thumbnailPath">保存缩略图的路径。</param>
+            <param name="width">缩略图的宽（像素）。</param>
+            <param name="height">缩略图的高（像素）。</param>
+            <param name="mode">缩略方式，参见<seealso cref="M:iPower.Utility.ImageHelper.MakeThumbnail(System.Drawing.Image,System.Int32,System.Int32,System.String)"/>。</param>
+        </member>
+        <member name="M:iPower.Utility.ImageHelper.MakeThumbnail(System.IO.Stream,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            制作图片的缩略图。
+            </summary>
+            <param name="originalStream">原图。</param>
+            <param name="thumbnailPath">保存缩略图的路径。</param>
+            <param name="width">缩略图的宽（像素）。</param>
+            <param name="height">缩略图的高（像素）。</param>
+            <param name="mode">缩略方式，参见<seealso cref="M:iPower.Utility.ImageHelper.MakeThumbnail(System.Drawing.Image,System.Int32,System.Int32,System.String)"/>。</param>
+        </member>
+        <member name="M:iPower.Utility.ImageHelper.MakeThumbnail(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            制作图片的缩略图。
+            </summary>
+            <param name="originalImagePath">原图的路径。</param>
+            <param name="thumbnailPath">保存缩略图的路径。</param>
+            <param name="width">缩略图的宽（像素）。</param>
+            <param name="height">缩略图的高（像素）。</param>
+            <param name="mode">缩略方式，参见<seealso cref="M:iPower.Utility.ImageHelper.MakeThumbnail(System.Drawing.Image,System.Int32,System.Int32,System.String)"/>。</param>
+        </member>
+        <member name="T:iPower.Utility.BufferBlockUtil">
+            <summary>
+            大块数据工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.BufferBlockUtil.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.BufferBlockUtil.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            写入数据块。
+            </summary>
+            <param name="array">数据块。</param>
+            <param name="offset">数据块内偏移。</param>
+            <param name="count">有效数据长度。</param>
+        </member>
+        <member name="M:iPower.Utility.BufferBlockUtil.ToArray">
+            <summary>
+            将数据转换为数组。
+            </summary>
+            <returns>数据块数组。</returns>
+        </member>
+        <member name="M:iPower.Utility.BufferBlockUtil.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.FileStorage.StorageModuleConfigurationKeys">
+            <summary>
+            模块配置键类。
+            </summary>
+        </member>
+        <member name="F:iPower.FileStorage.StorageModuleConfigurationKeys.FileStorageFactoryAssemblyKey">
+            <summary>
+            文件存储的实现工厂程序集键名。
+            </summary>
+        </member>
+        <member name="T:iPower.FileStorage.StorageModuleConfiguration">
+            <summary>
+            模块配置类。
+            </summary>
+            <example>
+            &lt;configuration&gt;
+                &lt;!--注册配置节--&gt;
+                &lt;configSections&gt;
+                     &lt;!--注册附件存储配置--&gt;
+                     &lt;section name ="FileStorage" type="iPower.Configuration.iPowerSection,iPower"/&gt;
+                &lt;/configSections&gt;
+            &lt;/configuration&gt;
+            
+            &lt;!--附件存储配置--&gt;
+            &lt;FileStorage&gt;
+                &lt;!--文件存储的实现工厂程序集--&gt;
+                &lt;add key="iPower.FileStorageFactoryAssembly" value="iPower.FileStorage.SQLServer.FileStorageFactory,iPower.FileStorage"/&gt;
+                &lt;!--文件存储地址（数据库或本地文件夹）--&gt;
+                &lt;add key="iPower.DbConnectionString" value="DefaultDbServer"/&gt;
+            &lt;/FileStorage&gt;
+            </example>
+        </member>
+        <member name="T:iPower.Configuration.iPowerConfiguration">
+            <summary>
+            获取配置类。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.IDefaultDataConnection">
+            <summary>
+            默认数据库连接接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.IDefaultDataConnection.DefaultDataConnectionString">
+            <summary>
+            默认数据库连接字符串。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.iPowerConfiguration.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="sectionName">配置节名。</param>
+        </member>
+        <member name="M:iPower.Configuration.iPowerConfiguration.LoadConnectionConfiguration(System.String)">
+            <summary>
+            加载数据库连接配置.
+            </summary>
+            <param name="key">配置键名.</param>
+            <returns>数据库连接配置对象.</returns>
+        </member>
+        <member name="P:iPower.Configuration.iPowerConfiguration.DefaultDataConnectionString">
+            <summary>
+            获取默认数据库连接字符串(Jeason.DbConnectionString)。
+            </summary>
+        </member>
+        <member name="T:iPower.FileStorage.IStorageConfig">
+            <summary>
+            存储的配置接口。
+            </summary>
+        </member>
+        <member name="P:iPower.FileStorage.IStorageConfig.StorageSource">
+            <summary>
+            获取存储源。
+            </summary>
+        </member>
+        <member name="M:iPower.FileStorage.StorageModuleConfiguration.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.FileStorage.StorageModuleConfiguration.StorageSource">
+            <summary>
+            获取文件存储源。
+            </summary>
+        </member>
+        <member name="P:iPower.FileStorage.StorageModuleConfiguration.FileStorageFactoryAssembly">
+            <summary>
+            获取文件存储的实现工厂程序集。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.ConnectionStringConfigurationCollection">
+            <summary>
+            表示连接字符串配置文件节中的命名连接字符串的集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.#ctor(iPower.Configuration.ConnectionStringConfiguration)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="item">表示连接字符串配置文件节中的单个命名连接字符串。</param>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.Add(iPower.Configuration.ConnectionStringConfiguration)">
+            <summary>
+            添加表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+            <param name="item">表示连接字符串配置文件节中的单个命名连接字符串。</param>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.Clear">
+            <summary>
+            清除全部表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.Contains(iPower.Configuration.ConnectionStringConfiguration)">
+            <summary>
+            判断是否存在表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+            <param name="item">表示连接字符串配置文件节中的单个命名连接字符串。</param>
+            <returns>存在返回True，否则返回False。</returns>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.CopyTo(iPower.Configuration.ConnectionStringConfiguration[],System.Int32)">
+            <summary>
+            复制到数组。
+            </summary>
+            <param name="array">数组。</param>
+            <param name="arrayIndex">下标。</param>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.Remove(iPower.Configuration.ConnectionStringConfiguration)">
+            <summary>
+            移除指定表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+            <param name="item">表示连接字符串配置文件节中的单个命名连接字符串。</param>
+            <returns>成功返回True，否则返回False。</returns>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfigurationCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfigurationCollection.Item(System.String)">
+            <summary>
+            获取表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+            <param name="name">名称。</param>
+            <returns>表示连接字符串配置文件节中的单个命名连接字符串。</returns>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfigurationCollection.Count">
+            <summary>
+            获取集合中的数量。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfigurationCollection.IsReadOnly">
+            <summary>
+            获取是否只读。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.ConnectionStringConfiguration">
+            <summary>
+            表示连接字符串配置文件节中的单个命名连接字符串。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfiguration.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="name">名称。</param>
+            <param name="providerName">提供程序名称属性。</param>
+            <param name="connectionString">连接字符串。</param>
+        </member>
+        <member name="M:iPower.Configuration.ConnectionStringConfiguration.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfiguration.Name">
+            <summary>
+            获取或设置名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfiguration.ProviderName">
+            <summary>
+            获取或设置提供程序名称属性。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.ConnectionStringConfiguration.ConnectionString">
+            <summary>
+            获取或设置连接字符串。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.Logger">
+            <summary>
+            写日志文件（支持多线程并发）。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.Logger.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:iPower.Logs.Logger.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="filePath"></param>
+            <param name="encode"></param>
+        </member>
+        <member name="M:iPower.Logs.Logger.CreateMd5Key(System.String)">
+            <summary>
+            根据文件路径创建Md5键。
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Logs.Logger.Append(System.String)">
+            <summary>
+            追加数据。
+            </summary>
+            <param name="content">内容。</param>
+        </member>
+        <member name="M:iPower.Logs.Logger.AppendLine(System.String)">
+            <summary>
+            追加数据（结尾换行）。
+            </summary>
+            <param name="content">内容。</param>
+        </member>
+        <member name="M:iPower.Logs.Logger.Write(System.String)">
+            <summary>
+            写入新文件数据。
+            </summary>
+            <param name="content">内容。</param>
+        </member>
+        <member name="M:iPower.Logs.Logger.WriteLine(System.String)">
+            <summary>
+            写入新文件数据（结尾换行）。
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="M:iPower.Logs.Logger.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.Logger.FilePath">
+            <summary>
+            设置文件路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.Logger.Encode">
+            <summary>
+            设置字符集。
+            </summary>
+        </member>
+        <member name="T:iPower.Handlers.WebServiceHandler">
+            <summary>
+            WebService处理基类。
+            集成本类可以在HttpHandlers中直接配置WebService服务，
+            无需使用.asmx文件。
+            </summary>
+        </member>
+        <member name="M:iPower.Handlers.WebServiceHandler.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Handlers.WebServiceHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Handler处理。
+            </summary>
+            <param name="context">当前上下文。</param>
+        </member>
+        <member name="P:iPower.Handlers.WebServiceHandler.Handlers">
+            <summary>
+            获取处理工厂。
+            </summary>
+        </member>
+        <member name="P:iPower.Handlers.WebServiceHandler.IsReusable">
+            <summary>
+            获取实例是否可再次使用。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.INIConfiguration">
+            <summary>
+            INI配置的写入和读取。
+            </summary>
+            <example>
+            INI文件结构如下：
+            [小节名]
+            关键字=值
+            </example>
+        </member>
+        <member name="M:iPower.Configuration.INIConfiguration.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            创建INI配置的API。
+            </summary>
+            <param name="section">小节名。</param>
+            <param name="key">关键字。</param>
+            <param name="val">值（可以是变量、字符串、整型、Bool型）。</param>
+            <param name="filePath">文件所在路径。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Configuration.INIConfiguration.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            读取INI配置的API。
+            </summary>
+            <param name="section">小节名。</param>
+            <param name="key">关键字。</param>
+            <param name="def">默认值。</param>
+            <param name="retValue">值。</param>
+            <param name="size">值的最大长度。</param>
+            <param name="filePath">文件所在路径。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Configuration.INIConfiguration.Write(System.String,System.String,System.String,System.String)">
+            <summary>
+            写入配置。
+            </summary>
+            <param name="filePath">文件所在路径。</param>
+            <param name="section">小节名。</param>
+            <param name="key">关键字。</param>
+            <param name="value">值。</param>
+        </member>
+        <member name="M:iPower.Configuration.INIConfiguration.Read(System.String,System.String,System.String,System.String)">
+            <summary>
+            读取配置。
+            </summary>
+            <param name="filePath">文件所在路径。</param>
+            <param name="section">小节名。</param>
+            <param name="key">关键字。</param>
+            <param name="defaultValue">默认值。</param>
+            <returns>值。</returns>
+        </member>
+        <member name="T:iPower.Utility.EnumeratorOnICollection">
+            <summary>
+             将ICollection转化为IEnumerator。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnICollection.#ctor(System.Collections.ICollection,System.Int32,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="collection">collection。</param>
+            <param name="startIndex">开始索引。</param>
+            <param name="count">个数。</param>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnICollection.MoveNext">
+            <summary>
+            下一个值。
+            </summary>
+            <returns>存在为True，否则为False。</returns>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnICollection.Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.EnumeratorOnICollection.Current">
+            <summary>
+            获取当前值。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.EnumeratorOnArray">
+            <summary>
+            将Array转化为IEnumerator。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnArray.#ctor(System.Object[],System.Int32,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="array">array。</param>
+            <param name="startIndex">开始索引。</param>
+            <param name="count">个数。</param>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnArray.MoveNext">
+            <summary>
+            下一个值。
+            </summary>
+            <returns>存在为True，否则为False。</returns>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnArray.Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.EnumeratorOnArray.Current">
+            <summary>
+            获取当前值。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.FileCache">
+            <summary>
+            文件缓存。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.FileCache.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.FileCache.OnCacheChanged(iPower.Cache.CacheChangedEventArgs)">
+            <summary>
+            触发缓存改变事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:iPower.Cache.FileCache.OnCacheChanged(iPower.Cache.CacheChangedType,iPower.Cache.ICacheItem)">
+            <summary>
+            触发缓存改变事件。
+            </summary>
+            <param name="type"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:iPower.Cache.FileCache.ContainsKey(System.String)">
+            <summary>
+            判断缓存是否存在。
+            </summary>
+            <param name="cacheItemKey">缓存键。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.AddCache(iPower.Cache.ICacheItem)">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="item">缓存项。</param>
+            <returns>缓存键。</returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.AddFileCache(iPower.Cache.FileCacheItem)">
+            <summary>
+            添加缓存。
+            </summary>
+            <param name="item">缓存项。</param>
+            <returns>缓存键。</returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.AddFileCache(System.String,iPower.Cache.DataLoadType)">
+            <summary>
+            添加文件缓存。
+            </summary>
+            <param name="filePath">文件路径。</param>
+            <param name="loadType">加载类型。</param>
+            <returns>缓存键。</returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.GetItem(System.String)">
+            <summary>
+            获取缓存项。
+            </summary>
+            <param name="cacheItemKey">缓存键。</param>
+            <returns>缓存项对象。</returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.GetFileCacheItem(System.String)">
+            <summary>
+            获取文件缓存项。
+            </summary>
+            <param name="cacheItemKey">缓存键。</param>
+            <returns>文件缓存项对象。</returns>
+        </member>
+        <member name="M:iPower.Cache.FileCache.Remove(System.String)">
+            <summary>
+            移除缓存。
+            </summary>
+            <param name="cacheItemKey"></param>
+        </member>
+        <member name="M:iPower.Cache.FileCache.startCheckWorker">
+            <summary>
+            开始检测。
+            </summary>
+        </member>
+        <member name="E:iPower.Cache.FileCache.CacheChanged">
+            <summary>
+            缓存改变事件。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.CacheMaxSize">
+            <summary>
+            获取或设置缓存器最大容量(M)。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.CurrentSize">
+            <summary>
+            获取缓存器当前容量(M)。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.Effective">
+            <summary>
+            获取或设置缓存有效时间(分钟)。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.CheckInterval">
+            <summary>
+            获取或设置缓存检测间隔时间(分钟)。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.CacheItems">
+            <summary>
+            获取缓存列表。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.ItemQueue">
+            <summary>
+            获取缓存键队列。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCache.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="itemKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Cache.CacheKeyType">
+            <summary>
+            缓存键类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheKeyType.MD5">
+            <summary>
+            MD5值。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheKeyType.FilePath">
+            <summary>
+            文件路径。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheKeyType.Custom">
+            <summary>
+            自定义。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.JobStatus">
+            <summary>
+            Windows服务Job状态枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.Stopped">
+            <summary>
+            停止。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.Running">
+            <summary>
+            运行中。 
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.End">
+            <summary>
+            运行结束。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.Error">
+            <summary>
+            运行错误。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.Expired">
+            <summary>
+            过期。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.LoadFailure">
+            <summary>
+            加载服务失败。
+            </summary>
+        </member>
+        <member name="F:iPower.WinService.JobStatus.LoadSuccessfull">
+            <summary>
+            加载服务成功。
+            </summary>
+        </member>
+        <member name="T:iPower.WinService.Jobs.LogChangedHandler">
+            <summary>
+            日志变更信息。
+            </summary>
+            <param name="logType"></param>
+            <param name="logContent"></param>
+        </member>
+        <member name="T:iPower.WinService.Jobs.IJob">
+            <summary>
+            Windows服务Job的接口。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJob.Start(System.String[])">
+            <summary>
+            启动。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJob.Pause">
+            <summary>
+            暂停。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJob.Stop">
+            <summary>
+            停止。
+            </summary>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJob.CanRun">
+            <summary>
+             判断是否具备运行条件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WinService.Jobs.IJob.Run">
+            <summary>
+             运行。
+            </summary>
+        </member>
+        <member name="P:iPower.WinService.Jobs.IJob.JobName">
+            <summary>
+            获取任务名称。
+            </summary>
+        </member>
+        <member name="E:iPower.WinService.Jobs.IJob.LogChanged">
+            <summary>
+            日志记录输出。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.SortHelper">
+            <summary>
+            快速排序。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.SortHelper.QuickSort``1(System.Collections.Generic.List{``0},System.Comparison{``0})">
+            <summary>
+            快速排序
+            </summary>
+            <typeparam name="T">排序类型</typeparam>
+            <param name="sources">排序源数组</param>
+            <param name="comparison">判定条件</param>
+        </member>
+        <member name="M:iPower.Utility.SortHelper.QuickSort``1(System.Collections.Generic.List{``0},System.Int32,System.Int32,System.Comparison{``0})">
+            <summary>
+            快速排序
+            </summary>
+            <typeparam name="T">排序类型</typeparam>
+            <param name="sources">排序源数组</param>
+            <param name="low">低位</param>
+            <param name="high">高位</param>
+            <param name="comparison">判定条件</param>
+        </member>
+        <member name="M:iPower.Utility.SortHelper.MoveItemToEnd``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+            移动指点成员到队列最后
+            </summary>
+            <typeparam name="TItem">成员类型</typeparam>
+            <param name="items">成员数组</param>
+            <param name="moveIndex">移动下标</param>
+        </member>
+        <member name="M:iPower.Utility.SortHelper.MoveItemToIndex``1(System.Collections.Generic.List{``0},System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TItem"></typeparam>
+            <param name="items"></param>
+            <param name="moveIndex"></param>
+            <param name="toIndex"></param>
+        </member>
+        <member name="T:iPower.FileStorage.IFileStorageFactory">
+            <summary>
+            文件存储工厂接口。
+            </summary>
+        </member>
+        <member name="M:iPower.FileStorage.IFileStorageFactory.Upload(System.String,System.Int64,System.Byte[])">
+            <summary>
+            上传文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <param name="offSet">偏移量。</param>
+            <param name="content">文件内容。</param>
+            <returns>成功返回True，失败False。</returns>
+        </member>
+        <member name="M:iPower.FileStorage.IFileStorageFactory.DeleteFile(System.String)">
+            <summary>
+            删除文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <returns>成功返回true,失败返回false。</returns>
+        </member>
+        <member name="M:iPower.FileStorage.IFileStorageFactory.Download(System.String)">
+            <summary>
+            下载文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <returns>文件数据。</returns>
+        </member>
+        <member name="T:iPower.FileStorage.FileStorageFactoryInstance">
+            <summary>
+            文件存储工程实例类。
+            </summary>
+            <example>
+            &lt;configuration&gt;
+                &lt;!--注册配置节--&gt;
+                &lt;configSections&gt;
+                     &lt;!--注册附件存储配置--&gt;
+                     &lt;section name ="FileStorage" type="iPower.Configuration.iPowerSection,iPower"/&gt;
+                &lt;/configSections&gt;
+            &lt;/configuration&gt;
+            
+            &lt;!--附件存储配置--&gt;
+            &lt;FileStorage&gt;
+                &lt;!--文件存储的实现工厂程序集--&gt;
+                &lt;add key="iPower.FileStorageFactoryAssembly" value="iPower.FileStorage.SQLServer.FileStorageFactory,iPower.FileStorage"/&gt;
+                &lt;!--文件存储地址（数据库或本地文件夹）--&gt;
+                &lt;add key="iPower.DbConnectionString" value="DefaultDbServer"/&gt;
+            &lt;/FileStorage&gt;
+            </example>
+        </member>
+        <member name="M:iPower.FileStorage.FileStorageFactoryInstance.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.FileStorage.FileStorageFactoryInstance.Upload(System.String,System.Int64,System.Byte[])">
+            <summary>
+            上传文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <param name="offSet">偏移量。</param>
+            <param name="content">文件内容。</param>
+            <returns>成功返回True，失败False。</returns>
+        </member>
+        <member name="M:iPower.FileStorage.FileStorageFactoryInstance.DeleteFile(System.String)">
+            <summary>
+            删除文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <returns>成功返回true,失败返回false。</returns>
+        </member>
+        <member name="M:iPower.FileStorage.FileStorageFactoryInstance.Download(System.String)">
+            <summary>
+            下载文件。
+            </summary>
+            <param name="fileName">文件名称。</param>
+            <returns>文件数据。</returns>
+        </member>
+        <member name="P:iPower.FileStorage.FileStorageFactoryInstance.Instance">
+            <summary>
+            获取实例对象。
+            </summary>
+        </member>
+        <member name="T:iPower.Configuration.iPowerSection">
+            <summary>
+            配置映射类 <see cref="T:System.Configuration.ConfigurationSection"/>。
+            </summary>
+            <example>
+            <code>
+            &lt;configSections&gt;
+            &lt;section name="xxx" type="iPower.Configuration.JeasonSection,iPower"/&gt;
+            &lt;/configSections&gt;
+            </code>
+            </example>
+        </member>
+        <member name="M:iPower.Configuration.iPowerSection.#cctor">
+            <summary>
+            静态函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Configuration.iPowerSection.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="P:iPower.Configuration.iPowerSection.Settings">
+            <summary>
+            获取key-value配置集合。
+            </summary>
+        </member>
+        <member name="T:iPower.Guard">
+            <summary>
+            关于参数验证的一些实用方法。
+            </summary>
+        </member>
+        <member name="M:iPower.Guard.ArgumentNotNull(System.String,System.Object,System.Boolean)">
+            <summary>
+            检查参数是否为空引用（null）。
+            </summary>
+            <param name="argumentName">字符串名。</param>
+            <param name="argumentValue">被检查的字符串。.</param>
+            <param name="throwError">为空时是否抛出异常。</param>
+            <returns>为空则返回true。</returns>
+        </member>
+        <member name="M:iPower.Guard.ArgumentNotNullOrEmptyString(System.String,System.String,System.Boolean)">
+            <summary>
+            检查字符串是否为空（null或者长度为0）。
+            </summary>
+            <param name="argumentName">字符串名。</param>
+            <param name="argumentValue">被检查的字符串。.</param>
+            <param name="throwError">为空时是否抛出异常。</param>
+            <returns>为空则返回true。</returns>
+        </member>
+        <member name="M:iPower.Guard.ArgumentEmptyArray(System.String,System.Array,System.Boolean)">
+            <summary>
+            检查数组是否为空（长度为0）。
+            </summary>
+            <param name="argName">数组名。</param>
+            <param name="argValue">被检查的数组实例。</param>
+            <param name="throwError">为空引用时是否抛出异常。</param>
+            <returns>为空则返回true。</returns>
+        </member>
+        <member name="M:iPower.Guard.CheckFlagsEnumEquals(System.Enum,System.Enum)">
+            <summary>
+            判断某值是否在枚举内（位枚举）。
+            </summary>
+            <param name="checkingValue">被检测的枚举值。</param>
+            <param name="expectedValue">期望的枚举值。</param>
+            <returns>是否包含。</returns>
+        </member>
+        <member name="M:iPower.Guard.CheckEnumValueIsDefined(System.String,System.Type,System.Object,System.Boolean)">
+            <summary>
+            判断枚举值是否属于该枚举。
+            </summary>
+            <param name="argumentName">参数名。</param>
+            <param name="enumType">枚举类型。</param>
+            <param name="checkingValue">被检测的枚举值</param>
+            <param name="throwError">为空引用时是否抛出异常。</param>
+            <returns>是否包含。</returns>
+        </member>
+        <member name="T:iPower.Ticket">
+            <summary>
+            票据类。
+            </summary>
+        </member>
+        <member name="M:iPower.Ticket.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Ticket.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="ticket">票据串。</param>
+        </member>
+        <member name="M:iPower.Ticket.#ctor(System.String,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="token">令牌串。</param>
+            <param name="timeout">过期时间（秒）。</param>
+        </member>
+        <member name="M:iPower.Ticket.#ctor(System.Double,System.String,System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="version">版本。</param>
+            <param name="al">算法标识(md5,sha1)。</param>
+            <param name="token">令牌。</param>
+            <param name="issueDate">票据发布日期时间。</param>
+            <param name="expiration">票据过期日期时间。</param>
+            <param name="userData">用户数据。</param>
+        </member>
+        <member name="M:iPower.Ticket.TestTicket(System.String)">
+            <summary>
+            测试字符串是否为票据。
+            </summary>
+            <param name="ticket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.TestTicketFormat(System.String)">
+            <summary>
+            测试字符串是否满足Ticket格式。
+            </summary>
+            <param name="ticket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.TestTicketHex(System.String)">
+            <summary>
+            测试十六进制字符串是否为票据。
+            </summary>
+            <param name="hexTicket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.CreateTicket(System.String)">
+            <summary>
+            根据票据字符串创建票据对象。
+            </summary>
+            <param name="ticket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.CreateTicketByHex(System.String)">
+            <summary>
+            根据票据的十六进制字符串创建票据对象。
+            </summary>
+            <param name="hexTicket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.ToHexString">
+            <summary>
+            票据的十六进制字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.ToCompressBase64String">
+            <summary>
+            转化为压缩后的Base64数据格式。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.DeCompressBase64StringToTicket(System.String)">
+            <summary>
+            将压缩后的Base64解压转换为票据串。
+            </summary>
+            <param name="compressBase64String"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Ticket.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Ticket.Ver">
+            <summary>
+            获取或设置版本号。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.AL">
+            <summary>
+            获取或设置算法标识。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.Token">
+            <summary>
+            获取或设置令牌。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.UserData">
+            <summary>
+            获取或设置用户数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.IssueDate">
+            <summary>
+            获取或设置最初发出验证票证时的本地日期和时间。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.Expiration">
+            <summary>
+            获取或设置验证票证过期时的本地日期和时间。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.HexSign">
+            <summary>
+            获取散列值。
+            </summary>
+        </member>
+        <member name="P:iPower.Ticket.HasValid">
+            <summary>
+            判断票据是否有效。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.IButton">
+            <summary>
+            按钮控制接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.IButton.Enabled">
+            <summary>
+            获取或设置是否启用。
+            </summary>
+        </member>
+        <member name="T:iPower.Data.DataCollection`1">
+            <summary>
+            数据集合。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.InitAssignment(System.Data.DataTable)">
+            <summary>
+            根据<see cref="T:System.Data.DataTable"/>数据源填充数据。
+            </summary>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.InitAssignment(System.Collections.IEnumerator)">
+            <summary>
+            根据<see cref="T:System.Data.DataTable"/>数据源填充数据。
+            </summary>
+            <param name="dataSource">数据源。</param>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Assignment(System.Data.DataRow)">
+            <summary>
+            给数据项赋值。
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Assignment(System.Object)">
+            <summary>
+            给数据项赋值。
+            </summary>
+            <param name="dataSouce"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.ConvertToPropertyType(System.Object,System.Type)">
+            <summary>
+            数据类型转换。
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Add(`0)">
+            <summary>
+            添加数据。。
+            </summary>
+            <param name="item">数据项。</param>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Clear">
+            <summary>
+            清空数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Contains(`0)">
+            <summary>
+            是否存在相同数据。
+            </summary>
+            <param name="item">数据项。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            复制数据项到数据。
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Remove(`0)">
+            <summary>
+            移除数据项。
+            </summary>
+            <param name="item">数据项。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.Compare(`0,`0)">
+            <summary>
+            排序函数。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Data.DataCollection`1.System#ComponentModel#IListSource#GetList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Data.DataCollection`1.Items">
+            <summary>
+            获取数据。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataCollection`1.Item(System.Int32)">
+            <summary>
+            获取或设置数据项。
+            </summary>
+            <param name="index">从零开始的索引。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Data.DataCollection`1.Count">
+            <summary>
+            获取数据集合数量。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataCollection`1.IsReadOnly">
+            <summary>
+            获取是否只读。
+            </summary>
+        </member>
+        <member name="P:iPower.Data.DataCollection`1.System#ComponentModel#IListSource#ContainsListCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Paging.ReqPaging">
+            <summary>
+            请求分页参数类。
+            </summary>
+        </member>
+        <member name="T:iPower.Paging.IReqPaging">
+            <summary>
+            请求分页参数接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.IReqPaging.rows">
+            <summary>
+            获取或设置每页数据量。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.IReqPaging.page">
+            <summary>
+            获取或设置当前页码。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.IReqPaging.sort">
+            <summary>
+            获取或设置排序字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.IReqPaging.order">
+            <summary>
+            获取或设置排序方式。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ReqPaging.rows">
+            <summary>
+            获取或设置每页数据量。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ReqPaging.page">
+            <summary>
+            获取或设置当前页码。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ReqPaging.sort">
+            <summary>
+            获取或设置排序字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.ReqPaging.order">
+            <summary>
+            获取或设置排序方式。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.HexParser">
+            <summary>
+            16进制转换。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.HexParser.Parse(System.String)">
+            <summary>
+            将16进制转换为Byte数组。
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.HexParser.ToHexString(System.Byte[])">
+            <summary>
+            将Byte数组转换为16进制字符串。
+            </summary>
+            <param name="tokenBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Utility.DataUtil">
+            <summary>
+            数据集处理工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.DataUtil.GetDataTable(System.Data.DataView)">
+            <summary>
+            获取拥有一致数据记录的<see cref="T:System.Data.DataTable"/>对象。
+            </summary>
+            <param name="view">需要转化的
+            <see cref="T:System.Data.DataView"/>对象，一般是另外一个DataTable通过过滤获得。</param>
+            <returns>返回view结构一致、数据一致的System.Data.DataTable对象。</returns>
+        </member>
+        <member name="M:iPower.Utility.DataUtil.DataSource2IEnumerator(System.Object)">
+            <summary>
+            将object类型的数据转化为IEnumerator对象,现在只支持DataSet,DataTable,DataView。
+            </summary>
+            <param name="oDataSource">现在只支持DataSet<see cref="T:System.Data.DataSet"/>,DataTable<see cref="T:System.Data.DataTable"/>,DataView<see cref="T:System.Data.DataView"/>对象。</param>
+            <returns>返回IEnumerator<see cref="T:System.Collections.IEnumerator"/>接口。</returns>
+        </member>
+        <member name="M:iPower.Utility.DataUtil.DataSourceToDataTable(System.Object)">
+            <summary>
+            将object类型的数据转化为DataTable对象,现在只支持DataSet,DataTable,DataView。
+            </summary>
+            <param name="oDataSource">现在只支持DataSet<see cref="T:System.Data.DataSet"/>,DataTable<see cref="T:System.Data.DataTable"/>,DataView<see cref="T:System.Data.DataView"/>对象。</param>
+            <returns>返回DataTable<see cref="T:System.Data.DataTable"/>对象。</returns>
+        </member>
+        <member name="T:iPower.Logs.EnumLogsType">
+            <summary>
+            日志类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogsType.Normal">
+            <summary>
+            普通日志。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogsType.Warning">
+            <summary>
+            警告日志。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogsType.Error">
+            <summary>
+            错误日志。
+            </summary>
+        </member>
+        <member name="T:iPower.Handlers.WebServiceHandlerFactory">
+            <summary>
+            WebService的Handler处理工厂类。
+            使用此类可以让WebService服务不需要.asmx文件。
+            </summary>
+        </member>
+        <member name="M:iPower.Handlers.WebServiceHandlerFactory.#ctor(System.Type)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="serviceType">服务类型。</param>
+        </member>
+        <member name="M:iPower.Handlers.WebServiceHandlerFactory.System#Web#IHttpHandlerFactory#GetHandler(System.Web.HttpContext,System.String,System.String,System.String)">
+            <summary>
+            获取处理的HttpHandler对象。
+            </summary>
+            <param name="context"></param>
+            <param name="requestType"></param>
+            <param name="url"></param>
+            <param name="pathTranslated"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Handlers.WebServiceHandlerFactory.System#Web#IHttpHandlerFactory#ReleaseHandler(System.Web.IHttpHandler)">
+            <summary>
+            释放Handler。
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="T:iPower.Cache.FileCacheItem">
+            <summary>
+            文件缓存项。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.FileCacheItem.#ctor(System.String,iPower.Cache.DataLoadType,iPower.Cache.CacheKeyType)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="filePath">文件路径。</param>
+            <param name="loadType">加载方式。</param>
+            <param name="fileKeyType">缓存键类型。</param>
+        </member>
+        <member name="M:iPower.Cache.FileCacheItem.DelayLoad">
+            <summary>
+            延时加载数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.FileCacheItem.Read(System.Int64,System.Int64)">
+            <summary>
+            读取文件。
+            </summary>
+            <param name="offset">偏移量。</param>
+            <param name="length">读取长度。</param>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileName">
+            <summary>
+            获取或设置文件名称。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileExtension">
+            <summary>
+            获取或设置文件扩展名。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileTitle">
+            <summary>
+            获取文件全名（文件名称+扩展名）。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FilePath">
+            <summary>
+            获取或设置文件路径。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileBytes">
+            <summary>
+            获取或设置文件内容。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileLoadType">
+            <summary>
+            获取或设置文件加载类型。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.FileCacheItem.FileKeyType">
+            <summary>
+            获取或设置文件键类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.RandomHelper">
+            <summary>
+            随机数实用类。
+            </summary>
+        </member>
+        <member name="F:iPower.Utility.RandomHelper.DEFAULT_CHARLIST">
+            <summary>
+            缺省的字符串取值范围。
+            </summary>
+        </member>
+        <member name="F:iPower.Utility.RandomHelper.READ_CHARLIST">
+            <summary>
+            可读的字符串取值范围。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.RandomHelper.GetRandomBytes(System.Int32)">
+            <summary>
+            获取随机字节序列。
+            </summary>
+            <param name="length">字节序列的长度。</param>
+            <returns>字节序列。</returns>
+        </member>
+        <member name="M:iPower.Utility.RandomHelper.GetRandomString(System.Int32,System.String)">
+            <summary>
+            获取随机字符串。
+            </summary>
+            <param name="length">字符串长度。</param>
+            <param name="charList">字符串取值范围（如果为Null或为空，则返回空字符串）。</param>
+            <returns>随机字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.RandomHelper.GetRandomString(System.Int32)">
+            <summary>
+            获取随机字符串。
+            </summary>
+            <param name="length">字符串长度。</param>
+            <returns>随机字符串。</returns>
+            <remarks>
+            缺省使用ASCII从33到126共94个字符作为取值范围。
+            </remarks>
+        </member>
+        <member name="M:iPower.Utility.RandomHelper.GetReadRandomString(System.Int32)">
+            <summary>
+            获取可读的随机字符串(0-9A-Za-z)。
+            </summary>
+            <param name="length">字符串长度。</param>
+            <returns>随机字符串。</returns>
+            <remarks>
+            可读的随机字符串(0-9A-Za-z)。
+            </remarks>
+        </member>
+        <member name="T:iPower.Cryptography.XXTEA">
+            <summary>
+            XXTEA加解密算法。
+            </summary>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Encrypt(System.UInt32[],System.UInt32[])">
+            <summary>
+            加密。
+            </summary>
+            <param name="v">原文。</param>
+            <param name="k">密钥。</param>
+            <returns>密文。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Encrypt(System.Byte[],System.Byte[])">
+            <summary>
+            加密。
+            </summary>
+            <param name="data">原文。</param>
+            <param name="key">密钥。</param>
+            <returns>密文。</returns>
+            <remarks>
+            密文包含原始数据长度。
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Encrypt(System.Byte[],System.Byte[],System.Boolean)">
+            <summary>
+            加密。
+            </summary>
+            <param name="data">原文。</param>
+            <param name="key">密钥。</param>
+            <param name="includeDataLength">密文是否包含原始数据长度。</param>
+            <returns>密文。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Encrypt(System.String,System.String)">
+            <summary>
+            加密。
+            </summary>
+            <param name="data">原文（将经过UTF8编码变换）。</param>
+            <param name="key">密钥（将经过UTF8编码变换及MD5的Hash）。</param>
+            <returns>密文（HEX格式）。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Decrypt(System.UInt32[],System.UInt32[])">
+            <summary>
+            解密。
+            </summary>
+            <param name="v">密文。</param>
+            <param name="k">密钥。</param>
+            <returns>原文。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Decrypt(System.Byte[],System.Byte[])">
+            <summary>
+            解密。
+            </summary>
+            <param name="data">密文。</param>
+            <param name="key">密钥。</param>
+            <returns>原文。</returns>
+            <remarks>
+            密文包含原始数据长度。
+            </remarks>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Decrypt(System.Byte[],System.Byte[],System.Boolean)">
+            <summary>
+            解密。
+            </summary>
+            <param name="data">密文。</param>
+            <param name="key">密钥。</param>
+            <param name="includeDataLength">密文是否包含原始数据长度。</param>
+            <returns>原文。</returns>
+        </member>
+        <member name="M:iPower.Cryptography.XXTEA.Decrypt(System.String,System.String)">
+            <summary>
+            解密。
+            </summary>
+            <param name="data">密文（HEX格式）。</param>
+            <param name="key">密钥（将经过UTF8编码变换及MD5的Hash）。</param>
+            <returns>原文。</returns>
+        </member>
+        <member name="T:iPower.Cryptography.EncryptorXmlData">
+            <summary>
+            加密Xml数据。
+            </summary>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.EncryptorXmlElement(System.Xml.XmlDocument,System.String,System.Boolean)">
+            <summary>
+            加密Xml元素
+            </summary>
+            <param name="doc">XmlDocument</param>
+            <param name="elmentName">要加密的元素名称</param>
+            <param name="isContent">加密元素内容为True,加密整个元素为False</param>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.EncryptorXmlElement(System.Xml.XmlDocument,System.String)">
+            <summary>
+            加密Xml元素
+            </summary>
+            <param name="doc">XmlDocument</param>
+            <param name="elmentName">要加密的元素名称</param>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.EncryptorXml(System.Xml.XmlDocument)">
+            <summary>
+            加密Xml。
+            </summary>
+            <param name="doc"></param>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.DecryptorXmlElement(System.Xml.XmlDocument)">
+            <summary>
+            解密Xml元素
+            </summary>
+            <param name="doc">带密文的XmlDocument文档</param>
+        </member>
+        <member name="M:iPower.Cryptography.EncryptorXmlData.DecryptorXml(System.Xml.XmlDocument)">
+            <summary>
+            解密Xml。
+            </summary>
+            <param name="doc">带密文的XmlDocument文档</param>
+        </member>
+        <member name="T:iPower.Paging.CallbackDataGrid`1">
+            <summary>
+            反馈数据集。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.CallbackDataGrid`1.total">
+            <summary>
+            获取或设置总记录数。
+            </summary>
+        </member>
+        <member name="P:iPower.Paging.CallbackDataGrid`1.rows">
+            <summary>
+            获取或设置反馈数据集合。
+            </summary>
+        </member>
+        <member name="T:iPower.WSClient.DynamicProxyClient">
+            <summary>
+            动态代理客户端。
+            </summary>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.#ctor(System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="url">WebService URL</param>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.LoadAssembly">
+            <summary>
+            加载程序集。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.CreateClassInstance(System.String,System.Type@)">
+            <summary>
+            根据类名称在程序集中创建类对象实例。
+            </summary>
+            <param name="className"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.Invoke(System.String,System.String,System.Object[])">
+            <summary>
+            方法调用。
+            </summary>
+            <param name="className">类名。</param>
+            <param name="method">方法名。</param>
+            <param name="args">参数。</param>
+            <returns>返回值。</returns>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.Invoke(System.String,System.Object[])">
+            <summary>
+            方法调用。
+            </summary>
+            <param name="method">方法名。</param>
+            <param name="args">参数。</param>
+            <returns>返回值。</returns>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.loadClassName">
+            <summary>
+            获取类类型名称。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.WSClient.DynamicProxyClient.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.Pair`2">
+            <summary>
+            提供用于存储两个相关对象的基本实用工具类。 
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.Pair`2.#ctor(`0,`1)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:iPower.Utility.Pair`2.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.Pair`2.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:iPower.Utility.Pair`2.First">
+            <summary>
+            获取TFirst。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.Pair`2.Second">
+            <summary>
+            获取TSecond。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.CacheItemChangedEventHandler">
+            <summary>
+            缓存项改变委托。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:iPower.Cache.CacheItemChangedEventArgs">
+            <summary>
+            缓存项改变事件。
+            </summary>
+        </member>
+        <member name="M:iPower.Cache.CacheItemChangedEventArgs.#ctor(System.String,System.DateTime)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="cacheItemKey">缓存项键。</param>
+            <param name="lastAccessDate">缓存项最后活动时间。</param>
+        </member>
+        <member name="P:iPower.Cache.CacheItemChangedEventArgs.CacheItemKey">
+            <summary>
+            获取或设置缓存项键。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheItemChangedEventArgs.LastAccessDate">
+            <summary>
+            获取或设置缓存项最后活动时间。
+            </summary>
+        </member>
+        <member name="P:iPower.Cache.CacheItemChangedEventArgs.ChangedType">
+            <summary>
+            获取或设置缓存项改变类型。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.BeanUtils">
+            <summary>
+            对象
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.copyFieldsToProperties``1(System.Object)">
+            <summary>
+            将源的字段赋予目标类型对象。
+            </summary>
+            <typeparam name="T">目标类型。</typeparam>
+            <param name="source">源对象实例。</param>
+            <returns>目标对象。</returns>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.copyFieldsToProperties(System.Object,System.Type)">
+            <summary>
+            将源的字段赋予目标类型对象。
+            </summary>
+            <param name="source">源对象。</param>
+            <param name="target">目标类型。</param>
+            <returns>目标对象。</returns>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.computeSignProperties(System.Object)">
+            <summary>
+            计算属性的签名。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.computeSignProperties(System.Object,System.String[])">
+            <summary>
+            计算属性的签名。
+            </summary>
+            <param name="data"></param>
+            <param name="ignoreNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.copyProperties(System.Object,System.Object)">
+            <summary>
+            复制属性。
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.copyProperties(System.Object,System.Object,System.String[])">
+            <summary>
+            复制属性值。
+            </summary>
+            <param name="source">复制源。</param>
+            <param name="target">目标。</param>
+            <param name="ignoreNames">忽略的字段组数。</param>
+        </member>
+        <member name="M:iPower.Utility.BeanUtils.IsIgnore(System.String[],System.String)">
+            <summary>
+            是否忽略。
+            </summary>
+            <param name="ignoreNames"></param>
+            <param name="colName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Utility.XmlTools">
+            <summary>
+            Xml工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.CreateXmlElement(System.Xml.XmlDocument@,System.Xml.XmlElement@,System.String,System.String,System.Boolean)">
+            <summary>
+            创建Xml节点。
+            </summary>
+            <param name="doc">XmlDocument<see cref="T:System.Xml.XmlDocument"/>。</param>
+            <param name="parent">父节点。</param>
+            <param name="elemName">节点名。</param>
+            <param name="elemValue">节点值。</param>
+            <param name="isCData">是否为CDATA。</param>
+            <returns>Xml节点。</returns>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.CreateXmlElement(System.Xml.XmlDocument@,System.Xml.XmlElement@,System.String,System.String)">
+            <summary>
+            创建Xml节点。
+            </summary>
+            <param name="doc">XmlDocument。</param>
+            <param name="parent">父节点。</param>
+            <param name="elemName">节点名。</param>
+            <param name="elemValue">节点值。</param>
+            <returns>Xml节点。</returns>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.CreateXmlElement(System.Xml.XmlDocument@,System.Xml.XmlElement@,System.String)">
+            <summary>
+            创建Xml节点。
+            </summary>
+            <param name="doc">XmlDocument。</param>
+            <param name="parent">父节点。</param>
+            <param name="elemName">节点名。</param>
+            <returns>Xml节点。</returns>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.CreateCDATAElement(System.Xml.XmlDocument@,System.Xml.XmlElement@,System.String,System.String)">
+            <summary>
+            创建Xml节点。
+            </summary>
+            <param name="doc">XmlDocument。</param>
+            <param name="parent">父节点。</param>
+            <param name="elemName">节点名。</param>
+            <param name="elemValue">节点值。</param>
+            <returns>Xml节点。</returns>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.CreateAttribute(System.Xml.XmlDocument@,System.Xml.XmlElement@,System.String,System.String)">
+            <summary>
+            创建节点属性。
+            </summary>
+            <param name="doc">XmlDocument。</param>
+            <param name="elem">节点。</param>
+            <param name="attrName">属性名。</param>
+            <param name="attrValue">属性值。</param>
+            <returns>Xml节点。</returns>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.XmlAndXsltToHtml(System.Xml.XmlDocument,System.String)">
+            <summary>
+            将Xml转化为Html。
+            </summary>
+            <param name="doc">XmlDocument。</param>
+            <param name="xsltPath">XsltPath。</param>
+        </member>
+        <member name="M:iPower.Utility.XmlTools.XmlAndXsltToHtml(System.Xml.XmlDocument,System.IO.Stream)">
+            <summary>
+            将Xml转化为Html。
+            </summary>
+            <param name="doc">XmlDocument.</param>
+            <param name="xsltStream">Xslt流数据。</param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Utility.IdentityImpersonation">
+            <summary>
+            用户模拟角色类。实现在程序段内进行用户角色模拟。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.IdentityImpersonation.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.IdentityImpersonation.Finalize">
+            <summary>
+            析构函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.IdentityImpersonation.BeginImpersonate">
+            <summary>
+            开始身份角色模拟。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.IdentityImpersonation.StopImpersonate">
+            <summary>
+            停止身分角色模拟。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.IdentityImpersonation.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.EnumeratorOnIEnumerator">
+            <summary>
+            将IEnumerator转化为IEnumerator。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIEnumerator.#ctor(System.Collections.IEnumerator,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="realEnum"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIEnumerator.MoveNext">
+            <summary>
+            下一个值。
+            </summary>
+            <returns>存在为True，否则为False。</returns>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIEnumerator.Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.EnumeratorOnIEnumerator.Current">
+            <summary>
+            获取当前值。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.ConvertEx">
+            <summary>
+            类型转换扩展集合。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ToStringArray(System.Collections.Specialized.StringCollection)">
+            <summary>
+            字符串集合转换成字符串数组。
+            </summary>
+            <param name="collection">需要转化为字符串数组的字符串集合。</param>
+            <returns>转化后的字符串数组，如果传入集合为null则返回0长度的字符数组。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ToStringCollection(System.String[])">
+            <summary>
+            字符串数组转换成字符串集合。 
+            </summary>
+            <param name="value">需要转化为字符串集合的数组。</param>
+            <returns>转化后的字符串集合，如果传入数组为null则返回空集合。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ToStringEx(System.DateTime)">
+            <summary>
+            日期转化为yyyyMMddHHmmss格式的字符串。 
+            </summary>
+            <param name="date">需要转化的日期。</param>
+            <returns>转化后的字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ToShortDateCN(System.DateTime)">
+            <summary>
+            将日期转换为yyyy年MM月dd日格式。
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ToLongDateCN(System.DateTime)">
+            <summary>
+            将日期转换为yyyy年MM月dd日HH时mm分ss秒格式。
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.Base64StringToNameValueCollection(System.String)">
+            <summary>
+            将经过Base64编码的，携带名称值信息的Xml文档转变为名称值集合。
+            </summary>
+            <param name="strBase64xml">携带名称值信息的Xml文档的Base64编码。</param>
+            <returns>转化后的名称值对信息。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.NameValueCollectionToBase64String(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            将名称值对转化为Xml文档并进行Base64的编码。
+            </summary>
+            <param name="values">需要进行转换的名称值对集合。</param>
+            <returns>转化为Xml文档并且进行Base64编码的字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.CutString(System.String,System.Int32,System.Int32)">
+            <summary>
+            把指定的字符串按照需要的字节长度截取，并在结尾附加指定个数的半个省略号的数量。
+            </summary>
+            <param name="inputString">需要截取的字符串。</param>
+            <param name="len">保留的长度（字节）。</param>
+            <param name="num">需要在结尾附加半个省略号的数量。</param>
+            <returns>截取后的字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ReplicateString(System.Char,System.Int32)">
+            <summary>
+            将指定字符，按照串联的方式重复一定次数。 
+            </summary>
+            <param name="c">要重复的字符。</param>
+            <param name="count">重复的次数。</param>
+            <returns>字符c重复count次后的串联字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.ReplicateString(System.String,System.Int32)">
+            <summary>
+            将指定字符串，按照串联的方式重复一定次数。 
+            </summary>
+            <param name="value">要重复的字符串。</param>
+            <param name="count">重复的次数。</param>
+            <returns>字符串value重复count次后的串联字符串。</returns>
+        </member>
+        <member name="M:iPower.Utility.ConvertEx.GetExtension(System.String)">
+            <summary>
+            获取文件后缀。
+            </summary>
+            <param name="fileName">文件名。</param>
+            <returns>后缀名。</returns>
+        </member>
+        <member name="T:iPower.Logs.ILogFileHead">
+            <summary>
+            生成日志文件配置接口。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.ILogFileHead.LogFileHead">
+            <summary>
+            获取日志文件名。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.ILogFileHead.LogFileRule">
+            <summary>
+            获取日志文件生成规则。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.EnumLogFileRule">
+            <summary>
+            日志文件记录方式枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.None">
+            <summary>
+            未定义。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.Year">
+            <summary>
+            年。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.Month">
+            <summary>
+            月。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.Week">
+            <summary>
+            周。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.Date">
+            <summary>
+            日。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.EnumLogFileRule.Hour">
+            <summary>
+            时。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.DataLoadType">
+            <summary>
+            数据加载类型。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.DataLoadType.None">
+            <summary>
+            不加载。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.DataLoadType.Load">
+            <summary>
+            加载。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.DataLoadType.DelayLoad">
+            <summary>
+            延迟加载。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.TypeHelper">
+            <summary>
+            关于类型、实例的一些实用方法。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.Create(System.String,System.String)">
+            <summary>
+            反射生成对象。
+            </summary>
+            <param name="className">类全名称。</param>
+            <param name="assemblyName">程序集名称。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.Create(System.String)">
+            <summary>
+             反射生成对象。
+            </summary>
+            <param name="classNameAssemblyName">格式（类全名称,程序集名称）</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.Create(System.String,System.String,System.Object[])">
+            <summary>
+            反射生成对象。
+            </summary>
+            <param name="className">类全名称。</param>
+            <param name="assemblyName">程序集名称。</param>
+            <param name="args">构造函数参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.Create(System.String,System.Object[])">
+            <summary>
+            反射生成对象。
+            </summary>
+            <param name="classNameAssemblyName">格式（类全名称,程序集名称）</param>
+            <param name="args">构造函数参数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.Invoke(System.Object,System.String,System.Object[])">
+            <summary>
+            用反射调用方法。
+            </summary>
+            <param name="obj">类型实例。</param>
+            <param name="methodName">方法名。</param>
+            <param name="parameters">参数列表。</param>
+            <returns>方法返回值。</returns>
+        </member>
+        <member name="M:iPower.Utility.TypeHelper.GetModuleResourceStream(System.Reflection.Assembly,System.String)">
+            <summary>
+            获取模块嵌入资源文件流。
+            </summary>
+            <param name="assembly">含有资源文件的程序集。</param>
+            <param name="resourceFileName">资源文件名称（全名称）。</param>
+            <returns>资源文件流。</returns>
+        </member>
+        <member name="T:iPower.Utility.StringUtil">
+            <summary>
+            字符串工具类。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.StringUtil.EqualsIgnoreCase(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s1"></param>
+            <param name="s2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Serialize.ISerializeView`1">
+            <summary>
+            序列化操作接口。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.Serialize.ISerializeView`1.Serialize">
+            <summary>
+            序列化。
+            </summary>
+        </member>
+        <member name="M:iPower.Serialize.ISerializeView`1.Deserialize">
+            <summary>
+            反序列化。
+            </summary>
+        </member>
+        <member name="T:iPower.Serialize.IXmlSerializeView`1">
+            <summary>
+            序列化操作接口。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:iPower.Serialize.IXmlSerializeView`1.LoadXmlDocument">
+            <summary>
+            加载Xml。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:iPower.Platform.ITreeView">
+            <summary>
+            树形控件接口。
+            </summary>
+        </member>
+        <member name="M:iPower.Platform.ITreeView.BuildTree">
+            <summary>
+             构建树。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITreeView.DataSource">
+            <summary>
+            获取或设置数据源。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITreeView.IDField">
+            <summary>
+            获取或设置ID映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITreeView.PIDField">
+            <summary>
+            获取或设置父ID值映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITreeView.TitleField">
+            <summary>
+            获取或设置标题映射字段。
+            </summary>
+        </member>
+        <member name="P:iPower.Platform.ITreeView.OrderNoField">
+            <summary>
+            获取或设置排序映射字段。
+            </summary>
+        </member>
+        <member name="T:iPower.GUIDEx">
+            <summary>
+            扩展的Guid数据类型。
+            </summary>
+        </member>
+        <member name="M:iPower.GUIDEx.#cctor">
+            <summary>
+            静态构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.GUIDEx.#ctor(System.String)">
+            <summary>
+            构造函数。
+            <param name="value">值字符串。</param>
+            </summary>
+        </member>
+        <member name="M:iPower.GUIDEx.#ctor(System.Object)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="value">值对象。</param>
+        </member>
+        <member name="M:iPower.GUIDEx.#ctor(System.Guid)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="id">值Guid。</param>
+        </member>
+        <member name="M:iPower.GUIDEx.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            私有序列化构造函数。
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:iPower.GUIDEx.ToString">
+            <summary>
+            转换为字符串。
+            </summary>
+            <returns>返回字符串。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.Equals(System.Object)">
+            <summary>
+            比较。 
+            </summary>
+            <param name="obj">GUIDEx对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.GetHashCode">
+            <summary>
+            获取HashCode。 
+            </summary>
+            <returns>返回int<see cref="T:System.Int32"/>。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.op_Equality(iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            比较运算符。
+            </summary>
+            <param name="a">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <param name="b">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <returns>值一致返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.op_Inequality(iPower.GUIDEx,iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="a">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <param name="b">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <returns>值不一致返回true，否则返回false。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.op_Implicit(iPower.GUIDEx)~System.Guid">
+            <summary>
+            隐私转换为Guid。
+            </summary>
+            <param name="a">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <returns>返回Guid<see cref="T:System.Guid"/>。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.op_Implicit(iPower.GUIDEx)~System.String">
+            <summary>
+            隐私转换为string.
+            </summary>
+            <param name="a">GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</param>
+            <returns>返回String<see cref="T:System.String"/>。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.op_Implicit(System.String)~iPower.GUIDEx">
+            <summary>
+            隐式转换为GUIDEx。
+            </summary>
+            <param name="a">string<see cref="T:System.String"/>对象。</param>
+            <returns>返回GUIDEx<see cref="T:iPower.GUIDEx"/>对象。</returns>
+        </member>
+        <member name="M:iPower.GUIDEx.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="formatProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.CompareTo(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.Equals(iPower.GUIDEx)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.GetSchema">
+            <summary>
+            此方法是保留方法，请不要使用。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.GUIDEx.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            从对象的 XML 表示形式生成该对象。
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:iPower.GUIDEx.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            将对象转换为其 XML 表示形式。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:iPower.GUIDEx.Value">
+            <summary>
+            获取值。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.IsGuid">
+            <summary>
+            获取是否为Guid。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.IsGUIDEx">
+            <summary>
+            获取是否为GUIDEx。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.IsNull">
+            <summary>
+            获取是否为Null。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.IsValid">
+            <summary>
+            获取是否正确的GUIDEx数据类型。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.Empty">
+            <summary>
+            获取空的GUIDEx。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.New">
+            <summary>
+            获取新的GUIDEx。
+            </summary>
+        </member>
+        <member name="P:iPower.GUIDEx.Null">
+            <summary>
+            获取为Null的GUIDEx。
+            </summary>
+        </member>
+        <member name="T:iPower.Cache.CacheChangedType">
+            <summary>
+            缓存改变类型枚举。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheChangedType.Added">
+            <summary>
+            添加。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheChangedType.Access">
+            <summary>
+            访问。
+            </summary>
+        </member>
+        <member name="F:iPower.Cache.CacheChangedType.Removed">
+            <summary>
+            移除。
+            </summary>
+        </member>
+        <member name="T:iPower.Utility.EnumeratorOnIList">
+            <summary>
+             将IList转化为IEnumerator。
+            </summary>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIList.#ctor(System.Collections.IList,System.Int32,System.Int32)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="collection"></param>
+            <param name="startIndex"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIList.MoveNext">
+            <summary>
+            下一个值。
+            </summary>
+            <returns>存在为True，否则为False。</returns>
+        </member>
+        <member name="M:iPower.Utility.EnumeratorOnIList.Reset">
+            <summary>
+            复位。
+            </summary>
+        </member>
+        <member name="P:iPower.Utility.EnumeratorOnIList.Current">
+            <summary>
+            获取当前值。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.LogStorage">
+            <summary>
+            默认日志存储。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.#ctor(iPower.Logs.ILogFileHead)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="logHead">日志头配置接口。</param>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.loadLogger(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.StorageLog(iPower.Logs.EnumLogsType,System.String)">
+            <summary>
+            记录日志。
+            </summary>
+            <param name="logType">日志类型。</param>
+            <param name="logContent">日志内容。</param>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.GetLogStoragePath(iPower.Logs.EnumLogsType)">
+            <summary>
+            日志文件的完整路径。
+            </summary>
+            <param name="logType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.CreateLogBody(System.String)">
+            <summary>
+            格式化日志内容。
+            </summary>
+            <param name="logContent">日志内容。</param>
+            <returns>格式化后的日志内容。</returns>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.Dispose">
+            <summary>
+            销毁对象。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogStorage.LogRecordDateTime">
+            <summary>
+            获取日志记录时间。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogStorage.LogFileEndTime">
+            <summary>
+            日志文件时间戳。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.LogStorage.LogHead">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogStorage.LogHead.#ctor(iPower.Logs.ILogFileHead)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="head"></param>
+        </member>
+        <member name="P:iPower.Logs.LogStorage.LogHead.LogFileHead">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogStorage.LogHead.LogFileRule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.LogsConfigKeys">
+            <summary>
+            日志全局配置节键。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_StoragePathKey">
+            <summary>
+            文件存储目录键(iPower.Logs.StoragePath)。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_IntervalMarkKey">
+            <summary>
+            分隔符键(iPower.Logs.IntervalMark)。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_IntervalMarkLengthKey">
+            <summary>
+            分隔符长度键(iPower.Logs.IntervalMarkLength)。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_DateTimeFormatKey">
+            <summary>
+            时间格式键(iPower.Logs.DateTimeFormat)。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_FileHeadKey">
+            <summary>
+            日志文件头键(iPower.Logs.FileHead)。
+            </summary>
+        </member>
+        <member name="F:iPower.Logs.LogsConfigKeys.iPower_Logs_LogFileRuleKey">
+            <summary>
+            日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)(iPower.Logs.LogFileRule)。
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.LogsConfig">
+            <summary>
+            系统日志配置。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.LogsConfig.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.ModuleConfig">
+            <summary>
+            静态属性。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.StoragePath">
+            <summary>
+            获取日志文件存储目录(iPower.Logs.StoragePath)。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.IntervalMark">
+            <summary>
+            获取间隔字符(iPower.Logs.IntervalMark)。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.IntervalMarkLength">
+            <summary>
+            获取分隔符长度(iPower.Logs.IntervalMarkLength)。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.DateTimeFormat">
+            <summary>
+            获取时间格式(iPower.Logs.DateTimeFormat)。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.LogFileHead">
+            <summary>
+            获取日志文件头(iPower.Logs.FileHead)。
+            </summary>
+        </member>
+        <member name="P:iPower.Logs.LogsConfig.LogFileRule">
+            <summary>
+            获取日志文件生成规则(Year-年，Month-月，Week-周，Date-日， Hour-时)
+            </summary>
+        </member>
+        <member name="T:iPower.Logs.IOLock">
+            <summary>
+            读写线程锁。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.IOLock.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.IOLock.AcquireReaderLock">
+            <summary>
+            超时读线程锁。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.IOLock.ReleaseReaderLock">
+            <summary>
+            减少读锁计数。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.IOLock.AcquireWriterLock">
+            <summary>
+            超时写线程锁。
+            </summary>
+        </member>
+        <member name="M:iPower.Logs.IOLock.ReleaseWriterLock">
+            <summary>
+            减少写锁计数。
+            </summary>
+        </member>
+    </members>
+</doc>
