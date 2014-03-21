@@ -43,11 +43,11 @@
              
         </JWC:TabView>
         
-        <JWC:TabView ID="tabThumbnails" Text="作品缩略图" runat="server" TabIndex="1">
+       <%-- <JWC:TabView ID="tabThumbnails" Text="作品缩略图" runat="server" TabIndex="1">
             <div style="float:left; width:98%; height:450px; overflow:auto;">
-                <%--<JWC:UCWorkThumbnailsList ID="ucWorkThumbnailsList" runat="server" />--%>
+               <JWC:UCWorkThumbnailsList ID="ucWorkThumbnailsList" runat="server" />
             </div>
-        </JWC:TabView>
+        </JWC:TabView>--%>
         
         <JWC:TabView ID="tabCommentView" Text="作品评论" runat="server" TabIndex="2">
             <div style="float:left;width:98%; height:456px; overflow:auto;">

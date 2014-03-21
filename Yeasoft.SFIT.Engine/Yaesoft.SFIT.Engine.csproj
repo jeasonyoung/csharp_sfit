@@ -71,6 +71,7 @@
     <Compile Include="..\Yaesoft.SFIT\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="AuthorizedToVerifyProvider.cs" />
     <Compile Include="Domain\SecurityRoleEmployee.cs" />
     <Compile Include="Domain\SFITAccessories.cs" />
     <Compile Include="Domain\SFITCatalog.cs" />

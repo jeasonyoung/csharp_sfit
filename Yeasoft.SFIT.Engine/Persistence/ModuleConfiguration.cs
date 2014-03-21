@@ -142,7 +142,13 @@ namespace Yaesoft.SFIT.Engine.Persistence
                 {
                     throw new ArgumentNullException("作业缩略图默认路径未配置(" + ModuleConfigurationKeys.WorkTempDefaultImagePathKey + ")！");
                 }
-                else if (!File.Exists(path))
+
+                if (!File.Exists(path))
+                {
+                    path = Path.GetFullPath(string.Format("{0}/{1}", AppDomain.CurrentDomain.BaseDirectory, path));
+                }
+
+                if (!File.Exists(path))
                 {
                     throw new ArgumentNullException("作业缩略图默认路径不存在(" + path + ")！");
                 }

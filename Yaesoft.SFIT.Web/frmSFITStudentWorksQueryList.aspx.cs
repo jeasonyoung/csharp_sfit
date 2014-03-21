@@ -60,6 +60,11 @@ namespace Yaesoft.SFIT.Web
         {
             this.LoadData();
         }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            this.LoadData();
+        }
         #endregion
 
         #region 重载。

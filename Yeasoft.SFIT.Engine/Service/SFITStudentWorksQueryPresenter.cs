@@ -42,6 +42,12 @@ namespace Yaesoft.SFIT.Engine.Service
     /// <summary>
     /// 
     /// </summary>
+    public interface ISFITStudentWorksUploadView : ISFITStudentWorksQueryView
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ISFITStudentWorksQueryListView : ISFITStudentWorksQueryView
     {
         /// <summary>

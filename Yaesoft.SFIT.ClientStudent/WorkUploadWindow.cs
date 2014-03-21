@@ -63,6 +63,7 @@ namespace Yaesoft.SFIT.ClientStudent
         /// <param name="e"></param>
         private void WorkUploadWindow_Load(object sender, EventArgs e)
         {
+            this.bUploadComplete = true;
             this.CoreService.ForceQuit = false;
             this.catalog = this.CoreService["catalog"] as Catalog;
             if (this.catalog != null)

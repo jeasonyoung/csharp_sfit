@@ -493,6 +493,13 @@
     <Compile Include="frmSFITStudentWorksQueryList.aspx.designer.cs">
       <DependentUpon>frmSFITStudentWorksQueryList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmSFITStudentWorksUpload.aspx.cs">
+      <DependentUpon>frmSFITStudentWorksUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSFITStudentWorksUpload.aspx.designer.cs">
+      <DependentUpon>frmSFITStudentWorksUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmSFITTeaClassByUnitEdit.aspx.cs">
       <DependentUpon>frmSFITTeaClassByUnitEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -821,6 +828,7 @@
     <Content Include="App_Themes\Summer\Images\TopBannerMenuLeft.gif" />
     <Content Include="App_Themes\Summer\Images\WorkPlaceMainTopBg.gif" />
     <Content Include="App_Themes\Summer\Images\WorkPlaceTopHeader.gif" />
+    <Content Include="frmSFITStudentWorksUpload.aspx" />
     <Content Include="Include\ar01.jpg" />
     <Content Include="Include\filebg.jpg" />
     <Content Include="IndexClasses.aspx" />

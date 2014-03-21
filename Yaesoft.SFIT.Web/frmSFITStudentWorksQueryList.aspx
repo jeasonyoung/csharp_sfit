@@ -25,6 +25,11 @@
     <span class="LabelTitle" style="float: left;">
         <JWC:LabelEx ID="lbTitle" runat="server" />
     </span>
+    <div style="float:right;">
+		<span style="float:left;">
+			<JWC:ButtonEx ID="btnUpload" runat="server" Text="上传作业" PickerPage="frmSFITStudentWorksUpload.aspx" PickerType="Modal" PickerWidth="640px" PickerHeight="560px" onclick="btnUpload_Click"/>
+		</span>
+	</div>
 </div>
 <!--查询区域-->
 <asp:Panel ID="panelSearch" runat="server" CssClass="TableSearch" DefaultButton="btnSearch">
