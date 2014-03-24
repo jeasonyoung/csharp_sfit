@@ -44,6 +44,28 @@ namespace Yaesoft.SFIT.Engine.Service
     /// </summary>
     public interface ISFITStudentWorksUploadView : ISFITStudentWorksQueryView
     {
+        /// <summary>
+        /// 设置学校名称。
+        /// </summary>
+        string SchoolName { set; }
+        /// <summary>
+        /// 设置所属班级名称。
+        /// </summary>
+        string ClassName { set; }
+        /// <summary>
+        /// 设置学生姓名。
+        /// </summary>
+        string StudentName { set; }
+        /// <summary>
+        /// 设置课程科目。
+        /// </summary>
+        /// <param name="data"></param>
+        void BindCatalogs(IListControlsData data);
+        /// <summary>
+        /// 设置作品类型。
+        /// </summary>
+        /// <param name="data"></param>
+        void BindWorkType(IListControlsData data);
     }
     /// <summary>
     /// 
@@ -96,7 +118,10 @@ namespace Yaesoft.SFIT.Engine.Service
     public class SFITStudentWorksQueryPresenter: ModulePresenter<ISFITStudentWorksQueryView>
     {
         #region 成员变量，构造函数。
-        SFITStudentWorksEntity studentWorksEntity = null;
+        private SFITStudentWorksEntity studentWorksEntity = null;
+        private SFITStudentsEntity studentsEntity = null;
+        private SFITClassEntity classEntity = null;
+        private SFITCatalogEntity catalogEntity = null;
         /// <summary>
         /// 构造函数。
         /// </summary>
@@ -106,6 +131,7 @@ namespace Yaesoft.SFIT.Engine.Service
         {
             this.View.SecurityID = ModuleConstants.StudentPersonalWorks_ModuleID;
             this.studentWorksEntity = new SFITStudentWorksEntity();
+            this.studentsEntity = new SFITStudentsEntity();
         }
         #endregion
 
@@ -143,9 +169,26 @@ namespace Yaesoft.SFIT.Engine.Service
         /// </summary>
         protected override void PreViewLoadData()
         {
+            //listView
             ISFITStudentWorksQueryListView listView = this.View as ISFITStudentWorksQueryListView;
             if (listView != null)
+            {
                 listView.BindWorkStatus(this.BindEnumWorkStatusData());
+            }
+            //uploadview
+            ISFITStudentWorksUploadView uploadView = this.View as ISFITStudentWorksUploadView;
+            if (uploadView != null)
+            {
+                SFITStudents data = new SFITStudents();
+                data.StudentID = uploadView.CurrentUserID;
+                if (this.studentsEntity.LoadRecord(ref data))
+                {
+                    uploadView.SchoolName = data.SchoolName;
+                    uploadView.ClassName = this.classEntity.LoadClassName(data.ClassID);
+                    uploadView.BindCatalogs(this.catalogEntity.BindCatalogs(data.SchoolID, data.GradeID));
+                }
+                uploadView.BindWorkType(this.EnumDataSource(typeof(EnumWorkType)));
+            }
         }
         #endregion
 

@@ -73,6 +73,22 @@ namespace Yaesoft.SFIT.Engine.Persistence
 
         #region 数据操作。
         /// <summary>
+        /// 根据班级ID加载班级名称。
+        /// </summary>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        public string LoadClassName(String classId)
+        {
+            if (string.IsNullOrEmpty(classId)) return null;
+            SFITClass data = new SFITClass();
+            data.ClassID = classId;
+            if (base.LoadRecord(ref data))
+            {
+                return data.ClassName;
+            }
+            return null;
+        }
+        /// <summary>
         /// 绑定班级数据。
         /// </summary>
         /// <param name="schoolID"></param>
