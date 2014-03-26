@@ -132,6 +132,8 @@ namespace Yaesoft.SFIT.Engine.Service
             this.View.SecurityID = ModuleConstants.StudentPersonalWorks_ModuleID;
             this.studentWorksEntity = new SFITStudentWorksEntity();
             this.studentsEntity = new SFITStudentsEntity();
+            this.classEntity = new SFITClassEntity();
+            this.catalogEntity = new SFITCatalogEntity();
         }
         #endregion
 
@@ -185,6 +187,7 @@ namespace Yaesoft.SFIT.Engine.Service
                 {
                     uploadView.SchoolName = data.SchoolName;
                     uploadView.ClassName = this.classEntity.LoadClassName(data.ClassID);
+                    uploadView.StudentName = data.SchoolName;
                     uploadView.BindCatalogs(this.catalogEntity.BindCatalogs(data.SchoolID, data.GradeID));
                 }
                 uploadView.BindWorkType(this.EnumDataSource(typeof(EnumWorkType)));
@@ -192,5 +195,43 @@ namespace Yaesoft.SFIT.Engine.Service
         }
         #endregion
 
+        #region 数据操作。
+        /// <summary>
+        /// 上传学生作业。
+        /// </summary>
+        /// <param name="studentId"></param>
+        /// <param name="upload"></param>
+        /// <returns></returns>
+        public bool UploadStudentWork(GUIDEx studentId, StudentWorkTeaUpload upload)
+        {
+            if (!studentId.IsValid)
+            {
+                this.View.ShowMessage("没有获取到学生信息！");
+                return false;
+            }
+            if (upload == null)
+            {
+                this.View.ShowMessage("没有获取到上传数据！");
+                return false;
+            }
+            SFITStudents data = new SFITStudents();
+            data.StudentID = studentId;
+            if (!this.studentsEntity.LoadRecord(ref data))
+            {
+                this.View.ShowMessage("当前用户不是学生帐号，无法上传作业！");
+                return false;
+            }
+            upload.ClassID = data.ClassID;
+            upload.GradeID = data.GradeID;
+            upload.Student = new Student();
+            upload.Student.StudentID = data.StudentID;
+            upload.Student.StudentCode = data.StudentCode;
+            upload.Student.StudentName = data.StudentName;
+            upload.Review = null;
+            upload.Time = DateTime.Now;
+
+            return this.studentWorksEntity.UploadWorks(data.SchoolID, upload);
+        }
+        #endregion
     }
 }

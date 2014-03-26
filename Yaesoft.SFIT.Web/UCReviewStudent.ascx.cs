@@ -90,8 +90,8 @@ namespace Yaesoft.SFIT.Web
                 data.SubjectiveReviews = this.txtSubjectiveReviews.Text;
                 data.TeacharName = this.txtTeacharName.Text;
 
-                data.CreateEmployeeID = this.CurrentUserID;
-                data.CreateEmployeeName = this.CurrentUserName;
+                data.TeacherID = data.CreateEmployeeID = this.CurrentUserID;
+                data.TeacharName = data.CreateEmployeeName = this.CurrentUserName;
                 data.CreateDateTime = DateTime.Now;
 
                 this.presenter.UpdateReviews(data);

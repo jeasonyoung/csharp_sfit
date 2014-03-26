@@ -87,6 +87,7 @@ namespace Yaesoft.Furong
             {
                 int type = 1;
                 string account = userSign;
+                bool isAllType = true;
                 if (account.IndexOf('#') > 0)
                 {
                     string[] usr = account.Split('#');
@@ -96,11 +97,16 @@ namespace Yaesoft.Furong
                     }
                     catch (Exception) { }
                     account = usr[1];
+                    isAllType = false;
                 }
 
                 string code = this.authentication.VerifyUser(type, account, password, out err);
-                if (string.IsNullOrEmpty(code))
-                    throw new Exception(string.IsNullOrEmpty(err) ? "用户账号或密码不正确！" : err);
+                if (isAllType && string.IsNullOrEmpty(code))
+                {
+                    type = 2;
+                    code = this.authentication.VerifyUser(type, account, password, out err);
+                }
+                if (string.IsNullOrEmpty(code)) throw new Exception(string.IsNullOrEmpty(err) ? "用户账号或密码不正确！" : err);
 
                 IGetUserInfo getInfo = ModuleConfiguration.ModuleConfig.GetUserInfoAssembly;
                 if (getInfo == null)

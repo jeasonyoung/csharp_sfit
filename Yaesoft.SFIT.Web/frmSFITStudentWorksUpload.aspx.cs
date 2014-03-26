@@ -44,6 +44,51 @@ namespace Yaesoft.SFIT.Web
         /// <param name="e"></param>
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                StudentWorkTeaUpload stuworkUpload = new StudentWorkTeaUpload();
+                stuworkUpload.CatalogID = this.ddlCatalog.SelectedValue;
+                stuworkUpload.Description = this.txtWorkDescription.Text.Trim();
+                stuworkUpload.WorkName = this.txtWorkName.Text.Trim();
+                stuworkUpload.Type = (EnumWorkType)Enum.Parse(typeof(EnumWorkType), this.ddlWorkType.SelectedValue);
+                stuworkUpload.Status = EnumWorkStatus.Submit;
+                bool isUploadWork = false;
+                this.uploadAttachments.SaveUploadAs(new EventHandler<iPower.Web.Upload.UploadViewEventArgs>(delegate(object o, iPower.Web.Upload.UploadViewEventArgs s)
+                {
+                    try
+                    {
+                        isUploadWork = true;
+                        StudentWorkFile workfile = new StudentWorkFile();
+                        stuworkUpload.WorkID = workfile.FileID = s.ItemRaw.FileID;
+                        workfile.FileName = s.ItemRaw.FileName;
+                        workfile.FileExt = s.ItemRaw.Extension;
+                        workfile.OffSet = 0;
+                        workfile.Size = s.ItemRaw.Size;
+                        workfile.ContentType = s.ItemRaw.ContentType;
+                        workfile.Data = s.ItemRaw.FileRaw;
+
+                        stuworkUpload.CheckCode = s.ItemRaw.CheckCode;
+                        stuworkUpload.Files = workfile;
+                        if (this.presenter.UploadStudentWork(this.CurrentUserID, stuworkUpload))
+                        {
+                            this.SaveData();
+                        }
+                        else
+                        {
+                            this.ShowMessage("上传失败！发生未知异常。");
+                        }
+                    }
+                    catch (Exception e1)
+                    {
+                        this.ShowMessage("发生异常：" + e1.Message);
+                    }
+                }));
+                if (!isUploadWork)this.ShowMessage("请上传学生作业文件！");
+            }
+            catch (Exception ex)
+            {
+                this.ShowMessage(ex.Message);
+            }
         }
         /// <summary>
         /// 

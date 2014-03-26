@@ -23,7 +23,7 @@
 	    </div>
 	    <div style="float:left; width:98%;">
             <JWC:LabelEx ID="lbWorkName" runat="server">作业名称：</JWC:LabelEx>
-            <JWC:TextBoxEx ID="txtWorkName" runat="server" Width="328px" ReadOnly="true" IsRequired="true" RequiredErrorMessage="学生姓名不能为空！"/>
+            <JWC:TextBoxEx ID="txtWorkName" runat="server" Width="328px" IsRequired="true" RequiredErrorMessage="学生姓名不能为空！"/>
 	    </div>
 	    <div style="float:left; width:98%;">
 	         <JWC:LabelEx ID="lbWorkType" runat="server">作品类型：</JWC:LabelEx>

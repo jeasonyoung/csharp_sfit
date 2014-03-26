@@ -74,22 +74,23 @@ namespace Yaesoft.SFIT.Engine.Service
         {
             if (workID.IsValid)
             {
-                SFITeaReviewStudent data = new SFITeaReviewStudent();
-                data.WorkID = workID;
-                if (this.teaReviewStudentEntity.LoadRecord(ref data))
+                SFITStudentWorks stuWork = new SFITStudentWorks();
+                stuWork.WorkID = workID;
+                if (new SFITStudentWorksEntity().LoadRecord(ref stuWork))
                 {
-                    if (data.EvaluateType == (int)EnumEvaluateType.Hierarchy)
+                    SFITEvaluate evaluate = new SFITEvaluate();
+                    SFITEvaluateSetEntity evaluateSetEntity = new SFITEvaluateSetEntity();
+                    evaluate.EvaluateID = evaluateSetEntity.LoadEvaluateID(stuWork.GradeID);
+                    if (new SFITEvaluateEntity().LoadRecord(ref evaluate) && (evaluate.EvaluateType == (int)EnumEvaluateType.Hierarchy))
                     {
-                        SFITStudentWorks stuWork = new SFITStudentWorks();
-                        stuWork.WorkID = data.WorkID;
-
-                        if (new SFITStudentWorksEntity().LoadRecord(ref stuWork))
-                        {
-                            this.View.BindReviewValue(new SFITEvaluateSetEntity().BindEvaluateValues(stuWork.GradeID));
-                        }
+                        this.View.BindReviewValue(evaluateSetEntity.BindEvaluateValues(stuWork.GradeID));
                     }
-
-                    handler(this, new EntityEventArgs<SFITeaReviewStudent>(data));
+                    SFITeaReviewStudent data = new SFITeaReviewStudent();
+                    data.WorkID = stuWork.WorkID;
+                    if (this.teaReviewStudentEntity.LoadRecord(ref data))
+                    {
+                        handler(this, new EntityEventArgs<SFITeaReviewStudent>(data));
+                    }
                 }
             }
          }

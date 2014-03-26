@@ -45,17 +45,28 @@ namespace Yaesoft.SFIT.Engine.Persistence
 
         #region 数据处理。
         /// <summary>
+        /// 获取年级客观评价ID。
+        /// </summary>
+        /// <param name="gradeID"></param>
+        /// <returns></returns>
+        public GUIDEx LoadEvaluateID(GUIDEx gradeID)
+        {
+            const string sql = "select EvaluateID from {0} where GradeID='{1}' order by ModifyTime desc";
+            object obj = this.DatabaseAccess.ExecuteScalar(string.Format(sql, this.TableName, gradeID));
+            if (obj == null) return GUIDEx.Null;
+            return new GUIDEx(obj);
+        }
+        /// <summary>
         /// 绑定客观评价。
         /// </summary>
         /// <param name="gradeID"></param>
         /// <returns></returns>
         public IListControlsData BindEvaluateValues(GUIDEx gradeID)
         {
-            const string sql = "select EvaluateID from {0} where GradeID='{1}' order by ModifyTime desc";
-            object obj = this.DatabaseAccess.ExecuteScalar(string.Format(sql, this.TableName, gradeID));
-            if (obj != null)
+            GUIDEx evaluateId = this.LoadEvaluateID(gradeID);
+            if (evaluateId.IsValid)
             {
-                return this.evaluateItemsEntity.BindEvaluateItemsValue(new GUIDEx(obj));
+                return this.evaluateItemsEntity.BindEvaluateItemsValue(evaluateId);
             }
             return null;
         }
